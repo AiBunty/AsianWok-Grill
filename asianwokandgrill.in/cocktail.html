@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <title>
+   Asian Wok &amp; Grill | Premium Bar Menu
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Tangerine:wght@400;700&amp;family=Cinzel:wght@400;600;700&amp;family=Montserrat:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   /* ============================================================
+            ⚠️ GLOBAL THEME RULE — CLASSIC BURGUNDY COCKTAIL MENU (LOCKED)
+            ============================================================ */
+        :root {
+            --burgundy-deep: #6B1313;
+            --burgundy-rich: #8B2020;
+            --gold-cream: #F4E5C2;
+            --gold-bright: #D4AF37;
+            --text-light: #F8F3E8;
+            --border-gold: #C9A961;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            background: linear-gradient(135deg, #6B1313 0%, #8B2020 50%, #6B1313 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: ""; position: fixed; inset: 0;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.05) 2px, rgba(0,0,0,.05) 4px),
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,.05) 2px, rgba(0,0,0,.05) 4px);
+            pointer-events: none; opacity: 0.3; z-index: 1;
+        }
+
+        .header-bar { text-align: center; padding: 25px 20px 20px; position: relative; z-index: 10; }
+        .header-logo { height: 60px; filter: drop-shadow(0 0 12px rgba(244, 229, 194, 0.4)); margin-bottom: 10px; }
+        .header-subtitle { font-size: 0.75rem; letter-spacing: 4px; color: var(--gold-cream); opacity: 0.8; text-transform: uppercase; font-weight: 300; }
+
+        .container { position: relative; z-index: 5; width: 100%; max-width: 900px; margin: 0 auto; padding: 20px 15px 40px; }
+        
+        .hero-title { text-align: center; margin-bottom: 50px; }
+        .hero-title h1 { font-family: 'Great Vibes', cursive; font-size: 5rem; color: var(--gold-cream); line-height: 1; margin: 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
+        .hero-title .cocktail-word { font-size: 6rem; display: block; margin-bottom: -20px; }
+        .hero-title .menu-word { font-size: 5rem; font-style: italic; margin-left: 60px; }
+
+        /* ============================================================
+           ⚠️ GLOBAL UX FEATURE — VERTICAL JUMP MENU
+           ============================================================ */
+        #menuTriggerBtn {
+            position: fixed; right: 0; top: 50%; transform: translateY(-50%);
+            writing-mode: vertical-rl; background: var(--gold-bright); color: #000;
+            padding: 25px 12px; border-radius: 15px 0 0 15px;
+            font-size: 0.8rem; font-weight: 900; letter-spacing: 3px;
+            z-index: 3500; cursor: pointer; border: 1px solid var(--gold-cream); border-right: none;
+            box-shadow: -4px 0 15px rgba(0,0,0,0.4);
+        }
+        #navDrawer {
+            position: fixed; right: -280px; top: 0; bottom: 0; width: 260px;
+            background: var(--burgundy-deep); z-index: 4000; padding: 50px 20px;
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; gap: 12px;
+            border-left: 2px solid var(--gold-bright); box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+            overflow-y: auto;
+        }
+        #navDrawer.open { transform: translateX(-280px); }
+        .nav-link {
+            padding: 18px; background: rgba(212, 175, 55, 0.1); border-radius: 8px;
+            font-size: 0.85rem; font-weight: 600; color: var(--gold-cream);
+            text-align: center; text-transform: uppercase; border: 1px solid rgba(212, 175, 55, 0.3);
+            cursor: pointer; letter-spacing: 1px;
+        }
+        #navOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 3800; display: none; }
+
+        .menu-frame { border: 2px solid var(--border-gold); padding: 50px 30px; position: relative; background: rgba(0, 0, 0, 0.15); backdrop-filter: blur(10px); }
+        .category-section { margin-bottom: 50px; scroll-margin-top: 100px; }
+        .category-title { font-family: 'Cinzel', serif; font-size: 1.8rem; text-align: center; color: var(--gold-cream); text-transform: uppercase; letter-spacing: 4px; margin-bottom: 30px; position: relative; padding-bottom: 15px; }
+        .category-title::after { content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100px; height: 1px; background: var(--border-gold); }
+
+        /* ⚠️ TYPOGRAPHY: SENTENCE CASE FOR ITEMS (LOCKED) */
+        .menu-item { margin-bottom: 35px; text-align: center; }
+        .item-name { 
+            font-family: 'Great Vibes', cursive; 
+            font-size: 2.8rem; 
+            color: var(--gold-cream); 
+            font-weight: 400; 
+            line-height: 1.1; 
+            margin-bottom: 5px; 
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            text-transform: lowercase; /* Base set to lower */
+        }
+        .item-name::first-letter { text-transform: uppercase; } /* Force first letter Upper */
+        
+        .item-desc { font-size: 0.9rem; color: var(--text-light); opacity: 0.95; max-width: 600px; margin: 0 auto; font-style: italic; font-weight: 300; }
+
+        .price-display { margin-top: 15px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .price-item { font-size: 0.9rem; color: var(--gold-bright); letter-spacing: 1px; font-weight: 500; }
+        .price-item .unit { opacity: 0.8; font-size: 0.75rem; margin-right: 4px; text-transform: uppercase; }
+        .price-item .amount { font-weight: 700; }
+
+        footer { text-align: center; padding: 50px 20px 30px; color: var(--gold-cream); border-top: 1px solid var(--border-gold); margin-top: 60px; }
+        .footer-logo { height: 50px; filter: drop-shadow(0 0 10px rgba(244, 229, 194, 0.3)); margin-bottom: 30px; }
+        .branches-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 25px; }
+        .branch-card { background: rgba(0, 0, 0, 0.2); border: 1px solid var(--border-gold); padding: 25px 20px; border-radius: 8px; }
+
+        #scrollTopBtn { position: fixed; bottom: 20px; left: 20px; width: 50px; height: 50px; border-radius: 50%; background: var(--gold-bright); color: #000; border: 2px solid var(--gold-cream); cursor: pointer; z-index: 3000; display: none; align-items: center; justify-content: center; font-size: 1.3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+
+        #loader { position: fixed; inset: 0; background: var(--burgundy-deep); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 5000; gap: 25px; }
+        .spinner { width: 50px; height: 50px; border: 4px solid var(--gold-cream); border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        @media (max-width: 768px) {
+            .hero-title h1 { font-size: 3.5rem; }
+            .menu-frame { padding: 30px 15px; }
+            .item-name { font-size: 2.4rem; }
+        }
+  </style>
+ </head>
+ <body>
+  <div id="loader">
+   <div class="spinner">
+   </div>
+   <div style="font-family: 'Cinzel'; letter-spacing: 3px; color: var(--gold-cream);">
+    SYNCING SELECTIONS
+   </div>
+  </div>
+  <div id="menuTriggerBtn" onclick="toggleNav(true)">
+   MENU
+  </div>
+  <div id="navOverlay" onclick="toggleNav(false)">
+  </div>
+  <div id="navDrawer">
+   <div style="font-family: 'Cinzel'; color: var(--gold-bright); text-align: center; margin-bottom: 25px; border-bottom: 1px solid var(--border-gold); padding-bottom: 10px;">
+    SECTIONS
+   </div>
+   <div id="navLinkList">
+   </div>
+  </div>
+  <div class="header-bar">
+   <img alt="Asian Wok &amp; Grill" class="header-logo" src="https://storage.files-vault.com/landing_pages/84726/0b31a695da1984f463ffecdd904d2d9b-0b31a695da1984f463ffecdd904d2d9b-Header-Logo.webp"/>
+   <div class="header-subtitle">
+    Premium Gourmet Kitchen
+   </div>
+  </div>
+  <div class="container">
+   <div class="back-home-link" style="text-align:left; margin-bottom:18px;">
+    <a href="https://asianwokandgrill.in/" style="
+      display: inline-block;
+      background: var(--gold-bright);
+      color: #6B1313;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      letter-spacing: 2px;
+      border-radius: 8px;
+      padding: 10px 22px;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: 1px solid var(--gold-cream);
+      transition: background 0.2s, color 0.2s;
+    " onmouseover="this.style.background='#6B1313';this.style.color='#F4E5C2';" onmouseout="this.style.background='var(--gold-bright)';this.style.color='#6B1313';">
+      ← Back to Home
+    </a>
+  </div>
+  <div class="hero-title">
+   <h1>
+    <span class="cocktail-word">
+     Cocktail
+    </span>
+    <span class="menu-word">
+     Menu
+    </span>
+   </h1>
+  </div>
+  <div class="menu-frame">
+   <main id="menuMain">
+   </main>
+  </div>
+  <footer>
+   <img alt="Asian Wok &amp; Grill" class="footer-logo" src="https://storage.files-vault.com/landing_pages/84726/0b31a695da1984f463ffecdd904d2d9b-0b31a695da1984f463ffecdd904d2d9b-Header-Logo.webp"/>
+   <div class="branches-container">
+    <div style="font-size: 1.2rem; letter-spacing: 3px; margin-bottom: 25px; color: var(--gold-bright); font-family: 'Cinzel', serif;">
+     OUR LOCATIONS
+    </div>
+    <div class="branches-grid">
+     <div class="branch-card">
+      <div style="font-family:'Cinzel'; color:var(--gold-bright); margin-bottom:10px;">
+       Gangapur Road
+      </div>
+      <div style="font-size:0.8rem; opacity:0.8;">
+       Shop 01, Jehan Circle, Nashik
+      </div>
+     </div>
+     <div class="branch-card">
+      <div style="font-family:'Cinzel'; color:var(--gold-bright); margin-bottom:10px;">
+       Nashik Road
+      </div>
+      <div style="font-size:0.8rem; opacity:0.8;">
+       Pushpa Park, Nashik
+      </div>
+     </div>
+     <div class="branch-card">
+      <div style="font-family:'Cinzel'; color:var(--gold-bright); margin-bottom:10px;">
+       Kalyan West
+      </div>
+      <div style="font-size:0.8rem; opacity:0.8;">
+       Rock Mount, Kalyan
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="syncStatus" style="font-size: 0.65rem; letter-spacing: 2px; opacity: 0.6; text-transform: uppercase; margin-bottom:10px;">
+   </div>
+   <div style="opacity: 0.9; font-size: 0.7rem; letter-spacing: 1px; color: var(--gold-cream);">
+    © 2026 ASIAN WOK &amp; GRILL | POWERED BY DCore Systems LLP
+   </div>
+  </footer>
+  <button id="scrollTopBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+   ▲
+  </button>
+  <script>
+   /* ============================================================
+        ⚠️ GLOBAL DATA RULE — HARDENED PROXY PIPELINE (LOCKED)
+       ============================================================ */
+    const DataLayer = {
+        PROXY_URL: 'https://script.google.com/macros/s/AKfycbxKdQvD58ks4-lowwGtmNeVyODOpQbFVFi8_Xgd6r6fYV6N40sA5gDwzt0C15MNBfQ23A/exec',
+        SUPPORTED_UNITS: ["Glass", "30ml", "Pint", "Pitcher", "Per Bottle"],
+
+        async getMenuData() {
+            try {
+                // Task 1: Identify and bypass Forbidden redirect error
+                const response = await fetch(this.PROXY_URL, { 
+                    method: 'GET',
+                    redirect: 'follow' // Explicitly follow Google Macro redirects
+                });
+                
+                if (!response.ok) throw new Error("PROXY_HTTP_ERROR");
+                
+                const text = await response.text();
+                if (text.trim().startsWith('<')) throw new Error("FORBIDDEN_HTML_RESPONSE");
+                
+                const data = this.parseCSV(text);
+                localStorage.setItem('awg_v5_cache', JSON.stringify(data));
+                return { data, source: 'live' };
+            } catch (error) {
+                console.warn('Data Layer failover activated:', error.message);
+                const cached = localStorage.getItem('awg_v5_cache');
+                if (cached) return { data: JSON.parse(cached), source: 'cache' };
+            }
+            throw new Error("DATA_UNAVAILABLE");
+        },
+
+        parseCSV(csv) {
+            const arr = []; let quote = false;
+            for (let row = 0, col = 0, c = 0; c < csv.length; c++) {
+                let cc = csv[c], nc = csv[c + 1];
+                arr[row] = arr[row] || []; arr[row][col] = arr[row][col] || "";
+                if (cc == '"' && quote && nc == '"') { arr[row][col] += cc; ++c; continue; }
+                if (cc == '"') { quote = !quote; continue; }
+                if (cc == ',' && !quote) { ++col; continue; }
+                if (cc == '\n' && !quote) { ++row; col = 0; continue; }
+                arr[row][col] += cc;
+            }
+            const headers = arr[0].map(h => h.trim().toLowerCase());
+            return arr.slice(1).map(row => {
+                let item = {}; headers.forEach((h, i) => item[h] = row[i] || "");
+                let prices = {};
+                this.SUPPORTED_UNITS.forEach(u => {
+                    const v = item[u.toLowerCase()];
+                    if (v && v.trim() !== "" && !isNaN(v.toString().replace(/[₹,]/g, ''))) {
+                        prices[u] = v.toString().replace(/[₹,]/g, '').trim();
+                    }
+                });
+                return { 
+                    name: item["item name"], 
+                    cat: item["category"] || "Selection", 
+                    desc: item["description"] || "", 
+                    prices, 
+                    avail: item["availability"] !== "No" 
+                };
+            }).filter(i => i.name && i.avail);
+        }
+    };
+
+    const UIEngine = {
+        render(items, source) {
+            const main = document.getElementById('menuMain');
+            const navList = document.getElementById('navLinkList');
+            const categories = [...new Set(items.map(i => i.cat))];
+            
+            navList.innerHTML = categories.map(cat => 
+                `<div class="nav-link" onclick="scrollToCat('${cat.replace(/\s+/g, '-').toLowerCase()}')">${cat}</div>`
+            ).join('');
+
+            main.innerHTML = categories.map(cat => {
+                const catItems = items.filter(i => i.cat === cat);
+                return `
+                    <div class="category-section" id="${cat.replace(/\s+/g, '-').toLowerCase()}">
+                        <h2 class="category-title">${cat}</h2>
+                        ${catItems.map(item => {
+                            const activeUnits = DataLayer.SUPPORTED_UNITS.filter(u => item.prices[u]);
+                            return `
+                                <div class="menu-item">
+                                    <div class="item-name">${item.name}</div>
+                                    ${item.desc ? `<div class="item-desc">${item.desc}</div>` : ''}
+                                    <div class="price-display">
+                                        ${activeUnits.map(u => `
+                                            <div class="price-item">
+                                                <span class="unit">${u}:</span>
+                                                <span class="amount">₹${item.prices[u]}</span>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('syncStatus').innerText = 
+                source === 'live' ? `Live Sync: ${new Date().toLocaleTimeString()}` : 'Viewing Emergency Cache';
+        }
+    };
+
+    function toggleNav(show) {
+        document.getElementById('navDrawer').classList.toggle('open', show);
+        document.getElementById('navOverlay').style.display = show ? 'block' : 'none';
+    }
+
+    function scrollToCat(id) {
+        const el = document.getElementById(id);
+        if(el) { toggleNav(false); window.scrollTo({ top: el.offsetTop - 90, behavior: 'smooth' }); }
+    }
+
+    window.onscroll = () => { document.getElementById('scrollTopBtn').style.display = window.scrollY > 400 ? 'flex' : 'none'; };
+
+    window.onload = async () => {
+        try {
+            const { data, source } = await DataLayer.getMenuData();
+            UIEngine.render(data, source);
+            document.getElementById('loader').style.display = 'none';
+        } catch (error) {
+            document.getElementById('loader').style.display = 'none';
+            alert("Secure connection interrupted. Retrying...");
+            location.reload();
+        }
+    };
+  </script>
+ </body>
+</html>
