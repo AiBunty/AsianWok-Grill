@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Landing</title>
+    <link rel="icon" href="assets/images/circlelogo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+   * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background:  #1f0000;   /* tick वाला exact dark wine */
+  color: #e9e4dc;
+
+}
+
+/* =====================
+   HEADER
+===================== */
+/* =========================
+   HEADER BASE
+========================= */
+.site-header {
+  zoom: 1;                 /* 🔥 live zoom normalize */
+}
+
+.site-header * {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/* LOGO */
+.logo img {
+  height: 65px;
+}
+
+/* NAV */
+.main-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-family: 'Cormorant Garamond', serif;
+  transition: opacity 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  font-weight: 500; /* optional: normal-bold mix */
+}
+
+.main-nav a:hover {
+  opacity: 0.75;
+}
+/* =========================
+   HAMBURGER
+========================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  display: block;
+}
+
+@media (max-width: 600px) {
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo img {
+    height: 50px;
+  }
+
+  /* HIDE DESKTOP MENU */
+  .main-nav {
+    position: fixed;
+    inset: 0;
+    background: #1f0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 150; /* 🔥 LOWER than logo */
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .main-nav a {
+    font-size: 24px;
+  }
+
+  /* SHOW HAMBURGER */
+  .hamburger {
+    display: flex;
+  }
+
+  /* ACTIVE MENU */
+  .main-nav.active {
+    transform: translateX(0);
+  }
+}
+.hero-slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* dark overlay like screenshot */
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 100px;          /* EXACT desktop size */
+
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: 0.5px;
+  margin-bottom: 38px;
+ font-family: 'Kugile', serif;
+  
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 46px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-content {
+    bottom: 22%;
+  }
+
+ 
+}
+/* SECTION */
+.about-section {
+  position: relative;
+  padding: 120px 0 120px;
+  overflow: visible;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 100px;
+}
+
+/* GRID */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+ gap: 100px; 
+  align-items: center;
+}
+
+/* ABOUT TITLE (KEY CHANGE) */
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 130px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  color: #c7a46b;
+  margin-bottom: 40px;
+   position: relative;
+  margin-bottom: 40px;
+}
+/* Our (script text) */
+.title-script {
+  display: block;
+ font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  font-size: 64px;
+  color: #ffffff;
+  margin-bottom: -20px;
+
+}
+.title-main {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 130px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  color: #c7a46b;
+}
+/* TEXT */
+.about-content p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 22px;
+  line-height: 1.9;
+   color: #c7a46b;
+  max-width: 520px;
+   z-index: 5;  
+   padding-left: 60px;
+  text-shadow: 0 0 1px rgba(255,255,255,0.15);
+}
+@media (min-width:992px)
+{
+  .about-content p
+  {
+    
+  }
+}
+/* IMAGE */
+.about-image img {
+  width: 100%;
+  height: 760px;
+  object-fit: cover;
+    z-index: 3;
+  overflow: visible; 
+}
+
+/* SVG */
+.svg-decor {
+  position: absolute;
+  width: 260px;
+  opacity: 0.85;
+  animation: float 6s ease-in-out infinite;
+   z-index: 1;  
+  
+}
+
+.top-right {
+  top: -30px;
+  right: 60px;
+
+}
+
+.bottom-left {
+  bottom: 90px;
+  left: -5px;
+}
+
+/* FLOAT */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .section-title {
+    font-size: 80px;
+  }
+
+  .about-image img {
+    height: 520px;
+  }
+}
+/* ===============================
+   FINAL MOBILE SVG FIX (CLEAN)
+================================ */
+@media (max-width: 600px) {
+
+  .about-section {
+    position: relative;
+    overflow: visible !important;
+  }
+
+  .svg-decor {
+    width: 120px;
+    opacity: 0.6;
+    z-index: 1;              /* 🔥 ABOVE BACKGROUND */
+    pointer-events: none;
+  }
+
+  .svg-decor.top-right {
+    top: -5px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .svg-decor.bottom-left {
+   bottom: 10px;           /* 🔥 pull INTO view */
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  /* content always above SVG */
+  .about-content,
+  .about-image {
+    position: relative;
+    z-index: 2;
+  }
+}
+@media (max-width: 768px) {
+  .title-main {
+    font-size: 64px;
+    letter-spacing: 4px;
+  }
+
+  .title-script {
+    font-size: 42px;
+    margin-bottom: -10px;
+  }
+
+    .about-content p {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+   
+}
+.inspiration-section {
+  background: #1f0000;
+  
+  padding: 140px 0;
+}
+
+.insp-wrapper {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 100px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 160px;
+  align-items: flex-start;
+}
+
+/* LEFT */
+.insp-left h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 90px;
+  font-weight: 300;
+  letter-spacing: 6px;
+
+    color: #c7a46b;
+  margin-bottom: 60px;
+  
+}
+
+.insp-slider {
+  height: 620px;  
+  width: 620px;           /* 🔥 bigger slider */
+  overflow: hidden;
+}
+.insp-slider {
+  margin-left: -200px;   /* 🔥 हेच magic आहे */
+}
+
+
+/* TRACK */
+.slider-track {
+  display: flex;
+  width: fit-content;
+  animation: marquee 30s linear infinite;
+}
+
+/* IMAGES */
+.slider-track img {
+  height: 620px;
+  width: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* 🔥 KEY FIX */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* RIGHT */
+.insp-bird {
+  width: 260px;
+  margin-bottom: 40px;
+}
+
+.insp-right p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;          /* 🔥 text thodi large */
+  line-height: 2;           /* airy luxury spacing */
+  color: #efe6d8;
+  max-width: 460px;
+  margin-bottom: 48px;
+}
+/* BIRD ANIMATION */
+.insp-bird {
+  width: 260px;
+  margin-bottom: 40px;
+  animation: birdFloat 8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes birdFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+
+.learn-more {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #efe6d8;
+  text-decoration: none;
+  border-bottom: 1px solid #efe6d8;
+  padding-bottom: 6px;
+}
+
+.insp-bottom-pattern {
+  width: 100%;
+  height: 130px;
+  background: url("assets/images/pattern.png") repeat-x center;
+  background-size: auto 100%;
+}
+.insp-right {
+  padding-bottom: 120px;   /* 🔥 THIS IS THE FIX */
+}
+/* =====================
+   MUSIC
+===================== */
+.music-toggle{
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #c9a46a;
+  border-radius: 50%;
+  background: rgba(0,0,0,.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+
+
+/* =========================
+   MENU SECTION – CLEAN FIX
+========================= */
+
+.menu-section {
+  background: #efe9db;
+ padding: 40px 0 80px; 
+}
+
+.menu-container {
+  max-width: 1400px;          /* 🔥 IMPORTANT */
+  margin: 0 auto;
+  padding: 0 40px;            /* balanced side space */
+}
+
+/* TITLE */
+.menu-title {
+ 
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 110px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  color: #c7a46b;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+/* ================= GRID ================= */
+
+/* ROW 1 – 3 cards */
+.menu-grid.row-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;                 /* 🔥 MORE AIR */
+  margin-bottom: 120px;
+}
+
+/* ROW 2 – 2 cards center */
+.menu-grid.row-2 {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+/* ================= CARD ================= */
+
+.menu-card {
+  position: relative;
+  width: 100%;
+  max-width: 460px;          /* 🔥 SAME VISUAL SIZE */
+  margin: 0 auto;
+}
+
+.menu-img {
+  width: 100%;
+  height: 600px;             /* 🔥 MATCH REF */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.menu-card:hover .menu-img {
+  transform: scale(1.05);
+}
+
+/* ================= CIRCLE ================= */
+
+/* ===============================
+   MENU RED CIRCLE – SIZE FIX
+================================ */
+
+.menu-circle {
+  position: absolute;
+  bottom: -90px;          /* push down a bit for bigger size */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;           /* 🔥 BIGGER SIZE */
+  height: 220px;          /* 🔥 BIGGER SIZE */
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;          /* 🔥 perfect centering */
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transform-origin: center center;
+  transition: transform 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-circle:hover img {
+  transform: rotate(90deg);
+}
+
+/* ================= MOBILE ================= */
+
+/* =========================
+  FINAL MOBILE MENU FIX
+========================= */
+@media (max-width: 600px) {
+
+  /* 🔒 STOP PAGE SIDE SCROLL */
+ 
+
+  /* MENU SECTION */
+  .menu-section {
+
+      padding: 60px 0;
+      /* mobile ला clean ठेव */
+  }
+
+  .menu-container {
+    padding: 0 16px;
+  }
+
+  .menu-title {
+    font-size: 60px;
+    letter-spacing: 5px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+    /* 🔥 MENU SCROLL WITH SNAP */
+   .menu-grid {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      overflow-y: visible;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 80px;
+      scroll-snap-type: x mandatory;
+      position: relative;
+    }
+
+    .menu-grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* RESET row-1 & row-2 */
+    .menu-grid.row-1,
+    .menu-grid.row-2 {
+      display: flex !important;
+      justify-content: flex-start;
+    }
+
+    .menu-grid.row-1 {
+      margin-bottom: 24px;
+    }
+
+    .menu-card {
+      flex: 0 0 85%;
+      max-width: none;
+      width: 85%;
+      margin: 0;
+      scroll-snap-align: center;
+    }
+
+  .menu-img {
+    height: 420px;   /* 🔥 mobile friendly */
+  }
+
+  /* 🔥 NAVIGATION DOTS */
+  .menu-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  .menu-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #c7a46b;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .menu-dots .dot.active {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  /* 🔥 ARROW NAVIGATION */
+  .menu-nav-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(199, 164, 107, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+
+  .menu-nav-arrow:active {
+    transform: translateY(-50%) scale(0.9);
+  }
+
+  .menu-nav-arrow.left {
+    left: 10px;
+  }
+
+  .menu-nav-arrow.right {
+    right: 10px;
+  }
+
+  .menu-nav-arrow.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  /* Hide dots and arrows on desktop */
+  .menu-dots,
+  .menu-nav-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Show navigation on mobile */
+  .menu-dots,
+  .menu-nav-arrow {
+    display: flex;
+  }
+
+  .menu-container {
+    position: relative;
+  }
+
+  .menu-grid {
+    position: relative;
+  }
+}
+@media (max-width: 600px) {
+
+  /* arrow hint wrapper */
+  .menu-section {
+    position: relative;
+  }
+
+  /* RIGHT ARROW */
+  .menu-section::after {
+    content: none;
+  }
+
+}
+
+/* smooth arrow motion */
+@keyframes menuArrowMove {
+  0%   { transform: translate(0, -50%); }
+  50%  { transform: translate(-8px, -50%); }
+  100% { transform: translate(0, -50%); }
+}
+
+/* ===============================
+   FINAL MOBILE FIX – ABOUT + INSP
+================================ */
+@media (max-width: 768px) {
+
+  /* COMMON */
+  .container,
+  .insp-wrapper {
+    padding: 0 20px;
+  }
+
+  /* ================= ABOUT ================= */
+   .about-section {
+    padding: 90px 0 110px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .section-title {
+    font-size: 52px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+  }
+  .about-content p {
+    font-size: 17px;
+  
+  }
+
+    .about-image img {
+    height: 380px;
+    border-radius: 2px;
+  }}
+
+  /* ===============================
+   MOBILE SVG ELEMENT FIX
+================================ */
+@media (max-width: 768px) {
+
+  /* IMPORTANT: allow bottom svg */
+  .about-section {
+    overflow: visible;
+    position: relative;
+  }
+
+  .svg-decor {
+    width: 120px;
+    opacity: 0.55;
+    z-index: 0;
+  }
+
+  /* TOP SVG – working already */
+  .svg-decor.top-right {
+    top: -18px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  /* 🔥 BOTTOM SVG – REAL FIX */
+  .svg-decor.bottom-left {
+    bottom: -60px;          /* pull it INTO view */
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    display: block;
+  }
+}
+
+  /* ================= INSPIRATION ================= */
+  @media (max-width: 768px) {
+  .inspiration-section {
+    padding: 100px 0 0;
+  }
+  .insp-left h2 {
+    margin-bottom: 20px;
+  }
+  .insp-wrapper {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .insp-left h2 {
+    font-size: 48px;
+    letter-spacing: 3px;
+    margin-bottom: 32px;
+  }
+
+  /* slider reset */
+  .insp-slider {
+    width: 100%;
+    height: 420px;
+    margin-left: 0; /* 🔥 MOST IMPORTANT */
+  }
+
+  .slider-track img {
+    height: 420px;
+  }
+  .insp-right {
+    text-align: left;          /* ❗ MOST IMPORTANT */
+    padding-top: 40px;    
+         /* space from top */
+  }
+  /* right content */
+ .insp-bird {
+    display: block;
+    margin: 0 0 24px 0;        /* icon neatly on top */
+    width: 140px;
+  }
+
+  .insp-right p {
+    font-size: 16px;
+    line-height: 1.85;
+    color: #cbb99e;
+    margin: 0;
+    padding-right: 8px;  
+  
+    padding-bottom: 20px;
+     /* avoid edge touch */
+  }
+  .learn-more {
+    font-size: 18px;
+  }
+  .insp-right {
+    padding-bottom: 120px;   /* space for pattern */
+    position: relative;
+    z-index: 2;
+  }
+  /* bottom pattern */
+  .insp-bottom-pattern {
+    position: relative;
+    z-index: 1;
+    margin-top: -40px;
+  }
+
+}
+
+/* ===============================
+   SVG VISIBILITY FIX – MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  /* allow svg to go outside */
+  .menu-grid {
+    overflow-x: auto;
+    overflow-y: visible;   /* 🔥 IMPORTANT */
+  }
+
+  .menu-card {
+    overflow: visible;     /* 🔥 IMPORTANT */
+    padding-bottom: 70px; /* 🔥 space for svg */
+  }
+
+  .menu-circle {
+    bottom: -40px;         /* slight adjust */
+  }
+}
+/* ===============================
+   🔒 GLOBAL MOBILE SCROLL FIX
+================================ */
+@media (max-width: 768px) {
+
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  /* 🔥 Kill negative margins */
+
+
+  /* INSPIRATION slider fix */
+  .insp-slider {
+    margin-left: 0 !important;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* SVG / DECORATIONS */
+  .svg-decor {
+    max-width: 120px;
+    right: auto !important;
+    left: auto !important;
+  }
+
+  /* MENU circles overflow fix */
+  .menu-circle {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Any absolute image safety */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Section safety */
+  
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="logo"><img src="assets/images/asainlogo.webp"></div>
+  <nav class="main-nav">
+    <ul>
+      
+    <li><a href="#" onclick="document.querySelector('.about-section').scrollIntoView({behavior:'smooth'})">ABOUT US</a></li>
+    <li><a href="#" onclick="document.querySelector('.menu-section').scrollIntoView({behavior:'smooth'})">MENU</a></li>
+     <li><a href="#" onclick="document.querySelector('.exclusive-v2').scrollIntoView({behavior:'smooth'})">EVENT</a></li>
+     <li><a href="franchises.html" onclick="document.querySelector('.franchises').scrollIntoView({behavior:'smooth'})">FRANCHISES</a></li>
+       <li><a href="reservation.html" onclick="document.querySelector('').scrollIntoView({behavior:'smooth'})">RESERVATION</a></li>
+         <li><a href="contact.html" onclick="document.querySelector('').scrollIntoView({behavior:'smooth'})">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+</header>
+<section class="hero-slider">
+  <div class="slides">
+
+    <!-- Slide 1 -->
+    <div class="slide active" style="background-image:url('assets/images/hero/slide1.jpg')">
+      <div class="hero-content">
+        <h1>Sizzling Stories <br> Asian Kitchens</h1>
+     
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" style="background-image:url('assets/images/hero/slide2.jpg')">
+      <div class="hero-content">
+        <h1>The Powerhouse of Pan-Asian<br> Indulgence</h1>
+    
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image:url('assets/images/hero/slide3.jpg')">
+      <div class="hero-content">
+        <h1>Experience the<br>Real Taste</h1>
+      
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="about-section">
+
+  <!-- Animated SVG decor -->
+  <img src="assets/images/uppersvg.png" class="svg-decor top-right" alt="">
+  <img src="assets/images/lowersvg.png" class="svg-decor bottom-left" alt="">
+
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Left Content -->
+      <div class="about-content">
+   <h1 class="section-title">
+ 
+  <span class="title-main">OUR <br>CONCEPT</span>
+</h1>
+
+        <p>
+          Asian food celebrates the idea of "Balance & Harmony" through its cooking style, great flavour & contrasting textures by maintaining & delivering a delicate balance between wide varieties of ingredients used in the different cooking styles. The finest ingredients punctuated with lots of taste and texture surprises, Asian foods offer a broad array of notes, all in harmony, some are subtle; others reverberate with excitement creating a unforgettable sensory experience/adventure Asian Wok & Grill brings to you some of the finest food from nine Asian countries to deliver joy, balance & harmony to its guests with an unforgettable customer service & food cooked with only the best & most authentic ingredients, expertise and love.
+        </p>
+      </div>
+
+      <!-- Right Image -->
+      <div class="about-image">
+        <img src="assets/images/about.jpeg" alt="Interior">
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- SLIDER + OVERLAP WRAPPER -->
+<section class="ss-wrapper">
+
+  <!-- DARK BACKGROUND -->
+  <div class="ss-dark">
+
+    <!-- GOLD IMAGE SLIDER -->
+    <div class="ss-gold-slider">
+      <img src="assets/images/Output/ourconcet.png" class="ss-slide active">
+      <img src="assets/images/Output/ourconcept2.png" class="ss-slide">
+      <img src="assets/images/Output/our3.png" class="ss-slide">
+       <img src="assets/images/Output/our4.png" class="ss-slide">
+      <img src="assets/images/Output/our5.png" class="ss-slide">
+     
+  
+    </div>
+
+  </div>
+
+  <!-- WHITE STRIP -->
+  <div class="ss-cream-strip">
+    <h3>SIZZLE | SPICE | SATISFACTION</h3>
+  </div>
+
+</section>
+
+<section class="awards-section">
+  <h2 class="awards-title">AWARDS & RECOGNITIONS</h2>
+
+  <div class="awards-grid">
+
+    <div class="award-card">
+      <img src="assets/images/Awards/01.png" alt="Award 1">
+     
+    </div>
+
+    <div class="award-card">
+      <img src="assets/images/Awards/02.png" alt="Award 2">
+     
+    </div>
+
+    <div class="award-card">
+      <img src="assets/images/Awards/03.png" alt="Award 3">
+    
+    </div>
+
+    <div class="award-card">
+      <img src="assets/images/Awards/04.png" alt="Award 4">
+    
+    </div>
+
+  </div>
+</section>
+<section class="menu-section">
+  <div class="menu-container">
+
+    <h2 class="menu-title">MENU</h2>
+
+    <!-- ROW 1 : 3 CARDS -->
+    <div class="menu-grid row-1 menu-auto-scroll">
+      <!-- Left Arrow -->
+      <div class="menu-nav-arrow left" data-row="1" data-dir="prev">‹</div>
+      
+      <div class="menu-card">
+        <img src="assets/images/Output/one.jpg" class="menu-img" alt="">
+        <div class="menu-circle">
+           <a href="menu.html">
+           <img src="assets/images/redlogos/1.png" alt="">
+           </a>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="assets/images/Output/two.jpg" class="menu-img" alt="">
+      
+        <div class="menu-circle">
+           <a href="https://asianwokandgrill.in/menu.html#mocktail">
+          <img src="assets/images/redlogos/2.png" alt="">
+           </a>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="assets/images/Output/three.jpg" class="menu-img" alt="">
+        <div class="menu-circle">
+
+          <a href="https://cocktail.asianwokandgrill.in/">
+           <img src="assets/images/redlogos/3.png" alt="">
+           </a>
+        </div>
+      </div>
+
+      <!-- Right Arrow -->
+      <div class="menu-nav-arrow right" data-row="1" data-dir="next">›</div>
+      
+      <!-- Pagination Dots -->
+      <div class="menu-dots">
+        <span class="dot active" data-row="1" data-index="0"></span>
+        <span class="dot" data-row="1" data-index="1"></span>
+        <span class="dot" data-row="1" data-index="2"></span>
+      </div>
+    </div>
+
+    <!-- ROW 2 : 2 CENTERED CARDS -->
+    <div class="menu-grid row-2 menu-auto-scroll">
+      <!-- Left Arrow -->
+      <div class="menu-nav-arrow left" data-row="2" data-dir="prev">‹</div>
+      
+      <div class="menu-card">
+        <img src="assets/images/Output/five.jpg" class="menu-img" alt="">
+        <div class="menu-circle">
+
+      <a href="menu.html?chef=true">
+           <img src="assets/images/redlogos/4.png" alt="">
+           </a>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="assets/images/Output/four.jpg" class="menu-img" alt="">
+        <div class="menu-circle">
+
+        <a href="menu.html">
+           <img src="assets/images/redlogos/5.png" alt="">
+           </a>
+        </div>
+      </div>
+
+      <!-- Right Arrow -->
+      <div class="menu-nav-arrow right" data-row="2" data-dir="next">›</div>
+      
+      <!-- Pagination Dots -->
+      <div class="menu-dots">
+        <span class="dot active" data-row="2" data-index="0"></span>
+        <span class="dot" data-row="2" data-index="1"></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="exclusive-v2">
+
+  <h2 class="exclusive-title">PLAN YOUR EVENTS AT AWG</h2>
+
+  <!-- FILTERS -->
+ 
+
+  <!-- GRID -->
+  <div class="exclusive-row">
+
+   <div class="exclusive-card">
+  <div class="card-img">
+    <img src="assets/images/Event Folder/Output/event1.jpg">
+
+    <div class="card-overlay">
+      <h3>BIRTHDAY PARTY</h3>
+    
+    </div>
+  </div>
+
+</div>
+    <div class="exclusive-card">
+        <div class="card-img">
+        <img src="assets/images/Event Folder/Output/event2.jpg">
+      
+      <div class="card-overlay">
+        <h3>KITTY PARTY</h3>
+     
+      </div>
+    </div>
+    </div>
+
+    <div class="exclusive-card">
+          <div class="card-img">
+        <img src="assets/images/Event Folder/Output/event4.jpg">
+      
+      <div class="card-overlay">
+        <h3>ENGAGEMENT CEREMONY</h3>
+       
+      </div>
+  
+    </div>
+</div>
+    <div class="exclusive-card">
+         <div class="card-img">
+        <img src="assets/images/Event Folder/Output/event3.jpg">
+ 
+     <div class="card-overlay">
+       
+        <h3>CORPORATE<br>PARTY</h3>
+      
+      </div>
+         </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="gallery-section">
+  <div class="gallery-grid">
+
+    <!-- LEFT TALL IMAGE -->
+    <div class="gallery-item tall">
+      <img src="assets/images/Gallery Images/im2.jpg" alt="">
+    </div>
+
+    <!-- RIGHT TOP ROW -->
+    <div class="gallery-item">
+      <img src="assets/images/Gallery Images/img3.jpg" alt="">
+    </div>
+
+    <div class="gallery-item">
+      <img src="assets/images/Gallery Images/img1.jpg" alt="">
+    </div>
+
+    <div class="gallery-item">
+      <img src="assets/images/Gallery Images/img4.jpg" alt="">
+    </div>
+
+    <!-- RIGHT BOTTOM ROW -->
+    <div class="gallery-item">
+      <img src="assets/images/Gallery Images/img5.jpg" alt="">
+    </div>
+
+    <div class="gallery-item wide">
+      <img src="assets/images/Gallery Images/img6.jpg" alt="">
+    </div>
+
+  </div>
+</section>
+
+<section class="presence-section">
+
+  <div class="presence-wrapper">
+
+    <!-- LEFT IMAGE -->
+    <div class="presence-image">
+      <img src="assets/images/dining.jpg" alt="Brand Presence">
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="presence-content">
+      <h2 class="presence-title">
+        <span>DINING</span><br>
+       EXPERIENCE
+      </h2>
+
+      <p class="presence-text">
+       Experience the perfect blend of authentic Asian flavours, premium ingredients, and exceptional dining crafted to delight every palate. At Asian Wok & Grill, every dish is prepared with passion to deliver a memorable and flavourful culinary experience.
+      </p>
+
+    
+    </div>
+
+  </div>
+
+</section>
+
+<section class="testimonials-section">
+  <h2 class="testi-heading">WHAT OUR GUESTS SAY ABOUT US</h2>
+
+  <div class="testi-slider">
+    <div class="testi-track">
+
+      <div class="testi-card active">
+        <p>
+          “The ambiance at Asian Wok & Grill instantly makes you feel relaxed.
+          From the soothing lighting to the aroma of spices, everything feels thoughtfully done.
+          The food was exceptional, and the service was just as impressive.”
+        </p>
+        <span>— Aarav Shah</span>
+      </div>
+
+      <div class="testi-card">
+        <p>
+          “I recently ordered from Asian Wok & Grill online, and the whole experience was great.
+          A few days later, I visited the restaurant, and the ambience truly impressed me.
+          Every dish was full of flavor and tasted fresh.”
+        </p>
+        <span>— Apurv Sethi</span>
+      </div>
+
+      <div class="testi-card">
+        <p>
+          “I really loved the food at Asian Wok and Grill! The noodles were tasty and full of flavour.
+          The mocktails were fresh and fun. It's officially my go-to place for comfort food with a kick.”
+        </p>
+        <span>— Sam Patel</span>
+      </div>
+
+      <div class="testi-card">
+        <p>
+          “From the moment we walked in, Asian Wok and Grill made a lasting impression.
+          The Pad Thai noodles and chef-recommended Thai curry were bursting with flavor.
+          Everything—from taste to presentation—was impeccable.”
+        </p>
+        <span>— Aarav Joshi</span>
+      </div>
+
+    </div>
+
+    <!-- dots -->
+    <div class="testi-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  
+  <div class="footer-container footer-locations">
+
+    <!-- LOCATION 1 -->
+   <div class="footer-col">
+        <div class="footer-brand">
+<img 
+  src="assets/images/footer/asain1.png" 
+  alt="" 
+  style="object-fit:contain; position: relative; top: -12px;"
+>
+      </div>
+     <div class="footer-social">
+  <a href="https://www.facebook.com/asianwokandgrill" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.instagram.com/asianwokandgrillnashik/" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://api.whatsapp.com/send/?phone=917269899999&text&type=phone_number&app_absent=0" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="https://asianwokandgrill.in/" aria-label="Website">
+    <i class="fa-solid fa-globe"></i>
+  </a>
+
+  <a href="mailto:asianwokandgrill9@gmail.com" aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+<a href="https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar"
+   target="_blank" rel="noopener" aria-label="Zomato">
+  <img src="https://cdn.simpleicons.org/zomato/c9a76a" alt="Zomato">
+</a>
+<a href="https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout"
+   target="_blank" rel="noopener" aria-label="Swiggy">
+  <img src="https://cdn.simpleicons.org/swiggy/c9a76a" alt="Swiggy">
+</a>
+</div>
+
+      <p>
+       ASIAN WOK AND GRILL<br>
+Shop no 1, Rushiraj Riviera, ahead of Jihan Circle,
+Gangapur Rd, Anandvalli, Nashik – 422013
+      </p>
+
+    
+    </div>
+
+    <!-- LOCATION 2 -->
+   <div class="footer-col">
+      <div class="footer-brand">
+       <img src="assets/images/footer/namaste2.png" alt="" style=" object-fit:contain;">
+      </div>
+           <div class="footer-social">
+  <a href="https://www.facebook.com/namastechefnashik/" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.instagram.com/namaste_chef_nashik/" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://api.whatsapp.com/send/?phone=917378599999&text&type=phone_number&app_absent=0" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="#" aria-label="Website">
+    <i class="fa-solid fa-globe"></i>
+  </a>
+
+  <a href="mailto:asianwokandgrill99@gmail.com" aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+<a href="https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar"
+   target="_blank" rel="noopener" aria-label="Zomato">
+  <img src="https://cdn.simpleicons.org/zomato/c9a76a" alt="Zomato">
+</a>
+<a href="https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout"
+   target="_blank" rel="noopener" aria-label="Swiggy">
+  <img src="https://cdn.simpleicons.org/swiggy/c9a76a" alt="Swiggy">
+</a>
+</div>
+
+      <p>
+         NAMASTE CHEF, BY ASAIN WOK & GRILL<br> Nashik – Pune Rd, near Inox Signal, above Croma Store,<br>
+        Ganesh Baba Nagar, Nashik – 422011
+      </p>
+
+      
+    </div>
+
+    <!-- LOCATION 3 -->
+   <div class="footer-col">
+        <div class="footer-brand">
+      <img src="assets/images/footer/namaste3.png" alt="" style=" object-fit:contain;">
+      </div>
+           <div class="footer-social">
+  <a href="https://www.facebook.com/namastekalyanbyawg" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.instagram.com/namaste_kalyan_by_awg/" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://api.whatsapp.com/send/?phone=919371519999&text&type=phone_number&app_absent=0" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+
+  <a href="mailto:namastekalyan09@gmail.com" aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+<a href="https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar"
+   target="_blank" rel="noopener" aria-label="Zomato">
+  <img src="https://cdn.simpleicons.org/zomato/c9a76a"  alt="Zomato">
+</a>
+<a href="https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout"
+   target="_blank" rel="noopener" aria-label="Swiggy">
+  <img src="https://cdn.simpleicons.org/swiggy/c9a76a" alt="Swiggy">
+</a>
+</div>
+
+      <p>
+      NAMASTE KALYAN BY ASAIN WOK & GRILL<br> RockMount Residency, 4th, Khadakpada Cir,<br>
+        Kalyan, Maharashtra – 421301
+      </p>
+
+    
+    </div>
+
+  </div>
+</footer>
+<div class="music-toggle" id="musicToggle">🔊</div>
+<audio id="bgMusic" loop>
+  <source src="assets/bgmusic.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<script>
+    document.querySelectorAll('.svg-decor').forEach(svg => {
+  svg.style.strokeDasharray = 1000;
+  svg.style.strokeDashoffset = 1000;
+
+  svg.animate(
+    [
+      { strokeDashoffset: 1000 },
+      { strokeDashoffset: 0 }
+    ],
+    {
+      duration: 3000,
+      easing: 'ease-out',
+      fill: 'forwards'
+    }
+  );
+});
+const music = document.getElementById("bgMusic");
+const toggle = document.getElementById("musicToggle");
+
+let musicStarted = false;
+
+/* 1️⃣ FIRST USER INTERACTION = AUTO PLAY */
+function startMusicOnce() {
+  if (!musicStarted) {
+    music.volume = 0.4;        // smooth volume
+    music.play().catch(() => {});
+    musicStarted = true;
+    toggle.innerText = "🔊";
+  }
+  document.removeEventListener("click", startMusicOnce);
+  document.removeEventListener("touchstart", startMusicOnce);
+}
+
+/* Listen for first interaction */
+document.addEventListener("click", startMusicOnce);
+document.addEventListener("touchstart", startMusicOnce);
+
+/* 2️⃣ TOGGLE BUTTON */
+toggle.onclick = () => {
+  if (music.paused) {
+    music.play();
+    toggle.innerText = "🔊";
+  } else {
+    music.pause();
+    toggle.innerText = "🔇";
+  }
+};
+
+/* =====================================================
+   3️⃣ MENU NAVIGATION (Dots + Arrows)
+===================================================== */
+document.querySelectorAll('.menu-grid').forEach((menuGrid, rowIndex) => {
+  const cards = menuGrid.querySelectorAll('.menu-card');
+  const dots = menuGrid.querySelectorAll('.dot');
+  const leftArrow = menuGrid.querySelector('.menu-nav-arrow.left');
+  const rightArrow = menuGrid.querySelector('.menu-nav-arrow.right');
+  
+  if (cards.length === 0) return;
+
+  let currentIndex = 0;
+
+  // Function to scroll to a specific card
+  function scrollToCard(index) {
+    if (index < 0 || index >= cards.length) return;
+    
+    currentIndex = index;
+    const card = cards[index];
+    
+    // Smooth scroll to card
+    card.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center'
+    });
+
+    // Update dots
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+
+    // Update arrow states
+    if (leftArrow && rightArrow) {
+      leftArrow.classList.toggle('disabled', index === 0);
+      rightArrow.classList.toggle('disabled', index === cards.length - 1);
+    }
+  }
+
+  // Arrow click handlers
+  if (leftArrow) {
+    leftArrow.addEventListener('click', () => {
+      scrollToCard(currentIndex - 1);
+    });
+  }
+
+  if (rightArrow) {
+    rightArrow.addEventListener('click', () => {
+      scrollToCard(currentIndex + 1);
+    });
+  }
+
+  // Dot click handlers
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      scrollToCard(index);
+    });
+  });
+
+  // Update active dot on scroll (optional enhancement)
+  let scrollTimeout;
+  menuGrid.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const scrollLeft = menuGrid.scrollLeft;
+      const cardWidth = cards[0].offsetWidth;
+      const gap = 16; // matches CSS gap
+      const newIndex = Math.round(scrollLeft / (cardWidth + gap));
+      
+      if (newIndex !== currentIndex && newIndex >= 0 && newIndex < cards.length) {
+        currentIndex = newIndex;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === newIndex);
+        });
+        
+        if (leftArrow && rightArrow) {
+          leftArrow.classList.toggle('disabled', newIndex === 0);
+          rightArrow.classList.toggle('disabled', newIndex === cards.length - 1);
+        }
+      }
+    }, 100);
+  });
+
+  // Initialize first arrow state
+  if (leftArrow) leftArrow.classList.add('disabled');
+});
+
+
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
+
+  setInterval(() => {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+    showSlide(currentSlide);
+  }, 5000); // change every 5 seconds
+
+// gallery section script
+
+  function openLightbox(img) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = img.src;
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+// exclusive section script
+
+
+
+const buttons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".exclusive-card");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+
+    cards.forEach(card => {
+      card.style.display =
+        card.dataset.category === filter ? "flex" : "none";
+    });
+  });
+});
+
+
+const images = [
+  "https://mainlandchina.in/mlc/mainland-img/dish-slider-img-2.png",
+  "https://mainlandchina.in/mlc/mainland-img/dish-slider-img-1.png",
+  "https://mainlandchina.in/mlc/mainland-img/dish-slider-img-0.png",
+  "https://mainlandchina.in/mlc/mainland-img/dish-slider-img-1.png"
+];
+
+let index = 0;
+const imgEl = document.getElementById("galleryImage");
+
+document.addEventListener("DOMContentLoaded", () => {
+  imgEl.src = images[0];
+});
+
+function nextImage() {
+  imgEl.style.opacity = 0;
+
+  setTimeout(() => {
+    index = (index + 1) % images.length;
+    imgEl.src = images[index];
+    imgEl.style.opacity = 1;
+  }, 200);
+}
+
+function prevImage() {
+  imgEl.style.opacity = 0;
+
+  setTimeout(() => {
+    index = (index - 1 + images.length) % images.length;
+    imgEl.src = images[index];
+    imgEl.style.opacity = 1;
+  }, 200);
+}
+
+
+
+  const goldSlides = document.querySelectorAll(".ss-gold-slider img");
+  let goldIndex = 0;
+
+  setInterval(() => {
+    goldSlides[goldIndex].classList.remove("active");
+    goldIndex = (goldIndex + 1) % goldSlides.length;
+    goldSlides[goldIndex].classList.add("active");
+  }, 4000);
+
+
+
+const cards1 = document.querySelectorAll('.testi-card');
+const dots1 = document.querySelectorAll('.dot');
+let index1 = 0;
+
+function showTestimonial(i) {
+  cards1.forEach(c => c.classList.remove('active'));
+  dots1.forEach(d => d.classList.remove('active'));
+
+  cards1[i].classList.add('active');
+  dots1[i].classList.add('active');
+  index1 = i;
+}
+
+dots1.forEach((dot, i) => {
+  dot.addEventListener('click', () => showTestimonial(i));
+});
+
+setInterval(() => {
+  index1 = (index1 + 1) % cards1.length;
+  showTestimonial(index1);
+}, 5000);
+
+</script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.querySelector('.main-nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  // close menu on link click
+  document.querySelectorAll('.main-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+    });
+  });
+</script>
+<!-- POPUP FORM -->
+<div id="leadPopup" style="
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+  z-index:99999;
+  justify-content:center;
+  align-items:center;
+">
+
+  <div style="
+    width:90%;
+    max-width:650px;
+    background:#fff;
+    border-radius:8px;
+    position:relative;
+    overflow:hidden;
+  ">
+
+    <!-- Close Button -->
+    <span onclick="closeLeadPopup()" 
+      style="
+        position:absolute;
+        right:15px;
+        top:10px;
+        font-size:22px;
+        cursor:pointer;
+        z-index:2;
+      ">✖</span>
+
+    <!-- Aibunty Form -->
+    <iframe
+      src="https://admin.aibunty.com/widget/form/695b9dd42c946"
+      style="width:100%;height:600px;border:none;"
+      title="Landing Page form">
+    </iframe>
+
+  </div>
+</div>
+<script>
+function closeLeadPopup(){
+  document.getElementById("leadPopup").style.display = "none";
+}
+
+window.addEventListener("load", function(){
+
+  // 6 seconds delay
+  setTimeout(function(){
+    document.getElementById("leadPopup").style.display = "flex";
+  }, 6000);
+
+});
+</script>
+<!-- MyAppzChat Widget -->
+<script src="https://myappzchat.com/production/master/widget/embed-widget.umd.js"
+ data-widget-id="cc4fff60-d1e1-46f2-a1ef-dfcf677237d7"
+ defer>
+</script>
+</body>
+</html>
