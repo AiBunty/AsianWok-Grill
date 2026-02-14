@@ -607,6 +607,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;                 /* 🔥 MORE AIR */
   margin-bottom: 120px;
+  position: relative;         /* for absolute positioned arrows */
 }
 
 /* ROW 2 – 2 cards center */
@@ -614,6 +615,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 60px;
+  position: relative;         /* for absolute positioned arrows */
 }
 
 /* ================= CARD ================= */
@@ -673,6 +675,69 @@ body {
 /* 🔥 CLICK ANIMATION */
 .menu-circle.spinning img {
   transform: rotate(360deg);
+}
+
+/* ================= NAVIGATION CONTROLS ================= */
+
+/* 🔥 ARROW NAVIGATION - Hidden on desktop, shown on mobile */
+.menu-nav-arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(199, 164, 107, 0.9);
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.menu-nav-arrow:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.menu-nav-arrow.left {
+  left: 10px;
+}
+
+.menu-nav-arrow.right {
+  right: 10px;
+}
+
+.menu-nav-arrow.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* 🔥 PAGINATION DOTS - Hidden on desktop, shown on mobile */
+.menu-dots {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  position: relative;
+  z-index: 5;
+}
+
+.menu-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(199, 164, 107, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-dots .dot.active {
+  background: #c7a46b;
+  transform: scale(1.3);
 }
 
 /* ================= MOBILE ================= */
@@ -754,67 +819,6 @@ body {
   }
 
   /* 🔥 NAVIGATION DOTS - FIXED POSITION */
-  .menu-dots {
-    display: none;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-    margin: 15px auto 30px;
-    z-index: 10;
-    pointer-events: auto;
-  }
-
-  .menu-dots .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #c7a46b;
-    opacity: 0.3;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .menu-dots .dot.active {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-
-  /* 🔥 ARROW NAVIGATION */
-  .menu-nav-arrow {
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background: rgba(199, 164, 107, 0.9);
-    border-radius: 50%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 10;
-    transition: all 0.3s ease;
-    user-select: none;
-  }
-
-  .menu-nav-arrow:active {
-    transform: translateY(-50%) scale(0.9);
-  }
-
-  .menu-nav-arrow.left {
-    left: 10px;
-  }
-
-  .menu-nav-arrow.right {
-    right: 10px;
-  }
-
-  .menu-nav-arrow.disabled {
-    opacity: 0.3;
-    pointer-events: none;
-  }
 
 }
 
