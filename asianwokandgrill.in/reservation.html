@@ -89,27 +89,26 @@
            AWG PAGE THEME
         ===================== */
         body.reservation-page {
-            background: #1f0000;
-            color: #e9e4dc;
-            padding-top: 110px;
+            background: #fff;
+            color: #333;
+            padding-top: 0;
         }
 
         .reservation-shell {
             width: 100%;
-            margin: 0 auto 80px;
+            margin: 0;
             padding: 0;
         }
 
         .reservation-shell h1 {
-            padding: 0 20px;
-            margin-top: 40px;
+            display: none;
         }
 
         /* =====================
            HEADER
         ===================== */
         .site-header {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -118,6 +117,7 @@
             justify-content: space-between;
             align-items: center;
             z-index: 100;
+            background: #1f0000;
         }
 
         .logo img {
@@ -319,6 +319,11 @@
 <main class="reservation-shell">
   <h1 style="text-align:center;color:#c7a46b;font-size:70px;letter-spacing:8px;margin-bottom:40px;font-weight:300;">RESERVATION</h1>
                     <style type="text/css">
+
+    #app {
+        padding-top: 110px !important;
+        margin-top: 0 !important;
+    }
 
     .guide-video_wrapper {
         overflow:hidden;
@@ -892,7 +897,7 @@ Gangapur Rd, Anandvalli, Nashik – 422013
   </div>
 </footer>
 
-<div class="music-toggle" id="musicToggle">🔊</div>
+<div class="music-toggle" id="musicToggle" style="position: fixed; bottom: 24px; left: 24px; z-index: 999;">🔊</div>
 <audio id="bgMusic" loop>
   <source src="assets/bgmusic.mp3" type="audio/mpeg">
 </audio>
@@ -928,7 +933,7 @@ toggle.onclick = () => {
 };
 </script>
 
-<button id="scrollTopBtn" aria-label="Scroll to top" style="position: fixed; right: 20px; bottom: 20px; width: 46px; height: 46px; border-radius: 50%; background: #c7a46b; color: #1f0000; border: 1px solid rgba(255,255,255,0.6); display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 3000; box-shadow: 0 6px 18px rgba(0,0,0,0.25); font-size: 18px;">↑</button>
+<button id="scrollTopBtn" aria-label="Scroll to top" style="position: fixed; right: 20px; bottom: 20px; width: 46px; height: 46px; border-radius: 50%; background: #c7a46b; color: #1f0000; border: 1px solid rgba(255,255,255,0.6); display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 2999; box-shadow: 0 6px 18px rgba(0,0,0,0.25); font-size: 18px;">↑</button>
 
 <script>
 (function setupScrollTopButton() {
