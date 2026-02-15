@@ -104,6 +104,11 @@
             display: none;
         }
 
+        /* Hide footer on reservation page */
+        footer {
+            display: none;
+        }
+
         /* =====================
            HEADER
         ===================== */
@@ -277,13 +282,17 @@
         color: var(--font-color)!important;
     }
     .main-navbar.admin-header {
-        margin-top: -25px;
+        display: none;
     }
     .seller_sub_menus_navbar {
-        margin-top: -60px;
+        display: none;
     }
     #app {
-        padding-top: 30px;
+        padding-top: 110px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        min-height: calc(100vh - 110px) !important;
+        background: #fff !important;
     }
     .btn:not(.btn-social):not(.btn-social-icon):active, .btn:not(.btn-social):not(.btn-social-icon):focus, .btn:not(.btn-social):not(.btn-social-icon):hover {
         background: var(--primary-color)!important;
