@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Franchise | Coming Soon</title>
-
+  <title>Franchise | Asian Wok &amp; Grill</title>
+  <link rel="icon" type="image/png" href="assets/images/circlelogo.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/images/circlelogo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     *{
@@ -16,18 +21,17 @@
     }
 
     body{
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
       background:#1f0000; /* your wine theme */
-      color:#c7a46b;
+      color:#e9e4dc;
       font-family:'Cormorant Garamond', serif;
-      text-align:center;
+      text-align:left;
+      padding-top:110px;
     }
 
     .coming-wrapper{
       padding:20px;
+      max-width:1100px;
+      margin:0 auto 80px;
     }
 
     h1{
@@ -35,12 +39,128 @@
       font-weight:300;
       letter-spacing:8px;
       margin-bottom:20px;
+      color:#c7a46b;
     }
 
     p{
       font-size:20px;
-      letter-spacing:2px;
+      letter-spacing:1px;
       color:#e9e4dc;
+    }
+
+    .franchise-grid{
+      display:grid;
+      grid-template-columns:1fr 520px;
+      gap:28px;
+      align-items:start;
+      text-align:left;
+    }
+
+    @media(max-width:980px){
+      body{
+        padding-top:90px;
+      }
+      .franchise-grid{
+        grid-template-columns:1fr;
+      }
+    }
+    /* =====================
+       HEADER
+    ===================== */
+    .site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 24px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .logo img {
+      height: 65px;
+    }
+
+    .main-nav ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+
+    .main-nav a:hover {
+      opacity: 0.75;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 2px;
+      background: #fff;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      html, body {
+        overflow-x: hidden;
+      }
+
+      .site-header {
+        padding: 16px 20px;
+      }
+
+      .logo img {
+        height: 50px;
+      }
+
+      .main-nav {
+        position: fixed;
+        inset: 0;
+        background: #1f0000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        z-index: 150;
+      }
+
+      .main-nav ul {
+        flex-direction: column;
+        gap: 28px;
+        text-align: center;
+      }
+
+      .main-nav a {
+        font-size: 24px;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .main-nav.active {
+        transform: translateX(0);
+      }
     }
 
     @media(max-width:768px){
@@ -62,12 +182,12 @@
   <nav class="main-nav">
     <ul>
       
-    <li><a href="javascript:void(0)" onclick="scrollToSection('.about-section')">ABOUT US</a></li>
-    <li><a href="javascript:void(0)" onclick="scrollToSection('.menu-section')">MENU</a></li>
-    <li><a href="javascript:void(0)" onclick="scrollToSection('.exclusive-v2')">EVENT</a></li>
-     <li><a href="franchises.html" onclick="document.querySelector('.franchises').scrollIntoView({behavior:'smooth'})">FRANCHISES</a></li>
-       <li><a href="reservation.html" onclick="document.querySelector('').scrollIntoView({behavior:'smooth'})">RESERVATION</a></li>
-         <li><a href="contact.html" onclick="document.querySelector('').scrollIntoView({behavior:'smooth'})">CONTACT</a></li>
+    <li><a href="index.html">ABOUT US</a></li>
+    <li><a href="menu.html">MENU</a></li>
+    <li><a href="index.html">EVENT</a></li>
+     <li><a href="franchises.html">FRANCHISES</a></li>
+       <li><a href="reservation.html">RESERVATION</a></li>
+         <li><a href="contact.html">CONTACT</a></li>
     </ul>
   </nav>
   <div class="hamburger" id="hamburger">
@@ -81,7 +201,7 @@
     <h1>FRANCHISE WITH US</h1>
     <p style="margin-bottom:18px;">Join the Asian Wok & Grill family — curated menus, proven operations and ongoing support.</p>
 
-    <section class="franchise-grid" style="display:grid;grid-template-columns:1fr 520px;gap:28px;align-items:start;max-width:1100px;margin:0 auto;text-align:left;">
+    <section class="franchise-grid">
       <div class="franchise-info" style="color:#e9e4dc;">
         <h2 style="font-size:28px;margin-bottom:8px;color:#c7a46b;">Why partner with AWG</h2>
         <ul style="list-style:none;padding-left:0;line-height:1.8;color:#e9e4dc;">
@@ -300,18 +420,9 @@ toggle.onclick = () => {
   }
 };
 
-/* Smooth scroll helper that accounts for sticky header */
-function scrollToSection(selector) {
-  const el = document.querySelector(selector);
-  if (!el) return;
-  const header = document.querySelector('.site-header');
-  const headerHeight = header ? header.getBoundingClientRect().height : 0;
-  const top = el.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20; // small gap
-  window.scrollTo({ top, behavior: 'smooth' });
-}
 </script>
 
-  <button id="scrollTopBtn" aria-label="Scroll to top" style="position: fixed; left: 20px; bottom: 20px; width: 46px; height: 46px; border-radius: 50%; background: #c7a46b; color: #1f0000; border: 1px solid rgba(255,255,255,0.6); display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 3000; box-shadow: 0 6px 18px rgba(0,0,0,0.25); font-size: 18px;">↑</button>
+  <button id="scrollTopBtn" aria-label="Scroll to top" style="position: fixed; right: 20px; bottom: 20px; width: 46px; height: 46px; border-radius: 50%; background: #c7a46b; color: #1f0000; border: 1px solid rgba(255,255,255,0.6); display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 3000; box-shadow: 0 6px 18px rgba(0,0,0,0.25); font-size: 18px;">↑</button>
   <script>
   (function setupScrollTopButton() {
     const btn = document.getElementById('scrollTopBtn');
@@ -324,6 +435,24 @@ function scrollToSection(selector) {
     }
     window.addEventListener('scroll', toggleBtn, { passive: true });
     toggleBtn();
+  })();
+  </script>
+
+  <script>
+  (function setupHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('.main-nav');
+    if (!hamburger || !nav) return;
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+      });
+    });
   })();
   </script>
 
