@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWG</title>
+  <link rel="icon" href="assets/images/circlelogo.png">
+   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+body:not(.contact-page) {
+  padding-top: 96px;
+}
+
+ 
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: #1f0000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* LOGO */
+.logo img {
+  height: 65px;
+}
+
+/* NAV */
+.main-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.main-nav a:hover {
+  opacity: 0.75;
+}
+/* =========================
+   HAMBURGER
+========================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  display: block;
+}
+
+@media (max-width: 768px) {
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    padding: 16px 20px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  /* HIDE DESKTOP MENU */
+  .main-nav {
+    position: fixed;
+    inset: 0;
+    background: #1f0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 150;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .main-nav a {
+    font-size: 18px;
+  }
+
+  /* SHOW HAMBURGER */
+  .hamburger {
+    display: flex;
+  }
+
+  /* ACTIVE MENU */
+  .main-nav.active {
+    transform: translateX(0);
+  }
+
+  .contact-section {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-section {
+    padding: 80px 20px;
+  }
+  
+  .logo img {
+    height: 45px;
+  }
+}
+
+
+/* ===== CONTACT PAGE HEADER FIX ===== */
+.contact-page {
+  background: #fff;
+}
+
+.contact-page .site-header {
+  position: fixed;
+  background: #1f0000;
+  padding: 20px 60px;
+}
+
+.contact-page .contact-section {
+  padding-top: 120px;
+  background: #fff;
+}
+/* ===== CONTACT LAYOUT FIX ===== */
+.contact-section {
+  padding: 80px 40px;
+  background: #fff;
+  min-height: calc(100vh - 120px);
+}
+
+
+
+.contact-info,
+.contact-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+/* Remove unnecessary bottom stretch */
+.contact-info {
+  height: auto;
+}
+
+.contact-map {
+  margin-top: 80px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 12px;
+  border: 0;
+}
+/* Make both cards equal height */
+/* ===== CLEAN CONTACT CARDS ===== */
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;   /* 🔥 not stretch */
+}
+
+.contact-info,
+.contact-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  display: block;   /* 🔥 normal flow */
+  height: auto;     /* 🔥 important */
+}
+/* =========================
+   CONTACT RESPONSIVE FIX
+========================= */
+
+@media (max-width: 992px) {
+
+  .contact-content {
+    grid-template-columns: 1fr;   /* 🔥 stack cards */
+    gap: 40px;
+  }
+
+  .contact-section {
+    padding: 100px 20px 60px;
+  }
+
+  .contact-heading h1 {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 30px;
+  }
+
+  .contact-map {
+    margin-top: 60px;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .contact-heading h1 {
+    font-size: 32px;
+    letter-spacing: 3px;
+  }
+
+  .contact-info h2,
+  .contact-form h2 {
+    font-size: 22px;
+  }
+
+  .info-block span {
+    font-size: 14px;
+  }
+
+  .social {
+    justify-content: flex-start;
+  }
+
+}
+/* =========================
+   BACK TO HOME BUTTON (REMOVED)
+========================= */
+/* Feature removed - using standard header nav instead */
+
+/* =====================
+   UTILITY STYLES
+===================== */
+.music-toggle {
+  position: fixed;
+  bottom: 80px;
+  left: 24px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #c7a46b;
+  transition: all 0.3s ease;
+}
+
+.music-toggle:hover {
+  background: rgba(199, 164, 107, 0.2);
+  transform: scale(1.1);
+}
+</style>
+</head>
+
+<body class="contact-page bg-white text-dark">
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+    <div class="logo">
+        <img src="assets/images/asainlogo.webp" alt="Asian Wok & Grill">
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="franchises.html">FRANCHISES</a></li>
+            <li><a href="reservation.html">RESERVATION</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<!-- ================= CONTACT PAGE ================= -->
+<section id="contact" class="contact-section">
+  <div class="container" style="max-width: 1200px; margin: 0 auto;">
+
+    <!-- HEADING -->
+    <div class="contact-heading" style="text-align: center; margin-bottom: 60px;">
+      <h1 style="font-size: 48px; letter-spacing: 2px; font-family: 'Cormorant Garamond', serif; color: #1f0000; font-weight: 600;">Contact Us</h1>
+      <p style="color: #c7a46b; font-size: 14px; letter-spacing: 1px; margin-top: 8px;">Get in touch with us</p>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="contact-content">
+
+      <!-- LEFT -->
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+     
+
+        <div class="info-block">
+          <strong>Address</strong>
+          <span>Shop no 1, Rushiraj Riviera, ahead of Jihan Circle,
+Gangapur Rd, Anandvalli, Nashik – 422013</span>
+        </div>
+
+        <div class="info-block">
+          <strong>Phone</strong>
+          <span>+91 72698 99999</span>
+         
+        </div>
+
+        <div class="info-block">
+          <strong>Email</strong>
+          <span>asianwokandgrill9@gmail.com</span>
+        </div>
+
+        <div class="social">
+          <a href="https://www.facebook.com/asianwokandgrill">Fb</a>
+          <a href="https://www.instagram.com/asianwokandgrillnashik/">In</a>
+          <a href="https://api.whatsapp.com/send/?phone=917269899999&text&type=phone_number&app_absent=0">wh</a>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="contact-form">
+        <h2>Send a Message</h2>
+
+    <iframe
+    src="https://admin.aibunty.com/widget/form/698adecb8cd0e"
+   style="width:100%; height:520px; border:none; border-radius:8px;"
+    id="inline-698adecb8cd0e"
+    data-form-name="Send a Message"
+    data-layout-iframe-id="inline-698adecb8cd0e"
+    data-form-id="698adecb8cd0e"
+    data-height="600"
+    title="Send a Message"
+    loading="lazy">
+  </iframe>
+
+
+
+
+      </div>
+
+    </div>
+
+    <!-- MAP -->
+    <div class="contact-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.9079028343244!2d73.74951787522937!3d20.01237968139468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebdf9ca70fef%3A0x3d577f63985931e9!2sASIAN%20WOK%20%26%20GRILL%20%7C%20Multi%20Cuisine%20Restaurant%20in%20nashik%20%7C%20Asian%20Food%20%7C%20Chinese%20Food%20%7C%20Thai%20Food!5e0!3m2!1sen!2sin!4v1770625206072!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  
+  <div class="footer-container footer-locations">
+
+    <!-- LOCATION 1 -->
+   <div class="footer-col">
+        <div class="footer-brand">
+<img 
+  src="assets/images/footer/asain1.png" 
+  alt="" 
+  style="object-fit:contain; position: relative; top: -12px;"
+>
+      </div>
+     <div class="footer-social">
+  <a href="https://www.facebook.com/asianwokandgrill" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.instagram.com/asianwokandgrillnashik/" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://api.whatsapp.com/send/?phone=917269899999&text&type=phone_number&app_absent=0" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="https://asianwokandgrill.in/" aria-label="Website">
+    <i class="fa-solid fa-globe"></i>
+  </a>
+
+  <a href="mailto:asianwokandgrill9@gmail.com" aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+<a href="https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar"
+   target="_blank" rel="noopener" aria-label="Zomato">
+  <img src="https://cdn.simpleicons.org/zomato/c9a76a" alt="Zomato">
+</a>
+<a href="https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout"
+   target="_blank" rel="noopener" aria-label="Swiggy">
+  <img src="https://cdn.simpleicons.org/swiggy/c9a76a" alt="Swiggy">
+</a>
+</div>
+
+      <p>
+       ASIAN WOK AND GRILL<br>
+Shop no 1, Rushiraj Riviera, ahead of Jihan Circle,
+Gangapur Rd, Anandvalli, Nashik – 422013
+      </p>
+
+    
+    </div>
+
+    <!-- LOCATION 2 -->
+   <div class="footer-col">
+      <div class="footer-brand">
+       <img src="assets/images/footer/namaste2.png" alt="" style=" object-fit:contain;">
+      </div>
+           <div class="footer-social">
+  <a href="https://www.facebook.com/namastechefnashik/" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.instagram.com/namaste_chef_nashik/" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://api.whatsapp.com/send/?phone=917378599999&text&type=phone_number&app_absent=0" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="#" aria-label="Website">
+    <i class="fa-solid fa-globe"></i>
+  </a>
+
+  <a href="mailto:asianwokandgrill99@gmail.com" aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+<a href="https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar"
+   target="_blank" rel="noopener" aria-label="Zomato">
+  <img src="https://cdn.simpleicons.org/zomato/c9a76a" alt="Zomato">
+</a>
+<a href="https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout"
+   target="_blank" rel="noopener" aria-label="Swiggy">
+  <img src="https://cdn.simpleicons.org/swiggy/c9a76a" alt="Swiggy">
+</a>
+</div>
+
+      <p>
+         NAMASTE CHEF, BY ASAIN WOK & GRILL<br> Nashik – Pune Rd, near Inox Signal, above Croma Store,<br>
+        Ganesh Baba Nagar, Nashik – 422011
+      </p>
+
+      
+    </div>
+
+    <!-- LOCATION 3 -->
+   <div class="footer-col">
+        <div class="footer-brand">
+      <img src="assets/images/footer/namaste3.png" alt="" style=" object-fit:contain;">
+      </div>
+           <div class="footer-social">
+  <a href="https://www.facebook.com/namastekalyanbyawg" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.instagram.com/namaste_kalyan_by_awg/" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://api.whatsapp.com/send/?phone=919371519999&text&type=phone_number&app_absent=0" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+
+  <a href="mailto:namastekalyan09@gmail.com" aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+<a href="https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar"
+   target="_blank" rel="noopener" aria-label="Zomato">
+  <img src="https://cdn.simpleicons.org/zomato/c9a76a"  alt="Zomato">
+</a>
+<a href="https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout"
+   target="_blank" rel="noopener" aria-label="Swiggy">
+  <img src="https://cdn.simpleicons.org/swiggy/c9a76a" alt="Swiggy">
+</a>
+</div>
+
+      <p>
+      NAMASTE KALYAN BY ASAIN WOK & GRILL<br> RockMount Residency, 4th, Khadakpada Cir,<br>
+        Kalyan, Maharashtra – 421301
+      </p>
+
+    
+    </div>
+
+  </div>
+</footer>
+<div class="music-toggle" id="musicToggle">🔊</div>
+<audio id="bgMusic" loop>
+  <source src="assets/bgmusic.mp3" type="audio/mpeg">
+</audio>
+<script>
+// Music Toggle
+const music = document.getElementById("bgMusic");
+const toggle = document.getElementById("musicToggle");
+
+let musicStarted = false;
+
+function startMusicOnce() {
+  if (!musicStarted) {
+    music.volume = 0.4;
+    music.play().catch(() => {});
+    musicStarted = true;
+    toggle.innerText = "🔊";
+  }
+  document.removeEventListener("click", startMusicOnce);
+  document.removeEventListener("touchstart", startMusicOnce);
+}
+
+document.addEventListener("click", startMusicOnce);
+document.addEventListener("touchstart", startMusicOnce);
+
+toggle.onclick = (e) => {
+  e.stopPropagation();
+  if (music.paused) {
+    music.play();
+    toggle.innerText = "🔊";
+  } else {
+    music.pause();
+    toggle.innerText = "🔇";
+  }
+};
+
+// Hamburger Menu
+const hamburger = document.getElementById('hamburger');
+const nav = document.querySelector('.main-nav');
+
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation();
+  nav.classList.toggle('active');
+});
+
+// Close menu on link click
+document.querySelectorAll('.main-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('active');
+  });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.site-header')) {
+    nav.classList.remove('active');
+  }
+});
+
+// Scroll to Top Button
+const scrollBtn = document.getElementById('scrollTopBtn');
+if (scrollBtn) {
+  window.addEventListener('scroll', () => {
+    scrollBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+  });
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+</script>
+
+<button id="scrollTopBtn" aria-label="Scroll to top" style="position: fixed; right: 20px; bottom: 20px; width: 50px; height: 50px; border-radius: 50%; background: #c7a46b; color: #1f0000; border: none; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 999; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); font-size: 20px; font-weight: bold;">↑</button>
+
+</body>
+</html>
