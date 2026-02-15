@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Franchise | Coming Soon</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#1f0000; /* your wine theme */
+      color:#c7a46b;
+      font-family:'Cormorant Garamond', serif;
+      text-align:center;
+    }
+
+    .coming-wrapper{
+      padding:20px;
+    }
+
+    h1{
+      font-size:70px;
+      font-weight:300;
+      letter-spacing:8px;
+      margin-bottom:20px;
+    }
+
+    p{
+      font-size:20px;
+      letter-spacing:2px;
+      color:#e9e4dc;
+    }
+
+    @media(max-width:768px){
+      h1{
+        font-size:40px;
+        letter-spacing:4px;
+      }
+      p{
+        font-size:16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="coming-wrapper">
+    <h1>FRANCHISE WITH US</h1>
+    <p style="margin-bottom:18px;">Join the Asian Wok & Grill family — curated menus, proven operations and ongoing support.</p>
+
+    <section class="franchise-grid" style="display:grid;grid-template-columns:1fr 520px;gap:28px;align-items:start;max-width:1100px;margin:0 auto;text-align:left;">
+      <div class="franchise-info" style="color:#e9e4dc;">
+        <h2 style="font-size:28px;margin-bottom:8px;color:#c7a46b;">Why partner with AWG</h2>
+        <ul style="list-style:none;padding-left:0;line-height:1.8;color:#e9e4dc;">
+          <li>• Strong brand with loyal customer base</li>
+          <li>• Turnkey operations & training</li>
+          <li>• Marketing support and supply chain access</li>
+          <li>• Proven menu and high-margin offerings</li>
+        </ul>
+
+        <h3 style="margin-top:18px;color:#c7a46b;">Franchise Requirements</h3>
+        <p style="color:#e9e4dc;">Ideal partners: hospitality-minded individuals or groups with operational experience and passion for hospitality.</p>
+
+        <div style="margin-top:18px;">
+          <strong style="color:#c7a46b;">Contact:</strong>
+          <p style="margin:6px 0;color:#e9e4dc;">franchise@asianwokandgrill.in</p>
+        </div>
+      </div>
+
+      <aside class="franchise-form" style="background:rgba(255,255,255,0.02);padding:14px;border-radius:6px;">
+        <!-- Aibunty embed provided by user -->
+        <iframe src="https://admin.aibunty.com/widget/form/698b156411487" style="width:100%;height:600px;border:none;border-radius:3px" id="inline-698b156411487" data-form-name="Franchise Form" data-layout-iframe-id="inline-698b156411487" data-form-id="698b156411487" data-height="600" title="Franchise Form"></iframe>
+      </aside>
+    </section>
+  </main>
+
+  <button id="scrollTopBtn" aria-label="Scroll to top" style="position: fixed; left: 20px; bottom: 20px; width: 46px; height: 46px; border-radius: 50%; background: #c7a46b; color: #1f0000; border: 1px solid rgba(255,255,255,0.6); display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 3000; box-shadow: 0 6px 18px rgba(0,0,0,0.25); font-size: 18px;">↑</button>
+  <script>
+  (function setupScrollTopButton() {
+    const btn = document.getElementById('scrollTopBtn');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    function toggleBtn() {
+      btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    }
+    window.addEventListener('scroll', toggleBtn, { passive: true });
+    toggleBtn();
+  })();
+  </script>
+
+</body>
+</html>
