@@ -45,7 +45,7 @@
 
         .container { position: relative; z-index: 5; width: 100%; max-width: 900px; margin: 0 auto; padding: 20px 15px 40px; }
         
-        .hero-title { text-align: center; margin-bottom: 50px; }
+        .hero-title { text-align: center; margin-bottom: 50px; padding-top: 100px; }
         .hero-title h1 { font-family: 'Great Vibes', cursive; font-size: 5rem; color: var(--gold-cream); line-height: 1; margin: 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
         .hero-title .cocktail-word { font-size: 6rem; display: block; margin-bottom: -20px; }
         .hero-title .menu-word { font-size: 5rem; font-style: italic; margin-left: 60px; }
@@ -110,12 +110,124 @@
 
         #scrollTopBtn { position: fixed; bottom: 20px; left: 20px; width: 50px; height: 50px; border-radius: 50%; background: var(--gold-bright); color: #000; border: 2px solid var(--gold-cream); cursor: pointer; z-index: 3000; display: none; align-items: center; justify-content: center; font-size: 1.3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
 
+        /* =====================
+           SITE HEADER COCKTAIL
+        ===================== */
+        .site-header-cocktail {
+          position: sticky;
+          top: 0;
+          height: 80px;
+          background: var(--burgundy-deep);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 1.25rem;
+          border-bottom: 2px solid var(--gold-bright);
+          z-index: 1000;
+        }
+        .site-header-cocktail .header-logo-nav {
+          height: 60px;
+          width: auto;
+          object-fit: contain;
+        }
+        /* NAV */
+        .main-nav-cocktail ul {
+          display: flex;
+          gap: 32px;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        .main-nav-cocktail a {
+          color: var(--gold-cream);
+          text-decoration: none;
+          font-size: 15px;
+          letter-spacing: 1px;
+          font-family: 'Cinzel', serif;
+          font-weight: 600;
+          transition: opacity 0.3s ease, color 0.3s ease;
+        }
+        .main-nav-cocktail a:hover {
+          color: var(--gold-bright);
+          opacity: 0.9;
+        }
+        .header-actions-cocktail {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+        .theme-icon-btn-cocktail {
+          background: none;
+          border: none;
+          font-size: 1.4rem;
+          cursor: pointer;
+          color: var(--gold-cream);
+        }
+        /* HAMBURGER */
+        .hamburger-cocktail {
+          display: none;
+          flex-direction: column;
+          gap: 6px;
+          cursor: pointer;
+        }
+        .hamburger-cocktail span {
+          width: 28px;
+          height: 2px;
+          background: var(--gold-cream);
+          display: block;
+          transition: 0.3s ease;
+        }
+        @media (max-width: 768px) {
+          .site-header-cocktail {
+            height: 70px;
+            padding: 0 1rem;
+          }
+          .site-header-cocktail .header-logo-nav {
+            height: 50px;
+          }
+          .main-nav-cocktail {
+            position: fixed;
+            inset: 0;
+            background: var(--burgundy-deep);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(100%);
+            transition: transform 0.4s ease;
+            z-index: 150;
+          }
+          .main-nav-cocktail ul {
+            flex-direction: column;
+            gap: 28px;
+            text-align: center;
+          }
+          .main-nav-cocktail a {
+            font-size: 24px;
+          }
+          .hamburger-cocktail {
+            display: flex;
+          }
+          .main-nav-cocktail.active {
+            transform: translateX(0);
+          }
+          .hamburger-cocktail.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(12px);
+          }
+          .hamburger-cocktail.active span:nth-child(2) {
+            opacity: 0;
+          }
+          .hamburger-cocktail.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-12px);
+          }
+        }
+
         #loader { position: fixed; inset: 0; background: var(--burgundy-deep); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 5000; gap: 25px; }
         .spinner { width: 50px; height: 50px; border: 4px solid var(--gold-cream); border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
 
         @media (max-width: 768px) {
             .hero-title h1 { font-size: 3.5rem; }
+            .hero-title { padding-top: 80px; }
             .menu-frame { padding: 30px 15px; }
             .item-name { font-size: 2.4rem; }
         }
@@ -129,6 +241,23 @@
     SYNCING SELECTIONS
    </div>
   </div>
+  <header class="site-header-cocktail">
+   <img alt="Asian Wok &amp; Grill" class="header-logo-nav" src="https://storage.files-vault.com/landing_pages/84726/0b31a695da1984f463ffecdd904d2d9b-0b31a695da1984f463ffecdd904d2d9b-Header-Logo.webp"/>
+   <nav class="main-nav-cocktail">
+    <ul>
+      <li><a href="https://www.asianwokandgrill.in/">HOME</a></li>
+      <li><a href="menu.html">AWG MENU</a></li>
+      <li><a href="namaste_chef.html">MULTICUSINE</a></li>
+    </ul>
+   </nav>
+   <div class="header-actions-cocktail">
+    <div class="hamburger-cocktail" id="hamburger-cocktail">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+   </div>
+  </header>
   <div id="menuTriggerBtn" onclick="toggleNav(true)">
    MENU
   </div>
@@ -140,31 +269,6 @@
    </div>
    <div id="navLinkList">
    </div>
-  </div>
-  <div class="header-bar">
-   <img alt="Asian Wok &amp; Grill" class="header-logo" src="https://storage.files-vault.com/landing_pages/84726/0b31a695da1984f463ffecdd904d2d9b-0b31a695da1984f463ffecdd904d2d9b-Header-Logo.webp"/>
-   <div class="header-subtitle">
-    Premium Gourmet Kitchen
-   </div>
-  </div>
-  <div class="container">
-   <div class="back-home-link" style="text-align:left; margin-bottom:18px;">
-    <a href="https://asianwokandgrill.in/" style="
-      display: inline-block;
-      background: var(--gold-bright);
-      color: #6B1313;
-      font-family: 'Cinzel', serif;
-      font-weight: 700;
-      letter-spacing: 2px;
-      border-radius: 8px;
-      padding: 10px 22px;
-      text-decoration: none;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      border: 1px solid var(--gold-cream);
-      transition: background 0.2s, color 0.2s;
-    " onmouseover="this.style.background='#6B1313';this.style.color='#F4E5C2';" onmouseout="this.style.background='var(--gold-bright)';this.style.color='#6B1313';">
-      ← Back to Home
-    </a>
   </div>
   <div class="hero-title">
    <h1>
@@ -233,97 +337,158 @@
         async getMenuData() {
             try {
                 // Task 1: Identify and bypass Forbidden redirect error
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 8000); // 8 second timeout
+                
                 const response = await fetch(this.PROXY_URL, { 
                     method: 'GET',
-                    redirect: 'follow' // Explicitly follow Google Macro redirects
+                    redirect: 'follow', // Explicitly follow Google Macro redirects
+                    signal: controller.signal
                 });
                 
-                if (!response.ok) throw new Error("PROXY_HTTP_ERROR");
+                clearTimeout(timeoutId);
+                
+                if (!response.ok) {
+                    console.error(`HTTP Error: ${response.status} ${response.statusText}`);
+                    throw new Error(`PROXY_HTTP_ERROR_${response.status}`);
+                }
                 
                 const text = await response.text();
-                if (text.trim().startsWith('<')) throw new Error("FORBIDDEN_HTML_RESPONSE");
+                console.log('Fetched data length:', text.length, 'First 100 chars:', text.substring(0, 100));
+                
+                // Check if response is HTML (error page)
+                if (text.trim().startsWith('<')) {
+                    console.error('Received HTML response (likely error page):', text.substring(0, 200));
+                    throw new Error("FORBIDDEN_HTML_RESPONSE");
+                }
+                
+                // Check if response is empty
+                if (!text || text.trim().length === 0) {
+                    throw new Error("EMPTY_RESPONSE");
+                }
                 
                 const data = this.parseCSV(text);
+                if (!data || data.length === 0) throw new Error("EMPTY_CSV_RESPONSE");
+                
+                console.log('Successfully parsed', data.length, 'menu items from live data');
                 localStorage.setItem('awg_v5_cache', JSON.stringify(data));
                 return { data, source: 'live' };
             } catch (error) {
                 console.warn('Data Layer failover activated:', error.message);
+                console.warn('Attempting to load from cache...');
                 const cached = localStorage.getItem('awg_v5_cache');
-                if (cached) return { data: JSON.parse(cached), source: 'cache' };
+                if (cached) {
+                    try {
+                        const cachedData = JSON.parse(cached);
+                        console.log('Successfully loaded', cachedData.length, 'items from cache');
+                        return { data: cachedData, source: 'cache' };
+                    } catch (parseErr) {
+                        console.error('Failed to parse cached data:', parseErr.message);
+                    }
+                } else {
+                    console.warn('No cached data available');
+                }
             }
             throw new Error("DATA_UNAVAILABLE");
         },
 
         parseCSV(csv) {
-            const arr = []; let quote = false;
-            for (let row = 0, col = 0, c = 0; c < csv.length; c++) {
-                let cc = csv[c], nc = csv[c + 1];
-                arr[row] = arr[row] || []; arr[row][col] = arr[row][col] || "";
-                if (cc == '"' && quote && nc == '"') { arr[row][col] += cc; ++c; continue; }
-                if (cc == '"') { quote = !quote; continue; }
-                if (cc == ',' && !quote) { ++col; continue; }
-                if (cc == '\n' && !quote) { ++row; col = 0; continue; }
-                arr[row][col] += cc;
-            }
-            const headers = arr[0].map(h => h.trim().toLowerCase());
-            return arr.slice(1).map(row => {
-                let item = {}; headers.forEach((h, i) => item[h] = row[i] || "");
-                let prices = {};
-                this.SUPPORTED_UNITS.forEach(u => {
-                    const v = item[u.toLowerCase()];
-                    if (v && v.trim() !== "" && !isNaN(v.toString().replace(/[₹,]/g, ''))) {
-                        prices[u] = v.toString().replace(/[₹,]/g, '').trim();
+            try {
+                const arr = []; let quote = false;
+                for (let row = 0, col = 0, c = 0; c < csv.length; c++) {
+                    let cc = csv[c], nc = csv[c + 1];
+                    arr[row] = arr[row] || []; arr[row][col] = arr[row][col] || "";
+                    if (cc == '"' && quote && nc == '"') { arr[row][col] += cc; ++c; continue; }
+                    if (cc == '"') { quote = !quote; continue; }
+                    if (cc == ',' && !quote) { ++col; continue; }
+                    if (cc == '\n' && !quote) { ++row; col = 0; continue; }
+                    arr[row][col] += cc;
+                }
+                const headers = arr[0].map(h => h.trim().toLowerCase());
+                return arr.slice(1).map((row, rowIdx) => {
+                    let item = {}; 
+                    headers.forEach((h, i) => item[h] = (row[i] || "").toString().trim());
+                    
+                    // Validate that required fields exist
+                    if (!item["item name"] || item["item name"].length === 0) {
+                        console.warn(`Row ${rowIdx + 2}: Missing item name, skipping`);
+                        return null;
                     }
-                });
-                return { 
-                    name: item["item name"], 
-                    cat: item["category"] || "Selection", 
-                    desc: item["description"] || "", 
-                    prices, 
-                    avail: item["availability"] !== "No" 
-                };
-            }).filter(i => i.name && i.avail);
+                    
+                    let prices = {};
+                    this.SUPPORTED_UNITS.forEach(u => {
+                        const v = item[u.toLowerCase()];
+                        if (v && v !== "" && !isNaN(v.replace(/[₹,]/g, ''))) {
+                            prices[u] = v.replace(/[₹,]/g, '').trim();
+                        }
+                    });
+                    return { 
+                        name: item["item name"], 
+                        cat: item["category"] || "Selection", 
+                        desc: item["description"] || "", 
+                        prices, 
+                        avail: item["availability"] !== "No" 
+                    };
+                }).filter(i => i !== null && i.name && i.avail);
+            } catch (parseError) {
+                console.error('CSV Parse Error:', parseError.message);
+                throw parseError;
+            }
         }
     };
 
     const UIEngine = {
+        getCategoryId(categoryName) {
+            return categoryName.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+        },
+        
         render(items, source) {
             const main = document.getElementById('menuMain');
             const navList = document.getElementById('navLinkList');
             const categories = [...new Set(items.map(i => i.cat))];
             
-            navList.innerHTML = categories.map(cat => 
-                `<div class="nav-link" onclick="scrollToCat('${cat.replace(/\s+/g, '-').toLowerCase()}')">${cat}</div>`
-            ).join('');
+            // Only update navList if it exists (old navigation structure)
+            if (navList) {
+                navList.innerHTML = categories.map(cat => {
+                    const catId = this.getCategoryId(cat);
+                    return `<div class="nav-link" onclick="scrollToCat('${catId}')">${cat}</div>`;
+                }).join('');
+            }
 
-            main.innerHTML = categories.map(cat => {
-                const catItems = items.filter(i => i.cat === cat);
-                return `
-                    <div class="category-section" id="${cat.replace(/\s+/g, '-').toLowerCase()}">
-                        <h2 class="category-title">${cat}</h2>
-                        ${catItems.map(item => {
-                            const activeUnits = DataLayer.SUPPORTED_UNITS.filter(u => item.prices[u]);
-                            return `
-                                <div class="menu-item">
-                                    <div class="item-name">${item.name}</div>
-                                    ${item.desc ? `<div class="item-desc">${item.desc}</div>` : ''}
-                                    <div class="price-display">
-                                        ${activeUnits.map(u => `
-                                            <div class="price-item">
-                                                <span class="unit">${u}:</span>
-                                                <span class="amount">₹${item.prices[u]}</span>
-                                            </div>
-                                        `).join('')}
+            if (main) {
+                main.innerHTML = categories.map(cat => {
+                    const catId = this.getCategoryId(cat);
+                    const catItems = items.filter(i => i.cat === cat);
+                    return `
+                        <div class="category-section" id="${catId}">
+                            <h2 class="category-title">${cat}</h2>
+                            ${catItems.map(item => {
+                                const activeUnits = DataLayer.SUPPORTED_UNITS.filter(u => item.prices[u]);
+                                return `
+                                    <div class="menu-item">
+                                        <div class="item-name">${item.name}</div>
+                                        ${item.desc ? `<div class="item-desc">${item.desc}</div>` : ''}
+                                        <div class="price-display">
+                                            ${activeUnits.map(u => `
+                                                <div class="price-item">
+                                                    <span class="unit">${u}:</span>
+                                                    <span class="amount">₹${item.prices[u]}</span>
+                                                </div>
+                                            `).join('')}
+                                        </div>
                                     </div>
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                `;
-            }).join('');
+                                `;
+                            }).join('')}
+                        </div>
+                    `;
+                }).join('');
+            }
 
-            document.getElementById('syncStatus').innerText = 
-                source === 'live' ? `Live Sync: ${new Date().toLocaleTimeString()}` : 'Viewing Emergency Cache';
+            const syncStatus = document.getElementById('syncStatus');
+            if (syncStatus) {
+                syncStatus.innerText = 
+                    source === 'live' ? `Live Sync: ${new Date().toLocaleTimeString()}` : 'Viewing Emergency Cache';
+            }
         }
     };
 
@@ -333,23 +498,102 @@
     }
 
     function scrollToCat(id) {
-        const el = document.getElementById(id);
-        if(el) { toggleNav(false); window.scrollTo({ top: el.offsetTop - 90, behavior: 'smooth' }); }
+        // Normalize the ID to ensure it matches the category section
+        const normalizedId = id.trim().toLowerCase().replace(/\s+/g, '-');
+        const el = document.getElementById(normalizedId);
+        
+        if(el) { 
+            toggleNav(false); 
+            window.scrollTo({ top: el.offsetTop - 90, behavior: 'smooth' }); 
+        } else {
+            console.warn(`Category section not found for: ${normalizedId}`);
+            // Fallback: try to find any section with matching text
+            const sections = document.querySelectorAll('.category-title');
+            for(let section of sections) {
+                if(section.textContent.toLowerCase().replace(/\s+/g, '-') === normalizedId) {
+                    toggleNav(false);
+                    window.scrollTo({ top: section.offsetParent.offsetTop - 90, behavior: 'smooth' });
+                    return;
+                }
+            }
+        }
     }
 
     window.onscroll = () => { document.getElementById('scrollTopBtn').style.display = window.scrollY > 400 ? 'flex' : 'none'; };
 
     window.onload = async () => {
         try {
+            console.log('Starting menu data fetch...');
             const { data, source } = await DataLayer.getMenuData();
+            console.log(`Menu loaded from ${source} with ${data.length} items`);
             UIEngine.render(data, source);
             document.getElementById('loader').style.display = 'none';
         } catch (error) {
             document.getElementById('loader').style.display = 'none';
-            alert("Secure connection interrupted. Retrying...");
-            location.reload();
+            console.error('Fatal error loading menu:', error);
+            
+            // Check if we've already attempted a reload
+            const retryCount = parseInt(sessionStorage.getItem('cocktail_retry_count') || '0');
+            if (retryCount < 1) {
+                sessionStorage.setItem('cocktail_retry_count', String(retryCount + 1));
+                console.log('Attempt', retryCount + 1, '- Retrying...');
+                setTimeout(() => location.reload(), 1500); // 1.5s delay before reload
+            } else {
+                // Clear retry counter on second attempt failure
+                sessionStorage.removeItem('cocktail_retry_count');
+                
+                // Show error message on page
+                const main = document.getElementById('menuMain');
+                if (main) {
+                    main.innerHTML = `
+                        <div style="text-align: center; padding: 60px 20px; color: var(--gold-cream);">
+                            <div style="font-family: 'Cinzel', serif; font-size: 2rem; margin-bottom: 20px;">⚠️ Connection Error</div>
+                            <div style="font-size: 1rem; margin-bottom: 20px; line-height: 1.6;">
+                                Unable to load menu data.<br/>
+                                Please check your internet connection and try again.
+                            </div>
+                            <button onclick="location.reload()" style="
+                                background: var(--gold-bright);
+                                color: #6B1313;
+                                border: none;
+                                padding: 12px 30px;
+                                font-size: 1rem;
+                                font-weight: 700;
+                                border-radius: 8px;
+                                cursor: pointer;
+                                font-family: 'Cinzel', serif;
+                            ">
+                                Refresh Page
+                            </button>
+                            <div style="margin-top: 30px; font-size: 0.8rem; opacity: 0.7;">
+                                Error: ${error.message}
+                            </div>
+                        </div>
+                    `;
+                }
+            }
         }
     };
+
+    /* ===== HAMBURGER MENU COCKTAIL ===== */
+    const hamburgerCocktail = document.getElementById('hamburger-cocktail');
+    const navCocktail = document.querySelector('.main-nav-cocktail');
+
+    if (hamburgerCocktail) {
+      hamburgerCocktail.addEventListener('click', () => {
+        navCocktail.classList.toggle('active');
+        hamburgerCocktail.classList.toggle('active');
+      });
+    }
+
+    if (navCocktail) {
+      document.querySelectorAll('.main-nav-cocktail a').forEach(link => {
+        link.addEventListener('click', () => {
+          navCocktail.classList.remove('active');
+          if (hamburgerCocktail) hamburgerCocktail.classList.remove('active');
+        });
+      });
+    }
   </script>
  </body>
 </html>
