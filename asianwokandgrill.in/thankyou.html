@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Asian Wok &amp; Grill</title>
+  <link rel="icon" type="image/png" href="assets/images/circlelogo.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/images/circlelogo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#1f0000;
+      color:#e9e4dc;
+      font-family:'Cormorant Garamond', serif;
+      text-align:center;
+      padding-top:110px;
+    }
+
+    .page-wrap{
+      padding:40px 20px 80px;
+      max-width:1100px;
+      margin:0 auto 80px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .thankyou-shell{
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:20px;
+      opacity:0;
+      transform:translateY(14px);
+    }
+
+    h1{
+      font-size:58px;
+      font-weight:300;
+      letter-spacing:6px;
+      margin-bottom:18px;
+      color:#c7a46b;
+    }
+
+    p{
+      font-size:20px;
+      letter-spacing:1px;
+      color:#e9e4dc;
+    }
+
+    .thankyou-card{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(199,164,107,0.2);
+      padding:26px;
+      border-radius:16px;
+      max-width:820px;
+      width:100%;
+      box-shadow:0 20px 60px rgba(0,0,0,0.45);
+    }
+
+    .thankyou-card h2{
+      font-size:28px;
+      color:#c7a46b;
+      margin-bottom:10px;
+    }
+
+    .image-card{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(199,164,107,0.35);
+      border-radius:16px;
+      padding:16px;
+      width:100%;
+      max-width:760px;
+      box-shadow:0 22px 70px rgba(0,0,0,0.5);
+    }
+
+    .image-card img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
+    }
+
+    .gold-divider{
+      width:140px;
+      height:2px;
+      background:#c7a46b;
+      margin:14px auto 0;
+      opacity:0.7;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:18px;
+      justify-content:center;
+    }
+
+    .quick-confirm{
+      margin-top:18px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+    }
+
+    .quick-confirm-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 22px;
+      border-radius:999px;
+      font-family:'Poppins', sans-serif;
+      font-size:14px;
+      letter-spacing:1px;
+      text-decoration:none;
+      border:1px solid #c7a46b;
+      transition:transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    .btn i{
+      margin-right:8px;
+      font-size:15px;
+    }
+
+    .btn-whatsapp{
+      background:#c7a46b;
+      color:#1f0000;
+      box-shadow:0 10px 30px rgba(199,164,107,0.35);
+    }
+
+    .btn-outline{
+      background:transparent;
+      color:#c7a46b;
+      box-shadow:0 10px 24px rgba(199,164,107,0.18);
+    }
+
+    .btn-primary{
+      background:#c7a46b;
+      color:#1f0000;
+    }
+
+    .btn-ghost{
+      color:#c7a46b;
+      background:transparent;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-whatsapp:hover,
+    .btn-outline:hover{
+      box-shadow:0 12px 32px rgba(199,164,107,0.32);
+    }
+
+    .quick-confirm-note{
+      font-size:14px;
+      letter-spacing:0.4px;
+      color:#e9e4dc;
+      opacity:0.9;
+      text-align:center;
+    }
+
+    /* =====================
+       HEADER
+    ===================== */
+    .site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 24px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .logo img {
+      height: 65px;
+    }
+
+    .main-nav ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+
+    .main-nav a:hover {
+      opacity: 0.75;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 2px;
+      background: #fff;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      html, body {
+        overflow-x: hidden;
+      }
+
+      .site-header {
+        padding: 16px 20px;
+      }
+
+      .logo img {
+        height: 50px;
+      }
+
+      .main-nav {
+        position: fixed;
+        inset: 0;
+        background: #1f0000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        z-index: 150;
+      }
+
+      .main-nav ul {
+        flex-direction: column;
+        gap: 28px;
+        text-align: center;
+      }
+
+      .main-nav a {
+        font-size: 24px;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .main-nav.active {
+        transform: translateX(0);
+      }
+    }
+
+    @media(max-width:768px){
+      h1{
+        font-size:40px;
+        letter-spacing:4px;
+      }
+      p{
+        font-size:16px;
+      }
+      .quick-confirm-actions{
+        flex-direction:column;
+        width:100%;
+      }
+      .quick-confirm-actions .btn{
+        width:100%;
+      }
+    }
+
+    .page-loaded .thankyou-shell{
+      animation:fadeInUp 0.9s ease forwards;
+    }
+
+    @keyframes fadeInUp{
+      from{
+        opacity:0;
+        transform:translateY(14px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .thankyou-shell{
+        opacity:1;
+        transform:none;
+      }
+      .page-loaded .thankyou-shell{
+        animation:none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="logo"><img src="assets/images/asainlogo.webp" alt="Asian Wok &amp; Grill"></div>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">ABOUT US</a></li>
+      <li><a href="menu.html">MENU</a></li>
+      <li><a href="index.html">EVENT</a></li>
+      <li><a href="franchises.html">FRANCHISES</a></li>
+      <li><a href="reservation.html">RESERVATION</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+  <main class="page-wrap">
+    <div class="thankyou-shell">
+      <div class="image-card">
+        <img src="https://storage.files-vault.com/uploads/1772078159-AmWA22oV8M.png" alt="Asian Wok &amp; Grill">
+      </div>
+      <div class="gold-divider"></div>
+      <div class="thankyou-card">
+        <h2>We received your details</h2>
+        <p>Our team will evaluate your location and reach out shortly.</p>
+        <p style="margin-top:10px;color:#c7a46b;">Please check WhatsApp and confirm using the CTA button in the message you receive.</p>
+        <div class="quick-confirm">
+          <div class="quick-confirm-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/917350604942?text=Hi%20Asian%20Wok%20%26%20Grill%20Team%2C%20I%E2%80%99m%20interested%20in%20your%20franchise.%20I%20have%20already%20filled%20your%20form%20and%20would%20like%20to%20know%20more.%20Please%20get%20in%20touch%20with%20me." target="_blank" rel="noopener" aria-label="Chat on WhatsApp with Asian Wok & Grill">
+              <i class="fa-brands fa-whatsapp"></i>
+              WhatsApp
+            </a>
+            <a class="btn btn-outline" href="tel:+917350604942" aria-label="Call Asian Wok & Grill">
+              <i class="fa-solid fa-phone"></i>
+              Call Now
+            </a>
+          </div>
+          <div class="quick-confirm-note">For faster confirmation, message us on WhatsApp or call now.</div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-whatsapp" href="franchises.html">Back to Franchise Page</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<footer class="footer">
+  <div class="footer-container footer-locations">
+
+    <!-- LOCATION 1 -->
+    <div class="footer-col">
+      <div class="footer-brand">
+        <img
+          src="assets/images/footer/asain1.png"
+          alt=""
+          style="object-fit:contain; position: relative; top: -12px;"
+        >
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/asianwokandgrill" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/asianwokandgrillnashik/" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://api.whatsapp.com/send/?phone=917269899999&text&type=phone_number&app_absent=0" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="https://asianwokandgrill.in/" aria-label="Website">
+          <i class="fa-solid fa-globe"></i>
+        </a>
+
+        <a href="mailto:asianwokandgrill9@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar"
+           target="_blank" rel="noopener" aria-label="Zomato">
+          <img src="https://cdn.simpleicons.org/zomato/c9a76a" alt="Zomato">
+        </a>
+        <a href="https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout"
+           target="_blank" rel="noopener" aria-label="Swiggy">
+          <img src="https://cdn.simpleicons.org/swiggy/c9a76a" alt="Swiggy">
+        </a>
+      </div>
+
+      <p>
+       ASIAN WOK AND GRILL<br>
+Shop no 1, Rushiraj Riviera, ahead of Jihan Circle,
+Gangapur Rd, Anandvalli, Nashik – 422013
+      </p>
+    </div>
+
+    <!-- LOCATION 2 -->
+    <div class="footer-col">
+      <div class="footer-brand">
+        <img src="assets/images/footer/namaste2.png" alt="" style=" object-fit:contain;">
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/namastechefnashik/" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/namaste_chef_nashik/" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://api.whatsapp.com/send/?phone=917378599999&text&type=phone_number&app_absent=0" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="#" aria-label="Website">
+          <i class="fa-solid fa-globe"></i>
+        </a>
+
+        <a href="mailto:asianwokandgrill99@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar"
+           target="_blank" rel="noopener" aria-label="Zomato">
+          <img src="https://cdn.simpleicons.org/zomato/c9a76a"  alt="Zomato">
+        </a>
+        <a href="https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout"
+           target="_blank" rel="noopener" aria-label="Swiggy">
+          <img src="https://cdn.simpleicons.org/swiggy/c9a76a" alt="Swiggy">
+        </a>
+      </div>
+
+      <p>
+         NAMASTE CHEF, BY ASAIN WOK & GRILL<br> Nashik – Pune Rd, near Inox Signal, above Croma Store,<br>
+        Ganesh Baba Nagar, Nashik – 422011
+      </p>
+    </div>
+
+    <!-- LOCATION 3 -->
+    <div class="footer-col">
+      <div class="footer-brand">
+        <img src="assets/images/footer/namaste3.png" alt="" style=" object-fit:contain;">
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/namastekalyanbyawg" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/namaste_kalyan_by_awg/" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://api.whatsapp.com/send/?phone=919371519999&text&type=phone_number&app_absent=0" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="mailto:namastekalyan09@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar"
+           target="_blank" rel="noopener" aria-label="Zomato">
+          <img src="https://cdn.simpleicons.org/zomato/c9a76a"  alt="Zomato">
+        </a>
+        <a href="https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout"
+           target="_blank" rel="noopener" aria-label="Swiggy">
+          <img src="https://cdn.simpleicons.org/swiggy/c9a76a" alt="Swiggy">
+        </a>
+      </div>
+
+      <p>
+      NAMASTE KALYAN BY ASAIN WOK & GRILL<br> RockMount Residency, 4th, Khadakpada Cir,<br>
+        Kalyan, Maharashtra – 421301
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  (function setupHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('.main-nav');
+    if (!hamburger || !nav) return;
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+      });
+    });
+  })();
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('page-loaded');
+  });
+</script>
+
+</body>
+</html>
