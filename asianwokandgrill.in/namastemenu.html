@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <title>
+   AWG NK | Official Menu
+  </title>
+  <style>
+   /* 1. CORE SYSTEM */
+
+   * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+   :root {
+
+       --header-h: 80px;
+
+       --radius-card: 20px;
+
+       --radius-lg: 50px;
+
+       --shadow-soft: 0 10px 20px rgba(0,0,0,0.03);
+
+       --color-bg-primary: #F2EDE4;
+
+       --color-bg-secondary: #E0E7E1;
+
+       --color-card-bg: #E0E7E1;
+
+       --color-text-primary: #2D3E33;
+
+       --color-text-secondary: #6B7C70;
+
+       --color-accent-maroon: #C62828;
+
+       --color-accent-gold: #B89355;
+
+       --color-veg: #4A7C59;
+
+       --color-nonveg: #C62828;
+
+       --color-jain: #FF9800;
+
+   }
+
+   [data-theme="dark"] {
+
+       --color-bg-primary: #1A2F23;
+
+       --color-bg-secondary: #253D2F;
+
+       --color-card-bg: #253D2F;
+
+       --color-text-primary: #F2EDE4;
+
+       --color-text-secondary: #A3B1A8;
+
+   }
+
+   body { font-family: -apple-system, system-ui, sans-serif; background: var(--color-bg-primary); color: var(--color-text-primary); line-height: 1.6; overflow-x: hidden; transition: background 0.4s ease; }
+
+   header { position: sticky; top: 0; height: var(--header-h); background: #000000; display: flex; justify-content: space-between; align-items: center; padding: 0 1.25rem; border-bottom: 1px solid #333; z-index: 1000; }
+
+   .header-logo { height: 60px; width: auto; object-fit: contain; }
+
+   .header-actions { display: flex; align-items: center; gap: 15px; }
+
+   .nav-home-link { color: #fff; text-decoration: none; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.3); padding: 5px 12px; border-radius: 6px; }
+
+   .nav-home-link:hover { background: rgba(255,255,255,0.1); }
+
+   .theme-icon-btn { background: none; border: none; font-size: 1.4rem; cursor: pointer; color: #fff; }
+
+   .top-controls-bar { position: sticky; top: var(--header-h); z-index: 999; display: flex; align-items: center; gap: 12px; background: var(--color-bg-primary); padding: 12px 1rem; border-bottom: 1px solid rgba(0,0,0,0.05); overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+
+   .square-toggle-group { display: flex; background: var(--color-bg-secondary); border-radius: 12px; padding: 3px; }
+
+   .square-btn { font-size: 0.65rem; font-weight: 700; padding: 6px 12px; border-radius: 9px; color: var(--color-text-secondary); border: none; background: transparent; text-transform: uppercase; cursor: pointer; }
+
+   .square-btn.active { background: #FFFFFF; color: var(--color-accent-maroon); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+   #menuTriggerBtn { position: fixed; right: 0; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; text-orientation: mixed; background: var(--color-accent-maroon); color: #fff; padding: 20px 10px; border-radius: 12px 0 0 12px; font-size: 0.75rem; font-weight: 800; letter-spacing: 2px; z-index: 2500; cursor: pointer; box-shadow: -4px 0 15px rgba(0,0,0,0.2); }
+
+   #sideNavContainer { position: fixed; right: -280px; top: 0; bottom: 0; width: 260px; background: var(--color-bg-secondary); z-index: 3000; padding: 40px 20px; box-shadow: -10px 0 30px rgba(0,0,0,0.2); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; gap: 10px; overflow-y: auto; }
+
+   #sideNavContainer.open { transform: translateX(-280px); }
+
+   .cat-link { padding: 15px; background: var(--color-bg-primary); border-radius: 12px; font-size: 0.85rem; font-weight: 700; color: var(--color-text-primary); text-align: center; cursor: pointer; border: 1px solid rgba(0,0,0,0.05); }
+
+   #sideNavOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 2800; display: none; backdrop-filter: blur(2px); }
+
+   main { position: relative; width: 100%; min-height: 80vh; } 
+
+   .container { padding: 1rem; max-width: 1200px; margin: 0 auto; scroll-margin-top: 160px; }
+
+   .section-title {
+       font-size: 1.5rem;
+       color: var(--color-text-primary);
+       margin: 2rem 1rem 1rem;
+       font-weight: 300;
+       text-transform: capitalize;
+       letter-spacing: 2px;
+       border-bottom: 1px solid var(--color-accent-gold);
+       padding-bottom: 5px;
+       background: linear-gradient(90deg, var(--color-accent-gold) 0%, var(--color-bg-secondary) 100%);
+       border-radius: 12px 12px 0 0;
+       padding-top: 12px;
+       padding-left: 18px;
+       padding-right: 18px;
+       box-shadow: 0 2px 8px rgba(184,147,85,0.15);
+   }
+
+   .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 12px; }
+
+   @media (min-width: 1024px) { .grid { grid-template-columns: repeat(4, 1fr); gap: 24px; } }
+
+   .card { background: var(--color-card-bg); border-radius: var(--radius-card); overflow: hidden; display: flex; flex-direction: column; position: relative; box-shadow: var(--shadow-soft); transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, z-index 0.3s ease; border: 1px solid rgba(0,0,0,0.02); }
+
+   .card.slide-under { transform: translateY(-8px) scale(0.97); z-index: -1; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+
+   .card.slide-over { transform: translateY(0) scale(1); z-index: 1; }
+
+   .card:hover, .card:active { transform: translateY(-5px) scale(1.02) !important; box-shadow: 0 15px 30px rgba(0,0,0,0.15); border-color: var(--color-accent-gold); z-index: 10 !important; }
+
+   .img-box { padding: 15px 15px 0; display: flex; justify-content: center; align-items: center; transition: 0.3s; position: relative; }
+
+   .img-container-circle { width: 100%; aspect-ratio: 1/1; border-radius: 50%; overflow: hidden; border: 3px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+   .img-main { width: 100%; height: 100%; object-fit: cover; }
+
+   .hide-images .img-box { display: none; }
+
+   .hide-images .card { padding-top: 10px; }
+
+   .card-body { padding: 12px; flex-grow: 1; position: relative; }
+
+   .card-header-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; width: 100%; margin-bottom: 4px; }
+
+   .header-right-symbols { display: flex; align-items: center; gap: 5px; flex-shrink: 0; margin-left: auto; }
+
+   .badge-type { width: 18px; height: 18px; background: #fff; border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1px solid #ddd; }
+
+   .dot { width: 8px; height: 8px; border-radius: 50%; }
+
+   .dot.veg { background: var(--color-veg); }
+
+   .dot.nonveg { background: var(--color-nonveg); }
+
+   .dot.jain { background: var(--color-jain); }
+
+   .jain-badge { background: var(--color-jain); color: #fff; font-size: 0.5rem; font-weight: 900; padding: 2px 5px; border-radius: 4px; text-transform: uppercase; line-height: 1; }
+
+   .chef-badge { background: #fff; color: var(--color-accent-maroon); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+   .item-name { font-size: 0.95rem; font-weight: 600; color: var(--color-text-primary); line-height: 1.2; flex: 1; }
+
+   .item-desc { font-size: 0.75rem; color: var(--color-text-secondary); margin: 4px 0 10px 0; line-height: 1.4; cursor: pointer; overflow: hidden; }
+
+   .item-desc.collapsed { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+
+   .item-desc::after { content: "▾ More"; display: block; font-size: 0.6rem; color: var(--color-accent-gold); margin-top: 4px; font-weight: 700; }
+
+   .item-desc.expanded::after { content: "▴ Less"; }
+
+   .variant-chip, .qty-chip { padding: 5px 12px; border-radius: 8px; font-size: 0.65rem; font-weight: 800; background: var(--color-bg-primary); color: var(--color-text-secondary); cursor: pointer; white-space: nowrap; transition: 0.2s; border: 1px solid rgba(0,0,0,0.05); margin-bottom: 4px; }
+
+   .variant-chip.active.v-veg, .qty-chip.active.v-veg { background: var(--color-veg) !important; color: #FFFFFF !important; border-color: var(--color-veg) !important; }
+
+   .variant-chip.active.v-non, .qty-chip.active.v-non { background: var(--color-nonveg) !important; color: #FFFFFF !important; border-color: var(--color-nonveg) !important; }
+
+   .variant-chip.active.v-jain, .qty-chip.active.v-jain { background: var(--color-jain) !important; color: #FFFFFF !important; border-color: var(--color-jain) !important; }
+
+   .price { font-size: 1.1rem; font-weight: 800; color: var(--color-text-primary); border-top: 1px solid rgba(0,0,0,0.05); padding-top: 10px; margin-top: 5px; display: flex; justify-content: space-between; align-items: center; }
+
+   footer { background: #000000; color: #F2EDE4; padding: 4rem 1.5rem; text-align: center; border-top: 2px solid var(--color-accent-gold); }
+
+   .branch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; text-align: left; max-width: 1200px; margin: 0 auto; }
+
+   .branch-item { background: #111; padding: 20px; border-radius: 15px; border: 1px solid #333; }
+
+   .branch-logo { height: 50px; margin-bottom: 15px; object-fit: contain; }
+
+   .branch-socials { display: flex; gap: 15px; margin-top: 15px; align-items: center; }
+
+   .branch-socials a svg { width: 22px; height: 22px; fill: var(--color-accent-gold); transition: 0.3s; }
+
+   .branch-socials a:hover svg { fill: #fff; transform: translateY(-3px); }
+
+   .sync-info { font-size: 0.65rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 1px; margin-top: 3rem; }
+
+   #loader { position: fixed; inset: 0; background: #000; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+   .legend-section { background: var(--color-bg-secondary); padding: 2.5rem 1.5rem; margin: 0 auto 3rem; max-width: 1200px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); }
+
+   .legend-title { font-size: 1.3rem; color: var(--color-text-primary); text-align: center; font-weight: 300; letter-spacing: 2px; margin-bottom: 2rem; text-transform: uppercase; }
+
+   .legend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+
+   .legend-item { display: flex; align-items: center; gap: 12px; padding: 15px; background: var(--color-bg-primary); border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); transition: 0.3s; }
+
+   .legend-item:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+   .legend-icon { flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+
+   .legend-icon .badge-type { width: 24px; height: 24px; background: #fff; border-radius: 6px; display: flex; align-items: center; justify-content: center; border: 1px solid #ddd; }
+
+   .legend-icon .dot { width: 12px; height: 12px; border-radius: 50%; }
+
+   .legend-icon .jain-badge { background: var(--color-jain); color: #fff; font-size: 0.6rem; font-weight: 900; padding: 4px 8px; border-radius: 6px; text-transform: uppercase; }
+
+   .legend-icon .chef-badge { background: #fff; color: var(--color-accent-maroon); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 2px solid var(--color-accent-maroon); }
+
+   .legend-icon .spice-indicator { font-size: 1.3rem; }
+
+   .legend-text { flex: 1; }
+
+   .legend-label { font-size: 0.9rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 2px; }
+
+   .legend-desc { font-size: 0.7rem; color: var(--color-text-secondary); line-height: 1.3; }
+
+   .nav-links-header { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+
+   .nav-links-header a { color: #fff; text-decoration: none; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.3); padding: 6px 12px; border-radius: 6px; transition: 0.3s; }
+
+   .nav-links-header a:hover { background: rgba(255,255,255,0.1); }
+
+   /* =====================
+      SITE HEADER NAMASTE
+   ===================== */
+   .site-header-namaste {
+     position: sticky;
+     top: 0;
+     height: 80px;
+     background: #000000;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 1.25rem;
+     border-bottom: 1px solid #333;
+     z-index: 1000;
+   }
+
+   .site-header-namaste .header-logo {
+     height: 60px;
+     width: auto;
+     object-fit: contain;
+   }
+
+   /* NAV */
+   .main-nav-namaste ul {
+     display: flex;
+     gap: 32px;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+   }
+
+   .main-nav-namaste a {
+     color: #fff;
+     text-decoration: none;
+     font-size: 15px;
+     letter-spacing: 1px;
+     font-family: 'Poppins', sans-serif;
+     font-weight: 500;
+     transition: opacity 0.3s ease;
+   }
+
+   .main-nav-namaste a:hover {
+     opacity: 0.75;
+   }
+
+   .header-actions-namaste {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+   }
+
+   /* HAMBURGER */
+   .hamburger-namaste {
+     display: none;
+     flex-direction: column;
+     gap: 6px;
+     cursor: pointer;
+   }
+
+   .hamburger-namaste span {
+     width: 28px;
+     height: 2px;
+     background: #fff;
+     display: block;
+     transition: 0.3s ease;
+   }
+
+   @media (max-width: 768px) {
+     .site-header-namaste {
+       height: 70px;
+       padding: 0 1rem;
+     }
+
+     .site-header-namaste .header-logo {
+       height: 50px;
+     }
+
+     .main-nav-namaste {
+       position: fixed;
+       inset: 0;
+       background: #000000;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       transform: translateX(100%);
+       transition: transform 0.4s ease;
+       z-index: 150;
+     }
+
+     .main-nav-namaste ul {
+       flex-direction: column;
+       gap: 28px;
+       text-align: center;
+     }
+
+     .main-nav-namaste a {
+       font-size: 24px;
+     }
+
+     .hamburger-namaste {
+       display: flex;
+     }
+
+     .main-nav-namaste.active {
+       transform: translateX(0);
+     }
+
+     .hamburger-namaste.active span:nth-child(1) {
+       transform: rotate(45deg) translateY(12px);
+     }
+
+     .hamburger-namaste.active span:nth-child(2) {
+       opacity: 0;
+     }
+
+     .hamburger-namaste.active span:nth-child(3) {
+       transform: rotate(-45deg) translateY(-12px);
+     }
+   }
+  </style>
+ </head>
+ <body id="menuBody">
+  <div id="loader">
+   <img alt="Logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg" style="height:80px;"/>
+  </div>
+  <header class="site-header-namaste">
+   <img alt="AWG NK Logo" class="header-logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg"/>
+   <nav class="main-nav-namaste">
+    <ul>
+      <li><a href="https://www.asianwokandgrill.in/">HOME</a></li>
+      <li><a href="menu.html">AWG MENU</MENU></a></li>
+      <li><a href="cocktail.html">COCKTAIL</a></li>
+          </ul>
+   </nav>
+   <div class="header-actions-namaste">
+    <button class="theme-icon-btn" id="themeIconBtn" onclick="toggleTheme()">
+     🌙
+    </button>
+    <div class="hamburger-namaste" id="hamburger-namaste">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+   </div>
+  </header>
+  <div class="top-controls-bar">
+   <div class="square-toggle-group">
+    <button class="square-btn active" id="f-all" onclick="updateFilter('ALL')">
+     ALL
+    </button>
+    <button class="square-btn" id="f-veg" onclick="updateFilter('VEG')">
+     VEG
+    </button>
+    <button class="square-btn" id="f-non" onclick="updateFilter('NON')">
+     NON
+    </button>
+   </div>
+   <div class="square-toggle-group">
+    <button class="square-btn active" id="jain-off" onclick="setJainToggle(false)">
+     ALL
+    </button>
+    <button class="square-btn" id="jain-on" onclick="setJainToggle(true)">
+     JAIN
+    </button>
+   </div>
+   <div class="square-toggle-group">
+    <button class="square-btn active" id="chef-off" onclick="setChefToggle(false)">
+     ALL
+    </button>
+    <button class="square-btn" id="chef-on" onclick="setChefToggle(true)">
+     ⭐ CHEF
+    </button>
+   </div>
+   <div class="square-toggle-group">
+    <button class="square-btn active" id="img-on" onclick="setImageToggle(true)">
+     IMG ON
+    </button>
+    <button class="square-btn" id="img-off" onclick="setImageToggle(false)">
+     OFF
+    </button>
+   </div>
+  </div>
+  <div id="menuTriggerBtn" onclick="toggleSideNav(true)">
+   MENU
+  </div>
+  <div id="sideNavOverlay" onclick="toggleSideNav(false)">
+  </div>
+  <div id="sideNavContainer">
+   <h3 style="color:var(--color-accent-gold); letter-spacing:3px; font-weight:300; margin-bottom:10px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;">
+    SECTIONS
+   </h3>
+   <div id="sideNavList">
+   </div>
+   <a href="https://www.asianwokandgrill.in" style="margin-top:auto; padding:15px; background:var(--color-accent-maroon); color:#fff; text-decoration:none; border-radius:12px; font-size:0.85rem; font-weight:700; text-align:center;">
+    Back to Website
+   </a>
+  </div>
+  <main id="menuMain">
+  </main>
+  <footer>
+   <div class="legend-section">
+    <h3 class="legend-title">
+     Menu Symbols Guide
+    </h3>
+    <div class="legend-grid">
+     <div class="legend-item">
+      <div class="legend-icon">
+       <div class="badge-type">
+        <div class="dot veg">
+        </div>
+       </div>
+      </div>
+      <div class="legend-text">
+       <div class="legend-label">
+        Vegetarian
+       </div>
+       <div class="legend-desc">
+        Pure vegetarian dishes with no meat or animal products
+       </div>
+      </div>
+     </div>
+     <div class="legend-item">
+      <div class="legend-icon">
+       <div class="badge-type">
+        <div class="dot nonveg">
+        </div>
+       </div>
+      </div>
+      <div class="legend-text">
+       <div class="legend-label">
+        Non-Vegetarian
+       </div>
+       <div class="legend-desc">
+        Contains meat, poultry, seafood, or eggs
+       </div>
+      </div>
+     </div>
+     <div class="legend-item">
+      <div class="legend-icon">
+       <div class="jain-badge">
+        JAIN
+       </div>
+      </div>
+      <div class="legend-text">
+       <div class="legend-label">
+        Jain Option
+       </div>
+       <div class="legend-desc">
+        Prepared without onion, garlic, and root vegetables
+       </div>
+      </div>
+     </div>
+     <div class="legend-item">
+      <div class="legend-icon">
+       <div class="chef-badge">
+        👨‍🍳
+       </div>
+      </div>
+      <div class="legend-text">
+       <div class="legend-label">
+        Chef's Special
+       </div>
+       <div class="legend-desc">
+        Signature dishes recommended by our expert chefs
+       </div>
+      </div>
+     </div>
+     <div class="legend-item">
+      <div class="legend-icon">
+       <span class="spice-indicator">
+        🌶️
+       </span>
+      </div>
+      <div class="legend-text">
+       <div class="legend-label">
+        Medium Spicy
+       </div>
+       <div class="legend-desc">
+        Moderate heat level for balanced flavors
+       </div>
+      </div>
+     </div>
+     <div class="legend-item">
+      <div class="legend-icon">
+       <div class="badge-type">
+        <div class="dot" style="background:transparent;width:12px;height:12px;border-radius:4px;border:1px solid #ddd;">
+        </div>
+       </div>
+      </div>
+      <div class="legend-text">
+       <div class="legend-label">
+        Sheet Extras
+       </div>
+       <div class="legend-desc">
+        Auto-detected columns appear as chips on items
+       </div>
+      </div>
+     </div>
+     <div class="legend-item">
+      <div class="legend-icon">
+       <span class="spice-indicator">
+        🌶️🌶️
+       </span>
+      </div>
+      <div class="legend-text">
+       <div class="legend-label">
+        Spicy
+       </div>
+       <div class="legend-desc">
+        High heat level for spice enthusiasts
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="branch-grid">
+    <div class="branch-item">
+     <img alt="Asian Wok &amp; Grill" class="branch-logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg"/>
+     <h4>
+      Asian Wok &amp; Grill
+     </h4>
+     <p>
+      📍 Shop no 1, Rushiraj Riviera, ahead of Jihan Circle, Gangapur Rd, Anandvalli, shiver, Nashik, Maharashtra 422013
+     </p>
+     <p>
+      📞 +91 72698 99999
+      <br/>
+      ✉️ asianwokandgrill9@gmail.com
+     </p>
+     <div class="branch-socials">
+      <a href="https://www.facebook.com/asianwokandgrill" target="_blank">
+       <svg viewbox="0 0 24 24">
+        <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z">
+        </path>
+       </svg>
+      </a>
+      <a href="https://www.instagram.com/asianwokandgrillnashik/" target="_blank">
+       <svg viewbox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+        </path>
+       </svg>
+      </a>
+      <a href="https://wa.me/917269899999" target="_blank">
+       <svg viewbox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.301-.15-1.779-.879-2.053-.979-.275-.1-.475-.15-.675.15-.199.299-.775.979-.95.174s-.349-.15-.649-.3c-1.272-.639-2.081-1.169-2.825-1.913-.197-.197-.197-.457-.046-.607l.45-.45c.15-.15.2-.25.3-.45.1-.199.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.588-.491-.508-.675-.518-.174-.01-.374-.012-.574-.012-.2 0-.525.075-.8.375-.275.299-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.199 2.113 3.227 5.125 4.525.715.308 1.273.493 1.708.631.719.227 1.373.195 1.89.117.575-.087 1.779-.726 2.028-1.426.25-.7.25-1.299.175-1.425-.075-.125-.275-.199-.575-.349z">
+        </path>
+       </svg>
+      </a>
+     </div>
+    </div>
+    <div class="branch-item">
+     <img alt="Namaste Chef" class="branch-logo" src="https://storage.files-vault.com/uploads/1768797625-EllydznoIM.JPG"/>
+     <h4>
+      Namaste Chef
+     </h4>
+     <p>
+      📍 Nashik - Pune Rd, near Inox Signal, above Croma Store, Ganesh Baba Nagar, Nashik, Maharashtra 422011
+     </p>
+     <p>
+      📞 +91 7378599999
+      <br/>
+      ✉️ asianwokandgrill99@gmail.com
+     </p>
+     <div class="branch-socials">
+      <a href="https://www.facebook.com/namastechefnashik/" target="_blank">
+       <svg viewbox="0 0 24 24">
+        <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z">
+        </path>
+       </svg>
+      </a>
+      <a href="https://www.instagram.com/namaste_chef_nashik/" target="_blank">
+       <svg viewbox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+        </path>
+       </svg>
+      </a>
+      <a href="https://wa.me/917378599999" target="_blank">
+       <svg viewbox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.301-.15-1.779-.879-2.053-.979-.275-.1-.475-.15-.675.15-.199.299-.775.979-.95.174s-.349-.15-.649-.3c-1.272-.639-2.081-1.169-2.825-1.913-.197-.197-.197-.457-.046-.607l.45-.45c.15-.15.2-.25.3-.45.1-.199.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.588-.491-.508-.675-.518-.174-.01-.374-.012-.574-.012-.2 0-.525.075-.8.375-.275.299-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.199 2.113 3.227 5.125 4.525.715.308 1.273.493 1.708.631.719.227 1.373.195 1.89.117.575-.087 1.779-.726 2.028-1.426.25-.7.25-1.299.175-1.425-.075-.125-.275-.199-.575-.349z">
+        </path>
+       </svg>
+      </a>
+     </div>
+    </div>
+    <div class="branch-item">
+     <img alt="Namaste Kalyan" class="branch-logo" src="https://storage.files-vault.com/uploads/1768797743-s1dqwybMab.webp"/>
+     <h4>
+      Namaste Kalyan
+     </h4>
+     <p>
+      📍 RockMount Residency, 4th, Khadakpada Cir, Gokul Nagari NX, Gandhar Nagar, Khadakpada, Kalyan, Maharashtra 421301
+     </p>
+     <p>
+      📞 +91 9371519999
+      <br/>
+      ✉️ namastekalyan09@gmail.com
+     </p>
+     <div class="branch-socials">
+      <a href="https://www.facebook.com/namastekalyanbyawg" target="_blank">
+       <svg viewbox="0 0 24 24">
+        <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z">
+        </path>
+       </svg>
+      </a>
+      <a href="https://www.instagram.com/namaste_kalyan_by_awg/" target="_blank">
+       <svg viewbox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+        </path>
+       </svg>
+      </a>
+      <a href="https://wa.me/919371519999" target="_blank">
+       <svg viewbox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.301-.15-1.779-.879-2.053-.979-.275-.1-.475-.15-.675.15-.199.299-.775.979-.95.174s-.349-.15-.649-.3c-1.272-.639-2.081-1.169-2.825-1.913-.197-.197-.197-.457-.046-.607l.45-.45c.15-.15.2-.25.3-.45.1-.199.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.588-.491-.508-.675-.518-.174-.01-.374-.012-.574-.012-.2 0-.525.075-.8.375-.275.299-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.199 2.113 3.227 5.125 4.525.715.308 1.273.493 1.708.631.719.227 1.373.195 1.89.117.575-.087 1.779-.726 2.028-1.426.25-.7.25-1.299.175-1.425-.075-.125-.275-.199-.575-.349z">
+        </path>
+       </svg>
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="sync-info">
+    <div id="footerSyncTime">
+     Last synced: Just now
+    </div>
+    <div id="footerItemCount">
+    </div>
+   </div>
+  </footer>
+  <script>
+   const SHEET_ID = '1KA-aKRyCkGiAyUU991sAiO0NNY28oc-I2YYHfj2gqqE';
+
+   const API_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;
+
+   let MENU_DB = [];
+
+   let foodFilter = 'ALL'; 
+
+   let showChefOnly = false; 
+
+   let showJainOnly = false;
+
+   let activeVariant = {}; 
+
+   let activeQty = {};
+
+   let showImages = true;
+
+   // Parse URL parameters on load
+   function parseUrlParams() {
+
+       const params = new URLSearchParams(window.location.search);
+
+       const hashParams = new URLSearchParams(window.location.hash.substring(1).split('?')[1] || '');
+
+       // Merge both query and hash params (query takes precedence)
+
+       const allParams = new URLSearchParams([...hashParams.entries(), ...params.entries()]);
+
+       // Chef toggle: ?chef=on|true|yes
+
+       if(allParams.has('chef')) {
+
+           const chefVal = allParams.get('chef').toLowerCase();
+
+           if(['on', 'true', 'yes', '1'].includes(chefVal)) showChefOnly = true;
+
+       }
+
+       // Jain toggle: ?jain=on|true|yes
+
+       if(allParams.has('jain')) {
+
+           const jainVal = allParams.get('jain').toLowerCase();
+
+           if(['on', 'true', 'yes', '1'].includes(jainVal)) showJainOnly = true;
+
+       }
+
+       // Diet filter: ?diet=veg|non|all
+
+       if(allParams.has('diet')) {
+
+           const diet = allParams.get('diet').toUpperCase();
+
+           if(['VEG', 'NON', 'ALL'].includes(diet)) foodFilter = diet;
+
+       }
+
+       // Image toggle: ?images=off|false|no
+
+       if(allParams.has('images')) {
+
+           const imgVal = allParams.get('images').toLowerCase();
+
+           if(['off', 'false', 'no', '0'].includes(imgVal)) showImages = false;
+
+       }
+
+   } 
+
+   async function init() {
+
+       try {
+
+           parseUrlParams();
+
+           const res = await fetch(API_URL);
+
+           const text = await res.text();
+
+           const json = JSON.parse(text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1));
+
+           const rows = json.table.rows;
+
+           const cols = json.table.cols;
+
+           const map = {};
+
+           cols.forEach((c, idx) => { if(c.label) map[c.label.trim()] = idx; });
+
+                     // JSON Schema validation (Ajv). Strict failure: stop rendering if required headers missing.
+                     const REQUIRED_HEADERS = ["Item Name","Description","Category","Image URL"];
+
+                     function loadAjv() {
+                         return new Promise((resolve, reject) => {
+                             if(window.Ajv) return resolve(window.Ajv);
+                             const s = document.createElement('script');
+                             s.src = 'https://cdn.jsdelivr.net/npm/ajv@8.12.0/dist/ajv7.min.js';
+                             s.onload = () => resolve(window.Ajv);
+                             s.onerror = (e) => reject(e);
+                             document.head.appendChild(s);
+                         });
+                     }
+
+                     async function validateSheetHeaders(map) {
+                         try {
+                             const AjvLib = await loadAjv();
+                             const ajv = new AjvLib();
+                             const schema = { type: 'object', required: REQUIRED_HEADERS, additionalProperties: { type: 'boolean' } };
+                             const headersObj = {};
+                             Object.keys(map).forEach(k => { headersObj[k] = true; });
+                             const valid = ajv.validate(schema, headersObj);
+                             if(!valid) {
+                                 const errs = ajv.errors || [{ message: 'Missing required headers' }];
+                                 showSchemaErrorOverlay(errs);
+                                 return false;
+                             }
+                             return true;
+                         } catch (err) {
+                             console.error('Schema validator failed to load', err);
+                             return true;
+                         }
+                     }
+
+                     function showSchemaErrorOverlay(errors) {
+                         document.getElementById('loader').style.display = 'none';
+                         const id = 'schemaErrorOverlay';
+                         let el = document.getElementById(id);
+                         if(!el) {
+                             el = document.createElement('div');
+                             el.id = id;
+                             el.style = 'position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);color:#fff;padding:24px;z-index:10000;';
+                             document.body.appendChild(el);
+                         }
+                         el.innerHTML = `<div style="max-width:900px;background:#2b0000;padding:20px;border-radius:12px;border:3px solid #ffb3b3;"><h2 style="margin:0 0 8px;color:#ffdede">Menu Schema Validation Failed</h2><div style="font-family:monospace;white-space:pre-wrap">${(errors||[]).map(e=>e.message||JSON.stringify(e)).join('\n')}</div></div>`;
+                     }
+
+                     const headersOk = await validateSheetHeaders(map);
+                     if(!headersOk) {
+                         return;
+                     }
+
+                        // Build NON_VEG_WORDS from optional sheet column 'NonVeg Keywords'
+                        let NON_VEG_WORDS = ['chicken','egg','eggs','mutton','prawn','prawns','fish','surmai','crab','pomfret'];
+                        if(map['NonVeg Keywords'] !== undefined) {
+                            for(const rr of rows) {
+                                const vv = rr.c[map['NonVeg Keywords']] && rr.c[map['NonVeg Keywords']].v;
+                                if(vv) { NON_VEG_WORDS = vv.toString().split(/[,;]+/).map(s=>s.trim().toLowerCase()).filter(Boolean); break; }
+                            }
+                        }
+                        window.NON_VEG_WORDS = NON_VEG_WORDS;
+
+           // Dynamic column detection — treat sheet as master of truth
+           const knownStatic = ["Item Name","Description","Category","Image URL","Jain","Chef Special","Chef's Special","Spice Level","Unit (Pcs)"];
+           const headerList = Object.keys(map || {});
+           const proteinRegex = /\b(veg|chicken|prawn|mutton|fish|surmai|pomfret|crab|egg)\b/i;
+           const servingRegex = /\b(pcs|pc|piece|half|full|plain|butter|medium|large)\b/i;
+           function sampleColumnValues(colName, rows, map) {
+               const idx = map[colName];
+               if(idx === undefined) return "";
+               return rows.slice(0,6).map(r => (r.c && r.c[idx] && r.c[idx].v) || "").join(' ');
+           }
+           const dynamicColumns = headerList
+               .filter(h => !knownStatic.includes(h))
+               .map(h => {
+                   const sample = sampleColumnValues(h, rows, map).toString();
+                   const hasNumber = /[0-9]/.test(sample);
+                   let type = 'meta';
+                   if(proteinRegex.test(h)) type = 'protein';
+                   else if(servingRegex.test(h)) type = 'serving';
+                   else if(hasNumber) type = 'price';
+                   return { key: h, label: h, type };
+               });
+
+           const proteinColumns = ["Veg", "Chicken", "Prawn", "Mutton", "Fish", "Surmai", "Pomfret", "Crab", "Egg"];
+
+           const servingColumns = ["Half", "Full", "Plain", "Butter", "Medium", "Large"];
+
+           MENU_DB = rows.map((r, idx) => {
+
+               const d = r.c;
+
+               if(!d[map["Item Name"]] || !d[map["Item Name"]].v) return null;
+
+               const itemName = (d[map["Item Name"]]?.v || "").toString();
+
+               const itemDesc = (d[map["Description"]]?.v || "").toString();
+
+               const fullText = (itemName + " " + itemDesc).toLowerCase();
+
+               // SPECIFIC OVERRIDE FOR VEG DELIGHT & MUSHROOM VEG
+
+               const isSpecificVeg = fullText.includes('veg delight') || fullText.includes('mushroom veg');
+
+               // ROW BASED DIET DETECTION
+
+               const isNonVegItem = !isSpecificVeg && (fullText.includes('chicken') || fullText.includes('egg') || fullText.includes('mutton') || fullText.includes('prawn') || fullText.includes('surmai') || fullText.includes('fish') || fullText.includes('crab') || fullText.includes('pomfret'));
+
+               let proteins = {};
+
+               let servings = {};
+
+               proteinColumns.forEach(pCol => {
+
+                   if(map[pCol] !== undefined && d[map[pCol]] && d[map[pCol]].v) {
+
+                       proteins[pCol] = d[map[pCol]].v;
+
+                   }
+
+               });
+
+               servingColumns.forEach(sCol => {
+
+                   if(map[sCol] !== undefined && d[map[sCol]] && d[map[sCol]].v) {
+
+                       servings[sCol] = d[map[sCol]].v;
+
+                   }
+
+               });
+
+               // Merge dynamic columns into proteins/servings/dynamic
+               let dynamic = {};
+               dynamicColumns.forEach(dc => {
+                   const idx = map[dc.key];
+                   const val = (idx !== undefined && d[idx] && d[idx].v) ? d[idx].v : null;
+                   if(!val) return;
+                   if(dc.type === 'protein') proteins[dc.key] = val;
+                   else if(dc.type === 'serving' || dc.type === 'price') servings[dc.key] = val;
+                   else dynamic[dc.key] = val;
+               });
+
+               const jVal = (map["Jain"] !== undefined && d[map["Jain"]] && d[map["Jain"]].v) ? d[map["Jain"]].v : null;
+
+               const chefRaw = (map["Chef's Special"] !== undefined && d[map["Chef's Special"]]) ? d[map["Chef's Special"]].v : null;
+
+               return {
+
+                   id: idx,
+
+                   cat: d[map["Category"]]?.v || "Other",
+
+                   name: itemName,
+
+                   desc: itemDesc,
+
+                   proteins: proteins,
+
+                   servings: servings,
+                   dynamic: dynamic,
+
+                   chef: (chefRaw === "Yes" || chefRaw === "YES" || chefRaw === true),
+
+                   spice: d[map["Spice Level"]]?.v || "",
+
+                   jainPrice: jVal,
+
+                   img: d[map["Image URL"]]?.v || "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400",
+
+                   isVeg: !isNonVegItem,
+
+                   rowDiet: isNonVegItem ? 'nonveg' : 'veg'
+
+               };
+
+           }).filter(x => x);
+
+           document.getElementById('footerSyncTime').innerText = `Last synced: Today at ${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+
+           document.getElementById('footerItemCount').innerText = `Total Selections: ${MENU_DB.length}`;
+
+           document.getElementById('loader').style.display = 'none';
+
+           // Apply URL-based filter states to UI
+
+           document.getElementById('f-' + foodFilter.toLowerCase()).classList.add('active');
+
+           document.getElementById('chef-on').classList.toggle('active', showChefOnly);
+
+           document.getElementById('chef-off').classList.toggle('active', !showChefOnly);
+
+           document.getElementById('jain-on').classList.toggle('active', showJainOnly);
+
+           document.getElementById('jain-off').classList.toggle('active', !showJainOnly);
+
+           document.getElementById('img-on').classList.toggle('active', showImages);
+
+           document.getElementById('img-off').classList.toggle('active', !showImages);
+
+           if(!showImages) document.getElementById('menuBody').classList.add('hide-images');
+
+           render();
+
+       } catch (e) { console.error(e); }
+
+   }
+
+   function render() {
+
+       const main = document.getElementById('menuMain');
+
+       const sideList = document.getElementById('sideNavList');
+
+       const cats = [...new Set(MENU_DB.map(i => i.cat))];
+
+       let db = MENU_DB;
+
+       // When Chef's Special is enabled, strictly show only chef special items
+       if(showChefOnly) {
+
+           db = db.filter(i => i.chef);
+
+       } else {
+
+           // Apply other filters only when Chef's Special is not active
+
+           if(showJainOnly) db = db.filter(i => i.jainPrice !== null);
+
+           else {
+
+               if(foodFilter === 'VEG') db = db.filter(i => i.isVeg);
+
+               if(foodFilter === 'NON') db = db.filter(i => !i.isVeg);
+
+           }
+
+       }
+
+       main.innerHTML = cats.map(c => {
+
+           const items = db.filter(i => i.cat === c);
+
+           if(items.length === 0) return ""; 
+
+           const slug = c.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+
+           return `<section class="container" id="${slug}"><h2 class="section-title">${c}</h2><div class="grid">${items.map(i => generateCard(i)).join('')}</div></section>`;
+
+       }).join('');
+
+       sideList.innerHTML = cats.map(c => {
+        const slug = c.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+        return `<div class="cat-link" onclick="snapTo('${slug}')">${c}</div>`;
+    }).join('');
+
+    // Log all categories for debugging
+    console.log('Available categories:', cats.map(c => ({
+        original: c,
+        slug: c.replace(/[^a-z0-9]/gi, '-').toLowerCase()
+    })));
+
+    // Handle hash navigation on page load
+    if(window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        if(targetId === 'chef-special') {
+            showChefOnly = true;
+            document.getElementById('chef-on').classList.add('active');
+            document.getElementById('chef-off').classList.remove('active');
+            render();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            setTimeout(() => snapTo(targetId), 500);
+        }
+    }
+   }
+
+   function generateCard(i) {
+
+       const proteinKeys = Object.keys(i.proteins);
+
+       const servingKeys = Object.keys(i.servings);
+
+       if(!activeVariant[i.id]) {
+
+           if(showJainOnly && i.jainPrice !== null) activeVariant[i.id] = 'Jain';
+
+           else if(foodFilter === 'VEG') activeVariant[i.id] = proteinKeys.find(k => k === "Veg") || proteinKeys[0] || servingKeys[0];
+
+           else if(foodFilter === 'NON') activeVariant[i.id] = proteinKeys.find(k => k !== "Veg") || proteinKeys[0] || servingKeys[0];
+
+           else activeVariant[i.id] = proteinKeys[0] || servingKeys[0];
+
+       }
+
+       const selV = activeVariant[i.id];
+
+       let dietType = i.rowDiet; 
+
+       if (selV === "Veg") dietType = "veg";
+
+       if (selV === "Jain") dietType = "jain";
+
+       if (["Chicken", "Prawn", "Mutton", "Fish", "Surmai", "Pomfret", "Crab", "Egg"].includes(selV)) dietType = "nonveg";
+
+       let displayPrice = "--";
+
+       if(selV === 'Jain') displayPrice = i.jainPrice;
+
+       else if(servingKeys.includes(selV)) displayPrice = i.servings[selV];
+
+       else if(proteinKeys.includes(selV)) displayPrice = i.proteins[selV];
+
+       let spiceIcons = "";
+
+       const rawSpice = (i.spice || "").toString().trim().toLowerCase();
+
+       if (rawSpice === "spicy") spiceIcons = "🌶️🌶️";
+
+       else if (rawSpice === "medium spicy") spiceIcons = "🌶️";
+
+       return `<div class="card">
+
+           <div class="img-box">
+
+               <div class="img-container-circle">
+
+                   <img src="${i.img}" class="img-main" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400'">
+
+               </div>
+
+           </div>
+
+           <div class="card-body">
+
+               <div class="card-header-row">
+
+                    <div class="item-name">${i.name} ${spiceIcons ? `<span class="spice-indicator">${spiceIcons}</span>` : ''}</div>
+
+                    <div class="header-right-symbols">
+
+                        <div class="badge-type"><div class="dot ${dietType}"></div></div>
+
+                        ${i.jainPrice !== null ? `<div class="jain-badge">JAIN</div>` : ''}
+
+                        ${i.chef ? `<div class="chef-badge">👨‍🍳</div>` : ''}
+
+                    </div>
+
+               </div>
+
+               <div class="item-desc collapsed" onclick="toggleDesc(this)">${i.desc}</div>
+
+               <div class="variant-container">
+
+                   ${proteinKeys.map(v => `<div class="variant-chip ${selV === v ? 'active ' + (v === 'Veg' ? 'v-veg' : 'v-non') : ''}" onclick="setVariant(${i.id}, '${v}')">${v}</div>`).join('')}
+
+                   ${i.jainPrice !== null ? `<div class="variant-chip jain-type ${selV === 'Jain' ? 'active v-jain' : ''}" onclick="setVariant(${i.id}, 'Jain')">Jain</div>` : ''}
+
+               </div>
+
+               ${Object.keys(i.dynamic || {}).length ? `<div class="variant-container">${Object.entries(i.dynamic).map(([k,v]) => `<div class="variant-chip" title="${v}">${k}</div>`).join('')}</div>` : ''}
+
+               <div class="qty-container">
+
+                   ${servingKeys.map(q => `<div class="qty-chip ${selV === q ? 'active ' + (dietType === 'veg' ? 'v-veg' : 'v-non') : ''}" onclick="setVariant(${i.id}, '${q}')">${q}</div>`).join('')}
+
+               </div>
+
+               <div class="price"><span>Total</span> ₹${displayPrice}</div>
+
+           </div>
+
+       </div>`;
+
+   }
+
+   function setVariant(id, v) { activeVariant[id] = v; render(); }
+
+   function toggleDesc(el) { el.classList.toggle('collapsed'); el.classList.toggle('expanded'); }
+
+   function snapTo(id) { const el = document.getElementById(id); if(el) { toggleSideNav(false); window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 160, behavior: 'smooth' }); } }
+
+   function updateFilter(val) { foodFilter = val; if(val !== 'VEG') showJainOnly = false; activeVariant = {}; document.querySelectorAll('.top-controls-bar .square-btn').forEach(b => { if(b.id && b.id.startsWith('f-')) b.classList.remove('active'); }); document.getElementById('f-' + val.toLowerCase()).classList.add('active'); render(); }
+
+   function setChefToggle(val) { showChefOnly = val; document.getElementById('chef-on').classList.toggle('active', val); document.getElementById('chef-off').classList.toggle('active', !val); render(); }
+
+   function setJainToggle(val) { showJainOnly = val; activeVariant = {}; if(val) updateFilter('VEG'); document.getElementById('jain-on').classList.toggle('active', val); document.getElementById('jain-off').classList.toggle('active', !val); render(); }
+
+   function setImageToggle(val) { document.getElementById('menuBody').classList.toggle('hide-images', !val); document.getElementById('img-on').classList.toggle('active', val); document.getElementById('img-off').classList.toggle('active', !val); }
+
+   function toggleTheme() { const target = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; document.body.setAttribute('data-theme', target); document.getElementById('themeIconBtn').innerText = target === 'dark' ? '☀️' : '🌙'; }
+
+   function filterChefSpecial() { showChefOnly = true; document.getElementById('chef-on').classList.add('active'); document.getElementById('chef-off').classList.remove('active'); render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+   function toggleSideNav(show) { const drawer = document.getElementById('sideNavContainer'); const overlay = document.getElementById('sideNavOverlay'); if(show) { drawer.classList.add('open'); overlay.style.display = 'block'; } else { drawer.classList.remove('open'); overlay.style.display = 'none'; } }
+
+   /* ===== HAMBURGER MENU NAMASTE ===== */
+   const hamburgerNameste = document.getElementById('hamburger-namaste');
+   const navNameste = document.querySelector('.main-nav-namaste');
+
+   hamburgerNameste.addEventListener('click', () => {
+     navNameste.classList.toggle('active');
+     hamburgerNameste.classList.toggle('active');
+   });
+
+   document.querySelectorAll('.main-nav-namaste a').forEach(link => {
+     link.addEventListener('click', () => {
+       navNameste.classList.remove('active');
+       hamburgerNameste.classList.remove('active');
+     });
+   });
+
+   let lastScrollTop = 0;
+
+   let scrollTimeout;
+
+   function handleScrollAnimation() {
+
+       const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+       const isScrollingDown = currentScrollTop > lastScrollTop;
+
+       const cards = document.querySelectorAll('.card');
+
+       const viewportCenter = window.innerHeight / 2;
+
+       cards.forEach((card, index) => {
+
+           const rect = card.getBoundingClientRect();
+
+           const cardCenter = rect.top + rect.height / 2;
+
+           card.classList.remove('slide-under', 'slide-over');
+
+           if (isScrollingDown) {
+
+               if (rect.bottom < viewportCenter && rect.bottom > 0) {
+
+                   card.classList.add('slide-under');
+
+               } else if (rect.top < viewportCenter) {
+
+                   card.classList.add('slide-over');
+
+               }
+
+           } else {
+
+               if (rect.top > viewportCenter && rect.top < window.innerHeight) {
+
+                   card.classList.add('slide-under');
+
+               } else if (rect.bottom > viewportCenter) {
+
+                   card.classList.add('slide-over');
+
+               }
+
+           }
+
+       });
+
+       lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+
+   }
+
+   window.addEventListener('scroll', () => {
+
+       clearTimeout(scrollTimeout);
+
+       scrollTimeout = setTimeout(handleScrollAnimation, 30);
+
+   }, { passive: true });
+
+   window.addEventListener('load', () => { setTimeout(handleScrollAnimation, 100); });
+
+     window.onload = init;
+  </script>
+  <script>
+   // Ensure Mocktail and Bread category/items are always visible regardless of veg/jain/nonveg toggles.
+        (function(){
+            const original = window.render;
+            function isExemptItem(i){
+                if(!i || !i.cat) return false;
+                const c = i.cat.toString().toLowerCase();
+                const nonVegWords = (window.NON_VEG_WORDS && window.NON_VEG_WORDS.slice()) || ['chicken','egg','eggs','mutton','prawn','prawns','fish','surmai','crab','pomfret'];
+                const desc = (i.desc||'').toString().toLowerCase();
+                const hasNonVegInDesc = nonVegWords.some(w => desc.indexOf(w) !== -1);
+                const proteinKeys = Object.keys(i.proteins||{});
+                const hasNonVegProtein = proteinKeys.some(k => nonVegWords.some(nw => k.toLowerCase().includes(nw)) && i.proteins[k]);
+                if(/(mocktail|bread)/i.test(c)) return true;
+                if(c.indexOf('dessert') !== -1) {
+                    if(hasNonVegInDesc) return false;
+                    if(hasNonVegProtein) return false;
+                    return true;
+                }
+                return false;
+            }
+            window.render = function(){
+                try{ original(); } catch(e){ console.error(e); }
+                try{
+                    const main = document.getElementById('menuMain');
+                    const exempt = (MENU_DB||[]).filter(isExemptItem);
+                    exempt.forEach(i => {
+                        const slug = i.cat.replace(/[^a-z0-9]/gi,'-').toLowerCase();
+                        let section = document.getElementById(slug);
+                        if(!section){
+                            const html = `<section class="container" id="${slug}"><h2 class="section-title">${i.cat}</h2><div class="grid">${generateCard(i)}</div></section>`;
+                            main.insertAdjacentHTML('beforeend', html);
+                        } else {
+                            const grid = section.querySelector('.grid');
+                            const exists = grid && grid.innerText && grid.innerText.includes(i.name);
+                            if(grid && !exists) grid.insertAdjacentHTML('beforeend', generateCard(i));
+                        }
+                    });
+                } catch(e){ console.error('Exempt post-render hook failed', e); }
+            };
+        })();
+  </script>
+ </body>
+</html>

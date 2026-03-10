@@ -305,6 +305,42 @@ body:not(.contact-page) {
   transform: translateY(-2px);
 }
 </style>
+<style id="mobile-half-menu-fix">
+@media (max-width: 768px) {
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: #1f0000 !important;
+    z-index: 1100 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+  }
+  .main-nav {
+    left: auto !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: min(78vw, 340px) !important;
+    height: 100vh !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding: 90px 20px 20px !important;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.28);
+  }
+  .main-nav ul {
+    width: 100%;
+  }
+  .main-nav a {
+    display: block;
+    width: 100%;
+  }
+  .hamburger {
+    position: relative;
+    z-index: 1200;
+  }
+}
+</style>
 </head>
 
 <body class="contact-page bg-white text-dark">
@@ -424,11 +460,11 @@ Gangapur Rd, Anandvalli, Nashik – 422013</span>
   <a href="mailto:asianwokandgrill9@gmail.com" aria-label="Email">
     <i class="fa-solid fa-envelope"></i>
   </a>
-<a href="https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar"
+<a href="https://www.zomato.com/nashik/asian-wok-and-grill-anand-wali-goan/order"
    target="_blank" rel="noopener" aria-label="Zomato">
   <img src="https://cdn.simpleicons.org/zomato/c9a76a" alt="Zomato">
 </a>
-<a href="https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout"
+<a href="https://www.swiggy.com/city/nashik/asian-wok-and-grill-takli-road-ashokamarg-rest630679"
    target="_blank" rel="noopener" aria-label="Swiggy">
   <img src="https://cdn.simpleicons.org/swiggy/c9a76a" alt="Swiggy">
 </a>
@@ -508,11 +544,11 @@ Gangapur Rd, Anandvalli, Nashik – 422013
   <a href="mailto:namastekalyan09@gmail.com" aria-label="Email">
     <i class="fa-solid fa-envelope"></i>
   </a>
-<a href="https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar"
+<a href="https://www.zomato.com/mumbai/namaste-kalyan-by-asian-wok-and-grill-kalyan-thane/"
    target="_blank" rel="noopener" aria-label="Zomato">
   <img src="https://cdn.simpleicons.org/zomato/c9a76a"  alt="Zomato">
 </a>
-<a href="https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout"
+<a href="https://www.swiggy.com/restaurants/namaste-kalyan-by-asian-wok-and-grill-kalyan-mumbai-1000913/dineout"
    target="_blank" rel="noopener" aria-label="Swiggy">
   <img src="https://cdn.simpleicons.org/swiggy/c9a76a" alt="Swiggy">
 </a>
@@ -598,5 +634,22 @@ toggle.onclick = () => {
 })();
 </script>
 
+<script id="mobile-menu-close-fix">
+(function setupMobileMenuCloseFix() {
+  const nav = document.querySelector('.main-nav');
+  const burger = document.getElementById('hamburger');
+  if (!nav || !burger) return;
+
+  document.addEventListener('click', function (e) {
+    if (!nav.classList.contains('active')) return;
+    if (nav.contains(e.target) || burger.contains(e.target)) return;
+    nav.classList.remove('active');
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') nav.classList.remove('active');
+  });
+})();
+</script>
 </body>
 </html>
