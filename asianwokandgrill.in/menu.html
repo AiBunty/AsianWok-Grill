@@ -703,7 +703,7 @@ render();
        const cats = [...new Set(MENU_DB.map(i => i.cat))];
        let db = MENU_DB;
 
-         if(showJainOnly) db = db.filter(i => i.jainPrice !== null || isExemptItem(i));
+         if(showJainOnly) db = db.filter(i => (i.jainPrice !== null && i.isVeg) || isExemptItem(i));
          else {
            if(foodFilter === 'VEG') db = db.filter(i => i.isVeg || isExemptItem(i));
            if(foodFilter === 'NON') db = db.filter(i => !i.isVeg || isExemptItem(i));
