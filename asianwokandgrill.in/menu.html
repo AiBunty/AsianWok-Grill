@@ -474,13 +474,54 @@
    let activeVariant = {}; 
    let activeQty = {}; 
 
+     const MENU_CACHE_KEY = 'menu-cache:menu:v1';
+
+     function registerMenuCacheWorker() {
+       if (!('serviceWorker' in navigator)) return;
+       navigator.serviceWorker.register('/menu-cache-sw.js').catch(() => {});
+     }
+
+     async function loadMenuDataWithCache() {
+       try {
+         const cached = localStorage.getItem(MENU_CACHE_KEY);
+         if (cached) {
+           const parsed = JSON.parse(cached);
+           if (parsed && parsed.rows && parsed.cols) {
+             return { rows: parsed.rows, cols: parsed.cols, fromCache: true };
+           }
+         }
+       } catch (_) {}
+
+       const res = await fetch(API_URL, { cache: 'force-cache' });
+       const text = await res.text();
+       const json = JSON.parse(text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1));
+       const rows = json.table.rows;
+       const cols = json.table.cols;
+
+       try {
+         localStorage.setItem(MENU_CACHE_KEY, JSON.stringify({ rows, cols, ts: Date.now() }));
+       } catch (_) {}
+
+       return { rows, cols, fromCache: false };
+     }
+
+     function warmMenuAssets(items) {
+       if (!('serviceWorker' in navigator)) return;
+       const imageUrls = [...new Set((items || []).map(i => i && i.img).filter(Boolean))];
+       const urls = [API_URL, ...imageUrls];
+       navigator.serviceWorker.ready.then((reg) => {
+         const target = reg.active || reg.waiting || reg.installing;
+         if (target) target.postMessage({ type: 'WARM_CACHE', urls });
+       }).catch(() => {});
+     }
+
+     registerMenuCacheWorker();
+
    async function init() {
        try {
-           const res = await fetch(API_URL);
-           const text = await res.text();
-           const json = JSON.parse(text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1));
-           const rows = json.table.rows;
-           const cols = json.table.cols;
+         const sheetData = await loadMenuDataWithCache();
+         const rows = sheetData.rows;
+         const cols = sheetData.cols;
            
            const map = {};
            cols.forEach((c, idx) => { if(c.label) map[c.label.trim()] = idx; });
@@ -631,6 +672,7 @@
 
            document.getElementById('footerSyncTime').innerText = `Last synced: Today at ${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
            document.getElementById('footerItemCount').innerText = `Total Selections: ${MENU_DB.length}`;
+               warmMenuAssets(MENU_DB);
      document.getElementById('loader').style.display = 'none';
 
 checkURLParams();   // 👈 ही line add कर
