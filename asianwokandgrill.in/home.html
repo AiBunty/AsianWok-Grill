@@ -8,10 +8,10 @@
   <meta name="keywords" content="Asian Wok, Grill, Nashik, Restaurant, Pan-Asian, Chinese, Thai, Sushi, Dine-In, Takeaway, Events, Food, Menu, Reservation, Franchise" />
   <meta name="author" content="Asian Wok &amp; Grill" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://asianwokandgrill.in/" />
+  <link rel="canonical" href="https://asianwokandgrill.in/home.html" />
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://asianwokandgrill.in/" />
+  <meta property="og:url" content="https://asianwokandgrill.in/home.html" />
   <meta property="og:title" content="Asian Wok &amp; Grill | Pan-Asian Restaurant in Nashik" />
   <meta property="og:description" content="Experience authentic Pan-Asian cuisine, events, and more at Asian Wok &amp; Grill, Nashik." />
   <meta property="og:image" content="https://asianwokandgrill.in/assets/images/circlelogo.png" />
@@ -1168,6 +1168,149 @@ body {
     z-index: 1200;
   }
 }
+
+#leadPopup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(199, 164, 107, 0.22), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.12), transparent 30%),
+    rgba(16, 4, 4, 0.68);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
+}
+
+.lead-popup-shell {
+  width: min(92vw, 720px);
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.lead-popup-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), transparent 48%);
+  pointer-events: none;
+}
+
+.lead-popup-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px 0;
+}
+
+.lead-popup-copy {
+  max-width: calc(100% - 56px);
+}
+
+.lead-popup-chip {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #f7ead1;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.lead-popup-title {
+  margin: 0;
+  color: #fff8ef;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.lead-popup-subtitle {
+  margin: 6px 0 0;
+  color: rgba(255, 248, 239, 0.82);
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+}
+
+.lead-popup-close {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.lead-popup-close:hover {
+  transform: scale(1.06);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lead-popup-frame-wrap {
+  position: relative;
+  padding: 98px 18px 18px;
+}
+
+.lead-popup-iframe {
+  width: 100%;
+  height: min(70vh, 600px);
+  border: none;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 600px) {
+  #leadPopup {
+    padding: 14px;
+  }
+
+  .lead-popup-shell {
+    width: 100%;
+    border-radius: 22px;
+  }
+
+  .lead-popup-header {
+    padding: 18px 18px 0;
+  }
+
+  .lead-popup-subtitle {
+    font-size: 12px;
+  }
+
+  .lead-popup-frame-wrap {
+    padding: 92px 12px 12px;
+  }
+
+  .lead-popup-iframe {
+    height: min(72vh, 560px);
+    border-radius: 18px;
+  }
+}
 </style>
 </head>
 <body>
@@ -1570,11 +1713,11 @@ body {
 <section id="order-online" style="padding:40px 20px;background:#fff8ef;text-align:center;">
   <h2 style="margin:0 0 24px;font-size:38px;letter-spacing:1px;color:#1f0000;font-family:'Cormorant Garamond', serif;">Order Online</h2>
   <div style="display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;">
-    <a href="https://www.zomato.com/mumbai/namaste-kalyan-by-asian-wok-and-grill-kalyan-thane/" target="_blank" rel="noopener" aria-label="Order on Zomato" style="display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid #e7d5b4;border-radius:999px;background:#ffffff;text-decoration:none;color:#1f0000;font-family:'Poppins', sans-serif;font-weight:600;">
+    <a href="https://www.zomato.com/nashik/asian-wok-and-grill-anand-wali-goan/order" target="_blank" rel="noopener" aria-label="Order on Zomato" style="display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid #e7d5b4;border-radius:999px;background:#ffffff;text-decoration:none;color:#1f0000;font-family:'Poppins', sans-serif;font-weight:600;">
       <img src="https://cdn.simpleicons.org/zomato/e23744" alt="Zomato" style="width:30px;height:30px;">
       <span>Zomato</span>
     </a>
-    <a href="https://www.swiggy.com/restaurants/namaste-kalyan-by-asian-wok-and-grill-kalyan-mumbai-1000913/dineout" target="_blank" rel="noopener" aria-label="Order on Swiggy" style="display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid #e7d5b4;border-radius:999px;background:#ffffff;text-decoration:none;color:#1f0000;font-family:'Poppins', sans-serif;font-weight:600;">
+    <a href="https://www.swiggy.com/restaurants/nashik/asian-wok-and-grill-anand-wali-goan/dineout" target="_blank" rel="noopener" aria-label="Order on Swiggy" style="display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid #e7d5b4;border-radius:999px;background:#ffffff;text-decoration:none;color:#1f0000;font-family:'Poppins', sans-serif;font-weight:600;">
       <img src="https://cdn.simpleicons.org/swiggy/fc8019" alt="Swiggy" style="width:30px;height:30px;">
       <span>Swiggy</span>
     </a>
@@ -2031,43 +2174,24 @@ setInterval(() => {
   });
 </script>
 <!-- POPUP FORM -->
-<div id="leadPopup" style="
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.65);
-  z-index:99999;
-  justify-content:center;
-  align-items:center;
-">
+<div id="leadPopup">
+  <div class="lead-popup-shell">
+    <div class="lead-popup-header">
+      <div class="lead-popup-copy">
+        <span class="lead-popup-chip">Exclusive Offers</span>
+        <h3 class="lead-popup-title">Unlock Your Special Dining Perks</h3>
+        <p class="lead-popup-subtitle">Share your details to receive curated offers, event updates, and priority access.</p>
+      </div>
+      <button class="lead-popup-close" type="button" aria-label="Close offer popup" onclick="closeLeadPopup()">✕</button>
+    </div>
 
-  <div style="
-    width:90%;
-    max-width:650px;
-    background:#fff;
-    border-radius:8px;
-    position:relative;
-    overflow:hidden;
-  ">
-
-    <!-- Close Button -->
-    <span onclick="closeLeadPopup()" 
-      style="
-        position:absolute;
-        right:15px;
-        top:10px;
-        font-size:22px;
-        cursor:pointer;
-        z-index:2;
-      ">✖</span>
-
-    <!-- Aibunty Form -->
-    <iframe
-      src="https://admin.aibunty.com/widget/form/695b9dd42c946"
-      style="width:100%;height:600px;border:none;"
-      title="Landing Page form">
-    </iframe>
-
+    <div class="lead-popup-frame-wrap">
+      <iframe
+        src="https://admin.aibunty.com/widget/form/695b9dd42c946"
+        class="lead-popup-iframe"
+        title="Landing Page form">
+      </iframe>
+    </div>
   </div>
 </div>
 <script>

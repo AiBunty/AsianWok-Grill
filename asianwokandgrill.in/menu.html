@@ -7,6 +7,23 @@
   <title>
    Asian Wok &amp; Grill | Official Menu
   </title>
+  <meta name="description" content="Browse the official Asian Wok &amp; Grill food menu with vegetarian, non-vegetarian, Jain, and chef special dishes." />
+  <meta name="keywords" content="Asian Wok menu, Nashik food menu, vegetarian menu, non vegetarian menu, Jain menu" />
+  <meta name="author" content="Asian Wok &amp; Grill" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://asianwokandgrill.in/menu.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://asianwokandgrill.in/menu.html" />
+  <meta property="og:title" content="Asian Wok &amp; Grill | Official Menu" />
+  <meta property="og:description" content="Explore Asian Wok &amp; Grill official menu featuring curated Pan-Asian dishes and chef specials." />
+  <meta property="og:image" content="https://asianwokandgrill.in/assets/images/circlelogo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Asian Wok &amp; Grill | Official Menu" />
+  <meta name="twitter:description" content="Explore Asian Wok &amp; Grill official menu featuring curated Pan-Asian dishes and chef specials." />
+  <meta name="twitter:image" content="https://asianwokandgrill.in/assets/images/circlelogo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
    /* 1. CORE SYSTEM */
    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -36,6 +53,7 @@
    body { font-family: -apple-system, system-ui, sans-serif; background: var(--color-bg-primary); color: var(--color-text-primary); line-height: 1.6; overflow-x: hidden; transition: background 0.4s ease; }
    .theme-icon-btn { background: none; border: none; font-size: 1.4rem; cursor: pointer; color: #fff; }
    .top-controls-bar { position: sticky; top: var(--header-h); z-index: 999; display: flex; align-items: center; gap: 12px; background: var(--color-bg-primary); padding: 12px 1rem; border-bottom: 1px solid rgba(0,0,0,0.05); overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+   .top-controls-bar::-webkit-scrollbar { display: none; }
    .square-toggle-group { display: flex; background: var(--color-bg-secondary); border-radius: 12px; padding: 3px; }
    .square-btn { font-size: 0.65rem; font-weight: 700; padding: 6px 12px; border-radius: 9px; color: var(--color-text-secondary); border: none; background: transparent; text-transform: uppercase; cursor: pointer; }
 /* Category Highlighter: solid color for active */
@@ -46,20 +64,131 @@
 }
    
   #menuTriggerBtn { position: fixed; right: 0; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; text-orientation: mixed; background: var(--color-accent-maroon); color: #fff; padding: 20px 10px; border-radius: 12px 0 0 12px; font-size: 0.75rem; font-weight: 800; letter-spacing: 2px; z-index: 2500; cursor: pointer; box-shadow: -4px 0 15px rgba(0,0,0,0.2); }
-  #scrollTopBtn { position: fixed; left: 20px; bottom: 24px; background: var(--color-accent-maroon); color: #fff; padding: 10px 12px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; border: none; cursor: pointer; z-index: 2600; display: none; box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
-   #sideNavContainer { position: fixed; right: -280px; top: 0; bottom: 0; width: 260px; background: var(--color-bg-secondary); z-index: 3000; padding: 40px 20px; box-shadow: -10px 0 30px rgba(0,0,0,0.2); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; gap: 10px; overflow-y: auto; }
+  #scrollTopBtn { position: fixed; left: auto; right: 20px; bottom: 24px; background: var(--color-accent-maroon); color: #fff; padding: 10px 12px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; border: none; cursor: pointer; z-index: 2600; display: none; box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+   #sideNavContainer { position: fixed; right: -280px; top: 0; bottom: 0; width: 260px; background: var(--color-bg-secondary); z-index: 9999; padding: 40px 20px; box-shadow: -10px 0 30px rgba(0,0,0,0.2); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; gap: 10px; overflow-y: auto; }
    #sideNavContainer.open { transform: translateX(-280px); }
    .cat-link { padding: 15px; background: var(--color-bg-primary); border-radius: 12px; font-size: 0.85rem; font-weight: 700; color: var(--color-text-primary); text-align: center; cursor: pointer; border: 1px solid rgba(0,0,0,0.05); }
-   #sideNavOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 2800; display: none; backdrop-filter: blur(2px); }
+   #sideNavOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 9998; display: none; backdrop-filter: blur(2px); }
+
+   body.drawer-open .concept-header,
+   body.drawer-open .top-controls-bar { position: relative !important; z-index: auto !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+   body.drawer-open #menuTriggerBtn { display: none !important; }
 
    main { position: relative; width: 100%; min-height: 80vh; } 
-   .container { padding: 1rem; max-width: 1200px; margin: 0 auto; scroll-margin-top: 160px; }
-   .section-title { font-size: 1.5rem; color: var(--color-text-primary); margin: 2rem 1rem 1rem; font-weight: 300; text-transform: capitalize; letter-spacing: 2px; border-bottom: 1px solid var(--color-accent-gold); padding-bottom: 5px; }
+   .container { --section-highlight: var(--color-accent-maroon); --section-highlight-soft: rgba(198, 40, 40, 0.18); padding: 1rem; max-width: 1200px; margin: 0 auto; scroll-margin-top: 160px; }
+   main > .container:nth-of-type(4n+1) { --section-highlight: var(--color-accent-maroon); --section-highlight-soft: rgba(198, 40, 40, 0.18); }
+   main > .container:nth-of-type(4n+2) { --section-highlight: #8b1e1e; --section-highlight-soft: rgba(139, 30, 30, 0.18); }
+   main > .container:nth-of-type(4n+3) { --section-highlight: #a34a1e; --section-highlight-soft: rgba(163, 74, 30, 0.16); }
+   main > .container:nth-of-type(4n+4) { --section-highlight: #7b3f00; --section-highlight-soft: rgba(123, 63, 0, 0.16); }
+   .section-title {
+     display: inline-flex;
+     align-items: center;
+     gap: 12px;
+     position: relative;
+     isolation: isolate;
+     margin: 2rem 1rem 1.2rem;
+     padding: 0.95rem 1.5rem 0.95rem 1.15rem;
+     font-size: 1.05rem;
+     color: #fff;
+     font-weight: 800;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     border-radius: 18px;
+     border: 1px solid rgba(255,255,255,0.22);
+     border-left: 6px solid var(--color-accent-gold);
+     background:
+       linear-gradient(135deg, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.04) 38%, rgba(255,255,255,0.10) 100%),
+       linear-gradient(90deg, var(--section-highlight) 0%, #3d0d0d 100%);
+     box-shadow: 0 14px 28px rgba(72, 14, 14, 0.28);
+     text-shadow: 0 1px 1px rgba(0,0,0,0.18);
+     backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+     overflow: visible;
+   }
+   .section-title::before {
+     content: "";
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background: var(--color-accent-gold);
+     box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.18);
+     flex-shrink: 0;
+   }
+   .section-title::after {
+     content: "";
+     position: absolute;
+     inset: 1px;
+     border-radius: 16px;
+     border-top: 1px solid rgba(255,255,255,0.22);
+     background: linear-gradient(120deg, rgba(255,255,255,0.22), transparent 36%);
+     pointer-events: none;
+   }
+   .section-title::before {
+     position: relative;
+     z-index: 1;
+   }
+   .section-title + .grid {
+     position: relative;
+   }
+   .section-title + .grid::before {
+     content: "";
+     position: absolute;
+     left: 1.15rem;
+     right: 1.15rem;
+     top: -0.3rem;
+     height: 3px;
+     border-radius: 999px;
+     background: linear-gradient(90deg, var(--color-accent-gold), rgba(212, 175, 55, 0));
+     opacity: 0.75;
+     pointer-events: none;
+   }
+   @media (max-width: 640px) {
+     .section-title {
+       width: calc(100% - 2rem);
+       font-size: 1rem;
+       letter-spacing: 2px;
+       padding: 0.75rem 1rem;
+     }
+   }
    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 12px; }
    @media (min-width: 1024px) { .grid { grid-template-columns: repeat(4, 1fr); gap: 24px; } }
    
-   .card { background: var(--color-card-bg); border-radius: var(--radius-card); overflow: hidden; display: flex; flex-direction: column; position: relative; box-shadow: var(--shadow-soft); transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); border: 1px solid rgba(0,0,0,0.02); }
-   .card:hover, .card:active { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--color-accent-gold); }
+   .card {
+     background: linear-gradient(180deg, rgba(255,255,255,0.48) 0%, rgba(255,255,255,0.26) 100%);
+     border-radius: var(--radius-card);
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     box-shadow: 0 18px 38px rgba(33, 24, 10, 0.12);
+     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+     border: 1px solid rgba(255,255,255,0.42);
+     backdrop-filter: blur(16px);
+     -webkit-backdrop-filter: blur(16px);
+   }
+   .card::before {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: linear-gradient(135deg, rgba(255,255,255,0.28), rgba(255,255,255,0) 42%);
+     pointer-events: none;
+   }
+   .card::after {
+     content: "";
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 0;
+     height: 4px;
+     background: linear-gradient(90deg, var(--color-accent-gold), var(--color-accent-maroon));
+     opacity: 0.95;
+     pointer-events: none;
+   }
+   .card:hover, .card:active {
+     transform: translateY(-6px);
+     box-shadow: 0 22px 42px rgba(33, 24, 10, 0.16);
+     border-color: rgba(212, 175, 55, 0.55);
+   }
    .img-box { padding: 15px 15px 0; display: flex; justify-content: center; align-items: center; transition: 0.3s; position: relative; }
    .img-container-circle { width: 100%; aspect-ratio: 1/1; border-radius: 50%; overflow: hidden; border: 3px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
    .img-main { width: 100%; height: 100%; object-fit: cover; }
@@ -84,7 +213,7 @@
    .serving-remark { font-size: 0.65rem; color: var(--color-accent-gold); font-weight: 700; background: rgba(184, 147, 85, 0.1); padding: 2px 6px; border-radius: 4px; margin-top: 4px; display: inline-block; }
    .spice-indicator { display: inline-flex; gap: 2px; font-size: 0.85rem; line-height: 1; vertical-align: middle; flex-shrink: 0; }
    .item-desc { font-size: 0.75rem; color: var(--color-text-secondary); margin: 4px 0 10px 0; line-height: 1.4; cursor: pointer; overflow: hidden; }
-   .item-desc.collapsed { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .item-desc.collapsed { display: -webkit-box; line-clamp: 2; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
    .item-desc::after { content: "▾ More"; display: block; font-size: 0.6rem; color: var(--color-accent-gold); margin-top: 4px; font-weight: 700; }
    .item-desc.expanded::after { content: "▴ Less"; }
    
@@ -93,6 +222,8 @@
    .variant-chip.active.v-non { background: var(--color-nonveg) !important; color: #FFFFFF !important; border-color: var(--color-nonveg) !important; }
    .variant-chip.active.v-jain { background: var(--color-jain) !important; color: #FFFFFF !important; border-color: var(--color-jain) !important; }
    .qty-chip.active { background: var(--color-accent-maroon); color: #FFFFFF; border-color: var(--color-accent-maroon); }
+   .qty-chip.active.v-veg { background: var(--color-veg) !important; color: #FFFFFF !important; border-color: var(--color-veg) !important; }
+   .qty-chip.active.v-non { background: var(--color-nonveg) !important; color: #FFFFFF !important; border-color: var(--color-nonveg) !important; }
    
    .price { font-size: 1.1rem; font-weight: 800; color: var(--color-text-primary); border-top: 1px solid rgba(0,0,0,0.05); padding-top: 10px; margin-top: 5px; display: flex; justify-content: space-between; align-items: center; }
 
@@ -261,69 +392,585 @@
     }
   }
   </style>
+  <link rel="stylesheet" href="assets/css/menu-shell.css">
+  <style id="menu-ambient-overrides">
+  body.concept-body {
+    position: relative;
+    background:
+      radial-gradient(circle at 14% 14%, rgba(196, 110, 83, 0.18), transparent 24%),
+      radial-gradient(circle at 84% 8%, rgba(217, 179, 122, 0.16), transparent 20%),
+      radial-gradient(circle at 58% 42%, rgba(83, 118, 103, 0.14), transparent 24%),
+      linear-gradient(180deg, #121922 0%, #090d14 42%, #0b1017 100%);
+    background-attachment: fixed;
+  }
+  body.concept-body::before {
+    opacity: 0.28;
+  }
+  body.concept-body #loader {
+    background:
+      radial-gradient(circle at 50% 30%, rgba(217, 179, 122, 0.16), transparent 28%),
+      radial-gradient(circle at 20% 20%, rgba(196, 110, 83, 0.14), transparent 26%),
+      linear-gradient(180deg, rgba(7, 11, 16, 0.98), rgba(4, 7, 11, 0.98));
+    transition: opacity 0.55s ease, visibility 0.55s ease;
+  }
+  body.concept-body #loader.is-closing {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  body.concept-body .loader-shell {
+    position: relative;
+    gap: 12px;
+    width: min(92vw, 520px);
+    padding: 32px 28px 26px;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(180deg, rgba(17, 23, 32, 0.9), rgba(9, 13, 20, 0.84));
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    overflow: hidden;
+    animation: loaderShellIn 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 0.45s ease, opacity 0.45s ease;
+  }
+  body.concept-body #loader.is-closing .loader-shell {
+    transform: translateY(18px) scale(0.97);
+    opacity: 0;
+  }
+  body.concept-body .loader-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 38%);
+    pointer-events: none;
+  }
+  body.concept-body .loader-stage {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 6px;
+  }
+  body.concept-body .loader-orbit {
+    position: absolute;
+    inset: 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(242, 213, 166, 0.24);
+    box-shadow: 0 0 0 1px rgba(196, 110, 83, 0.06) inset;
+    animation: loaderOrbitPulse 2.6s ease-in-out infinite;
+  }
+  body.concept-body .loader-orbit-secondary {
+    inset: 0;
+    border-color: rgba(196, 110, 83, 0.16);
+    animation-delay: 1.1s;
+  }
+  body.concept-body .loader-bowl-wrap {
+    position: relative;
+    width: 126px;
+    height: 126px;
+  }
+  body.concept-body .loader-bowl {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    width: 106px;
+    height: 58px;
+    transform: translateX(-50%);
+    border-radius: 0 0 56px 56px;
+    background: linear-gradient(180deg, rgba(248, 241, 232, 0.96), rgba(201, 177, 147, 0.84));
+    box-shadow: inset 0 -8px 18px rgba(93, 52, 38, 0.18), 0 18px 26px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+  }
+  body.concept-body .loader-bowl::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: -10px;
+    height: 18px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #f7dfb7, #fff3dc, #e0b57b);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+  }
+  body.concept-body .loader-soup {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: 7px;
+    height: 24px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #d46f4e, #b5423d 45%, #f0b160 100%);
+    animation: loaderSoupShift 2.8s ease-in-out infinite;
+  }
+  body.concept-body .loader-soup::before,
+  body.concept-body .loader-soup::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(248, 219, 160, 0.76);
+  }
+  body.concept-body .loader-soup::before {
+    width: 12px;
+    height: 12px;
+    left: 16px;
+    top: 6px;
+  }
+  body.concept-body .loader-soup::after {
+    width: 9px;
+    height: 9px;
+    right: 18px;
+    top: 8px;
+  }
+  body.concept-body .loader-garnish {
+    position: absolute;
+    top: 13px;
+    width: 18px;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(143, 196, 111, 0.9);
+    transform: rotate(18deg);
+  }
+  body.concept-body .loader-garnish-a {
+    left: 36px;
+  }
+  body.concept-body .loader-garnish-b {
+    right: 30px;
+    transform: rotate(-20deg);
+  }
+  body.concept-body .loader-steam {
+    position: absolute;
+    bottom: 68px;
+    width: 18px;
+    height: 68px;
+    border-radius: 999px;
+    border: 2px solid rgba(255, 255, 255, 0.34);
+    border-color: rgba(255, 255, 255, 0.28) transparent transparent transparent;
+    filter: blur(0.3px);
+    opacity: 0;
+    animation: loaderSteamRise 2.2s ease-in-out infinite;
+  }
+  body.concept-body .loader-steam-1 {
+    left: 36px;
+  }
+  body.concept-body .loader-steam-2 {
+    left: 54px;
+    height: 74px;
+    animation-delay: 0.5s;
+  }
+  body.concept-body .loader-steam-3 {
+    right: 32px;
+    height: 64px;
+    animation-delay: 1s;
+  }
+  body.concept-body .loader-chopsticks {
+    position: absolute;
+    right: 6px;
+    top: 34px;
+    width: 72px;
+    height: 10px;
+    transform: rotate(-24deg);
+  }
+  body.concept-body .loader-chopsticks::before,
+  body.concept-body .loader-chopsticks::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #f7dfb7, #b57752);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
+  }
+  body.concept-body .loader-chopsticks::before {
+    top: 0;
+  }
+  body.concept-body .loader-chopsticks::after {
+    bottom: 0;
+  }
+  body.concept-body .loader-brand-mark {
+    height: 62px;
+    width: auto;
+    position: relative;
+    z-index: 1;
+  }
+  body.concept-body .loader-copy {
+    font-size: 0.96rem;
+  }
+  body.concept-body .loader-tagline {
+    color: rgba(244, 236, 222, 0.76);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  body.concept-body .loader-progress {
+    position: relative;
+    width: min(100%, 240px);
+    height: 6px;
+    margin-top: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+  }
+  body.concept-body .loader-progress span {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, rgba(242, 213, 166, 0), rgba(242, 213, 166, 0.98), rgba(196, 110, 83, 0.92), rgba(242, 213, 166, 0));
+    transform: translateX(-100%);
+    animation: loaderProgressSweep 1.8s ease-in-out infinite;
+  }
+  @keyframes loaderShellIn {
+    from { opacity: 0; transform: translateY(24px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @keyframes loaderOrbitPulse {
+    0%, 100% { transform: scale(0.92); opacity: 0.42; }
+    50% { transform: scale(1); opacity: 0.95; }
+  }
+  @keyframes loaderSteamRise {
+    0% { opacity: 0; transform: translateY(8px) scale(0.9); }
+    25% { opacity: 0.72; }
+    100% { opacity: 0; transform: translateY(-26px) scale(1.1); }
+  }
+  @keyframes loaderSoupShift {
+    0%, 100% { transform: translateX(0); filter: saturate(1); }
+    50% { transform: translateX(3px); filter: saturate(1.1); }
+  }
+  @keyframes loaderProgressSweep {
+    0% { transform: translateX(-100%); }
+    65%, 100% { transform: translateX(100%); }
+  }
+  body.concept-body .menu-ambient {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  body.concept-body .menu-ambient-canvas,
+  body.concept-body .menu-ambient-blur canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  body.concept-body .menu-ambient-canvas {
+    opacity: 0.92;
+    mix-blend-mode: normal;
+  }
+  body.concept-body .menu-ambient-blur {
+    position: absolute;
+    width: 72vw;
+    height: 72vw;
+    max-width: 1040px;
+    max-height: 1040px;
+    opacity: 0.36;
+    filter: blur(84px) saturate(118%);
+  }
+  body.concept-body .menu-ambient-blur-top {
+    left: 36%;
+    top: -48%;
+    transform: rotate(18deg);
+    transform-origin: 0 100%;
+  }
+  body.concept-body .menu-ambient-blur-bottom {
+    left: -42%;
+    top: 64%;
+    transform: rotate(18deg);
+    transform-origin: 100% 0;
+  }
+  body.concept-body .menu-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(8px);
+    opacity: 0.52;
+  }
+  body.concept-body .menu-ambient-glow-a {
+    width: 28rem;
+    height: 28rem;
+    top: 12%;
+    left: -8%;
+    background: radial-gradient(circle, rgba(196, 110, 83, 0.3) 0%, rgba(196, 110, 83, 0.08) 44%, transparent 74%);
+  }
+  body.concept-body .menu-ambient-glow-b {
+    width: 24rem;
+    height: 24rem;
+    right: -4%;
+    top: 20%;
+    background: radial-gradient(circle, rgba(217, 179, 122, 0.24) 0%, rgba(83, 118, 103, 0.1) 44%, transparent 72%);
+  }
+  body.concept-body .concept-header,
+  body.concept-body #menuMain,
+  body.concept-body .legend-section,
+  body.concept-body .order-callout,
+  body.concept-body .concept-footer {
+    position: relative;
+    z-index: 1;
+  }
+  body.concept-body .concept-header {
+    position: sticky;
+    top: 0;
+    z-index: 1300;
+  }
+  body.concept-body .concept-header-actions {
+    position: relative;
+    z-index: 1302;
+  }
+  body.concept-body .top-controls-bar {
+    position: sticky;
+    top: calc(var(--header-h) - 1px);
+    z-index: 1200;
+    background: rgba(9, 13, 20, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+    width: min(calc(100% - 24px), 1280px);
+    margin: -1px auto 0;
+    border-radius: 0 0 16px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  body.concept-body #menuMain {
+    padding-top: 24px;
+  }
+  body.concept-body .section-title {
+    width: min(100%, 620px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+    isolation: isolate;
+    margin: 2rem auto 1.35rem;
+    padding: 18px 24px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: 6px solid #f2d5a6;
+    color: #fff7ec;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03) 42%, rgba(255, 255, 255, 0.08) 100%),
+      linear-gradient(135deg, #c46e53, #8b3a38 62%, #3d1316 100%);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28), 0 10px 24px rgba(139, 58, 56, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  body.concept-body .section-title::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f2d5a6;
+    box-shadow: 0 0 0 6px rgba(242, 213, 166, 0.16);
+    flex-shrink: 0;
+  }
+  body.concept-body .section-title::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 16px;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.18), transparent 38%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  body.concept-body .section-title + .grid {
+    position: relative;
+  }
+  body.concept-body .section-title + .grid::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    top: -0.35rem;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(242, 213, 166, 0.96), rgba(242, 213, 166, 0));
+    opacity: 0.85;
+    pointer-events: none;
+  }
+  body.concept-body .card {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.12) 100%),
+      linear-gradient(180deg, rgba(18, 25, 34, 0.44) 0%, rgba(10, 15, 22, 0.34) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(28px) saturate(138%);
+    -webkit-backdrop-filter: blur(28px) saturate(138%);
+  }
+  body.concept-body .card::before {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.06) 38%, transparent 64%);
+  }
+  body.concept-body .card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #f2d5a6, #c46e53);
+    opacity: 0.95;
+    pointer-events: none;
+  }
+  body.concept-body .card:hover,
+  body.concept-body .card:active {
+    border-color: rgba(242, 213, 166, 0.5);
+    box-shadow: 0 24px 58px rgba(0, 0, 0, 0.22);
+  }
+  @media (max-width: 768px) {
+    body.concept-body .menu-ambient-blur {
+      width: 108vw;
+      height: 108vw;
+      opacity: 0.28;
+    }
+    body.concept-body .concept-header {
+      position: sticky;
+      top: 0;
+      z-index: 1400;
+    }
+    body.concept-body .concept-nav {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: var(--header-h);
+      bottom: auto;
+      z-index: 1395;
+      max-height: calc(100vh - var(--header-h));
+      overflow-y: auto;
+      padding: 18px 20px 24px;
+      background: rgba(5, 8, 12, 0.98);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 24px 40px rgba(0, 0, 0, 0.34);
+    }
+    body.concept-body .concept-menu-toggle {
+      position: relative;
+      z-index: 1401;
+    }
+    body.concept-body .top-controls-bar {
+      width: calc(100% - 12px);
+      top: calc(var(--header-h) - 1px);
+      border-radius: 0 0 14px 14px;
+    }
+    body.concept-body .section-title {
+      width: calc(100% - 1.4rem);
+      font-size: 1.08rem;
+      letter-spacing: 0.12em;
+      padding: 16px 18px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body.concept-body .loader-shell,
+    body.concept-body .loader-orbit,
+    body.concept-body .loader-soup,
+    body.concept-body .loader-steam,
+    body.concept-body .loader-progress span {
+      animation: none !important;
+    }
+    body.concept-body .menu-ambient-canvas,
+    body.concept-body .menu-ambient-blur {
+      display: none;
+    }
+  }
+  </style>
  </head>
- <body id="menuBody">
-  <div id="loader">
-   <img alt="Logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg" style="height:80px;"/>
+ <body class="concept-body" id="menuBody">
+  <div class="menu-ambient" aria-hidden="true">
+   <canvas class="menu-ambient-canvas" id="menuAmbientCanvas"></canvas>
+   <div class="menu-ambient-blur menu-ambient-blur-top"><canvas id="menuAmbientBlurTop"></canvas></div>
+   <div class="menu-ambient-blur menu-ambient-blur-bottom"><canvas id="menuAmbientBlurBottom"></canvas></div>
+   <div class="menu-ambient-glow menu-ambient-glow-a"></div>
+   <div class="menu-ambient-glow menu-ambient-glow-b"></div>
   </div>
-  <header class="site-header-menu">
-   <img alt="Asian Wok &amp; Grill Logo" class="header-logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg"/>
-   <nav class="main-nav-menu">
-    <ul>
-      <li><a href="https://www.asianwokandgrill.in/">HOME</a></li>
-      <li><a href="namastemenu.html">MULTICUSINE</a></li>
-      <li><a href="cocktail.html">COCKTAIL</a></li>
-          
-      <li><a href="#order-online">ORDER ONLINE</a></li>
-    </ul>
+  <div id="loader">
+     <div class="loader-shell" aria-live="polite" aria-busy="true">
+      <div class="loader-stage" aria-hidden="true">
+       <div class="loader-orbit"></div>
+       <div class="loader-orbit loader-orbit-secondary"></div>
+       <div class="loader-bowl-wrap">
+        <div class="loader-steam loader-steam-1"></div>
+        <div class="loader-steam loader-steam-2"></div>
+        <div class="loader-steam loader-steam-3"></div>
+        <div class="loader-chopsticks"></div>
+        <div class="loader-bowl">
+         <div class="loader-soup"></div>
+         <div class="loader-garnish loader-garnish-a"></div>
+         <div class="loader-garnish loader-garnish-b"></div>
+        </div>
+       </div>
+      </div>
+      <img alt="Logo" class="loader-brand-mark" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg"/>
+      <p class="loader-kicker">Asian Wok &amp; Grill</p>
+      <div class="loader-copy">Preparing your menu experience</div>
+      <div class="loader-tagline">Woks fired. Steam rising. Flavours landing.</div>
+      <div class="loader-progress" aria-hidden="true"><span></span></div>
+     </div>
+  </div>
+  <header class="concept-header">
+   <a class="concept-brand" href="https://www.asianwokandgrill.in/" aria-label="Asian Wok and Grill home">
+    <img alt="Asian Wok &amp; Grill Logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg"/>
+   </a>
+   <nav class="concept-nav" id="conceptNav" aria-label="Primary">
+    <a href="https://www.asianwokandgrill.in/">Home</a>
+    <a href="menu.html">Food Menu</a>
+    <a href="cocktail.html">Cocktail</a>
+    <a href="reservation.html">Reservation</a>
+    <a href="#symbol-legend">Symbols</a>
+    <a href="#order-online">Order Online</a>
    </nav>
-   <div class="header-actions-menu">
-    <button class="theme-icon-btn" id="themeIconBtn" onclick="toggleTheme()">
-     🌙
-    </button>
-    <div class="hamburger-menu" id="hamburger-menu">
-      <span></span>
-      <span></span>
-      <span></span>
+   <div class="concept-header-actions">
+    <a class="ghost-link" href="reservation.html">Reserve</a>
+    <div class="order-online-wrap" id="orderOnlineWrap">
+     <button class="header-pill order-online-btn" aria-haspopup="true" aria-expanded="false" type="button">
+      Order Online
+      <svg class="caret-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+     </button>
+     <div class="order-dropdown" role="menu">
+        <a class="order-option" href="https://www.swiggy.com/city/nashik/asian-wok-and-grill-takli-road-ashokamarg-rest630679" target="_blank" rel="noopener noreferrer" role="menuitem">
+       <img class="platform-logo" src="https://cdn.simpleicons.org/swiggy/fc8019" alt="Swiggy">
+       Order on Swiggy
+      </a>
+        <a class="order-option" href="https://www.zomato.com/nashik/asian-wok-and-grill-anand-wali-goan/order" target="_blank" rel="noopener noreferrer" role="menuitem">
+       <img class="platform-logo" src="https://cdn.simpleicons.org/zomato/e23744" alt="Zomato">
+       Order on Zomato
+      </a>
+     </div>
     </div>
+    <button class="concept-menu-toggle" id="conceptMenuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+     <span></span>
+     <span></span>
+     <span></span>
+    </button>
    </div>
   </header>
-  <div class="top-controls-bar">
-   <div class="square-toggle-group">
-    <button class="square-btn active" id="f-all" onclick="updateFilter('ALL')">
-     ALL
-    </button>
-    <button class="square-btn" id="f-veg" onclick="updateFilter('VEG')">
-     VEG
-    </button>
-    <button class="square-btn" id="f-non" onclick="updateFilter('NON')">
-     NON
-    </button>
-   </div>
-   <div class="square-toggle-group">
-    <button class="square-btn active" id="jain-off" onclick="setJainToggle(false)">
-     ALL
-    </button>
-    <button class="square-btn" id="jain-on" onclick="setJainToggle(true)">
-     JAIN
-    </button>
-   </div>
-   <div class="square-toggle-group">
-    <button class="square-btn active" id="chef-off" onclick="setChefToggle(false)">
-     ALL
-    </button>
-    <button class="square-btn" id="chef-on" onclick="setChefToggle(true)">
-     ⭐ CHEF
-    </button>
-   </div>
-   <div class="square-toggle-group">
-    <button class="square-btn active" id="img-on" onclick="setImageToggle(true)">
-     IMG ON
-    </button>
-    <button class="square-btn" id="img-off" onclick="setImageToggle(false)">
-     OFF
-    </button>
-   </div>
+  <div class="top-controls-bar" id="topControlsBar">
+    <div class="square-toggle-group">
+     <button class="square-btn active" id="f-all" onclick="updateFilter('ALL')">
+      ALL
+     </button>
+     <button class="square-btn" id="f-veg" onclick="updateFilter('VEG')">
+      VEG
+     </button>
+     <button class="square-btn" id="f-non" onclick="updateFilter('NON')">
+      NON
+     </button>
+    </div>
+    <div class="square-toggle-group">
+     <button class="square-btn active" id="jain-off" onclick="setJainToggle(false)">
+      ALL
+     </button>
+     <button class="square-btn" id="jain-on" onclick="setJainToggle(true)">
+      JAIN
+     </button>
+    </div>
+    <div class="square-toggle-group">
+     <button class="square-btn active" id="chef-off" onclick="setChefToggle(false)">
+      ALL
+     </button>
+     <button class="square-btn" id="chef-on" onclick="setChefToggle(true)">
+      ⭐ CHEF
+     </button>
+    </div>
   </div>
   <div id="menuTriggerBtn" onclick="toggleSideNav(true)">
    MENU
@@ -332,137 +979,114 @@
   <div id="sideNavOverlay" onclick="toggleSideNav(false)">
   </div>
   <div id="sideNavContainer">
-   <h3 style="color:var(--color-accent-gold); letter-spacing:3px; font-weight:300; margin-bottom:10px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;">
-    SECTIONS
-   </h3>
+    <div class="drawer-header">
+     <div>
+      <p class="drawer-kicker">Browse</p>
+      <h3 class="drawer-title">Sections</h3>
+     </div>
+     <button class="quick-guide-btn" type="button" onclick="openSymbolGuide()">Guide</button>
+    </div>
    <div id="sideNavList">
    </div>
    <a href="https://asianwokandgrill.in" style="margin-top:auto; padding:15px; background:var(--color-accent-maroon); color:#fff; text-decoration:none; border-radius:12px; font-size:0.85rem; font-weight:700; text-align:center;">
     Back to Website
    </a>
   </div>
+    <div class="symbol-guide-modal" id="symbolGuideModal" aria-hidden="true">
+    <div class="symbol-guide-dialog" role="dialog" aria-modal="true" aria-labelledby="symbolGuideTitle">
+     <button class="symbol-guide-close" type="button" aria-label="Close symbol guide" onclick="closeSymbolGuide()">×</button>
+     <p class="drawer-kicker">Quick guide</p>
+     <h2 class="legend-title symbol-guide-title" id="symbolGuideTitle">Menu Symbols at a Glance</h2>
+    <div class="symbol-guide-grid" id="symbolGuideGrid"></div>
+    </div>
+    </div>
   <main id="menuMain">
   </main>
-  <section id="order-online" style="padding:40px 20px;background:#fff8ef;text-align:center;">
-  <h2 style="margin:0 0 24px;font-size:38px;letter-spacing:1px;color:#1f0000;font-family:'Cormorant Garamond', serif;">Order Online</h2>
-  <div style="display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;">
-    <a href="https://www.zomato.com/mumbai/namaste-kalyan-by-asian-wok-and-grill-kalyan-thane/" target="_blank" rel="noopener" aria-label="Order on Zomato" style="display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid #e7d5b4;border-radius:999px;background:#ffffff;text-decoration:none;color:#1f0000;font-family:'Poppins', sans-serif;font-weight:600;">
-      <img src="https://cdn.simpleicons.org/zomato/e23744" alt="Zomato" style="width:30px;height:30px;">
-      <span>Zomato</span>
-    </a>
-    <a href="https://www.swiggy.com/restaurants/namaste-kalyan-by-asian-wok-and-grill-kalyan-mumbai-1000913/dineout" target="_blank" rel="noopener" aria-label="Order on Swiggy" style="display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid #e7d5b4;border-radius:999px;background:#ffffff;text-decoration:none;color:#1f0000;font-family:'Poppins', sans-serif;font-weight:600;">
-      <img src="https://cdn.simpleicons.org/swiggy/fc8019" alt="Swiggy" style="width:30px;height:30px;">
-      <span>Swiggy</span>
-    </a>
-  </div>
-</section>
+  <section id="symbol-legend" class="legend-section">
+   <h2 class="legend-title">Menu Symbols Guide</h2>
+   <p class="legend-subtitle">Understand every icon, badge, and highlight before you order.</p>
+  <div class="legend-grid" id="symbolLegendGrid"></div>
+  </section>
 
-<footer>
-   <div class="legend-section" style="background: var(--color-bg-secondary); padding: 2.5rem 1.5rem; margin: 0 auto 3rem; max-width: 1200px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05);">
-    <h3 class="legend-title" style="font-size: 1.3rem; color: var(--color-text-primary); text-align: center; font-weight: 300; letter-spacing: 2px; margin-bottom: 2rem; text-transform: uppercase;">Menu Symbols Guide</h3>
-    <div class="legend-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
-      <div class="legend-card" style="background: var(--color-bg-primary); border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); padding: 18px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
-        <div style="font-weight:700; font-size:1.1rem; color:var(--color-text-primary);">Vegetarian</div>
-        <span style="display:inline-block;width:18px;height:18px;border-radius:4px;border:1px solid #ddd;background:#fff;vertical-align:middle;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--color-veg);margin:5px;"></span></span>
-        <span style="font-size:0.92em;color:#888;">Pure vegetarian dishes with no meat or animal products</span>
+  <section id="order-online" class="order-callout">
+   <h2 class="order-title">Order Online</h2>
+   <p class="order-subtitle">Choose your favourite delivery partner and get the menu to your door.</p>
+   <div class="order-actions">
+    <a class="order-pill" href="https://www.zomato.com/nashik/asian-wok-and-grill-anand-wali-goan/order" target="_blank" rel="noopener noreferrer" aria-label="Order on Zomato">
+     <img class="order-platform-logo" src="https://cdn.simpleicons.org/zomato/e23744" alt="Zomato">
+     <span>Zomato</span>
+    </a>
+    <a class="order-pill" href="https://www.swiggy.com/city/nashik/asian-wok-and-grill-takli-road-ashokamarg-rest630679" target="_blank" rel="noopener noreferrer" aria-label="Order on Swiggy">
+     <img class="order-platform-logo" src="https://cdn.simpleicons.org/swiggy/fc8019" alt="Swiggy">
+     <span>Swiggy</span>
+    </a>
+   </div>
+  </section>
+
+  <footer class="concept-footer">
+   <div class="footer-intro">
+    <p class="eyebrow">Our Properties</p>
+    <h2>Three destinations, one hospitality group.</h2>
+   </div>
+   <div class="property-footer-grid">
+    <article class="property-footer-card">
+     <div class="property-footer-head">
+      <img alt="Asian Wok and Grill" class="property-footer-logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg"/>
+      <div>
+       <h3>Asian Wok &amp; Grill</h3>
+       <p>Bold Pan-Asian plates, grills, and dine-out evenings in Nashik.</p>
       </div>
-      <div class="legend-card" style="background: var(--color-bg-primary); border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); padding: 18px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
-        <div style="font-weight:700; font-size:1.1rem; color:var(--color-text-primary);">Non-Vegetarian</div>
-        <span style="display:inline-block;width:18px;height:18px;border-radius:4px;border:1px solid #ddd;background:#fff;vertical-align:middle;"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--color-nonveg);margin:5px;"></span></span>
-        <span style="font-size:0.92em;color:#888;">Contains meat, poultry, seafood, or eggs</span>
-      </div>
-      <div class="legend-card" style="background: var(--color-bg-primary); border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); padding: 18px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
-        <div style="font-weight:700; font-size:1.1rem; color:var(--color-text-primary);">Jain Option</div>
-        <span style="display:inline-block;background:var(--color-jain);color:#fff;font-size:0.85em;font-weight:900;padding:2px 8px;border-radius:4px;vertical-align:middle;">JAIN</span>
-        <span style="font-size:0.92em;color:#888;">Prepared without onion, garlic, and root vegetables</span>
-      </div>
-      <div class="legend-card" style="background: var(--color-bg-primary); border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); padding: 18px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
-        <div style="font-weight:700; font-size:1.1rem; color:var(--color-text-primary);">Chef's Special</div>
-        <span style="display:inline-block;background:#fff;color:var(--color-accent-maroon);width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:1.2em;box-shadow:0 2px 5px rgba(0,0,0,0.1);">👨‍🍳</span>
-        <span style="font-size:0.92em;color:#888;">Signature dishes recommended by our expert chefs</span>
-      </div>
-      <div class="legend-card" style="background: var(--color-bg-primary); border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); padding: 18px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
-        <div style="font-weight:700; font-size:1.1rem; color:var(--color-text-primary);">Medium Spicy</div>
-        <span style="font-size:1.2em;vertical-align:middle;">🌶️</span>
-        <span style="font-size:0.92em;color:#888;">Moderate heat level for balanced flavors</span>
-      </div>
-      <div class="legend-card" style="background: var(--color-bg-primary); border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); padding: 18px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
-        <div style="font-weight:700; font-size:1.1rem; color:var(--color-text-primary);">Spicy</div>
-        <span style="font-size:1.2em;vertical-align:middle;">🌶️🌶️</span>
-        <span style="font-size:0.92em;color:#888;">High heat level for spice enthusiasts</span>
-      </div>
-      <div class="legend-card" style="background: var(--color-bg-primary); border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); padding: 12px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
-        <div style="font-weight:700; font-size:1.0rem; color:var(--color-text-primary);">Sheet Extras</div>
-        <div style="display:flex;gap:8px;align-items:center;"><div class="variant-chip" style="padding:4px 8px;font-size:0.75rem;">Custom</div><span style="font-size:0.9rem;color:#888;">Auto-detected columns shown as chips</span></div>
-      </div>
-    </div>
-  </div>
-   <!-- Branch Locations -->
-   <div class="branch-grid">
-    <div class="branch-item">
-     <img alt="Asian Wok &amp; Grill" class="branch-logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg"/>
-     <h4>Asian Wok &amp; Grill</h4>
-     <p>📍 Shop no 1, Rushiraj Riviera, ahead of Jihan Circle, Gangapur Rd, Anandvalli, shiver, Nashik, Maharashtra 422013</p>
-     <p>
-      <a href="tel:+917269899999" style="color:inherit;text-decoration:none;">
-        📞 +91 72698 99999
-      </a><br/>
-      <a href="mailto:asianwokandgrill9@gmail.com" style="color:inherit;text-decoration:none;">
-        ✉️ asianwokandgrill9@gmail.com
-      </a>
-     </p>
-     <div class="branch-socials">
-      <a href="https://www.facebook.com/asianwokandgrill" target="_blank"><svg viewbox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg></a>
-      <a href="https://www.instagram.com/asianwokandgrillnashik/" target="_blank"><svg viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
-      <a href="https://wa.me/917269899999" target="_blank"><svg viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.301-.15-1.779-.879-2.053-.979-.275-.1-.475-.15-.675.15-.199.299-.775.979-.95.174s-.349-.15-.649-.3c-1.272-.639-2.081-1.169-2.825-1.913-.197-.197-.197-.457-.046-.607l.45-.45c.15-.15.2-.25.3-.45.1-.199.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.588-.491-.508-.675-.518-.174-.01-.374-.012-.574-.012-.2 0-.525.075-.8.375-.275.299-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.199 2.113 3.227 5.125 4.525.715.308 1.273.493 1.708.631.719.227 1.373.195 1.89.117.575-.087 1.779-.726 2.028-1.426.25-.7.25-1.299.175-1.425-.075-.125-.275-.199-.575-.349z"></path></svg></a>
      </div>
-    </div>
-    <div class="branch-item">
-     <img alt="Namaste Chef" class="branch-logo" src="https://storage.files-vault.com/uploads/1768797625-EllydznoIM.JPG"/>
-     <h4>Namaste Chef</h4>
-     <p>📍 Nashik - Pune Rd, near Inox Signal, above Croma Store, Ganesh Baba Nagar, Nashik, Maharashtra 422011</p>
-     <p>
-      <a href="tel:+917378599999" style="color:inherit;text-decoration:none;">
-        📞 +91 7378599999
-      </a><br/>
-      <a href="mailto:asianwokandgrill99@gmail.com" style="color:inherit;text-decoration:none;">
-        ✉️ asianwokandgrill99@gmail.com
-      </a>
-     </p>
-     <div class="branch-socials">
-      <a href="https://www.facebook.com/namastechefnashik/" target="_blank"><svg viewbox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg></a>
-      <a href="https://www.instagram.com/namaste_chef_nashik/" target="_blank"><svg viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
-      <a href="https://wa.me/917378599999" target="_blank"><svg viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.301-.15-1.779-.879-2.053-.979-.275-.1-.475-.15-.675.15-.199.299-.775.979-.95.174s-.349-.15-.649-.3c-1.272-.639-2.081-1.169-2.825-1.913-.197-.197-.197-.457-.046-.607l.45-.45c.15-.15.2-.25.3-.45.1-.199.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.588-.491-.508-.675-.518-.174-.01-.374-.012-.574-.012-.2 0-.525.075-.8.375-.275.299-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.199 2.113 3.227 5.125 4.525.715.308 1.273.493 1.708.631.719.227 1.373.195 1.89.117.575-.087 1.779-.726 2.028-1.426.25-.7.25-1.299.175-1.425-.075-.125-.275-.199-.575-.349z"></path></svg></a>
+     <p class="property-footer-address">Shop no 1, Rushiraj Riviera, ahead of Jihan Circle, Gangapur Rd, Anandvalli, Nashik, Maharashtra 422013.</p>
+     <div class="property-socials">
+      <a class="property-social-link" href="https://www.facebook.com/asianwokandgrill" target="_blank" rel="noopener noreferrer" aria-label="Asian Wok and Grill on Facebook"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg></a>
+      <a class="property-social-link" href="https://www.instagram.com/asianwokandgrillnashik/" target="_blank" rel="noopener noreferrer" aria-label="Asian Wok and Grill on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
+      <a class="property-social-link" href="https://wa.me/917269899999" target="_blank" rel="noopener noreferrer" aria-label="Asian Wok and Grill on WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.301-.15-1.779-.879-2.053-.979-.275-.1-.475-.15-.675.15-.199.299-.775.979-.95.174s-.349-.15-.649-.3c-1.272-.639-2.081-1.169-2.825-1.913-.197-.197-.197-.457-.046-.607l.45-.45c.15-.15.2-.25.3-.45.1-.199.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.588-.491-.508-.675-.518-.174-.01-.374-.012-.574-.012-.2 0-.525.075-.8.375-.275.299-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.199 2.113 3.227 5.125 4.525.715.308 1.273.493 1.708.631.719.227 1.373.195 1.89.117.575-.087 1.779-.726 2.028-1.426.25-.7.25-1.299.175-1.425-.075-.125-.275-.199-.575-.349z"></path></svg></a>
+      <a class="property-social-link" href="https://asianwokandgrill.in/" target="_blank" rel="noopener noreferrer" aria-label="Asian Wok and Grill website">Site</a>
      </div>
-    </div>
-    <div class="branch-item">
-     <img alt="Namaste Kalyan" class="branch-logo" src="https://storage.files-vault.com/uploads/1768797743-s1dqwybMab.webp"/>
-     <h4>Namaste Kalyan</h4>
-     <p>📍 RockMount Residency, 4th, Khadakpada Cir, Gokul Nagari NX, Gandhar Nagar, Khadakpada, Kalyan, Maharashtra 421301</p>
-     <p>
-      <a href="tel:+919371519999" style="color:inherit;text-decoration:none;">
-        📞 +91 9371519999
-      </a><br/>
-      <a href="mailto:namastekalyan09@gmail.com" style="color:inherit;text-decoration:none;">
-        ✉️ namastekalyan09@gmail.com
-      </a>
-     </p>
-     <div class="branch-socials">
-      <a href="https://www.facebook.com/namastekalyanbyawg" target="_blank"><svg viewbox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg></a>
-      <a href="https://www.instagram.com/namaste_kalyan_by_awg/" target="_blank"><svg viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
-      <a href="https://wa.me/919371519999" target="_blank"><svg viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.301-.15-1.779-.879-2.053-.979-.275-.1-.475-.15-.675.15-.199.299-.775.979-.95.174s-.349-.15-.649-.3c-1.272-.639-2.081-1.169-2.825-1.913-.197-.197-.197-.457-.046-.607l.45-.45c.15-.15.2-.25.3-.45.1-.199.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.588-.491-.508-.675-.518-.174-.01-.374-.012-.574-.012-.2 0-.525.075-.8.375-.275.299-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.199 2.113 3.227 5.125 4.525.715.308 1.273.493 1.708.631.719.227 1.373.195 1.89.117.575-.087 1.779-.726 2.028-1.426.25-.7.25-1.299.175-1.425-.075-.125-.275-.199-.575-.349z"></path></svg></a>
+     <div class="property-order-links">
+        <a href="https://www.swiggy.com/city/nashik/asian-wok-and-grill-takli-road-ashokamarg-rest630679" target="_blank" rel="noopener noreferrer" aria-label="Asian Wok and Grill on Swiggy"><img src="https://cdn.simpleicons.org/swiggy/fc8019" alt="Swiggy" class="order-platform-logo"></a>
+        <a href="https://www.zomato.com/nashik/asian-wok-and-grill-anand-wali-goan/order" target="_blank" rel="noopener noreferrer" aria-label="Asian Wok and Grill on Zomato"><img src="https://cdn.simpleicons.org/zomato/e23744" alt="Zomato" class="order-platform-logo"></a>
      </div>
-    </div>
+    </article>
+    <article class="property-footer-card property-footer-card-featured">
+     <div class="property-footer-head">
+      <img alt="Namaste Chef" class="property-footer-logo" src="https://storage.files-vault.com/uploads/1768797625-EllydznoIM.JPG"/>
+      <div>
+       <h3>Namaste Chef</h3>
+       <p>Chef specials, mocktails, and event-ready dining in Nashik.</p>
+      </div>
+     </div>
+     <p class="property-footer-address">Nashik - Pune Rd, near Inox Signal, above Croma Store, Ganesh Baba Nagar, Nashik, Maharashtra 422011.</p>
+     <div class="property-socials">
+      <a class="property-social-link" href="https://www.facebook.com/namastechefnashik/" target="_blank" rel="noopener noreferrer" aria-label="Namaste Chef on Facebook"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg></a>
+      <a class="property-social-link" href="https://www.instagram.com/namaste_chef_nashik/" target="_blank" rel="noopener noreferrer" aria-label="Namaste Chef on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
+      <a class="property-social-link" href="https://wa.me/917378599999" target="_blank" rel="noopener noreferrer" aria-label="Namaste Chef on WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.301-.15-1.779-.879-2.053-.979-.275-.1-.475-.15-.675.15-.199.299-.775.979-.95.174s-.349-.15-.649-.3c-1.272-.639-2.081-1.169-2.825-1.913-.197-.197-.197-.457-.046-.607l.45-.45c.15-.15.2-.25.3-.45.1-.199.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.588-.491-.508-.675-.518-.174-.01-.374-.012-.574-.012-.2 0-.525.075-.8.375-.275.299-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.199 2.113 3.227 5.125 4.525.715.308 1.273.493 1.708.631.719.227 1.373.195 1.89.117.575-.087 1.779-.726 2.028-1.426.25-.7.25-1.299.175-1.425-.075-.125-.275-.199-.575-.349z"></path></svg></a>
+      <a class="property-social-link" href="https://namastechefawg.in/" target="_blank" rel="noopener noreferrer" aria-label="Namaste Chef website">Site</a>
+     </div>
+    </article>
+    <article class="property-footer-card">
+     <div class="property-footer-head">
+      <img alt="Namaste Kalyan" class="property-footer-logo" src="https://storage.files-vault.com/uploads/1768797743-s1dqwybMab.webp"/>
+      <div>
+       <h3>Namaste Kalyan</h3>
+       <p>Celebration-first dining with cocktails, ambience, and group-ready tables.</p>
+      </div>
+     </div>
+     <p class="property-footer-address">RockMount Residency, 4th, Khadakpada Cir, Gandhar Nagar, Khadakpada, Kalyan, Maharashtra 421301.</p>
+     <div class="property-socials">
+      <a class="property-social-link" href="https://www.facebook.com/namastekalyanbyawg" target="_blank" rel="noopener noreferrer" aria-label="Namaste Kalyan on Facebook"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg></a>
+      <a class="property-social-link" href="https://www.instagram.com/namaste_kalyan_by_awg/" target="_blank" rel="noopener noreferrer" aria-label="Namaste Kalyan on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a>
+      <a class="property-social-link" href="https://wa.me/919371519999" target="_blank" rel="noopener noreferrer" aria-label="Namaste Kalyan on WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.301-.15-1.779-.879-2.053-.979-.275-.1-.475-.15-.675.15-.199.299-.775.979-.95.174s-.349-.15-.649-.3c-1.272-.639-2.081-1.169-2.825-1.913-.197-.197-.197-.457-.046-.607l.45-.45c.15-.15.2-.25.3-.45.1-.199.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.588-.491-.508-.675-.518-.174-.01-.374-.012-.574-.012-.2 0-.525.075-.8.375-.275.299-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.199 2.113 3.227 5.125 4.525.715.308 1.273.493 1.708.631.719.227 1.373.195 1.89.117.575-.087 1.779-.726 2.028-1.426.25-.7.25-1.299.175-1.425-.075-.125-.275-.199-.575-.349z"></path></svg></a>
+      <a class="property-social-link" href="mailto:namastekalyan09@gmail.com" aria-label="Email Namaste Kalyan">Mail</a>
+     </div>
+    </article>
    </div>
    <div class="sync-info">
-    <div id="footerSyncTime">
-     Last synced: Just now
-    </div>
-    <div id="footerItemCount">
-    </div>
+    <div id="footerSyncTime">Last synced: Just now</div>
+    <div id="footerItemCount"></div>
    </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/ajv@8.12.0/dist/ajv.min.js"></script>
   <script>
    const SHEET_ID = '19hUSc2ny1NGd73WDTQfosdS3O7xhwiQbdGbiDgKSQlA';
    const API_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;
@@ -517,6 +1141,30 @@
 
      registerMenuCacheWorker();
 
+  const loaderMountedAt = Date.now();
+
+  function hideLoader() {
+      const loader = document.getElementById('loader');
+      const loaderShell = loader ? loader.querySelector('.loader-shell') : null;
+      if (!loader) return Promise.resolve();
+      if (loader.dataset.hidden === 'true') return Promise.resolve();
+
+      const minVisibleMs = 1100;
+      const remaining = Math.max(0, minVisibleMs - (Date.now() - loaderMountedAt));
+
+      return new Promise((resolve) => {
+        window.setTimeout(() => {
+          loader.dataset.hidden = 'true';
+          if (loaderShell) loaderShell.setAttribute('aria-busy', 'false');
+          loader.classList.add('is-closing');
+          window.setTimeout(() => {
+            loader.style.display = 'none';
+            resolve();
+          }, 560);
+        }, remaining);
+      });
+  }
+
    async function init() {
        try {
          const sheetData = await loadMenuDataWithCache();
@@ -544,19 +1192,12 @@
               ov.style.display = 'flex';
             }
 
-            try {
-              if(typeof Ajv === 'function' || typeof Ajv === 'object') {
-                const ajv = new Ajv();
-                const schema = { type: 'object', required: REQUIRED_HEADERS };
-                const valid = ajv.validate(schema, map);
-                if(!valid) { showSchemaErrorOverlay(ajv.errors || []); return; }
-              } else {
-                // fallback: warn but continue
-                const missing = REQUIRED_HEADERS.filter(h => map[h] === undefined);
-                if(missing.length) console.warn('Missing required headers:', missing);
+            {
+              const missing = REQUIRED_HEADERS.filter(h => map[h] === undefined);
+              if(missing.length) {
+                showSchemaErrorOverlay(missing.map(h => ({ message: 'missing required column: ' + h })));
+                return;
               }
-            } catch(e) {
-              console.warn('Header schema validation failed to run', e);
             }
 
             // Parse optional runtime Non-Veg keywords column (editors can supply comma/semicolon list)
@@ -578,13 +1219,16 @@
              const headerList = Object.keys(map || {});
              const proteinRegex = /\b(veg|chicken|prawn|mutton|fish|surmai|pomfret|crab|egg)\b/i;
              const servingRegex = /\b(pcs|pc|piece|half|full|plain|butter|medium|large)\b/i;
+           const proteinColumns = ["Veg", "Chicken", "Prawn", "Mutton", "Fish", "Surmai", "Pomfret", "Crab", "Egg"];
+           const vegXpcsCols = ["Veg 2Pcs", "Veg 4pcs", "Veg 6pcs", "Veg 9pcs", "Veg 12pcs"];
+           const servingColumns = ["Unit (Pcs)", ...vegXpcsCols, "Chicken 2pcs", "Chicken 4pcs", "Chicken 6pcs", "Chicken 9pcs", "Chicken 12pcs", "Prawns 2pcs", "Prawns 4pcs", "Prawns 6pcs", "Prawns 9pcs", "Prawns 12pcs", "Half", "Full", "Plain", "Butter", "Medium", "Large"];
              function sampleColumnValues(colName, rows, map) {
                const idx = map[colName];
                if(idx === undefined) return "";
                return rows.slice(0,6).map(r => (r.c && r.c[idx] && r.c[idx].v) || "").join(' ');
              }
              const dynamicColumns = headerList
-               .filter(h => !knownStatic.includes(h))
+               .filter(h => !knownStatic.includes(h) && !servingColumns.includes(h) && !proteinColumns.includes(h))
                .map(h => {
                  const sample = sampleColumnValues(h, rows, map).toString();
                  const hasNumber = /[0-9]/.test(sample);
@@ -594,9 +1238,6 @@
                  else if(hasNumber) type = 'price';
                  return { key: h, label: h, type };
                });
-           const proteinColumns = ["Veg", "Chicken", "Prawn", "Mutton", "Fish", "Surmai", "Pomfret", "Crab", "Egg"];
-           const vegXpcsCols = ["Veg 2Pcs", "Veg 4pcs", "Veg 6pcs", "Veg 9pcs", "Veg 12pcs"];
-           const servingColumns = ["Unit (Pcs)", ...vegXpcsCols, "Chicken 2pcs", "Chicken 4pcs", "Chicken 6pcs", "Chicken 9pcs", "Chicken 12pcs", "Prawns 2pcs", "Prawns 4pcs", "Prawns 6pcs", "Prawns 9pcs", "Prawns 12pcs", "Half", "Full", "Plain", "Butter", "Medium", "Large"];
 
            MENU_DB = rows.map((r, idx) => {
                const d = r.c;
@@ -650,7 +1291,8 @@
                  });
 
                const jVal = (map["Jain"] !== undefined && d[map["Jain"]] && d[map["Jain"]].v) ? d[map["Jain"]].v : null;
-               const chefRaw = (map["Chef Special"] !== undefined && d[map["Chef Special"]]) ? d[map["Chef Special"]].v : null;
+               const chefKey = map["Chef Special"] !== undefined ? "Chef Special" : (map["Chef's Special"] !== undefined ? "Chef's Special" : null);
+               const chefRaw = (chefKey && d[map[chefKey]]) ? d[map[chefKey]].v : null;
 
                  return {
                    id: idx,
@@ -666,19 +1308,18 @@
                    jainPrice: jVal,
                    img: d[map["Image URL"]]?.v || "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400",
                    isVeg: !isNonVegItem,
-                   rowDiet: isNonVegItem ? 'nonveg' : 'veg'
+                   rowDiet: isNonVegItem ? 'nonveg' : 'veg',
+                   descNonVeg: nonVegInText
                };
            }).filter(x => x);
 
            document.getElementById('footerSyncTime').innerText = `Last synced: Today at ${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
            document.getElementById('footerItemCount').innerText = `Total Selections: ${MENU_DB.length}`;
+               renderSymbolLegends();
                warmMenuAssets(MENU_DB);
-     document.getElementById('loader').style.display = 'none';
-
-checkURLParams();   // 👈 ही line add कर
-
-render();
-           render();
+               checkURLParams();
+               render();
+               await hideLoader();
        } catch (e) { console.error(e); }
    }
 
@@ -737,19 +1378,19 @@ render();
        
        const selV = activeVariant[i.id];
        
+       const NON_VEG_VARIANTS = ["Chicken", "Prawn", "Mutton", "Fish", "Surmai", "Pomfret", "Crab", "Egg"];
        let dietType = i.rowDiet; 
-       if (selV === "Veg" || vegXpcs.includes(selV)) dietType = "veg";
+       if (selV === "Veg" || vegXpcs.includes(selV)) dietType = i.descNonVeg ? "nonveg" : "veg";
        else if (selV === "Jain") dietType = "jain";
+       else if (NON_VEG_VARIANTS.includes(selV)) dietType = "nonveg";
 
        let displayPrice = "--";
        if(selV === 'Jain') displayPrice = i.jainPrice;
        else if(servingKeys.includes(selV)) displayPrice = i.servings[selV];
        else if(proteinKeys.includes(selV)) displayPrice = i.proteins[selV];
 
-       let spiceIcons = "";
-       const rawSpice = (i.spice || "").toString().trim().toLowerCase();
-       if (rawSpice === "spicy") spiceIcons = "🌶️🌶️";
-       else if (rawSpice === "medium spicy") spiceIcons = "🌶️";
+      const rawSpice = (i.spice || "").toString().trim().toLowerCase();
+      const spiceLabel = rawSpice === "spicy" ? "🌶️🌶️" : rawSpice === "medium spicy" ? "🌶️" : rawSpice === "non spicy" ? "🌿" : "";
 
        return `<div class="card">
            <div class="img-box">
@@ -759,10 +1400,9 @@ render();
            </div>
            <div class="card-body">
                <div class="card-header-row">
-                    <div class="item-name">${i.name} ${spiceIcons ? `<span class="spice-indicator">${spiceIcons}</span>` : ''}</div>
+                    <div class="item-name">${i.name} ${spiceLabel ? `<span class="spice-indicator">${spiceLabel}</span>` : ''}</div>
                     <div class="header-right-symbols">
-                        <div class="badge-type"><div class="dot ${dietType}"></div></div>
-                        ${i.jainPrice !== null ? `<div class="jain-badge">JAIN</div>` : ''}
+                        ${selV === 'Jain' ? `<div class="jain-badge">JAIN</div>` : `<div class="badge-type"><div class="dot ${dietType}"></div></div>`}
                         ${i.chef ? `<div class="chef-badge">👨‍🍳</div>` : ''}
                     </div>
                </div>
@@ -788,9 +1428,84 @@ render();
    function updateFilter(val) { foodFilter = val; if(val !== 'VEG') showJainOnly = false; activeVariant = {}; document.querySelectorAll('.top-controls-bar .square-btn').forEach(b => { if(b.id && b.id.startsWith('f-')) b.classList.remove('active'); }); document.getElementById('f-' + val.toLowerCase()).classList.add('active'); render(); }
    function setChefToggle(val) { showChefOnly = val; document.getElementById('chef-on').classList.toggle('active', val); document.getElementById('chef-off').classList.toggle('active', !val); render(); }
    function setJainToggle(val) { showJainOnly = val; activeVariant = {}; if(val) updateFilter('VEG'); document.getElementById('jain-on').classList.toggle('active', val); document.getElementById('jain-off').classList.toggle('active', !val); render(); }
-   function setImageToggle(val) { document.getElementById('menuBody').classList.toggle('hide-images', !val); document.getElementById('img-on').classList.toggle('active', val); document.getElementById('img-off').classList.toggle('active', !val); }
-   function toggleTheme() { const target = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; document.body.setAttribute('data-theme', target); document.getElementById('themeIconBtn').innerText = target === 'dark' ? '☀️' : '🌙'; }
-   function toggleSideNav(show) { const drawer = document.getElementById('sideNavContainer'); const overlay = document.getElementById('sideNavOverlay'); if(show) { drawer.classList.add('open'); overlay.style.display = 'block'; } else { drawer.classList.remove('open'); overlay.style.display = 'none'; } }
+   function toggleSideNav(show) { const drawer = document.getElementById('sideNavContainer'); const overlay = document.getElementById('sideNavOverlay'); if(show) { document.body.classList.add('drawer-open'); drawer.classList.add('open'); overlay.style.display = 'block'; } else { drawer.classList.remove('open'); overlay.style.display = 'none'; document.body.classList.remove('drawer-open'); } }
+  function escapeHtml(text) {
+    return String(text)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function buildSymbolDefinitions() {
+    const defs = [];
+    const hasVeg = MENU_DB.some(i => i.isVeg);
+    const hasNonVeg = MENU_DB.some(i => !i.isVeg);
+    const hasJain = MENU_DB.some(i => i.jainPrice !== null);
+    const hasChef = MENU_DB.some(i => i.chef);
+    const spiceLevels = [...new Set(MENU_DB.map(i => (i.spice || '').toString().trim()).filter(Boolean))];
+
+    if (hasVeg) {
+      defs.push({
+        iconHtml: '<span class="badge-type"><span class="dot veg"></span></span>',
+        label: 'Vegetarian',
+        desc: 'Pure vegetarian dishes with no meat or seafood.'
+      });
+    }
+
+    if (hasNonVeg) {
+      defs.push({
+        iconHtml: '<span class="badge-type"><span class="dot nonveg"></span></span>',
+        label: 'Non-Vegetarian',
+        desc: 'Contains meat, poultry, seafood, or egg.'
+      });
+    }
+
+    if (hasJain) {
+      defs.push({
+        iconHtml: '<span class="jain-badge">JAIN</span>',
+        label: 'Jain Option',
+        desc: 'Prepared without onion, garlic, or root vegetables.'
+      });
+    }
+
+    if (hasChef) {
+      defs.push({
+        iconHtml: '👨‍🍳',
+        label: 'Chef Special',
+        desc: 'Signature dishes handpicked by our kitchen team.'
+      });
+    }
+
+    spiceLevels.forEach(level => {
+      const lv = level.toLowerCase();
+      const icon = lv === 'spicy' ? '🌶️🌶️' : lv === 'medium spicy' ? '🌶️' : '🌿';
+      defs.push({
+        iconHtml: icon,
+        label: level,
+        desc: lv === 'non spicy' ? 'Mild dishes with no added spice.' : 'Spice level listed in the current Google Sheet menu.'
+      });
+    });
+
+    return defs;
+  }
+
+  function symbolCardMarkup(def) {
+    return `<article class="legend-card spice-dynamic-card"><span class="legend-icon">${def.iconHtml}</span><span class="legend-label">${escapeHtml(def.label)}</span><span class="legend-desc">${escapeHtml(def.desc)}</span></article>`;
+  }
+
+  function renderSymbolLegends() {
+    const symbolDefs = buildSymbolDefinitions();
+    const mainGrid = document.getElementById('symbolLegendGrid');
+    const quickGrid = document.getElementById('symbolGuideGrid');
+    const html = symbolDefs.map(symbolCardMarkup).join('');
+
+    if (mainGrid) mainGrid.innerHTML = html;
+    if (quickGrid) quickGrid.innerHTML = html;
+  }
+  function openSymbolGuide() { const modal = document.getElementById('symbolGuideModal'); if(!modal) return; modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); document.body.classList.add('modal-open'); }
+  function closeSymbolGuide() { const modal = document.getElementById('symbolGuideModal'); if(!modal) return; modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); document.body.classList.remove('modal-open'); }
    // Scroll-to-top behavior
    function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
    (function setupScrollTop() {
@@ -827,25 +1542,206 @@ function checkURLParams() {
   }
 }
 
-/* ===== HAMBURGER MENU ===== */
-const hamburgerMenu = document.getElementById('hamburger-menu');
-const navMenu = document.querySelector('.main-nav-menu');
+const conceptMenuToggle = document.getElementById('conceptMenuToggle');
+const conceptNav = document.getElementById('conceptNav');
+const orderOnlineWrap = document.getElementById('orderOnlineWrap');
+const orderOnlineBtn = orderOnlineWrap ? orderOnlineWrap.querySelector('.order-online-btn') : null;
 
-if (hamburgerMenu) {
-  hamburgerMenu.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburgerMenu.classList.toggle('active');
+if (conceptMenuToggle && conceptNav) {
+  conceptMenuToggle.addEventListener('click', () => {
+    const nextState = !conceptNav.classList.contains('open');
+    conceptNav.classList.toggle('open', nextState);
+    conceptMenuToggle.classList.toggle('active', nextState);
+    conceptMenuToggle.setAttribute('aria-expanded', String(nextState));
   });
-}
 
-if (navMenu) {
-  document.querySelectorAll('.main-nav-menu a').forEach(link => {
+  conceptNav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-      if (hamburgerMenu) hamburgerMenu.classList.remove('active');
+      conceptNav.classList.remove('open');
+      conceptMenuToggle.classList.remove('active');
+      conceptMenuToggle.setAttribute('aria-expanded', 'false');
     });
   });
 }
+
+if (orderOnlineWrap && orderOnlineBtn) {
+  orderOnlineBtn.addEventListener('click', () => {
+    const nextState = !orderOnlineWrap.classList.contains('open');
+    orderOnlineWrap.classList.toggle('open', nextState);
+    orderOnlineBtn.setAttribute('aria-expanded', String(nextState));
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!orderOnlineWrap.contains(event.target)) {
+      orderOnlineWrap.classList.remove('open');
+      orderOnlineBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeSymbolGuide();
+    if (orderOnlineWrap && orderOnlineBtn) {
+      orderOnlineWrap.classList.remove('open');
+      orderOnlineBtn.setAttribute('aria-expanded', 'false');
+    }
+  }
+});
+
+const symbolGuideModal = document.getElementById('symbolGuideModal');
+if (symbolGuideModal) {
+  symbolGuideModal.addEventListener('click', (event) => {
+    if (event.target === symbolGuideModal) {
+      closeSymbolGuide();
+    }
+  });
+}
+
+function initMenuAmbient() {
+  const canvas = document.getElementById('menuAmbientCanvas');
+  const blurTop = document.getElementById('menuAmbientBlurTop');
+  const blurBottom = document.getElementById('menuAmbientBlurBottom');
+  if (!canvas || !blurTop || !blurBottom) return;
+
+  const ctx = canvas.getContext('2d');
+  const topCtx = blurTop.getContext('2d');
+  const bottomCtx = blurBottom.getContext('2d');
+  if (!ctx || !topCtx || !bottomCtx) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let width = 0;
+  let height = 0;
+  let rafId = 0;
+  let particles = [];
+
+  const palette = [
+    'rgba(244, 236, 222, 0.92)',
+    'rgba(242, 213, 166, 0.82)',
+    'rgba(196, 110, 83, 0.7)',
+    'rgba(139, 58, 56, 0.58)',
+    'rgba(98, 138, 119, 0.46)'
+  ];
+
+  function fitCanvas(target, targetCtx) {
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    target.width = Math.round(width * dpr);
+    target.height = Math.round(height * dpr);
+    targetCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function createParticle() {
+    const speed = reduceMotion ? 0 : 0.08 + Math.random() * 0.22;
+    const angle = Math.random() * Math.PI * 2;
+    return {
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: 2.2 + Math.random() * 4.2,
+      color: palette[Math.floor(Math.random() * palette.length)],
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed
+    };
+  }
+
+  function resetScene() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    fitCanvas(canvas, ctx);
+    fitCanvas(blurTop, topCtx);
+    fitCanvas(blurBottom, bottomCtx);
+
+    const particleCount = reduceMotion ? 20 : Math.max(44, Math.min(86, Math.round((width * height) / 22000)));
+    particles = Array.from({ length: particleCount }, createParticle);
+    renderFrame();
+  }
+
+  function updateParticles() {
+    for (const particle of particles) {
+      particle.x += particle.vx;
+      particle.y += particle.vy;
+
+      if (particle.x < -20) particle.x = width + 20;
+      if (particle.x > width + 20) particle.x = -20;
+      if (particle.y < -20) particle.y = height + 20;
+      if (particle.y > height + 20) particle.y = -20;
+    }
+  }
+
+  function drawLinks() {
+    const linkDistance = Math.min(150, width * 0.16);
+    for (let i = 0; i < particles.length; i += 1) {
+      const a = particles[i];
+      for (let j = i + 1; j < particles.length; j += 1) {
+        const b = particles[j];
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+        const distance = Math.hypot(dx, dy);
+        if (distance > linkDistance) continue;
+
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(242, 213, 166, ${0.14 * (1 - distance / linkDistance)})`;
+        ctx.lineWidth = 1.2;
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  function drawParticles() {
+    for (const particle of particles) {
+      ctx.shadowBlur = 18;
+      ctx.shadowColor = particle.color;
+      ctx.beginPath();
+      ctx.fillStyle = particle.color;
+      ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.shadowBlur = 0;
+  }
+
+  function renderFrame() {
+    ctx.clearRect(0, 0, width, height);
+    drawLinks();
+    drawParticles();
+
+    topCtx.clearRect(0, 0, width, height);
+    bottomCtx.clearRect(0, 0, width, height);
+    topCtx.drawImage(canvas, 0, 0, width, height);
+    bottomCtx.drawImage(canvas, 0, 0, width, height);
+  }
+
+  function animate() {
+    updateParticles();
+    renderFrame();
+    rafId = window.requestAnimationFrame(animate);
+  }
+
+  function handleVisibility() {
+    if (document.hidden) {
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+        rafId = 0;
+      }
+      return;
+    }
+
+    if (!reduceMotion && !rafId) {
+      rafId = window.requestAnimationFrame(animate);
+    }
+  }
+
+  resetScene();
+
+  if (!reduceMotion) {
+    rafId = window.requestAnimationFrame(animate);
+    document.addEventListener('visibilitychange', handleVisibility);
+  }
+
+  window.addEventListener('resize', resetScene, { passive: true });
+}
+
+window.addEventListener('load', initMenuAmbient, { once: true });
 </script>
  </body>
 </html>
