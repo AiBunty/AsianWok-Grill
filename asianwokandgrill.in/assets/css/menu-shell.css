@@ -16,10 +16,9 @@ body.concept-body {
   min-height: 100vh;
   font-family: 'Manrope', sans-serif;
   color: var(--shell-text);
-  background:
-    radial-gradient(circle at top left, rgba(120, 84, 46, 0.18), transparent 30%),
-    radial-gradient(circle at 82% 0, rgba(121, 33, 45, 0.16), transparent 22%),
-    linear-gradient(180deg, #111821 0%, #090d14 36%, #0b1017 100%);
+  background: #1e130c;
+  background: -webkit-linear-gradient(to right, #9a8478, #1e130c);
+  background: linear-gradient(to right, #9a8478, #1e130c);
   background-attachment: fixed;
 }
 
@@ -579,6 +578,12 @@ body.concept-body #scrollTopBtn {
   background: linear-gradient(180deg, rgba(15, 20, 28, 0.96), rgba(8, 12, 18, 0.96));
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: var(--shell-shadow);
+}
+
+#symbol-legend {
+  background: #1e130c;
+  background: -webkit-linear-gradient(to right, #9a8478, #1e130c);
+  background: linear-gradient(to right, #9a8478, #1e130c);
 }
 
 .legend-title,

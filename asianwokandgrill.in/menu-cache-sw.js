@@ -1,4 +1,4 @@
-const SW_VERSION = "menu-cache-v1";
+const SW_VERSION = "menu-cache-v5";
 const SHELL_CACHE = `${SW_VERSION}-shell`;
 const RUNTIME_CACHE = `${SW_VERSION}-runtime`;
 
@@ -8,7 +8,9 @@ const SHELL_URLS = [
   "/namastemenu.html",
   "/namaste_chef.html",
   "/cocktail.html",
-  "/assets/css/style.css"
+  "/assets/css/style.css",
+  "/assets/js/menu-data.js",
+  "/assets/js/menu-ui.js"
 ];
 
 self.addEventListener("install", (event) => {
