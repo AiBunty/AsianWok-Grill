@@ -19,6 +19,43 @@ const SHEET_ID = (() => {
 const API_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json;reqId:1&tq=select%20*&headers=1`;
 const MENU_CACHE_KEY = `menu-cache:menu:${SHEET_ID}:v4`;
 
+function isMobileCacheDisabled() {
+  if (typeof window === 'undefined') return false;
+  if (!window.matchMedia) return false;
+  return window.matchMedia('(max-width: 768px)').matches;
+}
+
+async function cleanupMenuClientCache() {
+  try {
+    localStorage.removeItem(MENU_CACHE_KEY);
+  } catch (_) {}
+
+  try {
+    if ('caches' in window) {
+      const keys = await caches.keys();
+      await Promise.all(
+        keys
+          .filter((key) => key.indexOf('menu-cache-') === 0)
+          .map((key) => caches.delete(key))
+      );
+    }
+  } catch (_) {}
+
+  try {
+    if ('serviceWorker' in navigator) {
+      const regs = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(
+        regs
+          .filter((reg) => {
+            const scriptUrl = reg.active && reg.active.scriptURL ? reg.active.scriptURL : '';
+            return scriptUrl.includes('menu-cache-sw.js');
+          })
+          .map((reg) => reg.unregister())
+      );
+    }
+  } catch (_) {}
+}
+
 // Known column groups — treated as static, not dynamic
 const PROTEIN_COLUMNS  = ["Veg", "Chicken", "Prawn", "Mutton", "Fish", "Surmai", "Pomfret", "Crab", "Egg"];
 const VEG_XPCS_COLS    = ["Veg 2Pcs", "Veg 4pcs", "Veg 6pcs", "Veg 9pcs", "Veg 12pcs"];
@@ -39,6 +76,10 @@ const DEFAULT_NON_VEG  = ['chicken','mutton','prawn','prawns','fish','egg','eggs
 // Service worker registration (data-side concern: knows API_URL)
 // ---------------------------------------------------------------------------
 function registerMenuCacheWorker() {
+  if (isMobileCacheDisabled()) {
+    cleanupMenuClientCache().catch(() => {});
+    return;
+  }
   if (!('serviceWorker' in navigator)) return;
   if (!window.isSecureContext) return;
   if (location.protocol !== 'https:' && location.hostname !== 'localhost') return;
@@ -62,6 +103,7 @@ function registerMenuCacheWorker() {
 }
 
 function warmMenuAssets(items) {
+  if (isMobileCacheDisabled()) return;
   if (!('serviceWorker' in navigator)) return;
   const imageUrls = [...new Set((items || []).map(i => i && i.img).filter(Boolean))];
   const urls = [API_URL, ...imageUrls];
@@ -75,6 +117,19 @@ function warmMenuAssets(items) {
 // Network / cache fetch
 // ---------------------------------------------------------------------------
 async function loadMenuDataWithCache() {
+  if (isMobileCacheDisabled()) {
+    cleanupMenuClientCache().catch(() => {});
+
+    const res = await fetch(`${API_URL}&_ts=${Date.now()}`, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`Sheet fetch failed: HTTP ${res.status}`);
+    const text = await res.text();
+    const json = JSON.parse(text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1));
+    const rows = json.table.rows || [];
+    const cols = json.table.cols || [];
+    if (!cols.length) throw new Error('Sheet returned no columns');
+    return { rows, cols, fromCache: false };
+  }
+
   try {
     const res = await fetch(`${API_URL}&_ts=${Date.now()}`, { cache: 'no-store' });
     if (!res.ok) throw new Error(`Sheet fetch failed: HTTP ${res.status}`);

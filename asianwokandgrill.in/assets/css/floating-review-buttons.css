@@ -1,0 +1,85 @@
+#reviewBtn,
+#scrollTopBtn {
+  position: fixed;
+  left: 20px;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+#reviewBtn {
+  bottom: 48px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f2cf7a, #c79a3f);
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  box-shadow: 0 8px 20px rgba(58, 40, 8, 0.28);
+}
+
+#reviewBtn svg {
+  width: 28px;
+  height: 28px;
+}
+
+#scrollTopBtn {
+  bottom: 24px;
+  min-width: 74px;
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 12px;
+  background: #8b1f1f;
+  color: #ffffff;
+  font-size: 0.82rem;
+  letter-spacing: 0.4px;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+}
+
+#reviewBtn:hover,
+#scrollTopBtn:hover {
+  transform: translateY(-2px);
+}
+
+#reviewBtn:hover {
+  box-shadow: 0 12px 24px rgba(58, 40, 8, 0.35);
+}
+
+#scrollTopBtn:hover {
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.32);
+}
+
+#reviewBtn:active,
+#scrollTopBtn:active {
+  transform: translateY(0);
+}
+
+#reviewBtn:focus-visible,
+#scrollTopBtn:focus-visible {
+  outline: 3px solid rgba(255, 245, 214, 0.95);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  #reviewBtn,
+  #scrollTopBtn {
+    left: 20px;
+  }
+
+  #reviewBtn {
+    min-width: 86px;
+    height: 40px;
+    font-size: 0.82rem;
+  }
+
+  #scrollTopBtn {
+    min-width: 68px;
+    height: 40px;
+    font-size: 0.78rem;
+  }
+}

@@ -374,6 +374,60 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function resolvePrimaryFooterContact() {
+  const primaryWa =
+    document.querySelector('.concept-footer .property-footer-card:first-of-type a[href*="wa.me/"]') ||
+    document.querySelector('.concept-footer a[href*="wa.me/"]');
+  if (!primaryWa) return null;
+
+  const href = primaryWa.getAttribute('href') || '';
+  const phoneMatch = href.match(/wa\.me\/(\d+)/i);
+  if (!phoneMatch || !phoneMatch[1]) return null;
+
+  const phone = phoneMatch[1];
+  return {
+    whatsappUrl: `https://wa.me/${phone}`,
+    callUrl: `tel:+${phone}`,
+    phone,
+  };
+}
+
+function toggleQuickActions(forceCollapsed) {
+  const wrap = document.getElementById('floatingQuickActions');
+  const toggleBtn = document.getElementById('quickActionToggleBtn');
+  if (!wrap || !toggleBtn) return;
+
+  const nextCollapsed = typeof forceCollapsed === 'boolean'
+    ? forceCollapsed
+    : !wrap.classList.contains('is-collapsed');
+
+  wrap.classList.toggle('is-collapsed', nextCollapsed);
+  toggleBtn.textContent = nextCollapsed ? '+' : 'X';
+  toggleBtn.setAttribute('aria-pressed', String(nextCollapsed));
+  toggleBtn.setAttribute('aria-label', nextCollapsed ? 'Show quick actions' : 'Hide quick actions');
+  toggleBtn.setAttribute('title', nextCollapsed ? 'Show quick actions' : 'Hide quick actions');
+}
+
+function initFloatingQuickActions() {
+  const waBtn = document.getElementById('floatingWhatsAppBtn');
+  const callBtn = document.getElementById('floatingCallBtn');
+  const toggleBtn = document.getElementById('quickActionToggleBtn');
+  if (!waBtn || !callBtn || !toggleBtn) return;
+
+  const contact = resolvePrimaryFooterContact();
+  if (!contact) {
+    waBtn.style.display = 'none';
+    callBtn.style.display = 'none';
+    toggleBtn.style.display = 'none';
+    return;
+  }
+
+  waBtn.href = contact.whatsappUrl;
+  callBtn.href = contact.callUrl;
+  waBtn.setAttribute('aria-label', `Chat on WhatsApp (${contact.phone})`);
+  callBtn.setAttribute('aria-label', `Call ${contact.phone}`);
+}
+
 // ---------------------------------------------------------------------------
 // URL params + hash anchor handling (runs after render)
 // ---------------------------------------------------------------------------
@@ -446,19 +500,6 @@ function checkURLParams() {
       if (event.target === symbolGuideModal) closeSymbolGuide();
     });
   }
-})();
-
-// ---------------------------------------------------------------------------
-// Scroll-to-top button
-// ---------------------------------------------------------------------------
-(function setupScrollTop() {
-  const btn = document.getElementById('scrollTopBtn');
-  if (!btn) return;
-  function onScroll() {
-    btn.style.display = window.scrollY > 300 ? 'block' : 'none';
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
 })();
 
 // ---------------------------------------------------------------------------
@@ -607,6 +648,7 @@ async function init() {
       `Last synced: Today at ${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
     document.getElementById('footerItemCount').innerText = `Total Selections: ${MENU_DB.length}`;
 
+    initFloatingQuickActions();
     renderSymbolLegends();
     MenuData.warmMenuAssets(MENU_DB);
     checkURLParams();
