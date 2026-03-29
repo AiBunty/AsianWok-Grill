@@ -12,6 +12,7 @@
   <meta name="keywords" content="Asian Wok menu, Nashik food menu, vegetarian menu, non vegetarian menu, Jain menu" />
   <meta name="author" content="Asian Wok &amp; Grill" />
   <meta name="robots" content="index, follow" />
+  <link rel="icon" href="data:,">
   <link rel="canonical" href="https://asianwokandgrill.in/menu.html" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://asianwokandgrill.in/menu.html" />
@@ -392,7 +393,7 @@
   }
   </style>
   <link rel="stylesheet" href="assets/css/menu-shell.css">
-  <link rel="stylesheet" href="assets/css/menu-floating-actions.css">
+  <link rel="stylesheet" href="assets/css/side-nav.css">
   <style id="menu-ambient-overrides">
   body.concept-body {
     position: relative;
@@ -910,7 +911,8 @@
    </a>
    <nav class="concept-nav" id="conceptNav" aria-label="Primary">
     <a href="https://www.asianwokandgrill.in/">Home</a>
-    <a href="menu.html">Food Menu</a>
+    <a href="menu.html">AWG Menu</a>
+    <a href="namastemenu.html">Multicuisine Menu</a>
     <a href="cocktail.html">Cocktail</a>
     <a href="reservation.html">Reservation</a>
     <a href="#symbol-legend">Symbols</a>
@@ -979,7 +981,7 @@
    <a class="floating-contact-btn floating-action-item" id="floatingCallBtn" href="tel:+917269899999" aria-label="Call now" title="Call">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
    </a>
-   <button class="floating-hide-btn" id="quickActionToggleBtn" type="button" onclick="toggleQuickActions()" aria-label="Hide quick actions" aria-pressed="false" title="Hide quick actions">X</button>
+  <button class="floating-hide-btn" id="quickActionToggleBtn" type="button" onclick="toggleQuickActions()" aria-label="Hide quick actions" aria-pressed="false" title="Hide quick actions"><span class="quick-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
   </div>
   <button id="scrollTopBtn" aria-label="Scroll to top" style="position: fixed; left: 24px; bottom: 90px; width: 46px; height: 46px; border-radius: 50%; background: #c7a46b; color: #1f0000; border: 1px solid rgba(255,255,255,0.6); display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 3000; box-shadow: 0 6px 18px rgba(0,0,0,0.25); font-size: 18px;">↑</button>
   <div id="sideNavOverlay" onclick="toggleSideNav(false)">
@@ -1094,6 +1096,6 @@
   </footer>
     <script src="assets/js/menu-data.js" defer></script>
   <script src="assets/js/menu-ui.js" defer></script>
-  <script src="assets/js/floating-review-buttons.js" defer></script>
+  <script src="assets/js/side-nav.js" defer></script>
  </body>
 </html>

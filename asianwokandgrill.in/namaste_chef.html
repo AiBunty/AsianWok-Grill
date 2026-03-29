@@ -20,6 +20,7 @@
   <meta name="twitter:title" content="Namaste Chef | Official Menu" />
   <meta name="twitter:description" content="Explore the official Namaste Chef menu with curated chef specials and signature flavors." />
   <meta name="twitter:image" content="https://asianwokandgrill.in/assets/images/circlelogo.png" />
+  <link rel="stylesheet" href="assets/css/side-nav.css">
   <style>
    /* 1. CORE SYSTEM */
 
@@ -93,15 +94,11 @@
 
    .square-btn.active { background: #FFFFFF; color: var(--color-accent-maroon); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 
-   #menuTriggerBtn { position: fixed; right: 0; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; text-orientation: mixed; background: var(--color-accent-maroon); color: #fff; padding: 20px 10px; border-radius: 12px 0 0 12px; font-size: 0.75rem; font-weight: 800; letter-spacing: 2px; z-index: 2500; cursor: pointer; box-shadow: -4px 0 15px rgba(0,0,0,0.2); }
-
-   #sideNavContainer { position: fixed; right: -280px; top: 0; bottom: 0; width: 260px; background: var(--color-bg-secondary); z-index: 3000; padding: 40px 20px; box-shadow: -10px 0 30px rgba(0,0,0,0.2); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; gap: 10px; overflow-y: auto; }
-
-   #sideNavContainer.open { transform: translateX(-280px); }
-
-   .cat-link { padding: 15px; background: var(--color-bg-primary); border-radius: 12px; font-size: 0.85rem; font-weight: 700; color: var(--color-text-primary); text-align: center; cursor: pointer; border: 1px solid rgba(0,0,0,0.05); }
-
-   #sideNavOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 2800; display: none; backdrop-filter: blur(2px); }
+   /* Side nav theme overrides for namaste chef page */
+   #sideNavContainer { background: var(--color-bg-secondary); }
+   .cat-link { background: var(--color-bg-primary); color: var(--color-text-primary); border: 1px solid rgba(0,0,0,0.05); text-align: center; }
+   #menuTriggerBtn { background: var(--color-accent-maroon) !important; }
+   #sideNavOverlay { background: rgba(0,0,0,0.4); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); }
 
    main { position: relative; width: 100%; min-height: 80vh; } 
 
@@ -457,21 +454,7 @@
     </button>
    </div>
   </div>
-  <div id="menuTriggerBtn" onclick="toggleSideNav(true)">
-   MENU
-  </div>
-  <div id="sideNavOverlay" onclick="toggleSideNav(false)">
-  </div>
-  <div id="sideNavContainer">
-   <h3 style="color:var(--color-accent-gold); letter-spacing:3px; font-weight:300; margin-bottom:10px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;">
-    SECTIONS
-   </h3>
-   <div id="sideNavList">
-   </div>
-   <a href="https://www.namastechefawg.in" style="margin-top:auto; padding:15px; background:var(--color-accent-maroon); color:#fff; text-decoration:none; border-radius:12px; font-size:0.85rem; font-weight:700; text-align:center;">
-    Back to Website
-   </a>
-  </div>
+
   <main id="menuMain">
   </main>
   <section id="order-online" style="padding:40px 20px;background:#fff8ef;text-align:center;">
@@ -1244,7 +1227,7 @@
 
    function filterChefSpecial() { showChefOnly = true; document.getElementById('chef-on').classList.add('active'); document.getElementById('chef-off').classList.remove('active'); render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
-   function toggleSideNav(show) { const drawer = document.getElementById('sideNavContainer'); const overlay = document.getElementById('sideNavOverlay'); if(show) { drawer.classList.add('open'); overlay.style.display = 'block'; } else { drawer.classList.remove('open'); overlay.style.display = 'none'; } }
+   // toggleSideNav is provided by side-nav.js
 
    /* ===== HAMBURGER MENU NAMASTE ===== */
    const hamburgerNameste = document.getElementById('hamburger-namaste');
@@ -1369,5 +1352,6 @@
             };
         })();
   </script>
+  <script src="assets/js/side-nav.js" defer></script>
  </body>
 </html>

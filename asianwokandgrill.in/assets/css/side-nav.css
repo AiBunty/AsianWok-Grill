@@ -1,0 +1,306 @@
+/* =========================================================================
+   side-nav.css  –  Common side navigation, floating quick actions & scroll‑top
+   Shared across ALL pages of asianwokandgrill.in
+   ========================================================================= */
+
+/* ---------- Side‑nav overlay ---------- */
+#sideNavOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.56);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2800;
+  display: none;
+}
+
+/* ---------- Side‑nav container (drawer) ---------- */
+#sideNavContainer {
+  position: fixed;
+  right: -340px;
+  top: 0;
+  bottom: 0;
+  width: min(82vw, 320px);
+  background: rgba(8, 12, 18, 0.96);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 3000;
+  padding: 26px 18px 22px;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+}
+
+#sideNavContainer.open {
+  transform: translateX(-340px);
+}
+
+/* ---------- Drawer header ---------- */
+.drawer-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.drawer-kicker {
+  margin: 0 0 4px;
+  color: #d9b37a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.drawer-title {
+  margin: 0;
+  color: #f5f0ea;
+  font-family: 'Fraunces', 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+/* ---------- Navigation links inside drawer ---------- */
+#sideNavList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cat-link,
+.nav-link {
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #f5f0ea;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.cat-link:hover,
+.nav-link:hover {
+  transform: translateX(2px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(217, 179, 122, 0.16);
+}
+
+.nav-link.active {
+  background: rgba(217, 179, 122, 0.12);
+  border-color: rgba(217, 179, 122, 0.24);
+}
+
+/* "Back to Website" link at drawer bottom */
+.side-nav-back-link {
+  margin-top: auto;
+  padding: 15px;
+  background: #7a1f1f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.side-nav-back-link:hover {
+  background: #5e1818;
+}
+
+/* ---------- Floating quick actions (right edge) ---------- */
+#floatingQuickActions {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  z-index: 2600;
+}
+
+#menuTriggerBtn,
+.floating-contact-btn,
+.floating-hide-btn {
+  border: none;
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 12px 0 0 12px;
+  box-shadow: -4px 10px 18px rgba(0, 0, 0, 0.26);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#menuTriggerBtn {
+  background: linear-gradient(180deg, #d32f2f, #b71c1c);
+  cursor: pointer;
+  width: 52px;
+  min-height: 112px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 1.4px;
+}
+
+/* Reset legacy shell overrides */
+#floatingQuickActions #menuTriggerBtn {
+  position: static;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  padding: 0;
+}
+
+.floating-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  min-height: 52px;
+  border-radius: 12px 0 0 12px;
+}
+
+.floating-contact-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+#menuTriggerBtn:hover,
+.floating-contact-btn:hover,
+.floating-hide-btn:hover {
+  transform: translateX(-2px);
+  box-shadow: -6px 12px 22px rgba(0, 0, 0, 0.32);
+}
+
+#floatingWhatsAppBtn {
+  background: #18c95f;
+  color: #ffffff;
+}
+
+#floatingCallBtn {
+  background: #e4c086;
+  color: #d33a8e;
+}
+
+.floating-hide-btn {
+  background: #1e1f22;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  min-height: 32px;
+  border-radius: 8px 0 0 8px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-toggle-icon {
+  width: 14px;
+  height: 12px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.quick-toggle-icon span {
+  display: block;
+  width: 14px;
+  height: 2px;
+  border-radius: 999px;
+  background: #ffffff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* aria-pressed=false => quick actions visible => show close icon */
+.floating-hide-btn[aria-pressed="false"] .quick-toggle-icon span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.floating-hide-btn[aria-pressed="false"] .quick-toggle-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.floating-hide-btn[aria-pressed="false"] .quick-toggle-icon span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+#floatingQuickActions.is-collapsed .floating-action-item {
+  display: none;
+}
+
+body.drawer-open #floatingQuickActions {
+  display: none !important;
+}
+
+/* ---------- Scroll‑to‑top button ---------- */
+#scrollTopBtn {
+  position: fixed;
+  left: 24px;
+  bottom: 90px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #c7a46b;
+  color: #1f0000;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3000;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  font-size: 18px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  #floatingQuickActions {
+    gap: 7px;
+  }
+
+  .floating-contact-btn {
+    width: 48px;
+    height: 48px;
+    min-height: 48px;
+  }
+
+  #menuTriggerBtn {
+    width: 48px;
+    min-height: 102px;
+    font-size: 0.68rem;
+  }
+
+  .floating-contact-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .floating-hide-btn {
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+  }
+}

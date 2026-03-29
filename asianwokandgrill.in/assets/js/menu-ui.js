@@ -402,7 +402,7 @@ function toggleQuickActions(forceCollapsed) {
     : !wrap.classList.contains('is-collapsed');
 
   wrap.classList.toggle('is-collapsed', nextCollapsed);
-  toggleBtn.textContent = nextCollapsed ? '+' : 'X';
+  toggleBtn.classList.toggle('is-collapsed', nextCollapsed);
   toggleBtn.setAttribute('aria-pressed', String(nextCollapsed));
   toggleBtn.setAttribute('aria-label', nextCollapsed ? 'Show quick actions' : 'Hide quick actions');
   toggleBtn.setAttribute('title', nextCollapsed ? 'Show quick actions' : 'Hide quick actions');
