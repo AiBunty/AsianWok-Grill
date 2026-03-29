@@ -8,6 +8,9 @@
   --shell-text-muted: rgba(244, 236, 222, 0.72);
   --shell-gold: #d9b37a;
   --shell-gold-soft: rgba(217, 179, 122, 0.2);
+  --legend-glow-core: rgba(251, 96, 96, 0.5);
+  --legend-glow-mid: rgba(251, 96, 96, 0.26);
+  --legend-glow-edge: rgba(251, 96, 96, 0);
   --shell-shadow: 0 24px 64px rgba(0, 0, 0, 0.38);
   --header-h: 92px;
 }
@@ -617,14 +620,39 @@ body.concept-body #scrollTopBtn {
 }
 
 .legend-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding: 20px 18px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.04);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03)),
+    rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+}
+
+.legend-card::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -250px;
+  bottom: -300px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, var(--legend-glow-core) 0%, var(--legend-glow-mid) 48%, var(--legend-glow-edge) 100%);
+  filter: blur(55px);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.legend-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .legend-icon {
@@ -863,6 +891,15 @@ body.concept-body #scrollTopBtn {
     width: calc(100% - 20px);
     padding-left: 14px;
     padding-right: 14px;
+  }
+
+  .legend-card::before {
+    width: 300px;
+    height: 300px;
+    right: -190px;
+    bottom: -220px;
+    filter: blur(44px);
+    opacity: 0.78;
   }
 
   body.concept-body #menuTriggerBtn {

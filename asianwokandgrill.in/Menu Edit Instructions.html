@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Edit Instructions</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #1b1f2a;
+      --muted: #5b6478;
+      --line: #dfe3ee;
+      --brand: #b52f2f;
+      --brand-soft: #fde9e9;
+      --ok: #1f7a4d;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 24px;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 8px 24px rgba(20, 30, 60, 0.05);
+    }
+
+    h1, h2, h3 { margin: 0 0 10px; line-height: 1.3; }
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.2rem; margin-top: 4px; }
+    h3 { font-size: 1rem; margin-top: 14px; }
+    p { margin: 0 0 10px; }
+    .muted { color: var(--muted); }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--brand-soft);
+      color: var(--brand);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .email-preview {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .email-header {
+      background: #f1f4fb;
+      border-bottom: 1px solid var(--line);
+      padding: 12px 14px;
+      font-size: 0.92rem;
+    }
+
+    .email-body {
+      padding: 14px;
+      font-size: 0.95rem;
+      white-space: pre-line;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      font-size: 0.93rem;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th:last-child, td:last-child { border-right: none; }
+    tr:last-child td { border-bottom: none; }
+    th { background: #f9fbff; font-weight: 700; }
+
+    a {
+      color: #0a5ed7;
+      word-break: break-word;
+    }
+
+    ol, ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li { margin-bottom: 7px; }
+
+    .note {
+      border-left: 4px solid var(--ok);
+      background: #eefaf3;
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 0.92rem;
+    }
+
+    .danger {
+      border-left: 4px solid var(--brand);
+      background: #fff2f2;
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 0.92rem;
+    }
+
+    .copy-box {
+      border: 1px dashed #bac4da;
+      border-radius: 10px;
+      padding: 12px;
+      background: #f8faff;
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+    }
+
+    @media (max-width: 740px) {
+      body { padding: 14px; }
+      .card { padding: 14px; }
+      table, thead, tbody, th, td, tr { display: block; }
+      thead { display: none; }
+      td {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        padding: 10px 8px;
+      }
+      td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 700;
+        color: #25314c;
+        margin-bottom: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="card">
+      <span class="tag">Client Communication</span>
+      <h1>Menu Edit Instructions</h1>
+      <p class="muted">This document includes a ready-to-send HTML email draft and complete instructions for updating menu prices through Google Sheets.</p>
+    </section>
+
+    <section class="card">
+      <h2>Ready-to-Send Email Draft (HTML Style)</h2>
+      <div class="email-preview">
+        <div class="email-header">
+          <strong>Subject:</strong> How to Update Menu Prices via Google Sheet
+        </div>
+        <div class="email-body">Hi [Client Name],
+
+Hope you are doing well.
+
+To make menu price updates quick and easy, all your live menu pages are connected to dedicated Google Sheets. You only need to edit prices in the sheet, and the website menu will reflect updates automatically.
+
+Please use the correct sheet for each menu from the table below.
+
+How to update prices:
+1. Open the required Google Sheet.
+2. Find the item row and the relevant price column.
+3. Change only the price value (numbers only, for example: 249).
+4. Do not rename headers, delete columns, or change the sheet structure.
+5. Google Sheets saves automatically.
+6. Wait 2-10 minutes, then refresh the website page (hard refresh recommended).
+
+Important:
+- Keep item names and categories consistent.
+- Avoid adding currency symbols (Rs, INR, etc.) in numeric price cells.
+- If you need to add a new dish, please keep the same format as existing rows.
+
+If you need help with any update, reply to this email and we will assist right away.
+
+Regards,
+[Your Name]
+[Company / Team Name]
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Live Menus and Price Editing Sheets</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Menu</th>
+            <th>Live Website Menu Link</th>
+            <th>Google Sheet for Price Editing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Menu">Namaste Chef Full Menu</td>
+            <td data-label="Live Website Menu Link"><a href="https://namastechefawg.in/menu" target="_blank" rel="noopener noreferrer">https://namastechefawg.in/menu</a></td>
+            <td data-label="Google Sheet for Price Editing"><a href="https://docs.google.com/spreadsheets/d/1KA-aKRyCkGiAyUU991sAiO0NNY28oc-I2YYHfj2gqqE/edit" target="_blank" rel="noopener noreferrer">https://docs.google.com/spreadsheets/d/1KA-aKRyCkGiAyUU991sAiO0NNY28oc-I2YYHfj2gqqE/edit</a></td>
+          </tr>
+          <tr>
+            <td data-label="Menu">Asian Wok - Namaste Menu</td>
+            <td data-label="Live Website Menu Link"><a href="https://asianwokandgrill.in/namastemenu.html" target="_blank" rel="noopener noreferrer">https://asianwokandgrill.in/namastemenu.html</a></td>
+            <td data-label="Google Sheet for Price Editing"><a href="https://docs.google.com/spreadsheets/d/1BbxQ-HN-QsknQAXGp75IpaGqfnD6b1acLPnMUdi5hAg/edit" target="_blank" rel="noopener noreferrer">https://docs.google.com/spreadsheets/d/1BbxQ-HN-QsknQAXGp75IpaGqfnD6b1acLPnMUdi5hAg/edit</a></td>
+          </tr>
+          <tr>
+            <td data-label="Menu">Asian Wok Cocktail Menu</td>
+            <td data-label="Live Website Menu Link"><a href="https://asianwokandgrill.in/cocktail.html" target="_blank" rel="noopener noreferrer">https://asianwokandgrill.in/cocktail.html</a></td>
+            <td data-label="Google Sheet for Price Editing"><a href="https://docs.google.com/spreadsheets/d/1OPHeWHCamzWcKWunYxgYaoiAJxR4jd-4Uxu9Ao5AJpk/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">https://docs.google.com/spreadsheets/d/1OPHeWHCamzWcKWunYxgYaoiAJxR4jd-4Uxu9Ao5AJpk/edit?gid=0#gid=0</a></td>
+          </tr>
+          <tr>
+            <td data-label="Menu">Asian Wok Main Menu</td>
+            <td data-label="Live Website Menu Link"><a href="https://asianwokandgrill.in/menu.html" target="_blank" rel="noopener noreferrer">https://asianwokandgrill.in/menu.html</a></td>
+            <td data-label="Google Sheet for Price Editing"><a href="https://docs.google.com/spreadsheets/d/19hUSc2ny1NGd73WDTQfosdS3O7xhwiQbdGbiDgKSQlA/edit" target="_blank" rel="noopener noreferrer">https://docs.google.com/spreadsheets/d/19hUSc2ny1NGd73WDTQfosdS3O7xhwiQbdGbiDgKSQlA/edit</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Complete Editing Instructions</h2>
+      <ol>
+        <li>Open the correct Google Sheet from the table above.</li>
+        <li>Search for the menu item row you want to update.</li>
+        <li>Edit only the required price cell(s).</li>
+        <li>Use plain numbers for prices (example: 199, 249, 399).</li>
+        <li>Do not change header names, column order, or tab names.</li>
+        <li>Do not remove existing rows unless a dish has permanently been removed.</li>
+        <li>If adding a new item, copy an existing row and update values to maintain format consistency.</li>
+        <li>Wait a few minutes, then open the live menu page and refresh to verify changes.</li>
+      </ol>
+
+      <div class="danger">
+        <strong>Important:</strong> Structural edits to the sheet (renaming columns, deleting required columns, changing sheet format) can break menu loading on the website.
+      </div>
+
+      <div class="note">
+        <strong>Tip:</strong> After editing, use Ctrl+F5 (Windows) to hard refresh the menu page and confirm the latest prices are displayed.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Quick Verification Checklist</h2>
+      <ul>
+        <li>Correct item updated in the correct sheet.</li>
+        <li>Price entered as number only.</li>
+        <li>No unintended edits in adjacent columns.</li>
+        <li>Live page refreshed and checked.</li>
+        <li>At least one category and one item confirmed visually on website.</li>
+      </ul>
+
+      <h3>Optional: Plain Text Version (for quick copy)</h3>
+      <div class="copy-box">Subject: How to Update Menu Prices via Google Sheet
+
+Hi [Client Name],
+
+You can update your live menu prices by editing the connected Google Sheet. Open the correct sheet for your menu, update the price cells (numbers only), and save (auto-save in Google Sheets). Please avoid changing sheet headers or structure. After editing, wait 2-10 minutes and refresh the live menu page.
+
+If you need help, reply to this email and we will assist.
+
+Regards,
+[Your Name]</div>
+    </section>
+  </div>
+</body>
+</html>

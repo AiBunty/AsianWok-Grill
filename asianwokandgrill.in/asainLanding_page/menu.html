@@ -112,6 +112,32 @@
    
    .price { font-size: 1.1rem; font-weight: 800; color: var(--color-text-primary); border-top: 1px solid rgba(0,0,0,0.05); padding-top: 10px; margin-top: 5px; display: flex; justify-content: space-between; align-items: center; }
 
+  .legend-section .legend-card {
+   position: relative;
+   overflow: hidden;
+   isolation: isolate;
+  }
+
+  .legend-section .legend-card::before {
+   content: "";
+   position: absolute;
+   width: 420px;
+   height: 420px;
+   right: -250px;
+   bottom: -300px;
+   border-radius: 50%;
+   pointer-events: none;
+   background: radial-gradient(circle, rgba(251, 96, 96, 0.5) 0%, rgba(251, 96, 96, 0.26) 48%, rgba(251, 96, 96, 0) 100%);
+   filter: blur(55px);
+   opacity: 0.9;
+   z-index: 0;
+  }
+
+  .legend-section .legend-card > * {
+   position: relative;
+   z-index: 1;
+  }
+
    footer { background: #000000; color: #F2EDE4; padding: 4rem 1.5rem; text-align: center; border-top: 2px solid var(--color-accent-gold); }
    .branch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; text-align: left; max-width: 1200px; margin: 0 auto; }
    .branch-item { background: #111; padding: 20px; border-radius: 15px; border: 1px solid #333; }
@@ -125,6 +151,7 @@
   @media (max-width: 768px) {
     .legend-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
     .legend-card { padding: 10px !important; border-radius: 10px !important; }
+    .legend-card::before { width: 300px; height: 300px; right: -180px; bottom: -210px; filter: blur(44px); opacity: 0.78; }
     .legend-card > div { font-size: 0.98rem !important; }
     .legend-card span { font-size: 0.85rem !important; color: #777 !important; }
     .legend-title { font-size: 1.1rem !important; }
