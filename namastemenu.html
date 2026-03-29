@@ -6,6 +6,8 @@
   <title>
    AWG NK | Official Menu
   </title>
+  <link rel="stylesheet" href="asianwokandgrill.in/assets/css/menu-shell.css">
+  <link rel="stylesheet" href="asianwokandgrill.in/assets/css/side-nav.css">
   <style>
    /* 1. CORE SYSTEM */
 
@@ -349,24 +351,23 @@
   <div id="loader">
    <img alt="Logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg" style="height:80px;"/>
   </div>
-  <header class="site-header-namaste">
-   <img alt="AWG NK Logo" class="header-logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg"/>
-   <nav class="main-nav-namaste">
-    <ul>
-      <li><a href="https://www.asianwokandgrill.in/">HOME</a></li>
-      <li><a href="menu.html">AWG MENU</MENU></a></li>
-      <li><a href="cocktail.html">COCKTAIL</a></li>
-          </ul>
+  <header class="concept-header">
+   <a class="concept-brand" href="https://www.asianwokandgrill.in/" aria-label="Multicuisine home">
+    <img alt="Multicuisine Logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg"/>
+   </a>
+   <nav class="concept-nav" id="conceptNav" aria-label="Primary">
+    <a href="https://www.asianwokandgrill.in/">Home</a>
+    <a href="menu.html">AWG Menu</a>
+    <a href="namastemenu.html">Multicuisine Menu</a>
+    <a href="cocktail.html">Cocktail</a>
+    <a href="reservation.html">Reservation</a>
+    <a href="#symbol-legend">Symbols</a>
    </nav>
-   <div class="header-actions-namaste">
-    <button class="theme-icon-btn" id="themeIconBtn" onclick="toggleTheme()">
+   <div class="concept-header-actions">
+    <a class="ghost-link" href="reservation.html">Reserve</a>
+    <button class="theme-icon-btn" id="themeIconBtn" onclick="toggleTheme()" aria-label="Toggle theme">
      🌙
     </button>
-    <div class="hamburger-namaste" id="hamburger-namaste">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
    </div>
   </header>
   <div class="top-controls-bar">
@@ -1140,21 +1141,7 @@
 
    function toggleSideNav(show) { const drawer = document.getElementById('sideNavContainer'); const overlay = document.getElementById('sideNavOverlay'); if(show) { drawer.classList.add('open'); overlay.style.display = 'block'; } else { drawer.classList.remove('open'); overlay.style.display = 'none'; } }
 
-   /* ===== HAMBURGER MENU NAMASTE ===== */
-   const hamburgerNameste = document.getElementById('hamburger-namaste');
-   const navNameste = document.querySelector('.main-nav-namaste');
-
-   hamburgerNameste.addEventListener('click', () => {
-     navNameste.classList.toggle('active');
-     hamburgerNameste.classList.toggle('active');
-   });
-
-   document.querySelectorAll('.main-nav-namaste a').forEach(link => {
-     link.addEventListener('click', () => {
-       navNameste.classList.remove('active');
-       hamburgerNameste.classList.remove('active');
-     });
-   });
+   /* ===== OLD HAMBURGER MENU CODE REMOVED (Now using concept-header and side-nav.js) ===== */
 
    let lastScrollTop = 0;
 
@@ -1263,5 +1250,6 @@
             };
         })();
   </script>
+  <script src="asianwokandgrill.in/assets/js/side-nav.js" defer></script>
  </body>
 </html>
