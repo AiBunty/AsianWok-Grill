@@ -10,6 +10,7 @@
   <meta name="keywords" content="Asian Wok cocktail menu, premium bar menu, Nashik cocktails, mocktails" />
   <meta name="author" content="Asian Wok &amp; Grill" />
   <meta name="robots" content="index, follow" />
+  <link rel="icon" href="data:,">
   <link rel="canonical" href="https://asianwokandgrill.in/cocktail.html" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://asianwokandgrill.in/cocktail.html" />
@@ -76,8 +77,52 @@
 
         .menu-frame { border: 2px solid var(--border-gold); padding: 50px 30px; position: relative; background: rgba(0, 0, 0, 0.15); backdrop-filter: blur(10px); }
         .category-section { margin-bottom: 50px; scroll-margin-top: 100px; }
-        .category-title { font-family: 'Cinzel', serif; font-size: 1.8rem; text-align: center; color: var(--gold-cream); text-transform: uppercase; letter-spacing: 4px; margin-bottom: 30px; position: relative; padding-bottom: 15px; }
-        .category-title::after { content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100px; height: 1px; background: var(--border-gold); }
+        .category-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.05rem, 2.2vw, 1.6rem);
+            text-align: center;
+            color: var(--gold-cream);
+            text-transform: uppercase;
+            letter-spacing: clamp(2px, 0.55vw, 4px);
+            line-height: 1.45;
+            margin: 0 auto 34px;
+            padding: 22px 28px 28px;
+            max-width: min(100%, 760px);
+            position: relative;
+            border: 1px solid rgba(244, 229, 194, 0.38);
+            border-radius: 22px;
+            background:
+                radial-gradient(circle at top left, rgba(244, 229, 194, 0.22), transparent 34%),
+                radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.18), transparent 30%),
+                linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(212, 175, 55, 0.06) 40%, rgba(0, 0, 0, 0.18) 100%),
+                rgba(46, 7, 7, 0.55);
+            box-shadow:
+                0 18px 40px rgba(0, 0, 0, 0.24),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08),
+                inset 0 0 0 1px rgba(212, 175, 55, 0.08);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+        .category-title::before {
+            content: "";
+            position: absolute;
+            inset: 10px;
+            border-radius: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.16);
+            pointer-events: none;
+        }
+        .category-title::after {
+            content: "";
+            position: absolute;
+            left: 26px;
+            right: 26px;
+            bottom: 12px;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, transparent, rgba(244, 229, 194, 0.2), var(--gold-bright), rgba(244, 229, 194, 0.2), transparent);
+            pointer-events: none;
+        }
 
         /* ⚠️ TYPOGRAPHY: SENTENCE CASE FOR ITEMS (LOCKED) */
         .menu-item { margin-bottom: 35px; text-align: center; }
@@ -108,9 +153,9 @@
         #scrollTopBtn { position: fixed; bottom: 20px; left: 20px; width: 50px; height: 50px; border-radius: 50%; background: var(--gold-bright); color: #000; border: 2px solid var(--gold-cream); cursor: pointer; z-index: 3000; display: none; align-items: center; justify-content: center; font-size: 1.3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
 
         /* =====================
-           SITE HEADER COCKTAIL
+           COCKTAIL NAVBAR (MENU STRUCTURE, BURGUNDY THEME)
         ===================== */
-        .site-header-cocktail {
+        .concept-header {
           position: sticky;
           top: 0;
           height: 80px;
@@ -122,20 +167,19 @@
           border-bottom: 2px solid var(--gold-bright);
           z-index: 1000;
         }
-        .site-header-cocktail .header-logo-nav {
+        .concept-brand img {
           height: 60px;
           width: auto;
           object-fit: contain;
         }
         /* NAV */
-        .main-nav-cocktail ul {
+        .concept-nav {
           display: flex;
+          align-items: center;
+          justify-content: center;
           gap: 32px;
-          list-style: none;
-          margin: 0;
-          padding: 0;
         }
-        .main-nav-cocktail a {
+        .concept-nav a {
           color: var(--gold-cream);
           text-decoration: none;
           font-size: 15px;
@@ -144,30 +188,26 @@
           font-weight: 600;
           transition: opacity 0.3s ease, color 0.3s ease;
         }
-        .main-nav-cocktail a:hover {
+        .concept-nav a:hover {
           color: var(--gold-bright);
           opacity: 0.9;
         }
-        .header-actions-cocktail {
+        .concept-header-actions {
           display: flex;
           align-items: center;
           gap: 15px;
         }
-        .theme-icon-btn-cocktail {
-          background: none;
-          border: none;
-          font-size: 1.4rem;
-          cursor: pointer;
-          color: var(--gold-cream);
-        }
         /* HAMBURGER */
-        .hamburger-cocktail {
+        .concept-menu-toggle {
           display: none;
           flex-direction: column;
           gap: 6px;
           cursor: pointer;
+          background: none;
+          border: none;
+          color: var(--gold-cream);
         }
-        .hamburger-cocktail span {
+        .concept-menu-toggle span {
           width: 28px;
           height: 2px;
           background: var(--gold-cream);
@@ -175,14 +215,14 @@
           transition: 0.3s ease;
         }
         @media (max-width: 768px) {
-          .site-header-cocktail {
+          .concept-header {
             height: 70px;
             padding: 0 1rem;
           }
-          .site-header-cocktail .header-logo-nav {
+          .concept-brand img {
             height: 50px;
           }
-          .main-nav-cocktail {
+          .concept-nav {
             position: fixed;
             inset: 0;
             background: var(--burgundy-deep);
@@ -193,27 +233,27 @@
             transition: transform 0.4s ease;
             z-index: 150;
           }
-          .main-nav-cocktail ul {
+          .concept-nav {
             flex-direction: column;
             gap: 28px;
             text-align: center;
           }
-          .main-nav-cocktail a {
+          .concept-nav a {
             font-size: 24px;
           }
-          .hamburger-cocktail {
+          .concept-menu-toggle {
             display: flex;
           }
-          .main-nav-cocktail.active {
+          .concept-nav.open {
             transform: translateX(0);
           }
-          .hamburger-cocktail.active span:nth-child(1) {
+          .concept-menu-toggle.active span:nth-child(1) {
             transform: rotate(45deg) translateY(12px);
           }
-          .hamburger-cocktail.active span:nth-child(2) {
+          .concept-menu-toggle.active span:nth-child(2) {
             opacity: 0;
           }
-          .hamburger-cocktail.active span:nth-child(3) {
+          .concept-menu-toggle.active span:nth-child(3) {
             transform: rotate(-45deg) translateY(-12px);
           }
         }
@@ -226,12 +266,13 @@
             .hero-title h1 { font-size: 3.5rem; }
             .hero-title { padding-top: 80px; }
             .menu-frame { padding: 30px 15px; }
+            .category-title { padding: 18px 18px 24px; border-radius: 18px; margin-bottom: 28px; }
             .item-name { font-size: 2.4rem; }
         }
   </style>
   <style id="mobile-menu-visibility-fix">
   @media (max-width: 768px) {
-    .site-header-cocktail {
+    .concept-header {
       position: fixed !important;
       top: 0 !important;
       left: 0 !important;
@@ -240,7 +281,7 @@
       z-index: 1100 !important;
       box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
     }
-    .main-nav-cocktail {
+    .concept-nav {
       left: auto !important;
       right: 0 !important;
       top: 0 !important;
@@ -252,21 +293,18 @@
       padding: 90px 20px 20px !important;
       box-shadow: -10px 0 30px rgba(0,0,0,0.28);
     }
-    .main-nav-cocktail ul {
-      width: 100%;
-    }
-    .main-nav-cocktail a {
+    .concept-nav a {
       display: block;
       width: 100%;
     }
-    .hamburger-cocktail {
+    .concept-menu-toggle {
       position: relative;
       z-index: 1200;
     }
   }
   </style>
  </head>
- <body>
+ <body id="menuBody">
   <div id="loader">
    <div class="spinner">
    </div>
@@ -288,13 +326,39 @@
    </nav>
    <div class="concept-header-actions">
     <a class="ghost-link" href="reservation.html">Reserve</a>
-    <button class="theme-icon-btn" id="themeIconBtn" onclick="toggleTheme()" aria-label="Toggle theme">
-     🌙
+      <div class="order-online-wrap" id="orderOnlineWrap">
+       <button class="header-pill order-online-btn" aria-haspopup="true" aria-expanded="false" type="button">
+        Order Online
+        <svg class="caret-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+       </button>
+       <div class="order-dropdown" role="menu">
+        <a class="order-option" href="https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout" target="_blank" rel="noopener noreferrer" role="menuitem">
+         <img class="platform-logo" src="https://cdn.simpleicons.org/swiggy/fc8019" alt="Swiggy">
+         Order on Swiggy
+        </a>
+        <a class="order-option" href="https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar" target="_blank" rel="noopener noreferrer" role="menuitem">
+         <img class="platform-logo" src="https://cdn.simpleicons.org/zomato/e23744" alt="Zomato">
+         Order on Zomato
+        </a>
+       </div>
+      </div>
+    <button class="concept-menu-toggle" id="conceptMenuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+     <span></span>
+     <span></span>
+     <span></span>
     </button>
    </div>
   </header>
 
   <div class="hero-title">
+
+   <br>
+
+
+
+
+
+  </br>
    <h1>
     <span class="cocktail-word">
      Cocktail
@@ -611,23 +675,41 @@
         }
     };
 
-    /* ===== HAMBURGER MENU COCKTAIL ===== */
-    const hamburgerCocktail = document.getElementById('hamburger-cocktail');
-    const navCocktail = document.querySelector('.main-nav-cocktail');
+    /* ===== HAMBURGER MENU (MENU-STYLE) ===== */
+    const conceptMenuToggle = document.getElementById('conceptMenuToggle');
+    const conceptNav = document.getElementById('conceptNav');
+    const orderOnlineWrap = document.getElementById('orderOnlineWrap');
+    const orderOnlineBtn = orderOnlineWrap ? orderOnlineWrap.querySelector('.order-online-btn') : null;
 
-    if (hamburgerCocktail) {
-      hamburgerCocktail.addEventListener('click', () => {
-        navCocktail.classList.toggle('active');
-        hamburgerCocktail.classList.toggle('active');
+    if (conceptMenuToggle && conceptNav) {
+      conceptMenuToggle.addEventListener('click', () => {
+        const next = !conceptNav.classList.contains('open');
+        conceptNav.classList.toggle('open', next);
+        conceptMenuToggle.classList.toggle('active', next);
+        conceptMenuToggle.setAttribute('aria-expanded', String(next));
+      });
+
+      conceptNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          conceptNav.classList.remove('open');
+          conceptMenuToggle.classList.remove('active');
+          conceptMenuToggle.setAttribute('aria-expanded', 'false');
+        });
       });
     }
 
-    if (navCocktail) {
-      document.querySelectorAll('.main-nav-cocktail a').forEach(link => {
-        link.addEventListener('click', () => {
-          navCocktail.classList.remove('active');
-          if (hamburgerCocktail) hamburgerCocktail.classList.remove('active');
-        });
+    if (orderOnlineWrap && orderOnlineBtn) {
+      orderOnlineBtn.addEventListener('click', () => {
+        const next = !orderOnlineWrap.classList.contains('open');
+        orderOnlineWrap.classList.toggle('open', next);
+        orderOnlineBtn.setAttribute('aria-expanded', String(next));
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!orderOnlineWrap.contains(event.target)) {
+          orderOnlineWrap.classList.remove('open');
+          orderOnlineBtn.setAttribute('aria-expanded', 'false');
+        }
       });
     }
   </script>
