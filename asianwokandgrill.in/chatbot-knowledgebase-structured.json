@@ -1,0 +1,1136 @@
+{
+  "brand": "Asian Wok & Grill",
+  "version": "1.1",
+  "date": "2026-04-06",
+  "format": "structured-chatbot-training",
+  "purpose": "Customer-facing restaurant chatbot knowledge base",
+  "page_links": {
+    "main_menu": "https://asianwokandgrill.in/menu.html",
+    "cocktail_menu": "https://asianwokandgrill.in/cocktail.html",
+    "multicuisine_menu": "https://asianwokandgrill.in/namastemenu.html",
+    "locations": "https://asianwokandgrill.in/contact.html",
+    "booking": "https://asianwokandgrill.in/reservation.html",
+    "franchise_information": "https://asianwokandgrill.in/franchises.html",
+    "google_reviews": "https://www.google.com/maps?cid=4420141625021903337",
+    "timing": "Daily 11:00 AM to 9:30 PM"
+  },
+  "restrictions": [
+    "No technical website details",
+    "No source code details",
+    "No admin or internal information",
+    "No Google Sheet links or backend data source details",
+    "No made-up menu URLs or submenu page links such as lunch-menu or drinks-desserts",
+    "No wrong domain such as asianwokgrill.com",
+    "No generated URLs based on customer keywords such as beer, dessert, lunch, or drinks",
+    "No claiming to place, confirm, or process customer orders",
+    "No pickup-time, delivery-slot, address, or payment collection as if bot is ordering system"
+  ],
+  "bot_behavior": {
+    "tone": [
+      "warm",
+      "polite",
+      "helpful",
+      "clear",
+      "concise"
+    ],
+    "should_reply": [
+      "Answer with customer-facing restaurant information only",
+      "Answer directly before asking one helpful follow-up question",
+      "Suggest menu items when the user asks for recommendations",
+      "Use menu categories and items from the menu catalog",
+      "Only share links from the approved page_links list",
+      "Copy menu URLs exactly from page_links and never construct a new URL",
+      "For order placement requests, share official online ordering links only",
+      "Ask booking details for reservations: date, time, guest count, outlet preference",
+      "Ask event details for celebrations: occasion, guest count, preferred date"
+    ],
+    "should_not_reply": [
+      "Website code or script details",
+      "API, cache, proxy, or backend implementation details",
+      "Google Sheet links or internal editing instructions",
+      "Private or internal business information",
+      "Made-up page URLs or submenu links such as lunch menu, drinks menu, dinner menu, or starters menu",
+      "Wrong domain links such as asianwokgrill.com",
+      "Made-up category links such as beer menu or dessert menu",
+      "Claims to place or confirm orders for the customer",
+      "Asking pickup-time or payment questions as if the bot is a checkout system",
+      "Promises about exact live availability, delivery time, discounts, or guaranteed bookings",
+      "Medical, legal, or allergy-safety guarantees",
+      "Rude, sarcastic, or argumentative language"
+    ],
+    "unknown_reply": "I do not have that exact detail right now, but I can still help with menu suggestions, reservations, and dining support.",
+    "restricted_reply": "I can only help with customer-facing dining information.",
+    "technical_reply": "I am designed to help with restaurant and dining questions only."
+  },
+  "conversation_flow": {
+    "opening_message": "Welcome to Asian Wok & Grill. I can help you with menu suggestions, reservations, event dining, and ordering support. What would you like today?",
+    "fallback_messages": [
+      "I can help with menu suggestions, reservations, events, and outlet information. What would you like to know?",
+      "Please share your preference, such as veg or non-veg, spice level, and group size. I will suggest suitable options.",
+      "I am here to assist with dining-related queries. Ask me about food, booking, events, or ordering."
+    ],
+    "end_conversation_when": [
+      "User says thank you, thanks, okay, bye, good night, or confirms they are done",
+      "User received the requested guidance and has no follow-up question",
+      "Bot clarified twice and user still gives no usable information"
+    ],
+    "closing_messages": [
+      "Thank you for choosing Asian Wok & Grill. We look forward to serving you.",
+      "Thanks for connecting with us. If you need menu help or booking support later, I am here.",
+      "Thank you. Have a great day.",
+      "Looking forward to hosting you soon."
+    ],
+    "inactive_user_message": "I will be here whenever you need help with menu suggestions, reservations, or event dining."
+  },
+  "intents": [
+    {
+      "intent": "greeting",
+      "sample_user_messages": [
+        "Hi",
+        "Hello",
+        "Good evening"
+      ],
+      "suggested_reply": "Welcome to Asian Wok & Grill. How can I help you today?"
+    },
+    {
+      "intent": "ask_cuisine",
+      "sample_user_messages": [
+        "What food do you serve?",
+        "Is this Chinese or Asian?"
+      ],
+      "suggested_reply": "We serve Pan-Asian cuisine with a mix of popular Asian flavors, including wok dishes, starters, mains, and beverages."
+    },
+    {
+      "intent": "ask_veg_nonveg",
+      "sample_user_messages": [
+        "Do you have veg options?",
+        "Is non-veg available?"
+      ],
+      "suggested_reply": "Yes. We offer both vegetarian and non-vegetarian choices. Some dishes can also be prepared in Jain style where available."
+    },
+    {
+      "intent": "ask_jain",
+      "sample_user_messages": [
+        "Jain food available?",
+        "Can I get food without onion and garlic?"
+      ],
+      "suggested_reply": "Yes, Jain options are available for selected dishes. Share your preference and we can guide you better."
+    },
+    {
+      "intent": "ask_spice_level",
+      "sample_user_messages": [
+        "Is the food very spicy?",
+        "Can you make it less spicy?"
+      ],
+      "suggested_reply": "Spice levels vary by dish. We can suggest mild, medium, or spicy options based on your preference."
+    },
+    {
+      "intent": "ask_menu_recommendation",
+      "sample_user_messages": [
+        "What should I order?",
+        "Recommend best dishes"
+      ],
+      "suggested_reply": "If you like bold flavors, try chef-recommended wok specials, dimsum-style items, and signature starters. Tell me your preference and I can suggest a combo."
+    },
+    {
+      "intent": "ask_reservation",
+      "sample_user_messages": [
+        "Table booking available?",
+        "I want to reserve for tonight"
+      ],
+      "suggested_reply": "Yes, reservation support is available. Please share date, time, and number of guests so we can help with your request."
+    },
+    {
+      "intent": "ask_events",
+      "sample_user_messages": [
+        "Do you host birthday parties?",
+        "Can we plan a corporate dinner?"
+      ],
+      "suggested_reply": "Yes, event dining support is available for occasions like birthdays, engagements, and corporate gatherings."
+    },
+    {
+      "intent": "ask_order_online",
+      "sample_user_messages": [
+        "Can I order online?",
+        "Is delivery available?",
+        "Place takeaway order for me",
+        "Set pickup time",
+        "Confirm my order"
+      ],
+      "suggested_reply": "I cannot place or confirm orders directly, but I can redirect you to our official ordering partner. Please choose your preferred platform: Zomato or Swiggy."
+    },
+    {
+      "intent": "ask_locations",
+      "sample_user_messages": [
+        "Where are you located?",
+        "Do you have multiple branches?"
+      ],
+      "suggested_reply": "We have multiple locations under our hospitality group, including Asian Wok & Grill, Namaste Chef, and Namaste Kalyan."
+    },
+    {
+      "intent": "ask_allergy",
+      "sample_user_messages": [
+        "I have a food allergy"
+      ],
+      "suggested_reply": "Thanks for sharing. Please mention your allergy clearly before ordering so the team can guide you to suitable options."
+    },
+    {
+      "intent": "ask_menu_link",
+      "sample_user_messages": [
+        "Send me the menu link",
+        "Open the main menu",
+        "Lunch menu bhejo",
+        "Food menu link",
+        "Dinner menu link"
+      ],
+      "suggested_reply": "Here are our menu links:\n- Main menu: https://asianwokandgrill.in/menu.html\n- Cocktail menu: https://asianwokandgrill.in/cocktail.html\n- Multicuisine menu: https://asianwokandgrill.in/namastemenu.html"
+    },
+    {
+      "intent": "ask_cocktail_link",
+      "sample_user_messages": [
+        "Send me the cocktail menu",
+        "Cocktail page link",
+        "Drinks menu bhejo",
+        "Bar menu link",
+        "Beverage menu",
+        "Beer menu",
+        "Wine menu"
+      ],
+      "suggested_reply": "You can view the cocktail menu here: https://asianwokandgrill.in/cocktail.html"
+    },
+    {
+      "intent": "ask_multicuisine_link",
+      "sample_user_messages": [
+        "Send me the multicuisine menu",
+        "Open the multicuisine page"
+      ],
+      "suggested_reply": "You can view the multicuisine menu here: https://asianwokandgrill.in/namastemenu.html"
+    },
+    {
+      "intent": "ask_location_link",
+      "sample_user_messages": [
+        "Send me the location page",
+        "Where can I see all locations?"
+      ],
+      "suggested_reply": "You can view the locations page here: https://asianwokandgrill.in/contact.html"
+    },
+    {
+      "intent": "ask_booking_link",
+      "sample_user_messages": [
+        "Send me the booking page",
+        "Reservation page link"
+      ],
+      "suggested_reply": "You can view the booking page here: https://asianwokandgrill.in/reservation.html"
+    },
+    {
+      "intent": "ask_franchise_link",
+      "sample_user_messages": [
+        "Send me franchise information",
+        "Franchise page link"
+      ],
+      "suggested_reply": "You can view franchise information here: https://asianwokandgrill.in/franchises.html"
+    },
+    {
+      "intent": "ask_google_reviews_link",
+      "sample_user_messages": [
+        "Send me the Google reviews link",
+        "How can I leave a Google review?",
+        "Share Google Maps link",
+        "What are your timings?",
+        "Opening hours please"
+      ],
+      "suggested_reply": "You can find us here: https://www.google.com/maps?cid=4420141625021903337\nTiming: Daily 11:00 AM to 9:30 PM."
+    }
+  ],
+  "menus": [
+    {
+      "menu": "AWG Main Menu",
+      "categories": [
+        {
+          "category": "Bao",
+          "items": [
+            "Fire Cracker Bao",
+            "Paneer Tikka Masala Bao",
+            "Chilli Paneer Bao",
+            "Sriracha Tofu Bao",
+            "Char Siu Bao",
+            "Chilli Chicken Bao",
+            "Curried Chicken Bao",
+            "Butter Chicken Bao",
+            "Sriracha Bao",
+            "Fish Fingure Bao"
+          ]
+        },
+        {
+          "category": "Bowl",
+          "items": [
+            "Thukpa",
+            "Khow suey",
+            "Ramin Noodles Bowl",
+            "Laksa",
+            "Asian Noodles",
+            "Udon Noodle Soup"
+          ]
+        },
+        {
+          "category": "Curry",
+          "items": [
+            "Kari Kapitan",
+            "Kaeng Phet",
+            "Gaeng Kiew Wan",
+            "Shrimp & Mushroom Thai Red Curry"
+          ]
+        },
+        {
+          "category": "Deep Fried",
+          "items": [
+            "Thai Corn Cake",
+            "Japanese Korokke",
+            "Tempura",
+            "Cheese Corn Pop",
+            "Deep Fried Wanton",
+            "Pickin",
+            "Chinese Fried"
+          ]
+        },
+        {
+          "category": "Dessert",
+          "items": [
+            "Fried Ice Cream",
+            "Coconut Dumpling",
+            "Choco Rolls",
+            "Honey Sesame Noodles With Ice Cream.",
+            "Chocolate Nutty Brownie Sizzle",
+            "Blue Berry Cheese Cake",
+            "Fruit Platter",
+            "Choice of Ice Cream"
+          ]
+        },
+        {
+          "category": "Dim Sum",
+          "items": [
+            "AWG Dimsum",
+            "Cottage Cheese & Broccoli Dimsum",
+            "Cottage Cheese & Spinach Dimsum",
+            "Mushroom & Water Chestnut Dimsum",
+            "Veg Siu Mai Dimsum",
+            "Veg Dim Sum Platter",
+            "Tsing Hoi Dimsum",
+            "Hot Basil Dimsum",
+            "Sui Mai Dimsum",
+            "Poached Beijing Dimsum",
+            "Chicken Dim Sum Platter",
+            "Har Gao Dimsum",
+            "Sambal Dimsum",
+            "Sui Mai Prawn Dimsum"
+          ]
+        },
+        {
+          "category": "Dumpling",
+          "items": [
+            "Mixed Veg Cheese Dumpling Fried",
+            "Mixed Veg Cheese Dumpling Tossed",
+            "Chicken Cheese Dumpling Fried",
+            "Chicken Cheese Dumpling Tossed"
+          ]
+        },
+        {
+          "category": "Grill",
+          "items": [
+            "Corn Cheese & Water Chestnut",
+            "Assorted Mushrooms",
+            "Asian Grilled Vegetables",
+            "Lemongrass",
+            "Sriracha",
+            "Asian Grilled Chicken Wings",
+            "Chilli Basil",
+            "Garlic Butter",
+            "Sambal"
+          ]
+        },
+        {
+          "category": "Lettuce Cups",
+          "items": [
+            "Fusion Fruit",
+            "Asian Vegetable",
+            "Thai"
+          ]
+        },
+        {
+          "category": "Main Course",
+          "items": [
+            "Burma Delight",
+            "Stir Fried Asian Green With Chilli Basil",
+            "Hot Bean",
+            "Five Treasure Shanghai Style",
+            "Vegetable In Black Pepper Sauce",
+            "Classic Manchurian",
+            "Chilli Basil",
+            "Sichuan",
+            "Hunan",
+            "Classic Chilli",
+            "Shredded Pepper & Garlic",
+            "Chilli Oyster",
+            "Black Mushroom & Pak Choi",
+            "Shanghai Style",
+            "Dak Galbi",
+            "General Tsa'o Chicken",
+            "Burnt Garlic With Seasonal Greens",
+            "Xo Sauce"
+          ]
+        },
+        {
+          "category": "Mocktail",
+          "items": [
+            "Lost Island",
+            "Watermelon & Kafirlime Lemonade",
+            "Guava Mary",
+            "Asian Itch",
+            "Pineapple Yuzu Jalapeno Sour On The Rock",
+            "Red Ginger Fizz",
+            "AWG Virgin Sangria",
+            "Masala Virgin Mojito",
+            "Strawberry & Mango Slushie",
+            "Peach & Mint Slushie",
+            "Spicy Blackcurrent Slushie",
+            "Litchi & Draganfruit Slushie",
+            "Brownie & Chocolate Shake",
+            "Avagado Smoothie",
+            "Strawberry & Bourbon Shake",
+            "Chocolate & Coconut Shake",
+            "Coffee, Cookie & Toffee Shake",
+            "Salted Caramel, Alpenliebe & Popcorn Shake",
+            "Blueberry Cheese cake Smoothie",
+            "Mango Mint Smoothie",
+            "Lotus Biscoff Shake",
+            "AWG House Punch",
+            "Bull Basil Mojito",
+            "Fruit Punch",
+            "Virgin Pinacolada",
+            "Virgin Mojito",
+            "Blue Lagoon",
+            "Cold Coffee",
+            "Classic Ice Tea",
+            "Black Current Ice Tea",
+            "Strawberry & Peach Ice Tea",
+            "Yuzu & Mint Ice Tea",
+            "Blue Litchi & Coconut Lemonade",
+            "Blueberry & Basil Lemonade",
+            "Passion Rosemary & Chilli Lemonade",
+            "Cucumber & Curry Leaves Lemonade",
+            "Cucumber Lime Refresher",
+            "Green Forest"
+          ]
+        },
+        {
+          "category": "Noodle",
+          "items": [
+            "Singapore",
+            "Pan Fried",
+            "Cantonese",
+            "Hot Pepper Garlic",
+            "Hakka",
+            "Sichuan",
+            "Spicy Hunan",
+            "Longevity",
+            "American Chop Suey",
+            "Yakisoba",
+            "Korean",
+            "Pad Thai",
+            "All Time Favourite Chow Mein",
+            "Char Siu"
+          ]
+        },
+        {
+          "category": "Pot Sticker",
+          "items": [
+            "Exotic Vegetables & Truffle Oil Pan Fried",
+            "Exotic Vegetables & Truffle Oil Stir Fried",
+            "Gyoza Pan Fried",
+            "Gyoza Stir Fried",
+            "Korean Dumpling Pan fried",
+            "Korean Dumpling Stir fried",
+            "Cantonese Pan Fried",
+            "Cantonese Stir Fried",
+            "Sichuan Pan Fried",
+            "Sichuan Stir Fried",
+            "Chicken & Prawns XO Dumpling Pan Fried",
+            "Chicken & Prawns XO Dumpling Stir Fried"
+          ]
+        },
+        {
+          "category": "Rice",
+          "items": [
+            "Burnt Garlic",
+            "Pot Rice",
+            "Korean",
+            "Chilli Garlic",
+            "Sichuan",
+            "Jasmine Burnt Garlic",
+            "Khao Pad Prik",
+            "AWG Classic",
+            "Mun Fan",
+            "Kimchi Fried Rice",
+            "Classic Fried Rice",
+            "Nasi Goreng",
+            "Basil Stir Fried Chicken",
+            "Thai Basil Chicken With Cashew Nuts",
+            "Sea Food Fried Rice",
+            "Egg Fried Rice",
+            "Steamed Jasmine Rice",
+            "Steamed Rice"
+          ]
+        },
+        {
+          "category": "Roll",
+          "items": [
+            "AWG Classic",
+            "Cigar",
+            "Cha Gio",
+            "Assorted Mushroom and Cheese Roll",
+            "Corn Cheese Spinach Roll",
+            "Popia Tod",
+            "Cantonese Chicken Roll"
+          ]
+        },
+        {
+          "category": "Salad",
+          "items": [
+            "Crispy Salad",
+            "Rojak",
+            "Good Gado",
+            "Grilled Chicken Salad"
+          ]
+        },
+        {
+          "category": "Sizzler",
+          "items": [
+            "AWG Classic",
+            "Fusion Mexican",
+            "Classic Manchurian",
+            "Smoking Cheese Sambal",
+            "Spicy Korean Sizzler",
+            "Tripple Sichuan Sizzler"
+          ]
+        },
+        {
+          "category": "Sizzling Plate",
+          "items": [
+            "Five Treasure",
+            "Cheese Paneer Sizling",
+            "Barbeque Onions",
+            "Taipei",
+            "Smoked Prawn",
+            "Butter Garlic Prawn",
+            "Hot Pepper Fish",
+            "AWG Delight"
+          ]
+        },
+        {
+          "category": "Skewer",
+          "items": [
+            "Asian Vegetables",
+            "Hot Basil Paneer",
+            "Fresh Sambal",
+            "Satay Gai Chicken",
+            "Sesame Lime Prawn"
+          ]
+        },
+        {
+          "category": "Soup",
+          "items": [
+            "Clear Broth",
+            "Lemon Coriander",
+            "Sweet Corn",
+            "Sour & Pepper",
+            "AWG",
+            "Tom Yum",
+            "Tom Kha",
+            "Hai Kim",
+            "Steam Wonton Soup",
+            "Crispy Wonton Soup",
+            "Hakka",
+            "Thai Coconut Soup",
+            "Vietnamese Pho"
+          ]
+        },
+        {
+          "category": "Wings",
+          "items": [
+            "Peri Peri Crunchy",
+            "Curryleaves and Black Pepper",
+            "Sesame",
+            "Korean",
+            "Barbeque",
+            "Hong Kong Style"
+          ]
+        },
+        {
+          "category": "Wok Tossed",
+          "items": [
+            "Corn Chilli Pepper With Kaffir Lime Salt",
+            "Corn and Water Chestnut",
+            "Green Beans",
+            "Chow’s Finger Chips",
+            "Lotus Steam",
+            "Classic Manchurian Dry",
+            "Kung Pao",
+            "Chilli Classic Mushroom",
+            "Hunan Style Tofu",
+            "Crispy Tofu In Hot Garlic",
+            "Stir Fried Exotic Vegetables",
+            "Fresh Red Pepper",
+            "Chilli Classic",
+            "Hot Basil",
+            "Sichuan",
+            "Hunan Sesame",
+            "Crackling Spinach",
+            "Meat Balls With Smoke Chilli Pepper",
+            "AWG",
+            "Roasted Smoked Pepper Chicken",
+            "Asian Crispy Sesame",
+            "Oyster",
+            "Chilli Bean",
+            "Five Spice",
+            "Butter Garlic",
+            "Sticky Black Pepper",
+            "Cha Chu",
+            "Thai Spice"
+          ]
+        }
+      ]
+    },
+    {
+      "menu": "Cocktail Menu",
+      "categories": [
+        {
+          "category": "AWG & CLASSIC BOTANICAL MIXOLOGY",
+          "items": [
+            "BREEZER TWIST",
+            "MAI TAI",
+            "OLD MONK PUNCH",
+            "CLASSIC MOJITO",
+            "CLASSIC PINACOLADA",
+            "TOM & JERRY",
+            "SKY BLUE COLADA",
+            "DAIQUIRI",
+            "PAIN KILLER",
+            "CUBA LIBRA",
+            "SPICY CHILLI BEER",
+            "SEX ON THE BEACH",
+            "CLASSIC GUAVA MARRY",
+            "CHOCOTINI",
+            "PASSION STAR MARTINI",
+            "POISON LOVE",
+            "COSMOPOLITAN",
+            "CLASSIC BLUE LAGOON",
+            "NEW YORK SOUR",
+            "WHISKEY SOUR",
+            "OLD FASHIONED",
+            "MINT JULEP",
+            "HOT TODDY",
+            "ORANGE JULEP",
+            "LET'S DETOX",
+            "AWGTINI (MARTINI)",
+            "CHILLI BASIL MARTINI",
+            "WHITE/PINK LADY",
+            "GIMLET",
+            "GREEN MAXICAN",
+            "TEQUILA SUNRISE",
+            "MARGARITA"
+          ]
+        },
+        {
+          "category": "BEER'S",
+          "items": [
+            "Hoegaarden",
+            "Corona",
+            "Budweiser Magnum",
+            "Budweiser Premium",
+            "Kingfisher Ultra",
+            "Heineken / Silver",
+            "Carlsberg Elephent",
+            "Carlsberg Smooth",
+            "Tuborg Strong",
+            "Kingfisher Premium"
+          ]
+        },
+        {
+          "category": "BOURBON / IRISH WHISKY",
+          "items": [
+            "Jack Daniel's Old No.07 / HONEY / FIRE",
+            "Jim Beam",
+            "Jameson"
+          ]
+        },
+        {
+          "category": "BRANDY",
+          "items": [
+            "Hennessy V.S.",
+            "Honey Bee"
+          ]
+        },
+        {
+          "category": "BREEZERS",
+          "items": [
+            "Cranberry",
+            "Jamaican Passion"
+          ]
+        },
+        {
+          "category": "BULL BASE COCKTAIL",
+          "items": [
+            "BULL FROG",
+            "FLYING BULL",
+            "BULL EXOTICA"
+          ]
+        },
+        {
+          "category": "DESSERT WINE",
+          "items": [
+            "Sula Late Harvest"
+          ]
+        },
+        {
+          "category": "DOMESTIC RUM",
+          "items": [
+            "Bacardi (White Rum / Black)",
+            "Old Monk Coffee",
+            "Captain Morgan",
+            "Old Monk Regular / Old monk White"
+          ]
+        },
+        {
+          "category": "DOMESTIC VODKA",
+          "items": [
+            "Smirnoff / Smirnoff flavor",
+            "Magic Moment"
+          ]
+        },
+        {
+          "category": "GIN",
+          "items": [
+            "Jaisalmer",
+            "Bombay Sapphire",
+            "Beefeater",
+            "Gordon’s London Dry",
+            "Blue Riband"
+          ]
+        },
+        {
+          "category": "IMPORTED RUM",
+          "items": [
+            "Malibu"
+          ]
+        },
+        {
+          "category": "IMPORTED VODKA",
+          "items": [
+            "Grey Goose",
+            "Cîroc",
+            "Absolut / Absolut Flavor"
+          ]
+        },
+        {
+          "category": "LIIT LONG GLASS",
+          "items": [
+            "AWG LIIT",
+            "BEER LIIT",
+            "BOOM BOOM LIIT",
+            "CRANBERRY LIIT",
+            "CLASSIC LIIT"
+          ]
+        },
+        {
+          "category": "LIQUEURS",
+          "items": [
+            "Triple Sec / Cointreau",
+            "Jagermeister",
+            "Baileys",
+            "Sambuca",
+            "Kahlua",
+            "Midori",
+            "Martini"
+          ]
+        },
+        {
+          "category": "PREMIUM WHISKY",
+          "items": [
+            "Teachers 50",
+            "Black Dog Triple Gold",
+            "Teachers Highland Cream",
+            "Dewars White Label",
+            "Black & White",
+            "100 Pipers",
+            "Black Dog",
+            "Royal Ranthambore",
+            "VAT 69",
+            "Ballentine’s Finest",
+            "Willam Lawson's",
+            "The Glenwalk",
+            "Blenders Pride Reserved",
+            "Antiquity Blue",
+            "Signature",
+            "Blenders Pride",
+            "Oaksmith Gold",
+            "Oaksmith Silver",
+            "Okan Glow",
+            "Royal Stag Barrel"
+          ]
+        },
+        {
+          "category": "RED WINE",
+          "items": [
+            "Jacob Creak Merlot / Shiraz",
+            "Sula Dindori",
+            "Sula Cabernet Shiraz / Satroi",
+            "Fratelli Classic Merlot / Cabernet Shiraz"
+          ]
+        },
+        {
+          "category": "ROSE WINE",
+          "items": [
+            "Sula Zinfandel Rose",
+            "Rose"
+          ]
+        },
+        {
+          "category": "SANGRIA",
+          "items": [
+            "WHITE WINE SANGRIA",
+            "RED WINE SANGRIA"
+          ]
+        },
+        {
+          "category": "SCOTCH WHISKY",
+          "items": [
+            "Johnnie Walker Blue Label",
+            "Royal Salute 21YRS",
+            "Johnnie Walker Double Black",
+            "Monkey Shoulder",
+            "Chivas Regal 12 Y.O.",
+            "Johnnie Walker Black Label 12 YRS.",
+            "J & B",
+            "Johnnie Walker Red Label"
+          ]
+        },
+        {
+          "category": "SHOOTERS/SHOTS",
+          "items": [
+            "JAGER BOMB",
+            "B52",
+            "BMW",
+            "JACK SPARROW",
+            "IRISH FROG",
+            "DRUNK MELON",
+            "PASSION BLONDY",
+            "FIGHTING BULL",
+            "KAMIKAZI"
+          ]
+        },
+        {
+          "category": "SINGLE MALT",
+          "items": [
+            "Laphroaig 10 Y.O.",
+            "Glenfiddich 12 YRS.",
+            "Talisker 10 YRS.",
+            "Glenlivet 12 YRS.",
+            "Glenmorangie. 10 YRS.",
+            "Sangam",
+            "Amrut"
+          ]
+        },
+        {
+          "category": "SPARKLING WINE",
+          "items": [
+            "Sula Brut",
+            "Sula Seco"
+          ]
+        },
+        {
+          "category": "SPECIAL MODERN MIXOLOGY / BEST REFRESHMENT DRINKS / MIXOLOGICAL EXELLANCE",
+          "items": [
+            "DRUNK MAGHAI PAAN",
+            "SUNSET MELON",
+            "THE AWG PUNCH",
+            "CRANBERRY KISS",
+            "LOST IN LITCHI",
+            "TRUST IN ME"
+          ]
+        },
+        {
+          "category": "TEQUILA",
+          "items": [
+            "Patron",
+            "Tequila Camino (Gold /Silver)"
+          ]
+        },
+        {
+          "category": "WHITE WINE",
+          "items": [
+            "Jacob Creak Chordonnay",
+            "Sula Chenin Blanc / Sauvignon Blanc",
+            "Fratelli Chenin Blane / Chardonnay"
+          ]
+        }
+      ]
+    },
+    {
+      "menu": "Namaste Menu",
+      "categories": [
+        {
+          "category": "Bageeche Se",
+          "items": [
+            "Punjabi Style Paneer Tikka Masala",
+            "Paneer Amritsari",
+            "Paneer Lababdar",
+            "Paneer Butter Masala",
+            "Paneer Mirch Masala",
+            "Palak Paneer",
+            "Paneer Do Pyaza",
+            "Kadai Paneer",
+            "Paneer Angara",
+            "Paneer Makhmali Kofta",
+            "Banarasi Kofta Curry",
+            "Malai Kofta",
+            "Kaju Masala",
+            "Maratha Vegetable Kofta Curry",
+            "Sarso Ka Saag",
+            "Veg Khurchan",
+            "Tawa Subzi",
+            "Bhindi Kurkuri"
+          ]
+        },
+        {
+          "category": "Bread",
+          "items": [
+            "Tandoori Roti",
+            "Naan",
+            "Roomali Roti",
+            "Laccha Paratha",
+            "Cheese Naan",
+            "Garlic Naan",
+            "Missi Roti",
+            "Kulcha",
+            "Stuffed Paratha",
+            "Onion Garlic Kulcha",
+            "Malabar Paratha",
+            "Cheese Garlic Naan",
+            "Makkai Ki Roti",
+            "Assorted Bread Basket"
+          ]
+        },
+        {
+          "category": "Chawal",
+          "items": [
+            "Jeera Rice",
+            "Peas Pulao",
+            "Veg Pulao",
+            "Dal Khichdi",
+            "Palak Khichdi",
+            "Curd Rice",
+            "Paneer Pulao",
+            "Subz Dum Biryani",
+            "Veg Hydrabadi Biryani",
+            "Avadhi Murgh Biryani",
+            "Matka Biryani",
+            "Egg Biryani",
+            "Kachcha Ghost Biryani",
+            "Hydrabadi Mutton Biryani",
+            "Prawns Dum Biryani"
+          ]
+        },
+        {
+          "category": "Comfort Food",
+          "items": [
+            "Onion Rings",
+            "Paneer Pakoda",
+            "Hara Bhara Kebab",
+            "Garlic Bread",
+            "Tawa Fry Masala Egg",
+            "Chicken Sukha",
+            "Chicken Koliwada",
+            "Fish Koliwada",
+            "Fish Fingure",
+            "Tawa Fry",
+            "Hariyali Tawa Fry",
+            "Prawns Koliwada"
+          ]
+        },
+        {
+          "category": "Dal Wali Gali",
+          "items": [
+            "Dal Tadka",
+            "Dal Fry",
+            "Dal Panchmel",
+            "Dal Makhan Wali",
+            "Dal Palak",
+            "Dal Methi"
+          ]
+        },
+        {
+          "category": "Dessert",
+          "items": [
+            "Gulab Jamun With Ice Cream",
+            "Moongdal Halwa with ice cream",
+            "Dessert Of the Day"
+          ]
+        },
+        {
+          "category": "Fish Curry Special",
+          "items": [
+            "Machi Masala",
+            "Tikka Masala",
+            "Masaledar",
+            "Chettinad"
+          ]
+        },
+        {
+          "category": "Ghost Curry Special",
+          "items": [
+            "Maratha Style",
+            "Rogan Josh",
+            "Do Pyaza",
+            "Khada Masala"
+          ]
+        },
+        {
+          "category": "Koyle Ka Kamal",
+          "items": [
+            "Methi Mirchi Ka Paneer Tikka",
+            "Paneer Dohora",
+            "Paneer Hiltop",
+            "Methi Aur Paneer Ka Naram Dill Kebab",
+            "Classic Tikka",
+            "Ajwani Tikka",
+            "Achari Tikka",
+            "Lasooni Tikka",
+            "Paneer Malai Kali Miri",
+            "Cheese Makai Seekh Kebab",
+            "Seekh Kebab",
+            "Chilli Milli Seekh Kebab",
+            "Soya Chaap Tikka",
+            "Ajwani Soya Chaap",
+            "Malai Soya Chaap",
+            "Pahadi Soya Chaap",
+            "Aloo Ki Gutkey",
+            "Subz Shikampri Kebab",
+            "Mushroom Ki Nazakat",
+            "Mushroom & Babycorn Tikka",
+            "Veg Cheese Crispy Roll",
+            "Tandoori Plater",
+            "Murgh Nazakat",
+            "Murgh Ke Sholey",
+            "Sharabi Kebab",
+            "Tandoori Murgh",
+            "Murgh Malai Kebab",
+            "Chicken Tangdi Kebab",
+            "Banjara Tikka",
+            "Pahadi Tikka",
+            "Rolly Kebab",
+            "Tandoori Lollypop",
+            "Peri Peri Tikka",
+            "Bhuna Mutton Papper Fry",
+            "Bhuna Mutton Chaap",
+            "Hariyali Pomfret",
+            "Samundar Ki Shaan",
+            "Tandoori Non Veg Plater"
+          ]
+        },
+        {
+          "category": "Murgh Curry Special",
+          "items": [
+            "Butter Chicken",
+            "Kadai Mirch Wala",
+            "Lasooni Saag",
+            "Tikka Masala",
+            "Khurchan",
+            "Kala Masala",
+            "Kebab Masala",
+            "Khada Masala",
+            "Tandoori Chicken Masala",
+            "Handi",
+            "Egg Masala"
+          ]
+        },
+        {
+          "category": "Pasta",
+          "items": [
+            "Penne With Tomato Basil Sauce",
+            "Mac N Cheese",
+            "Fussili Butter Chichen With Mini Naan",
+            "Make your Own Pasta"
+          ]
+        },
+        {
+          "category": "Pizza",
+          "items": [
+            "Tomato Basil",
+            "Margarita",
+            "Corn Cheese",
+            "Veg Delight",
+            "Mushroom Veg",
+            "Tandoori Paneer",
+            "Peri Peri Paneer",
+            "Chicken Peri Peri",
+            "Tandoori Chicken",
+            "BBQ Chicken"
+          ]
+        },
+        {
+          "category": "Quick Bite",
+          "items": [
+            "Udad Papad",
+            "Nagli Papad",
+            "Masala Papad",
+            "Roomali Khakra Masala",
+            "Roomali Khakra Cheese Masala",
+            "Peanut Chaat",
+            "Masala Peanut",
+            "Peri Peri Boiled Egg"
+          ]
+        },
+        {
+          "category": "Salad & More",
+          "items": [
+            "Greek Salad",
+            "Garden Fresh Salad",
+            "Chicken Hawaiian Salad",
+            "Sprout Salad",
+            "Waldrof Salad",
+            "Pasta Salad",
+            "Russian Salad",
+            "Chicken Tikka Salad",
+            "Sautte Brocolli Chicken Salad",
+            "Pineapple Raita",
+            "Boondi Raita",
+            "Plain Dahi"
+          ]
+        },
+        {
+          "category": "Sandwich",
+          "items": [
+            "Cheese Chilli Toast",
+            "Corn Spinach",
+            "Classic Veg",
+            "Cheese Brust",
+            "Veg Club",
+            "Peri Peri Paneer",
+            "Chicken Delight",
+            "Chicken Tikka",
+            "Chicken Club"
+          ]
+        },
+        {
+          "category": "Soup & Shorba",
+          "items": [
+            "Badam Aur Elichi Ka Shorba",
+            "Cream Of Tomato Soup",
+            "Murgh Shorba",
+            "Cream of Chicken Soup"
+          ]
+        }
+      ]
+    }
+  ]
+}

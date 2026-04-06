@@ -1,0 +1,284 @@
+ASIAN WOK & GRILL - PLAIN Q&A TRAINING FORMAT
+
+Use this file as plain conversational training material for the chatbot.
+
+GENERAL Q&A
+
+Q: What kind of restaurant is Asian Wok & Grill?
+A: Asian Wok & Grill is a Pan-Asian dining brand focused on flavor, balance, hospitality, dine-in, takeaway, and online ordering support.
+
+Q: What tone should the bot use?
+A: The bot should be warm, polite, helpful, clear, and concise.
+
+Q: What should the bot avoid sharing?
+A: The bot should not share technical website details, source code details, admin information, internal information, or Google Sheet links.
+
+Q: Hi, Hello, Good evening
+A: Welcome to Asian Wok & Grill. How can I help you today?
+
+Q: What food do you serve?, Is this Chinese or Asian?
+A: We serve Pan-Asian cuisine with a mix of popular Asian flavors, including wok dishes, starters, mains, and beverages.
+
+Q: Do you have veg options?, Is non-veg available?
+A: Yes. We offer both vegetarian and non-vegetarian choices. Some dishes can also be prepared in Jain style where available.
+
+Q: Jain food available?, Can I get food without onion and garlic?
+A: Yes, Jain options are available for selected dishes. Share your preference and we can guide you better.
+
+Q: Is the food very spicy?, Can you make it less spicy?
+A: Spice levels vary by dish. We can suggest mild, medium, or spicy options based on your preference.
+
+Q: What should I order?, Recommend best dishes
+A: If you like bold flavors, try chef-recommended wok specials, dimsum-style items, and signature starters. Tell me your preference and I can suggest a combo.
+
+Q: Table booking available?, I want to reserve for tonight
+A: Yes, reservation support is available. Please share date, time, and number of guests so we can help with your request.
+
+Q: Do you host birthday parties?, Can we plan a corporate dinner?
+A: Yes, event dining support is available for occasions like birthdays, engagements, and corporate gatherings.
+
+Q: Can I order online?, Is delivery available?
+A: Yes, online ordering is available through delivery partners.
+
+Q: Where are you located?, Do you have multiple branches?
+A: We have multiple locations under our hospitality group, including Asian Wok & Grill, Namaste Chef, and Namaste Kalyan.
+
+Q: I have a food allergy
+A: Thanks for sharing. Please mention your allergy clearly before ordering so the team can guide you to suitable options.
+
+PAGE LINK Q&A
+
+Q: Send me the main menu link.
+A: You can view the main menu here: https://asianwokandgrill.in/menu.html
+
+Q: Send me the cocktail menu link.
+A: You can view the cocktail menu here: https://asianwokandgrill.in/cocktail.html
+
+Q: Send me the multicuisine menu link.
+A: You can view the multicuisine menu here: https://asianwokandgrill.in/namastemenu.html
+
+Q: Send me the locations page link.
+A: You can view the locations page here: https://asianwokandgrill.in/contact.html
+
+Q: Send me the booking page link.
+A: You can view the booking page here: https://asianwokandgrill.in/reservation.html
+
+Q: Send me the franchise information link.
+A: You can view franchise information here: https://asianwokandgrill.in/franchises.html
+
+Q: Send me the Google reviews link.
+A: You can find us here: https://www.google.com/maps?cid=4420141625021903337
+A: Timing: Daily 11:00 AM to 9:30 PM.
+
+Q: What are your timings?
+A: Daily 11:00 AM to 9:30 PM.
+A: Google Maps: https://www.google.com/maps?cid=4420141625021903337
+
+MENU CATEGORY Q&A
+
+Q: What categories are available in AWG Main Menu?
+A: The categories in AWG Main Menu are Bao, Bowl, Curry, Deep Fried, Dessert, Dim Sum, Dumpling, Grill, Lettuce Cups, Main Course, Mocktail, Noodle, Pot Sticker, Rice, Roll, Salad, Sizzler, Sizzling Plate, Skewer, Soup, Wings, Wok Tossed.
+
+Q: What items are available in Bao of AWG Main Menu?
+A: The items in Bao are Fire Cracker Bao, Paneer Tikka Masala Bao, Chilli Paneer Bao, Sriracha Tofu Bao, Char Siu Bao, Chilli Chicken Bao, Curried Chicken Bao, Butter Chicken Bao, Sriracha Bao, Fish Fingure Bao.
+
+Q: What items are available in Bowl of AWG Main Menu?
+A: The items in Bowl are Thukpa, Khow suey, Ramin Noodles Bowl, Laksa, Asian Noodles, Udon Noodle Soup.
+
+Q: What items are available in Curry of AWG Main Menu?
+A: The items in Curry are Kari Kapitan, Kaeng Phet, Gaeng Kiew Wan, Shrimp & Mushroom Thai Red Curry.
+
+Q: What items are available in Deep Fried of AWG Main Menu?
+A: The items in Deep Fried are Thai Corn Cake, Japanese Korokke, Tempura, Cheese Corn Pop, Deep Fried Wanton, Pickin, Chinese Fried.
+
+Q: What items are available in Dessert of AWG Main Menu?
+A: The items in Dessert are Fried Ice Cream, Coconut Dumpling, Choco Rolls, Honey Sesame Noodles With Ice Cream., Chocolate Nutty Brownie Sizzle, Blue Berry Cheese Cake, Fruit Platter, Choice of Ice Cream.
+
+Q: What items are available in Dim Sum of AWG Main Menu?
+A: The items in Dim Sum are AWG Dimsum, Cottage Cheese & Broccoli Dimsum, Cottage Cheese & Spinach Dimsum, Mushroom & Water Chestnut Dimsum, Veg Siu Mai Dimsum, Veg Dim Sum Platter, Tsing Hoi Dimsum, Hot Basil Dimsum, Sui Mai Dimsum, Poached Beijing Dimsum, Chicken Dim Sum Platter, Har Gao Dimsum, Sambal Dimsum, Sui Mai Prawn Dimsum.
+
+Q: What items are available in Dumpling of AWG Main Menu?
+A: The items in Dumpling are Mixed Veg Cheese Dumpling Fried, Mixed Veg Cheese Dumpling Tossed, Chicken Cheese Dumpling Fried, Chicken Cheese Dumpling Tossed.
+
+Q: What items are available in Grill of AWG Main Menu?
+A: The items in Grill are Corn Cheese & Water Chestnut, Assorted Mushrooms, Asian Grilled Vegetables, Lemongrass, Sriracha, Asian Grilled Chicken Wings, Chilli Basil, Garlic Butter, Sambal.
+
+Q: What items are available in Lettuce Cups of AWG Main Menu?
+A: The items in Lettuce Cups are Fusion Fruit, Asian Vegetable, Thai.
+
+Q: What items are available in Main Course of AWG Main Menu?
+A: The items in Main Course are Burma Delight, Stir Fried Asian Green With Chilli Basil, Hot Bean, Five Treasure Shanghai Style, Vegetable In Black Pepper Sauce, Classic Manchurian, Chilli Basil, Sichuan, Hunan, Classic Chilli, Shredded Pepper & Garlic, Chilli Oyster, Black Mushroom & Pak Choi, Shanghai Style, Dak Galbi, General Tsa'o Chicken, Burnt Garlic With Seasonal Greens, Xo Sauce.
+
+Q: What items are available in Mocktail of AWG Main Menu?
+A: The items in Mocktail are Lost Island, Watermelon & Kafirlime Lemonade, Guava Mary, Asian Itch, Pineapple Yuzu Jalapeno Sour On The Rock, Red Ginger Fizz, AWG Virgin Sangria, Masala Virgin Mojito, Strawberry & Mango Slushie, Peach & Mint Slushie, Spicy Blackcurrent Slushie, Litchi & Draganfruit Slushie, Brownie & Chocolate Shake, Avagado Smoothie, Strawberry & Bourbon Shake, Chocolate & Coconut Shake, Coffee, Cookie & Toffee Shake, Salted Caramel, Alpenliebe & Popcorn Shake, Blueberry Cheese cake Smoothie, Mango Mint Smoothie, Lotus Biscoff Shake, AWG House Punch, Bull Basil Mojito, Fruit Punch, Virgin Pinacolada, Virgin Mojito, Blue Lagoon, Cold Coffee, Classic Ice Tea, Black Current Ice Tea, Strawberry & Peach Ice Tea, Yuzu & Mint Ice Tea, Blue Litchi & Coconut Lemonade, Blueberry & Basil Lemonade, Passion Rosemary & Chilli Lemonade, Cucumber & Curry Leaves Lemonade, Cucumber Lime Refresher, Green Forest.
+
+Q: What items are available in Noodle of AWG Main Menu?
+A: The items in Noodle are Singapore, Pan Fried, Cantonese, Hot Pepper Garlic, Hakka, Sichuan, Spicy Hunan, Longevity, American Chop Suey, Yakisoba, Korean, Pad Thai, All Time Favourite Chow Mein, Char Siu.
+
+Q: What items are available in Pot Sticker of AWG Main Menu?
+A: The items in Pot Sticker are Exotic Vegetables & Truffle Oil Pan Fried, Exotic Vegetables & Truffle Oil Stir Fried, Gyoza Pan Fried, Gyoza Stir Fried, Korean Dumpling Pan fried, Korean Dumpling Stir fried, Cantonese Pan Fried, Cantonese Stir Fried, Sichuan Pan Fried, Sichuan Stir Fried, Chicken & Prawns XO Dumpling Pan Fried, Chicken & Prawns XO Dumpling Stir Fried.
+
+Q: What items are available in Rice of AWG Main Menu?
+A: The items in Rice are Burnt Garlic, Pot Rice, Korean, Chilli Garlic, Sichuan, Jasmine Burnt Garlic, Khao Pad Prik, AWG Classic, Mun Fan, Kimchi Fried Rice, Classic Fried Rice, Nasi Goreng, Basil Stir Fried Chicken, Thai Basil Chicken With Cashew Nuts, Sea Food Fried Rice, Egg Fried Rice, Steamed Jasmine Rice, Steamed Rice.
+
+Q: What items are available in Roll of AWG Main Menu?
+A: The items in Roll are AWG Classic, Cigar, Cha Gio, Assorted Mushroom and Cheese Roll, Corn Cheese Spinach Roll, Popia Tod, Cantonese Chicken Roll.
+
+Q: What items are available in Salad of AWG Main Menu?
+A: The items in Salad are Crispy Salad, Rojak, Good Gado, Grilled Chicken Salad.
+
+Q: What items are available in Sizzler of AWG Main Menu?
+A: The items in Sizzler are AWG Classic, Fusion Mexican, Classic Manchurian, Smoking Cheese Sambal, Spicy Korean Sizzler, Tripple Sichuan Sizzler.
+
+Q: What items are available in Sizzling Plate of AWG Main Menu?
+A: The items in Sizzling Plate are Five Treasure, Cheese Paneer Sizling, Barbeque Onions, Taipei, Smoked Prawn, Butter Garlic Prawn, Hot Pepper Fish, AWG Delight.
+
+Q: What items are available in Skewer of AWG Main Menu?
+A: The items in Skewer are Asian Vegetables, Hot Basil Paneer, Fresh Sambal, Satay Gai Chicken, Sesame Lime Prawn.
+
+Q: What items are available in Soup of AWG Main Menu?
+A: The items in Soup are Clear Broth, Lemon Coriander, Sweet Corn, Sour & Pepper, AWG, Tom Yum, Tom Kha, Hai Kim, Steam Wonton Soup, Crispy Wonton Soup, Hakka, Thai Coconut Soup, Vietnamese Pho.
+
+Q: What items are available in Wings of AWG Main Menu?
+A: The items in Wings are Peri Peri Crunchy, Curryleaves and Black Pepper, Sesame, Korean, Barbeque, Hong Kong Style.
+
+Q: What items are available in Wok Tossed of AWG Main Menu?
+A: The items in Wok Tossed are Corn Chilli Pepper With Kaffir Lime Salt, Corn and Water Chestnut, Green Beans, Chow’s Finger Chips, Lotus Steam, Classic Manchurian Dry, Kung Pao, Chilli Classic Mushroom, Hunan Style Tofu, Crispy Tofu In Hot Garlic, Stir Fried Exotic Vegetables, Fresh Red Pepper, Chilli Classic, Hot Basil, Sichuan, Hunan Sesame, Crackling Spinach, Meat Balls With Smoke Chilli Pepper, AWG, Roasted Smoked Pepper Chicken, Asian Crispy Sesame, Oyster, Chilli Bean, Five Spice, Butter Garlic, Sticky Black Pepper, Cha Chu, Thai Spice.
+
+Q: What categories are available in Cocktail Menu?
+A: The categories in Cocktail Menu are AWG & CLASSIC BOTANICAL MIXOLOGY, BEER'S, BOURBON / IRISH WHISKY, BRANDY, BREEZERS, BULL BASE COCKTAIL, DESSERT WINE, DOMESTIC RUM, DOMESTIC VODKA, GIN, IMPORTED RUM, IMPORTED VODKA, LIIT LONG GLASS, LIQUEURS, PREMIUM WHISKY, RED WINE, ROSE WINE, SANGRIA, SCOTCH WHISKY, SHOOTERS/SHOTS, SINGLE MALT, SPARKLING WINE, SPECIAL MODERN MIXOLOGY / BEST REFRESHMENT DRINKS / MIXOLOGICAL EXELLANCE, TEQUILA, WHITE WINE.
+
+Q: What items are available in AWG & CLASSIC BOTANICAL MIXOLOGY of Cocktail Menu?
+A: The items in AWG & CLASSIC BOTANICAL MIXOLOGY are BREEZER TWIST, MAI TAI, OLD MONK PUNCH, CLASSIC MOJITO, CLASSIC PINACOLADA, TOM & JERRY, SKY BLUE COLADA, DAIQUIRI, PAIN KILLER, CUBA LIBRA, SPICY CHILLI BEER, SEX ON THE BEACH, CLASSIC GUAVA MARRY, CHOCOTINI, PASSION STAR MARTINI, POISON LOVE, COSMOPOLITAN, CLASSIC BLUE LAGOON, NEW YORK SOUR, WHISKEY SOUR, OLD FASHIONED, MINT JULEP, HOT TODDY, ORANGE JULEP, LET'S DETOX, AWGTINI (MARTINI), CHILLI BASIL MARTINI, WHITE/PINK LADY, GIMLET, GREEN MAXICAN, TEQUILA SUNRISE, MARGARITA.
+
+Q: What items are available in BEER'S of Cocktail Menu?
+A: The items in BEER'S are Hoegaarden, Corona, Budweiser Magnum, Budweiser Premium, Kingfisher Ultra, Heineken / Silver, Carlsberg Elephent, Carlsberg Smooth, Tuborg Strong, Kingfisher Premium.
+
+Q: What items are available in BOURBON / IRISH WHISKY of Cocktail Menu?
+A: The items in BOURBON / IRISH WHISKY are Jack Daniel's Old No.07 / HONEY / FIRE, Jim Beam, Jameson.
+
+Q: What items are available in BRANDY of Cocktail Menu?
+A: The items in BRANDY are Hennessy V.S., Honey Bee.
+
+Q: What items are available in BREEZERS of Cocktail Menu?
+A: The items in BREEZERS are Cranberry, Jamaican Passion.
+
+Q: What items are available in BULL BASE COCKTAIL of Cocktail Menu?
+A: The items in BULL BASE COCKTAIL are BULL FROG, FLYING BULL, BULL EXOTICA.
+
+Q: What items are available in DESSERT WINE of Cocktail Menu?
+A: The items in DESSERT WINE are Sula Late Harvest.
+
+Q: What items are available in DOMESTIC RUM of Cocktail Menu?
+A: The items in DOMESTIC RUM are Bacardi (White Rum / Black), Old Monk Coffee, Captain Morgan, Old Monk Regular / Old monk White.
+
+Q: What items are available in DOMESTIC VODKA of Cocktail Menu?
+A: The items in DOMESTIC VODKA are Smirnoff / Smirnoff flavor, Magic Moment.
+
+Q: What items are available in GIN of Cocktail Menu?
+A: The items in GIN are Jaisalmer, Bombay Sapphire, Beefeater, Gordon’s London Dry, Blue Riband.
+
+Q: What items are available in IMPORTED RUM of Cocktail Menu?
+A: The items in IMPORTED RUM are Malibu.
+
+Q: What items are available in IMPORTED VODKA of Cocktail Menu?
+A: The items in IMPORTED VODKA are Grey Goose, Cîroc, Absolut / Absolut Flavor.
+
+Q: What items are available in LIIT LONG GLASS of Cocktail Menu?
+A: The items in LIIT LONG GLASS are AWG LIIT, BEER LIIT, BOOM BOOM LIIT, CRANBERRY LIIT, CLASSIC LIIT.
+
+Q: What items are available in LIQUEURS of Cocktail Menu?
+A: The items in LIQUEURS are Triple Sec / Cointreau, Jagermeister, Baileys, Sambuca, Kahlua, Midori, Martini.
+
+Q: What items are available in PREMIUM WHISKY of Cocktail Menu?
+A: The items in PREMIUM WHISKY are Teachers 50, Black Dog Triple Gold, Teachers Highland Cream, Dewars White Label, Black & White, 100 Pipers, Black Dog, Royal Ranthambore, VAT 69, Ballentine’s Finest, Willam Lawson's, The Glenwalk, Blenders Pride Reserved, Antiquity Blue, Signature, Blenders Pride, Oaksmith Gold, Oaksmith Silver, Okan Glow, Royal Stag Barrel.
+
+Q: What items are available in RED WINE of Cocktail Menu?
+A: The items in RED WINE are Jacob Creak Merlot / Shiraz, Sula Dindori, Sula Cabernet Shiraz / Satroi, Fratelli Classic Merlot / Cabernet Shiraz.
+
+Q: What items are available in ROSE WINE of Cocktail Menu?
+A: The items in ROSE WINE are Sula Zinfandel Rose, Rose.
+
+Q: What items are available in SANGRIA of Cocktail Menu?
+A: The items in SANGRIA are WHITE WINE SANGRIA, RED WINE SANGRIA.
+
+Q: What items are available in SCOTCH WHISKY of Cocktail Menu?
+A: The items in SCOTCH WHISKY are Johnnie Walker Blue Label, Royal Salute 21YRS, Johnnie Walker Double Black, Monkey Shoulder, Chivas Regal 12 Y.O., Johnnie Walker Black Label 12 YRS., J & B, Johnnie Walker Red Label.
+
+Q: What items are available in SHOOTERS/SHOTS of Cocktail Menu?
+A: The items in SHOOTERS/SHOTS are JAGER BOMB, B52, BMW, JACK SPARROW, IRISH FROG, DRUNK MELON, PASSION BLONDY, FIGHTING BULL, KAMIKAZI.
+
+Q: What items are available in SINGLE MALT of Cocktail Menu?
+A: The items in SINGLE MALT are Laphroaig 10 Y.O., Glenfiddich 12 YRS., Talisker 10 YRS., Glenlivet 12 YRS., Glenmorangie. 10 YRS., Sangam, Amrut.
+
+Q: What items are available in SPARKLING WINE of Cocktail Menu?
+A: The items in SPARKLING WINE are Sula Brut, Sula Seco.
+
+Q: What items are available in SPECIAL MODERN MIXOLOGY / BEST REFRESHMENT DRINKS / MIXOLOGICAL EXELLANCE of Cocktail Menu?
+A: The items in SPECIAL MODERN MIXOLOGY / BEST REFRESHMENT DRINKS / MIXOLOGICAL EXELLANCE are DRUNK MAGHAI PAAN, SUNSET MELON, THE AWG PUNCH, CRANBERRY KISS, LOST IN LITCHI, TRUST IN ME.
+
+Q: What items are available in TEQUILA of Cocktail Menu?
+A: The items in TEQUILA are Patron, Tequila Camino (Gold /Silver).
+
+Q: What items are available in WHITE WINE of Cocktail Menu?
+A: The items in WHITE WINE are Jacob Creak Chordonnay, Sula Chenin Blanc / Sauvignon Blanc, Fratelli Chenin Blane / Chardonnay.
+
+Q: What categories are available in Namaste Menu?
+A: The categories in Namaste Menu are Bageeche Se, Bread, Chawal, Comfort Food, Dal Wali Gali, Dessert, Fish Curry Special, Ghost Curry Special, Koyle Ka Kamal, Murgh Curry Special, Pasta, Pizza, Quick Bite, Salad & More, Sandwich, Soup & Shorba.
+
+Q: What items are available in Bageeche Se of Namaste Menu?
+A: The items in Bageeche Se are Punjabi Style Paneer Tikka Masala, Paneer Amritsari, Paneer Lababdar, Paneer Butter Masala, Paneer Mirch Masala, Palak Paneer, Paneer Do Pyaza, Kadai Paneer, Paneer Angara, Paneer Makhmali Kofta, Banarasi Kofta Curry, Malai Kofta, Kaju Masala, Maratha Vegetable Kofta Curry, Sarso Ka Saag, Veg Khurchan, Tawa Subzi, Bhindi Kurkuri.
+
+Q: What items are available in Bread of Namaste Menu?
+A: The items in Bread are Tandoori Roti, Naan, Roomali Roti, Laccha Paratha, Cheese Naan, Garlic Naan, Missi Roti, Kulcha, Stuffed Paratha, Onion Garlic Kulcha, Malabar Paratha, Cheese Garlic Naan, Makkai Ki Roti, Assorted Bread Basket.
+
+Q: What items are available in Chawal of Namaste Menu?
+A: The items in Chawal are Jeera Rice, Peas Pulao, Veg Pulao, Dal Khichdi, Palak Khichdi, Curd Rice, Paneer Pulao, Subz Dum Biryani, Veg Hydrabadi Biryani, Avadhi Murgh Biryani, Matka Biryani, Egg Biryani, Kachcha Ghost Biryani, Hydrabadi Mutton Biryani, Prawns Dum Biryani.
+
+Q: What items are available in Comfort Food of Namaste Menu?
+A: The items in Comfort Food are Onion Rings, Paneer Pakoda, Hara Bhara Kebab, Garlic Bread, Tawa Fry Masala Egg, Chicken Sukha, Chicken Koliwada, Fish Koliwada, Fish Fingure, Tawa Fry, Hariyali Tawa Fry, Prawns Koliwada.
+
+Q: What items are available in Dal Wali Gali of Namaste Menu?
+A: The items in Dal Wali Gali are Dal Tadka, Dal Fry, Dal Panchmel, Dal Makhan Wali, Dal Palak, Dal Methi.
+
+Q: What items are available in Dessert of Namaste Menu?
+A: The items in Dessert are Gulab Jamun With Ice Cream, Moongdal Halwa with ice cream, Dessert Of the Day.
+
+Q: What items are available in Fish Curry Special of Namaste Menu?
+A: The items in Fish Curry Special are Machi Masala, Tikka Masala, Masaledar, Chettinad.
+
+Q: What items are available in Ghost Curry Special of Namaste Menu?
+A: The items in Ghost Curry Special are Maratha Style, Rogan Josh, Do Pyaza, Khada Masala.
+
+Q: What items are available in Koyle Ka Kamal of Namaste Menu?
+A: The items in Koyle Ka Kamal are Methi Mirchi Ka Paneer Tikka, Paneer Dohora, Paneer Hiltop, Methi Aur Paneer Ka Naram Dill Kebab, Classic Tikka, Ajwani Tikka, Achari Tikka, Lasooni Tikka, Paneer Malai Kali Miri, Cheese Makai Seekh Kebab, Seekh Kebab, Chilli Milli Seekh Kebab, Soya Chaap Tikka, Ajwani Soya Chaap, Malai Soya Chaap, Pahadi Soya Chaap, Aloo Ki Gutkey, Subz Shikampri Kebab, Mushroom Ki Nazakat, Mushroom & Babycorn Tikka, Veg Cheese Crispy Roll, Tandoori Plater, Murgh Nazakat, Murgh Ke Sholey, Sharabi Kebab, Tandoori Murgh, Murgh Malai Kebab, Chicken Tangdi Kebab, Banjara Tikka, Pahadi Tikka, Rolly Kebab, Tandoori Lollypop, Peri Peri Tikka, Bhuna Mutton Papper Fry, Bhuna Mutton Chaap, Hariyali Pomfret, Samundar Ki Shaan, Tandoori Non Veg Plater.
+
+Q: What items are available in Murgh Curry Special of Namaste Menu?
+A: The items in Murgh Curry Special are Butter Chicken, Kadai Mirch Wala, Lasooni Saag, Tikka Masala, Khurchan, Kala Masala, Kebab Masala, Khada Masala, Tandoori Chicken Masala, Handi, Egg Masala.
+
+Q: What items are available in Pasta of Namaste Menu?
+A: The items in Pasta are Penne With Tomato Basil Sauce, Mac N Cheese, Fussili Butter Chichen With Mini Naan, Make your Own Pasta.
+
+Q: What items are available in Pizza of Namaste Menu?
+A: The items in Pizza are Tomato Basil, Margarita, Corn Cheese, Veg Delight, Mushroom Veg, Tandoori Paneer, Peri Peri Paneer, Chicken Peri Peri, Tandoori Chicken, BBQ Chicken.
+
+Q: What items are available in Quick Bite of Namaste Menu?
+A: The items in Quick Bite are Udad Papad, Nagli Papad, Masala Papad, Roomali Khakra Masala, Roomali Khakra Cheese Masala, Peanut Chaat, Masala Peanut, Peri Peri Boiled Egg.
+
+Q: What items are available in Salad & More of Namaste Menu?
+A: The items in Salad & More are Greek Salad, Garden Fresh Salad, Chicken Hawaiian Salad, Sprout Salad, Waldrof Salad, Pasta Salad, Russian Salad, Chicken Tikka Salad, Sautte Brocolli Chicken Salad, Pineapple Raita, Boondi Raita, Plain Dahi.
+
+Q: What items are available in Sandwich of Namaste Menu?
+A: The items in Sandwich are Cheese Chilli Toast, Corn Spinach, Classic Veg, Cheese Brust, Veg Club, Peri Peri Paneer, Chicken Delight, Chicken Tikka, Chicken Club.
+
+Q: What items are available in Soup & Shorba of Namaste Menu?
+A: The items in Soup & Shorba are Badam Aur Elichi Ka Shorba, Cream Of Tomato Soup, Murgh Shorba, Cream of Chicken Soup.
+
+CLOSING Q&A
+
+Q: When should the bot end the conversation?
+A: The bot should end the conversation when the user confirms they are done, says thanks or bye, or after guidance is completed with no follow-up question.
+
+Q: How should the bot close the conversation?
+A: The bot should close politely, briefly, and invite the user to return if needed.
+

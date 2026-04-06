@@ -1,0 +1,237 @@
+DEPRECATED FOR RUNTIME USE
+- Do not upload this file to the chatbot runtime.
+- Use only: chatbot-single-source-master.txt
+
+ASIAN WOK & GRILL - AI INTENT ACTIVATION GUIDE
+
+Purpose:
+Use AI to recognize customer intent based on topic, not just exact keywords.
+This file defines activation rules, trigger keywords, intent topics, and customer prompt examples.
+
+==================================================
+1) AI AGENT ACTIVATION LOGIC
+==================================================
+Recommended routing model:
+1. Activate AI for every inbound customer text message except empty or obvious spam messages.
+2. Detect intent category with confidence score.
+3. Respond by intent topic, not by fixed keyword matching.
+
+Confidence policy:
+- Confidence >= 0.60: answer directly.
+- Confidence 0.35 to 0.59: ask one clarifying question.
+- Confidence < 0.35: send fallback options.
+
+==================================================
+2) PRIMARY TRIGGER KEYWORDS
+==================================================
+Use these as high-priority trigger words/phrases:
+- hi
+- hello
+- menu
+- book
+- reservation
+- table
+- order
+- delivery
+- location
+- address
+- timings
+- hours
+- veg
+- jain
+- spicy
+- party
+- event
+- franchise
+- review
+- contact
+
+Hinglish trigger phrases:
+- booking karna hai
+- menu bhejo
+- location bhejo
+- table chahiye
+- order kaise kare
+- franchise chahiye
+- review link bhejo
+
+==================================================
+3) INTENT TOPICS TO RECOGNIZE
+==================================================
+- Greeting and small talk
+- Menu link request
+- Cocktail menu link request
+- Multicuisine menu link request
+- Recommendations
+- Veg/non-veg query
+- Jain query
+- Spice preference query
+- Price query
+- Reservation and table booking
+- Event/party booking
+- Location/branch details
+- Contact support
+- Delivery/online order query
+- Franchise query
+- Google review link query
+- Complaint/service recovery
+- Conversation closing
+
+==================================================
+4) CUSTOMER PROMPTS THAT SHOULD ACTIVATE AI
+==================================================
+Greeting:
+- Hi
+- Hello
+- Good evening
+- Anyone there?
+- Hey team
+
+Main menu:
+- Send me menu
+- Main menu link please
+- Show your food menu
+- I want to check menu items
+- Menu bhejo
+
+Cocktail menu:
+- Send cocktail menu
+- Bar menu link please
+- Drinks menu bhejo
+- Cocktail page link
+- Show beverage menu
+
+Multicuisine menu:
+- Send multicuisine menu
+- Namaste menu link
+- Indian menu page please
+- Multicuisine options dikhaiye
+- Full multicuisine menu bhejo
+
+Recommendations:
+- What should I order?
+- Best seller kya hai?
+- Recommend veg starter and main course
+- Suggest something spicy
+- First time hu, kya try karu?
+
+Veg/non-veg:
+- Do you have veg options?
+- Non veg available?
+- Pure veg dishes kaunse hain?
+- Veg and non veg dono milta hai?
+- Chicken options batao
+
+Jain:
+- Jain food available?
+- Without onion garlic options?
+- Jain starter suggest karo
+- Jain main course kya hai?
+- Can you make Jain version?
+
+Spice:
+- Is food spicy?
+- Less spicy bana sakte ho?
+- Medium spice options batao
+- Very spicy dishes kaunse hain?
+- Kids ke liye mild options do
+
+Price:
+- Price of this dish?
+- Approx cost for 2?
+- Budget friendly options batao
+- Is this expensive?
+- Menu with prices bhejo
+
+Reservation:
+- Table booking available?
+- I want to reserve for tonight
+- Book a table for 6
+- Reservation link bhejo
+- Dinner booking karni hai
+
+Events:
+- Birthday party booking
+- Corporate dinner arrange karna hai
+- Engagement function ke liye space hai?
+- Group booking for 20 people
+- Event menu options batao
+
+Locations:
+- Where are you located?
+- Branches kaha kaha hain?
+- Send location link
+- Nearest outlet ka address
+- Kalyan branch address bhejo
+
+Contact/support:
+- Contact number please
+- How can I speak to your team?
+- Call back chahiye
+- Support chahiye
+- WhatsApp contact do
+
+Delivery/order online:
+- Delivery available?
+- Order online kaise kare?
+- Swiggy or Zomato link?
+- Home delivery karte ho?
+- Parcel order karna hai
+- Online order link bhejo
+- Zomato link bhejo
+- Swiggy link bhejo
+
+Franchise:
+- Franchise chahiye
+- How to take franchise?
+- Franchise investment details
+- Franchise page link bhejo
+- FOCO model details
+
+Google reviews:
+- Send Google reviews link
+- Where can I leave a review?
+- Google ratings page link
+- Review dena hai
+- Share review link please
+
+Complaint:
+- I had a bad experience
+- Order was delayed
+- Food quality issue hai
+- Wrong item delivered
+- I want to report a complaint
+
+Closing:
+- Thanks
+- Thank you, done
+- Bye
+- That is all
+- Good night
+
+==================================================
+5) FALLBACK WHEN INTENT IS UNCLEAR
+==================================================
+Use one of these:
+- I can help with menu, booking, events, locations, franchise, and reviews. What do you need?
+- Would you like menu links, reservation help, or location details?
+- Please tell me if this is for dine-in, delivery, event, or franchise inquiry.
+
+==================================================
+6) QUICK LINK RESPONSES
+==================================================
+Main menu: https://asianwokandgrill.in/menu.html
+Cocktail menu: https://asianwokandgrill.in/cocktail.html
+Multicuisine menu: https://asianwokandgrill.in/namastemenu.html
+Locations page: https://asianwokandgrill.in/contact.html
+Booking page: https://asianwokandgrill.in/reservation.html
+Franchise page: https://asianwokandgrill.in/franchises.html
+Google reviews: https://www.google.com/maps?cid=4420141625021903337
+
+Online order links:
+AWG - Zomato: https://www.zomato.com/nashik/asian-wok-and-grill-anand-wali-goan/order
+AWG - Swiggy: https://www.swiggy.com/city/nashik/asian-wok-and-grill-takli-road-ashokamarg-rest630679
+Namaste Chef - Zomato: https://www.zomato.com/nashik/namaste-chef-by-asian-wok-grill-upnagar
+Namaste Chef - Swiggy: https://www.swiggy.com/restaurants/namaste-chef-by-asian-wok-and-grill-nashik-road-nashik-road-nashik-786310/dineout
+Namaste Kalyan - Zomato: https://www.zomato.com/mumbai/namaste-kalyan-by-asian-wok-and-grill-kalyan-thane/
+Namaste Kalyan - Swiggy: https://www.swiggy.com/restaurants/namaste-kalyan-by-asian-wok-and-grill-kalyan-mumbai-1000913/dineout
