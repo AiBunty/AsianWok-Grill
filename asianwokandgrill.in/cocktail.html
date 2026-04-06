@@ -598,19 +598,19 @@
     function toggleNav(show) { toggleSideNav(show); }
 
     function scrollToCat(id) {
-        // Normalize the ID to ensure it matches the category section
+        // Normalize incoming hash/category text to the same ID strategy used during render.
         const normalizedId = id.trim().toLowerCase().replace(/\s+/g, '-');
         const el = document.getElementById(normalizedId);
-        
-        if(el) { 
-            toggleNav(false); 
-            window.scrollTo({ top: el.offsetTop - 90, behavior: 'smooth' }); 
+
+        if (el) {
+            toggleNav(false);
+            window.scrollTo({ top: el.offsetTop - 90, behavior: 'smooth' });
         } else {
             console.warn(`Category section not found for: ${normalizedId}`);
-            // Fallback: try to find any section with matching text
+            // Fallback: match by rendered heading text.
             const sections = document.querySelectorAll('.category-title');
-            for(let section of sections) {
-                if(section.textContent.toLowerCase().replace(/\s+/g, '-') === normalizedId) {
+            for (let section of sections) {
+                if (section.textContent.toLowerCase().replace(/\s+/g, '-') === normalizedId) {
                     toggleNav(false);
                     window.scrollTo({ top: section.offsetParent.offsetTop - 90, behavior: 'smooth' });
                     return;
@@ -619,6 +619,16 @@
         }
     }
 
+    function applyHashCategoryLink() {
+        const hash = window.location.hash;
+        if (!hash || hash === '#order-online') return;
+        const targetId = decodeURIComponent(hash.substring(1));
+        if (!targetId) return;
+        // Run after render/layout so dynamic categories exist in DOM.
+        setTimeout(() => scrollToCat(targetId), 180);
+    }
+
+    window.addEventListener('hashchange', applyHashCategoryLink);
     window.onscroll = () => { document.getElementById('scrollTopBtn').style.display = window.scrollY > 400 ? 'flex' : 'none'; };
 
     window.onload = async () => {
@@ -627,6 +637,7 @@
             const { data, source } = await DataLayer.getMenuData();
             console.log(`Menu loaded from ${source} with ${data.length} items`);
             UIEngine.render(data, source);
+            applyHashCategoryLink();
             document.getElementById('loader').style.display = 'none';
         } catch (error) {
             document.getElementById('loader').style.display = 'none';
