@@ -1,0 +1,2772 @@
+{
+  "summary": {
+    "total_items": 387,
+    "veg": 277,
+    "nonveg": 110,
+    "jain": 124,
+    "chef_special": 40
+  },
+  "veg": [
+    {
+      "Category": "Sandwich",
+      "Item": "Veg Delight (Grilled / Toasted)",
+      "Description": "Chopped Vegetables & Cheese with Green Chutney & Mayo"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Cheese Chilli Toast",
+      "Description": "Toasted on both sides with cheese, bell pepper & onion"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Corn Chilli",
+      "Description": "Stuffed corn with chilli flakes & mozzarella"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Corn Spinach",
+      "Description": "Stuffed spinach with chilli flakes & mozzarella"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Classic Veg (Grilled / Toasted)",
+      "Description": "Cheese, lettuce, tomato & cucumber"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Cheese Brust (Grilled / Toasted)",
+      "Description": "Cheesy Sandwich."
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Veg Club",
+      "Description": "Triple-layered sandwich with veg filling, coleslaw & cheese"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Paneer Tikka (Grilled / Toasted)",
+      "Description": "Grilled paneer in tandoori masala with mayo & mint chutney"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Peri Peri Paneer (Grilled / Toasted)",
+      "Description": "Paneer in Peri peri with mayo & mint chutney"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Udad Papad (Fried / Roasted)",
+      "Description": "Thin, crisp papad made from urad dal flour"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Nagli Papad (Fried / Roasted)",
+      "Description": "Seasoned papad made from nachni flour"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Masala Papad (Fried / Roasted)",
+      "Description": "Crispy papad topped with spicy onion-tomato mix"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Boiled Chana Salad",
+      "Description": "Boiled black chana tossed with fresh vegetables, herbs, and a tangy lemon dressing."
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Roomali Khakra Masala",
+      "Description": "Butter-brushed khakra with peanut masala"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Roomali Khakra Cheese Masala",
+      "Description": "Butter-brushed khakra with peanut cheese masala"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Peanut Chaat",
+      "Description": "Peanuts tossed with onion, tomato & spices"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Masala Peanut",
+      "Description": "Chopped Onion & Tomatoes Mixed with Indian Spices."
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Bar Snacks Platter",
+      "Description": "Masala Peanuts, Roasted papad, Boiled Chana Salad, Sichuan Sauce, Green Chutney"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Ceaser Salad",
+      "Description": "Crisp romaine tossed in creamy parmesan dressing with garlic croutons."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Greek Salad",
+      "Description": "Cucumber, tomato, olives, feta & iceberg lettuce"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Garden Fresh Salad",
+      "Description": "Seasonal garden vegetables"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Sprout Salad",
+      "Description": "Sprouts with onion, tomato, coriander & lime"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Waldrof Salad",
+      "Description": "Apple, celery, grapes, walnuts & mayonnaise"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Pasta Salad",
+      "Description": "Pasta of the Day, Bellpepper, Iceberg & Mayo."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Watermelon & Feta Cheese Slad",
+      "Description": "Fresh watermelon with creamy feta and a hint of citrus."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Gado Gado Salad",
+      "Description": "Cubes Vegetables Mixed In Homemade Peanut Dressing Dussed with Chilli Flex"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Pineapple Raita",
+      "Description": "Tangy & Sweet Pineapple Conmine with Whisked Curd & Spicy Powder."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Boondi Raita",
+      "Description": "Tangy & Sweet Boondi Conmine with Whisked Curd & Spicy Powder."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Mix Fruit Raita",
+      "Description": "Finely chopped seasonal fresh fruit, Sweet Curd & Relish."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Plain Dahi",
+      "Description": "Home Style Full Cream Yougurt."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Onion Rings",
+      "Description": "Crispy gram-flour battered onion rings"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Mix Veg Pakoda",
+      "Description": "Sliced Mixed Veg Coated in Seasoned Gram Flour Batter & Deep Fried."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Onion Pakoda",
+      "Description": "Sliced Onion Coated in Seasoned Gram Flour Batter & Deep Fried."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Paneer Pakoda",
+      "Description": "Deep-fried gram-flour coated cottage cheese"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Hara Bhara Kebab",
+      "Description": "Shallow-fried vegetable patties with mint chutney"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Crostini",
+      "Description": "Toasted Bread Topped with Bell Peppers, Olives, Garlic & cheese."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Garlic Bread",
+      "Description": "Toasted bread with garlic, cheese & herbs"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Paneer Ghee Roast",
+      "Description": "Paneer cooked in aromatic ghee with a spicy, tangy Mangalorean masala."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Koliwada",
+      "Description": "Crispy fried spicy served with mint chutney"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Tawa Fry",
+      "Description": "Flavoured Shallow Fried Seafood Made With a Few Indian Spices & Herbs & Cooked on a Flat Pan."
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Badam Aur Elaichi Ka Shorba",
+      "Description": "Our Chefs Speciality Midly Spiced Almond Soup Flavoured With Cardamon."
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Tomato Dhaniya Shorba",
+      "Description": "Light tomato broth infused with fresh coriander and gentle Indian spices."
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Palak Shorba",
+      "Description": "Palak broth infused with fresh coriander and gentle Indian spices."
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Choice of Cream Soup",
+      "Description": "Tomato / Mushroom Soup Served with Bread Croutons / Sticks."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Clear Broth",
+      "Description": "Tofu, Broccoli, Mushroom & Pak choy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Lemon Coriander",
+      "Description": "Coriander, Ginger, Broccoli, Fresh Green Chilli & Touch of Lime Juice."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Sweet Corn",
+      "Description": "Creamy Sweet Corn & Green Onion."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Sour and Pepper",
+      "Description": "Tofu, Soya Sauce, Chilli, Mushroom, Bamboo Shoots & Touch of Mild Vinegar."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "AWG",
+      "Description": "Exotic Vegetables, Mushroom, Tofu"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Hakka",
+      "Description": "Fresh Chilli, Garlic, Chopped Vegetables, Soya Sauce Served With Crispy Noodles."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Burmese Traditional Soup",
+      "Description": "Classic Burmese Curried Noodles Soup"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Crispy Wonton Soup",
+      "Description": "Exotic Vegetables, Tofu, Chilli Paste & Sriracha, Served With Crispy Veg Wonton."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Bakso Ayam",
+      "Description": "Clear Broth, Meat Balls, Vermicelli, Pak Choy & Wonton Strip."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Thai Coconut Soup",
+      "Description": "Kaffir Lime Leaves ,Coconut Milk,Fresh Red Chilli ,Coriander ,Lime Juice."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Tom Yum",
+      "Description": "Thai Broth Flavoured With Lemongrass, Galangal, Fresh Chilli, Kaffir Lime Leaves & Straw Mushroom."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Tom Kha",
+      "Description": "Coconut Milk, Cherry Tomato Flavoured With Thai Herbs."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Methi Mirchi Ka Paneer Tikka",
+      "Description": "Spicy Fenugreek Flavoured Yogurt, Cooked in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Paneer Dohora",
+      "Description": "Two Different Flavoures Stuffed Paneer Tikka Cooked in Clay Oven."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Chettinad Paneer Tikka",
+      "Description": "Soft paneer marinated in bold Chettinad spices and grilled to smoky perfection."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Paneer Hiltop",
+      "Description": "spiced yogurt and herbs, grilled in the tandoor for a smokey, flavourful taste. Served with mint chutney."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Methi Aur Paneer Ka Naram Dill Kebab",
+      "Description": "Soft and creamy kebabs made with mashed paneer and green peas, blended with mild spices."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Classic Tikka",
+      "Description": "All Time Favourite Chargrilled in a Spicy Marinate"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Ajwani Tikka",
+      "Description": "All Time Favourite Chargrilled in a Spicy Marinate"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Achari Tikka",
+      "Description": "All Time Favourite Chargrilled in a Spicy Marinate"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Lasooni Tikka",
+      "Description": "All Time Favourite Chargrilled in a Spicy Marinate"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Paneer Malai Kali Miri",
+      "Description": "Creamy black-pepper paneer tikka"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Cheese Makai Seekh Kebab",
+      "Description": "Mildly Spiced Paneer, Cheese & American Corn Cooked In Clay Oven."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Cheese Palak Seekh",
+      "Description": "Delicious seekh kebabs made with spinach and cheese, lightly spiced and grilled for a smoky, creamy flavor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Seekh Kebab",
+      "Description": "Minced, Spices are Shaped on Skewers, Cooked in Clay Oven."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Chilli Milli Seekh Kebab",
+      "Description": "Minced Vegetables & Spices are Shaped on Skewers, Cooked in Clay Oven & Served With Green Chutney."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Soya Chaap Tikka",
+      "Description": "Spice-marinated soya chaap cooked in tandoor"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Ajwani Soya Chaap",
+      "Description": "Chaap is a Delicious North Indian Starter, Soya Chaap is then Marinated with Spices, then Cooked in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Malai Soya Chaap",
+      "Description": "Chaap is a Delicious North Indian Starter, Soya Chaap is then Marinated with Spices, then Cooked in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Pahadi Soya Chaap",
+      "Description": "Chaap is a Delicious North Indian Starter, Soya Chaap is then Marinated with Spices, then Cooked in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Badami Aloo",
+      "Description": "Tandoori Cooked Stuffed Potatoes With All the Richness of Dry Food."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Subz Shikampuri Kebab",
+      "Description": "Garden Fresh Vegetable Cutlets Stuffed with Mintly Onion Relish Deep Fried to Golden Brown."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Mushroom Ki Nazakat",
+      "Description": "Stuffed Button Mushrooms Marinated with Cheese & Coated Cream Glazed in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Mushroom & Babycorn Tikka",
+      "Description": "Mushroom & Babycorn Marinated in Tandoori Masala & Finished in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Veg Cheese Crispy Roll",
+      "Description": "Yummy & Stuffed Cheesy Rolls Filled with Healthy Vegetables."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Tandoori Platter",
+      "Description": "Assorted Platter"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Punjabi Style Paneer Tikka Masala",
+      "Description": "Cottage Cheese Tikka with Yoghurt with Onion, Tomato & Capsicum."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Amritsari",
+      "Description": "Cottage cheese marinated with aromatic Indian spices, cooked in authentic"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Lahori",
+      "Description": "Cottage cheese marinated with aromatic Indian spices, cooked in authentic"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Desi Paneer Bhurji",
+      "Description": "Wok-tossed cottage cheese with vegetables in a spicy desi masala."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Lababdar",
+      "Description": "Creamy, Mildly tangy & Faintly Sweet Gravy, Onions, Tomatoes, Cashews & Spices."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Butter Masala",
+      "Description": "Creamy, Mildly tangy & Faintly Sweet Gravy, Onions, Tomatoes, Cashews & Spices."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Mirch Masala",
+      "Description": "Cottage Cheese Cooked in Kadai in Rich Spiced Masala Crowded Cream."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Palak Paneer",
+      "Description": "Cottage Cheese Cooked in Kadai in Rich Spiced Masala Crowded Cream."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Do Pyaza",
+      "Description": "A Rich, Creamy Curry of paneer & Plenty of Onions in a Wonderful Medley of Spices, Herbs & Tomatoes."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Kadai Paneer",
+      "Description": "A Rich, Creamy Curry of paneer & Plenty of Onions in a Wonderful Medley of Spices, Herbs & Tomatoes."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Angara",
+      "Description": "An Exotic Smokey Flavour. It is Prepared with the Help of a Coal & Smoke Cooking Helps to Enhance its Taste."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Makhmali Kofta",
+      "Description": "Paneer and potato dumplings in a rich cashew-cream gravy."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Pasanda",
+      "Description": "Stuffed paneer in a rich, creamy onion-tomato gravy."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Makhmali Kofta",
+      "Description": "Cottage cheese dumplings in creamy cashew gravy with saffron."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Banarasi Kofta Curry",
+      "Description": "Traditional Banarasi Kofta in Nawabi Style."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Malai Kofta",
+      "Description": "Creamy Cottage Cheese Cooked in Cashewnut Gravy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Kaju Masala",
+      "Description": "Creamy Kaju Cooked in Cashewnut Gravy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Methi Matar Malai",
+      "Description": "Cottage Cheese, Matar & Methi Cooked in Rich Muglai Style."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Maratha Vegetable Kofta Curry",
+      "Description": "Vegetable Dumpling Served in Black Gravy."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Sarso Ka Saag",
+      "Description": "Traditional Punjabi Dish Made of Mustard leaf & spice."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Veg Khurchan",
+      "Description": "Mixed Vegetable Cooked with Mustard Capsicum with Cream."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Tawa Subzi",
+      "Description": "Assorted Vegetables Cooked on Tawa."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Veg Patiala",
+      "Description": "Cottage cheese rolls in creamy onion-tomato gravy with spices."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Bhindi Kurkuri",
+      "Description": "Crispy spiced okra fritters, light and crunchy."
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Tadka",
+      "Description": "Yellow lentils tempered with cumin & garlic"
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Fry",
+      "Description": "Yellow Lentil Tempered with Cumin Seeds, Onions & Tomatoes."
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Panchmel",
+      "Description": "5 Different Lentils or Dals. Hearty & Nutritious."
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Makhan Wali",
+      "Description": "Slow-cooked black lentils with butter & cream"
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Palak",
+      "Description": "Comforting lentils simmered with fresh spinach and mild spices."
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Methi",
+      "Description": "Creamy lentils delicately flavoured with fresh fenugreek."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Maratha Style",
+      "Description": "Lamb Cooked in Local Style."
+    },
+    {
+      "Category": "Ghost Curry Special",
+      "Item": "Khada Masala",
+      "Description": "Tender Lamb on Bone Cooked with Whole Spices."
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Chettinad",
+      "Description": "Spicy, Bold & Perfect Curry to Serve with Malabar Paratha."
+    },
+    {
+      "Category": "Bread",
+      "Item": "Tandoori Roti",
+      "Description": "Whole-wheat bread cooked in tandoor"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Naan",
+      "Description": "Tandoori Cooked Giant Refined Flour Bread."
+    },
+    {
+      "Category": "Bread",
+      "Item": "Roomali Roti",
+      "Description": "Paper-Thin Refined Flour Bread."
+    },
+    {
+      "Category": "Bread",
+      "Item": "Laccha Paratha",
+      "Description": "Whole Wheat Lacchadar Paratha Cooked in Clay Oven."
+    },
+    {
+      "Category": "Bread",
+      "Item": "Cheese Naan",
+      "Description": "Indian Bread Topped with Cheese or Garlic"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Garlic Naan",
+      "Description": "Indian Bread Topped with Cheese or Garlic"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Missi Roti",
+      "Description": "Made with a Mix of Whole Wheat Flour, Gram Flour & Spices."
+    },
+    {
+      "Category": "Bread",
+      "Item": "Kulcha",
+      "Description": "Bread with Appetizing Aroma & Mild Flavour of Nigella Seeds."
+    },
+    {
+      "Category": "Bread",
+      "Item": "Stuffed Paratha",
+      "Description": "Aloo / Gobi / Mint / Methi/ Ajwain - Choice of Stuffed Paratha"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Onion Garlic Kulcha",
+      "Description": "Traditional Indian Flatbread Made with Flour Garlic & Onion Toppings."
+    },
+    {
+      "Category": "Bread",
+      "Item": "Malabar Paratha",
+      "Description": "Unique Dish From South Indian which is Very Common in Kerala & Tamil Nadu."
+    },
+    {
+      "Category": "Bread",
+      "Item": "Cheese Garlic Naan",
+      "Description": "Indian bread topped with Garlic & Cheese."
+    },
+    {
+      "Category": "Bread",
+      "Item": "Makkai Ki Roti",
+      "Description": "Corn-Based Unleavened Flatbreads are Delicious, Slightly Sweet From the Maize Flour, Especially Served with Sarson ka Saag."
+    },
+    {
+      "Category": "Bread",
+      "Item": "Assorted Bread Basket",
+      "Description": "Assorted Tandoori Breads 7 Types"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Sada Basmati Chawal",
+      "Description": "Steamed Boiled Rice"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Jeera Rice",
+      "Description": "Steamed rice tempered with cumin seeds"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Peas Pulao",
+      "Description": "Temper with Cumin Seeds, Peas & Corianders."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Veg Pulao",
+      "Description": "Aromatic basmati rice with vegetables"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Dal Khichdi",
+      "Description": "Rice Perpered with Dal."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Palak Khichdi",
+      "Description": "Rice Perpered with Dal and Palak."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Curd Rice",
+      "Description": "Rice Prepared with Curd."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Paneer Pulao",
+      "Description": "Fragrant basmati rice with roasted paneer, vegetables, and spices."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Kashmiri Pulao",
+      "Description": "Fragrant basmati rice with dry fruits, mild spices, and a hint of sweetness."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Subz Dum Biryani",
+      "Description": "Garden Fresh Vegetables & Flavourful Basmati Rice."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Veg Hydrabadi Biryani",
+      "Description": "Garden Fresh Vegetables & Flavourful Basmati Rice."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Kachcha Ghost Biryani",
+      "Description": "Lamb & Finest Basmati Rice Cooked in Nizami Style."
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "AWG Veg (6 PCS)",
+      "Description": "Chef’s Special."
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "Cream Cheese Broccoli (6 PCS)",
+      "Description": "Chopped Broccoli, Cream cheese mixed with a truffle oil."
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "Assorted Mushroom & Water Chestnut (6 PCS)",
+      "Description": "Ginger, Garlic, Green Onion & Sesame Oil."
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "Hot Basil (6 PCS)",
+      "Description": "Basil, Fresh Red Chilli, Ginger, Garlic, Oyster Sauce & Chilli Oil."
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "Poached Beijing (6 PCS)",
+      "Description": "Oyster Sauce, Burnt Garlic, Pak Choy, Fresh Red Chilli, Soya Sauce & Sesame Oil."
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "Sui Mai (6 PCS)",
+      "Description": "Carrot, Thin Wonton Wrapped, Green Onion & Sesame Oil."
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "Assorted Platter (12 PCS)",
+      "Description": "Assorted Platter 12 PCS"
+    },
+    {
+      "Category": "Dumpling",
+      "Item": "Mixed Veg Cheese Dumpling Fried",
+      "Description": "Chopped Exotic Vegetables, Cheese, Chilli, Ginger, Garlic"
+    },
+    {
+      "Category": "Dumpling",
+      "Item": "Mixed Veg Cheese Dumpling Tossed",
+      "Description": "Chopped Exotic Vegetables, Cheese, Chilli, Ginger, Garlic"
+    },
+    {
+      "Category": "Bao",
+      "Item": "Fire Cracker",
+      "Description": "Finger Cottage Cheese Marinated in Ginger, Chilli Paste, Wrap With Thread Wonton."
+    },
+    {
+      "Category": "Bao",
+      "Item": "Paneer Tikka Masala Bao",
+      "Description": ""
+    },
+    {
+      "Category": "Bao",
+      "Item": "Chilli Bao",
+      "Description": "Bell Pepper,Spring Onion & Coriander."
+    },
+    {
+      "Category": "Wings",
+      "Item": "Korean",
+      "Description": "Wings Tossed With Garlic, Green Onion & Korean Spices."
+    },
+    {
+      "Category": "Wings",
+      "Item": "Barbeque",
+      "Description": "Wings Tossed With Homemade BBQ Sauce, Chilli Flakes Topped With Spring Onion."
+    },
+    {
+      "Category": "Wings",
+      "Item": "Hong Kong Style",
+      "Description": "Wings Tossed With Shredded Onion,Dry Chilli,Vinegar & Cooking wine."
+    },
+    {
+      "Category": "Roll",
+      "Item": "AWG Classic",
+      "Description": "Chef’s Special."
+    },
+    {
+      "Category": "Roll",
+      "Item": "Cigar",
+      "Description": "Roll Sheets, Bell Pepper, Cottage Cheese, Coriander Served With Chilli Plum Dip."
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Corn Cheese Ball",
+      "Description": "Panko-crusted cheese & corn bites with Thai sweet chilli."
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Japanese Korokke",
+      "Description": "Smashed Potatoes, Cheese, Garlic, Coated In Panko Served With Mayo Dip."
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Tempura",
+      "Description": "Tempura In Light Crispy Battered Served With Chilli Mayo Sauce."
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Chow's Finger Chips",
+      "Description": ""
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Cheesy Finger Chips",
+      "Description": "Cheesy finger chips, crisp-fried and indulgent."
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Peri Peri Chips",
+      "Description": "Crispy potato chips tossed in spicy peri-peri seasoning."
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Deep Fried Wonton",
+      "Description": "Stuffed Homemade wanton with marinated minced Vegetables"
+    },
+    {
+      "Category": "Grill",
+      "Item": "Corn Cheese & Water Chestnut",
+      "Description": "Grilled corn & water chestnut with Sichuan chilli and cheese."
+    },
+    {
+      "Category": "Grill",
+      "Item": "Assorted Mushroom",
+      "Description": "Oriental-spiced grilled mushrooms with lettuce salad."
+    },
+    {
+      "Category": "Grill",
+      "Item": "Asian Grilled Vegetables",
+      "Description": "Seasonal mixed vegetables."
+    },
+    {
+      "Category": "Grill",
+      "Item": "Sriracha",
+      "Description": "Garlic, Ginger, Red Chilli, Lime Juice & Sriracha Sauce."
+    },
+    {
+      "Category": "Sizzling Plate",
+      "Item": "Five Treasure",
+      "Description": "Shiitake Mushroom, Water Chestnut , Baby pok Choy, Chinese Cabbage and Bean Curd"
+    },
+    {
+      "Category": "Sizzling Plate",
+      "Item": "Cheese Paneer Sizzling",
+      "Description": "Ginger, Garlic, Sweet and spicy hot garlic sauce serve with Mozzarella and process cheese"
+    },
+    {
+      "Category": "Sizzling Plate",
+      "Item": "Barbeque Onions",
+      "Description": "Caramelized Sliced Onion, Ginger, Garlic, Light Soya, Black Bean & Fresh Red Chilli"
+    },
+    {
+      "Category": "Sizzling Plate",
+      "Item": "Taipei",
+      "Description": "Chilli Oil, Chopped Garlic, Slice Onion, Spring Onion & Scallion"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Crispy Corn and Water Chestnut",
+      "Description": "Corn and Waterchestnut Tossed With Fresh Red Chilli, Kaffir Lime Leaf."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Five Spice",
+      "Description": "Ginger, Garlic & Five Spice Powder."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Classic Manchurian Dry",
+      "Description": "Deep Fried Vegetable Balls Cooked With Chopped Ginger,Garlic,Onion,chilli & Coriander Leaf."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Chilli Classic Mushroom",
+      "Description": "Crispy Button Mushroom Tossed With Green Chilli, Bell Pepper, Soya Sauce & Chilli Sauce."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Hunan Style Tofu",
+      "Description": "Tofu Tossed With Ginger, Dry Red Chilli, Oyster Sauce, Bell Pepper, Cooking Wine & Chilli Oil."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Hunan Sesame",
+      "Description": "Ginger, Dry Red Chilli, Oyster Sauce, Bell Pepper, Cooking Wine & Chilli Oil."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Fresh Red Pepper",
+      "Description": "Diced Cottage Cheese Tossed With Bell Pepper, Scallion, Chilli Flakes & Black Pepper."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Chilli Classic",
+      "Description": "Green Chilli, Bell Pepper, Soya Sauce & Chilli Sauce."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Hot Basil",
+      "Description": "Ginger, Garlic, Fresh Red Chilli, Fresh Basil & Lime Juice."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Sichuan",
+      "Description": "Dry Red Chilli, Ginger, Garlic, Celery & Homemade Sichuan Sauce."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Crackling Spinach",
+      "Description": "Ginger,Chilli Flakes,Bell Pepper & Chilli Sauce Served On Bed Of Crispy Spinach."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "AWG",
+      "Description": "Yes."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Asian Crispy Sesame",
+      "Description": "Ginger,Honey,Vinegar,Kikkoman Soya & Topped With Sesame Seeds."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Butter Garlic",
+      "Description": "Garlic, Scallion, Bell Peppers & Butter."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Thai Spice",
+      "Description": "Bell Peppers, Sweet Basil, Garlic, Fresh Red Chilli & Sriracha Sauce."
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "AWG Classic",
+      "Description": "Combination of Grilled Corn Cheese, Wok Tossed Noodles Or Fried Rice, Chilli Potatoes & Stir Fry Vegetables."
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "Fusion Mexican",
+      "Description": "Rice and Noodles with Sauted Exotic Vegetables & Chilli Potatoes."
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "Classic Manchurian",
+      "Description": "Chilli Garlic Noodles Or Rice, Sauted Vegetables & Chilli Potatoes."
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "Makhmali Kofta Sizzler",
+      "Description": "Paneer makhmali kofta, Cheese corn Ball, Cheese Garlic Naan, Veg Royal Pulao."
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "Tandoori Sahi Sizzler",
+      "Description": "Dal Makhani, Mint Barista Pulao, 3 types of kebab, Butter Laccha Paratha"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Asian Vegetables Red Pepper Sauce",
+      "Description": "Exotic Vegetables Cooked With Ginger, Garlic, Fresh Red Chilli & Spring Onion."
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Stir Fried Asian Green With Chilli Basil",
+      "Description": "Ginger, Garlic, Sweet Basil, Fresh Red Chilli, Soya Sauce & Lime Juice."
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Shanghai Style",
+      "Description": "Diced Broccoli, Baby Corn, Zucchini, Water Chestnut, Pak Choy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Classic Manchurian",
+      "Description": "Deep fried Balls Cooked With Chopped Ginger, Garlic, Onion, Chilli Sauce & Coriander."
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Sichuan",
+      "Description": "Ginger, Garlic, Dry Red Chilli, Homemade Sichuan Sauce, Bell Pepper & Vinegar."
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Classic Chilli",
+      "Description": "Ginger, Garlic, Green Chilli, Spring Onion, Bell Peppers & Soya Sauce."
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Shredded Pepper & Garlic",
+      "Description": "Garlic, Scallion, Bell Peppers, Sesame Oil, Black Pepper & Cooking Wine."
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Chilli Oyster",
+      "Description": "Ginger, Scallion, Fresh Chilli, Oyster Mushroom, Oyster Sauce & Soya Sauce."
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Dak Galbi",
+      "Description": "Ginger, Garlic, Korean Chilli Paste, Soya Sauce, Cooking Wine & Green Onion"
+    },
+    {
+      "Category": "Curry",
+      "Item": "Kari Kapitan",
+      "Description": "Malaysian Curry"
+    },
+    {
+      "Category": "Curry",
+      "Item": "Kaeng Phet",
+      "Description": "Thai Red Curry"
+    },
+    {
+      "Category": "Curry",
+      "Item": "Gaeng Kiew Wan",
+      "Description": "Green Thai Curry"
+    },
+    {
+      "Category": "Bowl",
+      "Item": "Thukpa",
+      "Description": "Flat Noodles, Exotic Vegetables, Tomato & Fresh Chilli."
+    },
+    {
+      "Category": "Bowl",
+      "Item": "Khow suey",
+      "Description": "Classic Burmese Curried Noodle"
+    },
+    {
+      "Category": "Rice",
+      "Item": "Burnt Garlic",
+      "Description": "Wok Tossed Rice With Spinach, Butter & Fried Garlic."
+    },
+    {
+      "Category": "Rice",
+      "Item": "Korean",
+      "Description": "Star Anise, Cube Cottage Cheese, Chilli Flakes & Korean Spicy."
+    },
+    {
+      "Category": "Rice",
+      "Item": "Chilli Garlic",
+      "Description": "Wok Tossed Rice With Chilli Flakes, Fried Garlic & Spring Onion."
+    },
+    {
+      "Category": "Rice",
+      "Item": "Sichuan",
+      "Description": "Wok Tossed Rice Tossed With Homemade Sichuan Sauce & Spring Onion."
+    },
+    {
+      "Category": "Rice",
+      "Item": "Khao Pad Prik",
+      "Description": "Wok Tossed Rice With Spicy Homemade Thai Chilli Sauce & Sweet Basil."
+    },
+    {
+      "Category": "Rice",
+      "Item": "AWG Classic",
+      "Description": "Yes."
+    },
+    {
+      "Category": "Rice",
+      "Item": "Classic Fried Rice",
+      "Description": "Rice Tossed With Carrot, Beans & Fresh Corn."
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Pan Fried",
+      "Description": "Semi Crispy Noodles top with Choice of sauce"
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Hot Pepper Garlic",
+      "Description": "Chilli Flakes, Fried Garlic & Spring Onion."
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Hakka",
+      "Description": "Light Soya Sauce & Spring Onion."
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Sichuan",
+      "Description": "Ginger, Garlic, Homemade Sichuan Chilli Sauce & Spring Onion."
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Longevity",
+      "Description": "Butter Tossed Noodles Asparagus, Zuccini, Tofu, Broccoli, Babycorn, Pak Choy & Hunan Gravy."
+    },
+    {
+      "Category": "Noodle",
+      "Item": "American Chop Suey",
+      "Description": "Sweet & Sour Vegetables With Bed Of Crispy Noodles."
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Korean",
+      "Description": "Flat Noodles Korean Chilli Paste, Soya Sauce, Shiitake Mushrooms & Spring Onion."
+    },
+    {
+      "Category": "Noodle",
+      "Item": "All Time Favourite Chow Mein",
+      "Description": "Chilli Sauce, Soya Sauce, Bell Peppers, Celery & Spring Onion."
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Tomato Basil",
+      "Description": "Fresh tomato sauce, basil leaves & melted mozzarella on a crisp crust."
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Margarita",
+      "Description": "Tomato, mozzarella & fresh basil on a classic crust."
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Corn Cheese",
+      "Description": "Sweet corn & melted cheese on a golden crust."
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Veg Delight",
+      "Description": "Garden vegetables & melted cheese on a crisp crust."
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Mushroom Veg",
+      "Description": "Mushrooms, mixed veggies & melted cheese on a crisp crust."
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Tandoori Paneer",
+      "Description": "Spicy marinated paneer, peppers, onions, cheese on crispy crust.​"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Peri Peri Paneer",
+      "Description": "Spicy peri peri marinated paneer, peppers, onions, cheese on crispy crust.​"
+    },
+    {
+      "Category": "Mini Bao Pizza",
+      "Item": "Kadai Paneer",
+      "Description": "Bao base with spiced paneer & cheese."
+    },
+    {
+      "Category": "Mini Bao Pizza",
+      "Item": "Palak Paneer",
+      "Description": "Bao base with palak paneer & cheese."
+    },
+    {
+      "Category": "Pasta",
+      "Item": "Penne With Tomato Basil Sauce",
+      "Description": "Penne in fresh tomato, garlic, basil sauce."
+    },
+    {
+      "Category": "Pasta",
+      "Item": "Mac N Cheese",
+      "Description": "Macroni, cheese, milk"
+    },
+    {
+      "Category": "Pasta",
+      "Item": "Make your Own Pasta",
+      "Description": "Pasta Option - Penne, Spaghetti, Fusilli, Macaroni. Choice Of Sauce Option - Alfredo, Arrabiata, Pesto, Marinara."
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Fried Ice Cream",
+      "Description": "Vanilla Ice Cream Stuffed In Choco Chips & Nuts Coated With Desiccated Coconut Powder, Served WIth Caramel Sauce."
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Gulab Jamun With Ice Cream",
+      "Description": "Soft milk dumplings in sugar syrup with vanilla ice cream"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Crispy Honey Noodles with Ice Cream",
+      "Description": "Golden fried noodles drizzled with honey, served with a scoop of vanilla ice cream."
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Moongdal Halwa with ice cream",
+      "Description": "Ghee-roasted moong dal halwa with vanilla ice cream"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Chocolate Nutty Brownie",
+      "Description": "Sizzling Brownie Served With Ice Cream Scoop & Chocolate Sauce."
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Fruit Plater",
+      "Description": "Seasonal Fresh Cut fruit"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Choice of Ice Cream",
+      "Description": "Vanila, Butter Scotch, Chocolate, Strawberry - choice of flavour"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Dessert Of the Day",
+      "Description": "Chef’s special sweet selection"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Lost Island",
+      "Description": "A Medley of Mango, Passion & Coconut Cream Perked Uo With Fresh Mint."
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Watermelon & Kafirlime Lemonade",
+      "Description": "Refreshing & Tall Watermelon Fizz With a Hint of Kaffir Lime."
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Guava Mary",
+      "Description": "Spicy & Iced Guava Juice Sipped Through Chilli Salt."
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Asian Itch",
+      "Description": "Tall & Cool With Lemongrass, Ginger Lime, Litchi."
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Pineapple Yuzu Jalapeno Sour On The Rock",
+      "Description": "Ice & Fruity Spice With Pineapple, Chilli & Citrus Yuzu."
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Red Ginger Fizz",
+      "Description": "Cranberry & Pomegranate In a Ginger Lime."
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "AWG Virgin Sangria",
+      "Description": "Promogranade, cranberry, grape, and orange juice, lime, honey and house churned fruits."
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Masala Virgin Mojito",
+      "Description": "Refreshing Drink with a twist of Masala"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Strawberry & Mango Slushie",
+      "Description": "Strawberry crush, Mango crush, Ice"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Peach & Mint Slushie",
+      "Description": "Peach and Mint, Ice"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Spicy Blackcurrant Slushie",
+      "Description": "Blackcurrant Crush, Chilli, Ice"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Litchi & Dragon Fruit Slushie",
+      "Description": "Litchi Crush, Dragan Fruit, Ice"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Brownie & Chocolate Shake",
+      "Description": "Brownie, Chocolate ice cream, Chocolate Syrup, Milk"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Strawberry & Bourbon Shake",
+      "Description": "Strawberry Crush, Bourbon Biscuit."
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Chocolate & Coconut Shake",
+      "Description": "Chocolate & Coconut Syrup, Ice Cream"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Coffee, Cookie & Toffee Shake",
+      "Description": "Milk, Ice Cream, Coffee and Cookies."
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Salted Caramel, Alpenliebe & Popcorn Shake",
+      "Description": "Salted Caramel, Alpenliebe & Popcorn"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Blueberry Cheese cake Smoothie",
+      "Description": "Blueberry crush, Process Cheese"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Mango Mint Smoothie",
+      "Description": "Mango Crush, Mint Leaves"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Lotus Biscoff Shake",
+      "Description": "Lotus Biscoff Shake"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "AWG House Punch",
+      "Description": "AWG House Punch"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Bull Basil Mojito",
+      "Description": "Refreshing Basil Mojito with Red Bull"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Fruit Punch",
+      "Description": "Seasonal Fruit, Ice Cream"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Virgin Pinacolada",
+      "Description": "Pineapple Juice, Vanilla Ice Cream"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Virgin Mojito",
+      "Description": "Mint Leaves, Lemon Wedges, Ice and Sprite"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Blue Lagoon",
+      "Description": "Blue Curaco Syrup, Lemon Juice, Sprite"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Cold Coffee",
+      "Description": "Coffee, Ice Cream, Milk"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Classic Ice Tea",
+      "Description": "Lemon Ice tea"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Black Current Ice Tea",
+      "Description": "Black Current Ice Tea"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Strawberry & Peach Ice Tea",
+      "Description": "Strawberry & Peach Ice Tea"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Yuzu & Mint Ice Tea",
+      "Description": "Yuzu & Mint Ice Tea"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Blue Litchi & Coconut Lemonade",
+      "Description": "Litchi Crush, Blue Curacao Syrup, Coconut Syrup"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Blueberry & Basil Lemonade",
+      "Description": "Blueberry Crush, Basil Leaves, Lime juice, Sprite"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Passion Rosemary & Chilli Lemonade",
+      "Description": "Passion Fruit Puree, Rosemary, Green Chilli, Sprite"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Cucumber & Curry Leaves Lemonade",
+      "Description": "Curry Leaves, Cucumber Syrup, Lemon, Sprite"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Cucumber Lime Refresher",
+      "Description": "Cucumber Syrup, Lemon Juice, Sprite"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Green Forest",
+      "Description": "Green Forest"
+    }
+  ],
+  "nonveg": [
+    {
+      "Category": "Sandwich",
+      "Item": "Boiled Egg (Grilled / Toasted)",
+      "Description": "Eggs with Salt & Pepper Spread With Mayo & Ketchup"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Chicken Delight (Grilled / Toasted)",
+      "Description": "Chopped chicken & cheese with green chutney & mayo"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Chicken Tikka (Grilled / Toasted)",
+      "Description": "Grilled chicken tikka with mayo & mint chutney"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Chicken Peri peri (Grilled / Toasted)",
+      "Description": "Chicken Marinated in peri peri powder with mayo & mint chutney"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "BBQ Chicken (Grilled / Toasted)",
+      "Description": "Chicken marinated with BBQ Sauce, mayo & mint chutney"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Chicken Club (Grilled / Toasted)",
+      "Description": "Triple-layered sandwich with chicken, egg & cheese"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Peri Peri Boiled Egg",
+      "Description": "Boiled eggs dusted with peri peri spice"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Chicken Hawaiian Salad",
+      "Description": "Pineapple-coconut marinated chicken with greens"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Russian Salad",
+      "Description": "Potato, peas & carrot with eggless mayo"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Chicken Tikka Salad",
+      "Description": "Chunks of Tandoor Grilled Chicken with Lettuce & Peppers, Tossed with Tangy Lime Dressing."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Sauted Brocolli Chicken Salad",
+      "Description": "Chunks of Tandoor Grilled Chicken with Lettuce & Peppers, Tossed with Tangy Lime Dressing."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Crispy Salad",
+      "Description": "Crispy Shredded Chicken, Crispy Wonton, Rice Noodles, Marinade With Chilli Dressing."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Chicken Ghee Roast",
+      "Description": "Chicken cooked in aromatic ghee with a spicy, tangy Mangalorean masala."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Tawa Fry Masala Egg",
+      "Description": "Boiled eggs are coasted is a fregnent masala and shallow fry to perfection."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Chicken Sukha",
+      "Description": "Bone Chicken cooked in a dry-roasted blend of coconut, curry leaves, and spicy South Indian Masala."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Chicken Nuggets",
+      "Description": "A Small Piece of Deboned Chicken Meat That is Breaded Battered, Then Deep Fried & Served with Fries & Mustard Sauce."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Fish Fingers",
+      "Description": "Crumb-fried fish fingers with tartar sauce"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Fish & Chips",
+      "Description": "Crumb Fried Fish Finger Served With Tartar Sauce."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Patrani Pomfret",
+      "Description": "Banana leaf–steamed pomfret with fragrant green herbs and spices."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Hariyali Tawa Fry",
+      "Description": "Mint-coriander marinated king fish, pan-seared"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Jhinga Sukha",
+      "Description": "Indian-style dry prawns with roasted coconut and curry leaves."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Chettinad Prawns Pepper Fry",
+      "Description": "Bold South Indian spices, black pepper & curry leaf aroma."
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Murgh Shorba",
+      "Description": "Light chicken stock with Indian spices"
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Cream of Chicken Soup",
+      "Description": "Comforting creamy chicken soup"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Hai Kim",
+      "Description": "Crab Meat, Fresh Red Chilli, Garlic & fresh Coriander."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Murgh Nazakat",
+      "Description": "Chicken Supremes Stuffed with Minced Chicken, Cheese with Mild Spices, Fragrent Mint Masala Paste."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Murgh Ke Sholey",
+      "Description": "Hot & Spicy Chicken Marinated in Indian Spices Finished in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Sharabi Kebab",
+      "Description": "Hot & Spicy Chicken Marinated in Indian Spices Finished in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Murgh Alishan Kebab",
+      "Description": "Morsels of Chicken Marinated in Yougurt & Beetroot Juice with Exotic Spices Grilled in Clay Oven."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Tandoori Murgh",
+      "Description": "Chicken Marinated in Yougurt, Tandoori Potli Masala, Cooked in Clay Oven."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Murgh Malai Kebab",
+      "Description": "Chicken Marinated with Hung Curd Cheese & Cashew Paste Served with Green Chutney."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Chicken Tangdi Kebab",
+      "Description": "Juicy marinated chicken drumsticks, grilled to smoky, flavourful perfection."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Banjara Tikka",
+      "Description": "Boneless Chicken Pieces are Marinated with a Spices & then Grilled Until Nicely Cooked & Slightly Charred."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Pahadi Tikka",
+      "Description": "Boneless Chicken Pieces are Marinated with a Spices & then Grilled Until Nicely Cooked & Slightly Charred."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Achari Tikka",
+      "Description": "Boneless Chicken Pieces are Marinated with a Spices & then Grilled Until Nicely Cooked & Slightly Charred."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Ajwain Tikka",
+      "Description": "Boneless Chicken Pieces are Marinated with a Spices & then Grilled Until Nicely Cooked & Slightly Charred."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Chicken Amritsary",
+      "Description": "Crispy, tandoor-grilled chicken marinated in Punjabi spices and gram flour."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Sholey Kebab",
+      "Description": "Minced chicken kebabs stuffed with spiced egg bhurji, grilled smokey and juicy."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Rolly Kebab",
+      "Description": "Tender chicken rolls marinated in spicy herbs and grilled for rich, smokey flavour"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Tandoori Lollypop",
+      "Description": "Crispy chicken drumettes marinated in spiced yogurt and grilled in the tandoor for a smokey, flavorful taste."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Peri Peri Tikka",
+      "Description": "Juicy chicken pieces marinated in fiery peri peri spices and grilled in the tandoor for a smokey, flavourful kick."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Pesto Chicken Tikka",
+      "Description": "Tandoor-grilled chicken marinated in aromatic basil pesto."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Mutton Shami Kebab",
+      "Description": "Soft, pan-seared minced mutton and lentil kebabs with aromatic spices."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Mutton Boti Kebab",
+      "Description": "Tandoor-grilled mutton cubes marinated in spices, garlic, and green chilli."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Smoked Shore Pomfret",
+      "Description": "Charcoal-smoked pomfret with coastal spices & a hint of coconut."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Hariyali Pomfret",
+      "Description": "Fresh Pomfret , Marinated in Lemon Coriander & Mint Chutney Cooked in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Samundar Ki Shaan",
+      "Description": "Tandoori Pomfret."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Jhinga Dum Ajwain",
+      "Description": "Tandoor-cooked prawns with ajwain and spices."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Smoky Coastal Jhinga",
+      "Description": "Coastal prawns with smokey tandoori flavours"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Classic Fish tikka",
+      "Description": "Char-grilled fish chunks marinated in spiced yogurt."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Ajwain Fish Tikka",
+      "Description": "Char-grilled fish chunks marinated in spiced yogurt and ajwain."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Peri Peri Fish Tikka",
+      "Description": "Tandoor-grilled basa in spicy peri peri marinade."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Lemon Butter Tandoori Fish",
+      "Description": "Tandoor-grilled basa with lemon, butter, and mild spices"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Tandoori Non Veg Platter",
+      "Description": "Assortment of Chicken, Lamb, Fish Cooked in Clay Oven"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Butter Chicken",
+      "Description": "Tender chicken in rich buttery tomato gravy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Kukul Mass",
+      "Description": "Chicken Cooked in All Indian Green Spice Coconut Gravy."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Chicken Malvani",
+      "Description": "Chicken Cooked in All Indian Green Spice Coconut Gravy."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Kadai Mirch Wala",
+      "Description": "Chicken Cubes Tossed with Red, Green Chilli, Green Pepper."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Do Pyaza",
+      "Description": "Chicken cooked with onions and mild spices."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Tikka Masala",
+      "Description": "Char-grilled chicken in creamy tomato sauce"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Khurchan",
+      "Description": "Shredded Chicken Cooked in a Rich Cashew Gravy, Topped with Sliced Boiled Egg."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Kala Masala",
+      "Description": "Chicken Cooked in Local Kala Masala."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Murgh Patiala",
+      "Description": "Stuffed boneless chicken in rich creamy onion-tomato gravy."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Kali Miri Adraki",
+      "Description": "Chicken in peppery ginger masala."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Kebab Masala",
+      "Description": "Marinated Chicken Minced Placed Over a Skewers Cooked in Tandoor, These Kababs are Served in a Flavorful Gravy."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Khada Masala",
+      "Description": "Tender chicken cooked with whole spices, onions, and tomatoes, creating a rich, aromatic, and rustic flavor."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Tandoori Chicken Masala",
+      "Description": "Chicken is Marinated in Tandoori Spices & Yogurt then Grilled, Prepare the Curry Sauce & Combine the Chicken."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Handi",
+      "Description": "Chicken Cooked on a Low Flame for a Long Time, Handi is a Hindi Word for an Earthen Pot."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Egg Masala",
+      "Description": "Boiled Eggs, Onions, Tomatoes, Whole Spices & Spice Powders."
+    },
+    {
+      "Category": "Ghost Curry Special",
+      "Item": "Rajasthani Laal Maas",
+      "Description": "Slow-cooked mutton in fiery red chilli gravy."
+    },
+    {
+      "Category": "Ghost Curry Special",
+      "Item": "Gosht Do Pyaza",
+      "Description": "Mutton cooked with double onions in aromatic spiced masala."
+    },
+    {
+      "Category": "Ghost Curry Special",
+      "Item": "Bhuna Mutton Pepper Fry",
+      "Description": "Spiced mutton tossed with bell peppers and ginger."
+    },
+    {
+      "Category": "Ghost Curry Special",
+      "Item": "Bhuna Mutton Chaap",
+      "Description": "Spiced mutton chops tossed with bell peppers and ginger."
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Machi Masala",
+      "Description": "Tender fish cooked in a classic spiced onion-tomato masala."
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Tikka Masala",
+      "Description": "Char-grilled fish tikka in a rich, creamy tomato masala."
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Kasundi Fish Tikka Masala",
+      "Description": "Grilled fish tikka in a refined Bengali mustard-infused gravy."
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Amritsari Fish Curry",
+      "Description": "Fish fillets simmered in spiced tomato-onion gravy with ajwain."
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Prawns Hara Dhaniya",
+      "Description": "Prawns cooked in a fresh coriander, coconut, and green chilli masala."
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Masaledar",
+      "Description": "Prawns cooked in a spicy Indian Curry"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Avadhi Murgh Biryani",
+      "Description": "Delicious Flavoured Chicken Biryani in Rich with Nuts & Saffron."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Egg Biryani",
+      "Description": "Fragrant Basmati Rice Cooked with Aromatic Biryani Spices, Herbs & Boiled Eggs."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Hydrabadi Mutton Biryani",
+      "Description": "Lamb & Finest Basmati Rice Cooked in Nizami Style."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Prawns Dum Biryani",
+      "Description": "Aromatic Basmati Rice Dum Cooked with Prawns, Herbs & Spice Powder."
+    },
+    {
+      "Category": "Dumpling",
+      "Item": "Chicken Cheese Dumpling Fried",
+      "Description": "Chicken, Cheese, Chilli, Ginger, Garlic, Spring Onion"
+    },
+    {
+      "Category": "Dumpling",
+      "Item": "Chicken Cheese Dumpling Tossed",
+      "Description": "Chicken, Cheese, Chilli, Ginger, Garlic, Spring Onion"
+    },
+    {
+      "Category": "Bao",
+      "Item": "Char Siu",
+      "Description": "Grilled Chicken, Lettuce & Char Siu Sauce."
+    },
+    {
+      "Category": "Bao",
+      "Item": "Curried Chicken",
+      "Description": "Cube Chicken, Thai Green Curry Paste, Sweet Basil & Thai Slaw."
+    },
+    {
+      "Category": "Bao",
+      "Item": "Butter Chicken Bao",
+      "Description": "NA"
+    },
+    {
+      "Category": "Wings",
+      "Item": "Drums Of Heaven Fried",
+      "Description": "Chicken Lollipops Tossed in Sweet & Spicy Sauce."
+    },
+    {
+      "Category": "Wings",
+      "Item": "Drums Of Heaven Toasted",
+      "Description": "Chicken Lollipops Tossed in Sweet & Spicy Sauce."
+    },
+    {
+      "Category": "Roll",
+      "Item": "Popia Tod",
+      "Description": "Roll Sheets, Minced Chicken, Carrot, Ginger, Garlic & Spring Onion Served With Sweet Chilli Dip."
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Chinese Fried",
+      "Description": "Chicken Marinated With Ginger, Garlic, Soya Sauce, Deep Fried Served With Fries & Mayo Dip."
+    },
+    {
+      "Category": "Grill",
+      "Item": "Lemongrass",
+      "Description": "Lemon Grass, Fresh Chilli, Garlic, Fish Sauce, Soya Sauce, Lime Juice"
+    },
+    {
+      "Category": "Grill",
+      "Item": "Chilli Basil",
+      "Description": "Red chilli–basil, galangal & fish sauce with cucumber lettuce salad."
+    },
+    {
+      "Category": "Sizzling Plate",
+      "Item": "Smoked Prawn",
+      "Description": "Thai Chilli Paste, Spring Onion, Ginger, Garlic & Sesame Oil."
+    },
+    {
+      "Category": "Sizzling Plate",
+      "Item": "Butter Garlic Prawn",
+      "Description": "Deep Fried Prawns Tossed With Fresh Garlic, Scallion, Bell Pepper & Butter."
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "Butter Chicken Sizzler",
+      "Description": "Butter Chicken, Veg royal pulao, Cheese Garlic Naan, Chicken Seekh Kebab"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Ca Uop Xa",
+      "Description": "Slice Chicken With Lemongrass, Fresh Red Chilli, Ginger, Garlic, Bell Pepper & Scallion."
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Butter Garlic",
+      "Description": "Sliced Fish Cooked With Garlic, Chinese Cabbage, Spinach & Cooking Wine."
+    },
+    {
+      "Category": "Bowl",
+      "Item": "Ramin Noodles Bowl",
+      "Description": "Korean Noodles With Hot And Spicy Broth Soup With Asian Veggies"
+    },
+    {
+      "Category": "Bowl",
+      "Item": "Asian Noodles",
+      "Description": "Chicken Meat Ball, Exotic Vegetables, Ginger, Garlic & Vermicelli Noodles."
+    },
+    {
+      "Category": "Rice",
+      "Item": "Pot Rice",
+      "Description": "Wok Tossed Buttery Rice Topped With Seasonal Veggie And Red Spicy Gravy With Star Anise."
+    },
+    {
+      "Category": "Rice",
+      "Item": "Egg Fried Rice",
+      "Description": "Wok Tossed Rice With Egg & Onion."
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Chicken Peri Peri",
+      "Description": "Spicy peri peri marinated Chicken, peppers, onions, cheese on crispy crust.​"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Tandoori Chicken",
+      "Description": "Spicy Tandoori Chicken, Bell pepper, Cheese"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "BBQ Chicken",
+      "Description": "BBQ sauce, grilled chicken, red onions, cilantro, cheese on crispy crust.\n ​"
+    },
+    {
+      "Category": "Mini Bao Pizza",
+      "Item": "Butter Chicken",
+      "Description": "Bao base with butter chicken & cheese."
+    },
+    {
+      "Category": "Mini Bao Pizza",
+      "Item": "Chicken Kebab",
+      "Description": "Bao base with chicken kebab & cheese."
+    },
+    {
+      "Category": "Pasta",
+      "Item": "Fussili Butter Chichen With Mini Naan",
+      "Description": "Butter Chicken, Fussili"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Blue Berry Cheese Cake",
+      "Description": "Philadelphia Cheese, Whipped Cream, Egg & Blueberry Fruit Filling."
+    }
+  ],
+  "jain": [
+    {
+      "Category": "Sandwich",
+      "Item": "Veg Delight (Grilled / Toasted)",
+      "Description": "Chopped Vegetables & Cheese with Green Chutney & Mayo"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Cheese Chilli Toast",
+      "Description": "Toasted on both sides with cheese, bell pepper & onion"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Corn Chilli",
+      "Description": "Stuffed corn with chilli flakes & mozzarella"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Corn Spinach",
+      "Description": "Stuffed spinach with chilli flakes & mozzarella"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Classic Veg (Grilled / Toasted)",
+      "Description": "Cheese, lettuce, tomato & cucumber"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Cheese Brust (Grilled / Toasted)",
+      "Description": "Cheesy Sandwich."
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Veg Club",
+      "Description": "Triple-layered sandwich with veg filling, coleslaw & cheese"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Paneer Tikka (Grilled / Toasted)",
+      "Description": "Grilled paneer in tandoori masala with mayo & mint chutney"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Udad Papad (Fried / Roasted)",
+      "Description": "Thin, crisp papad made from urad dal flour"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Nagli Papad (Fried / Roasted)",
+      "Description": "Seasoned papad made from nachni flour"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Masala Papad (Fried / Roasted)",
+      "Description": "Crispy papad topped with spicy onion-tomato mix"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Boiled Chana Salad",
+      "Description": "Boiled black chana tossed with fresh vegetables, herbs, and a tangy lemon dressing."
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Bar Snacks Platter",
+      "Description": "Masala Peanuts, Roasted papad, Boiled Chana Salad, Sichuan Sauce, Green Chutney"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Greek Salad",
+      "Description": "Cucumber, tomato, olives, feta & iceberg lettuce"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Garden Fresh Salad",
+      "Description": "Seasonal garden vegetables"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Sprout Salad",
+      "Description": "Sprouts with onion, tomato, coriander & lime"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Waldrof Salad",
+      "Description": "Apple, celery, grapes, walnuts & mayonnaise"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Pasta Salad",
+      "Description": "Pasta of the Day, Bellpepper, Iceberg & Mayo."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Watermelon & Feta Cheese Slad",
+      "Description": "Fresh watermelon with creamy feta and a hint of citrus."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Crispy Salad",
+      "Description": "Crispy Shredded Chicken, Crispy Wonton, Rice Noodles, Marinade With Chilli Dressing."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Gado Gado Salad",
+      "Description": "Cubes Vegetables Mixed In Homemade Peanut Dressing Dussed with Chilli Flex"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Pineapple Raita",
+      "Description": "Tangy & Sweet Pineapple Conmine with Whisked Curd & Spicy Powder."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Boondi Raita",
+      "Description": "Tangy & Sweet Boondi Conmine with Whisked Curd & Spicy Powder."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Mix Fruit Raita",
+      "Description": "Finely chopped seasonal fresh fruit, Sweet Curd & Relish."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Plain Dahi",
+      "Description": "Home Style Full Cream Yougurt."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Mix Veg Pakoda",
+      "Description": "Sliced Mixed Veg Coated in Seasoned Gram Flour Batter & Deep Fried."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Paneer Pakoda",
+      "Description": "Deep-fried gram-flour coated cottage cheese"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Hara Bhara Kebab",
+      "Description": "Shallow-fried vegetable patties with mint chutney"
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Badam Aur Elaichi Ka Shorba",
+      "Description": "Our Chefs Speciality Midly Spiced Almond Soup Flavoured With Cardamon."
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Tomato Dhaniya Shorba",
+      "Description": "Light tomato broth infused with fresh coriander and gentle Indian spices."
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Palak Shorba",
+      "Description": "Palak broth infused with fresh coriander and gentle Indian spices."
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Choice of Cream Soup",
+      "Description": "Tomato / Mushroom Soup Served with Bread Croutons / Sticks."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Clear Broth",
+      "Description": "Tofu, Broccoli, Mushroom & Pak choy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Lemon Coriander",
+      "Description": "Coriander, Ginger, Broccoli, Fresh Green Chilli & Touch of Lime Juice."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Sweet Corn",
+      "Description": "Creamy Sweet Corn & Green Onion."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Sour and Pepper",
+      "Description": "Tofu, Soya Sauce, Chilli, Mushroom, Bamboo Shoots & Touch of Mild Vinegar."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "AWG",
+      "Description": "Exotic Vegetables, Mushroom, Tofu"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Hakka",
+      "Description": "Fresh Chilli, Garlic, Chopped Vegetables, Soya Sauce Served With Crispy Noodles."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Methi Mirchi Ka Paneer Tikka",
+      "Description": "Spicy Fenugreek Flavoured Yogurt, Cooked in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Paneer Hiltop",
+      "Description": "spiced yogurt and herbs, grilled in the tandoor for a smokey, flavourful taste. Served with mint chutney."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Methi Aur Paneer Ka Naram Dill Kebab",
+      "Description": "Soft and creamy kebabs made with mashed paneer and green peas, blended with mild spices."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Classic Tikka",
+      "Description": "All Time Favourite Chargrilled in a Spicy Marinate"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Ajwani Tikka",
+      "Description": "All Time Favourite Chargrilled in a Spicy Marinate"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Paneer Malai Kali Miri",
+      "Description": "Creamy black-pepper paneer tikka"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Cheese Makai Seekh Kebab",
+      "Description": "Mildly Spiced Paneer, Cheese & American Corn Cooked In Clay Oven."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Cheese Palak Seekh",
+      "Description": "Delicious seekh kebabs made with spinach and cheese, lightly spiced and grilled for a smoky, creamy flavor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Seekh Kebab",
+      "Description": "Minced, Spices are Shaped on Skewers, Cooked in Clay Oven."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Chilli Milli Seekh Kebab",
+      "Description": "Minced Vegetables & Spices are Shaped on Skewers, Cooked in Clay Oven & Served With Green Chutney."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Soya Chaap Tikka",
+      "Description": "Spice-marinated soya chaap cooked in tandoor"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Ajwani Soya Chaap",
+      "Description": "Chaap is a Delicious North Indian Starter, Soya Chaap is then Marinated with Spices, then Cooked in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Malai Soya Chaap",
+      "Description": "Chaap is a Delicious North Indian Starter, Soya Chaap is then Marinated with Spices, then Cooked in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Pahadi Soya Chaap",
+      "Description": "Chaap is a Delicious North Indian Starter, Soya Chaap is then Marinated with Spices, then Cooked in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Subz Shikampuri Kebab",
+      "Description": "Garden Fresh Vegetable Cutlets Stuffed with Mintly Onion Relish Deep Fried to Golden Brown."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Veg Cheese Crispy Roll",
+      "Description": "Yummy & Stuffed Cheesy Rolls Filled with Healthy Vegetables."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Tandoori Platter",
+      "Description": "Assorted Platter"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Punjabi Style Paneer Tikka Masala",
+      "Description": "Cottage Cheese Tikka with Yoghurt with Onion, Tomato & Capsicum."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Amritsari",
+      "Description": "Cottage cheese marinated with aromatic Indian spices, cooked in authentic"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Lahori",
+      "Description": "Cottage cheese marinated with aromatic Indian spices, cooked in authentic"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Desi Paneer Bhurji",
+      "Description": "Wok-tossed cottage cheese with vegetables in a spicy desi masala."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Lababdar",
+      "Description": "Creamy, Mildly tangy & Faintly Sweet Gravy, Onions, Tomatoes, Cashews & Spices."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Butter Masala",
+      "Description": "Creamy, Mildly tangy & Faintly Sweet Gravy, Onions, Tomatoes, Cashews & Spices."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Mirch Masala",
+      "Description": "Cottage Cheese Cooked in Kadai in Rich Spiced Masala Crowded Cream."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Palak Paneer",
+      "Description": "Cottage Cheese Cooked in Kadai in Rich Spiced Masala Crowded Cream."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Kadai Paneer",
+      "Description": "A Rich, Creamy Curry of paneer & Plenty of Onions in a Wonderful Medley of Spices, Herbs & Tomatoes."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Angara",
+      "Description": "An Exotic Smokey Flavour. It is Prepared with the Help of a Coal & Smoke Cooking Helps to Enhance its Taste."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Makhmali Kofta",
+      "Description": "Paneer and potato dumplings in a rich cashew-cream gravy."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Banarasi Kofta Curry",
+      "Description": "Traditional Banarasi Kofta in Nawabi Style."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Malai Kofta",
+      "Description": "Creamy Cottage Cheese Cooked in Cashewnut Gravy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Kaju Masala",
+      "Description": "Creamy Kaju Cooked in Cashewnut Gravy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Methi Matar Malai",
+      "Description": "Cottage Cheese, Matar & Methi Cooked in Rich Muglai Style."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Sarso Ka Saag",
+      "Description": "Traditional Punjabi Dish Made of Mustard leaf & spice."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Veg Khurchan",
+      "Description": "Mixed Vegetable Cooked with Mustard Capsicum with Cream."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Tawa Subzi",
+      "Description": "Assorted Vegetables Cooked on Tawa."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Veg Patiala",
+      "Description": "Cottage cheese rolls in creamy onion-tomato gravy with spices."
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Bhindi Kurkuri",
+      "Description": "Crispy spiced okra fritters, light and crunchy."
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Tadka",
+      "Description": "Yellow lentils tempered with cumin & garlic"
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Fry",
+      "Description": "Yellow Lentil Tempered with Cumin Seeds, Onions & Tomatoes."
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Panchmel",
+      "Description": "5 Different Lentils or Dals. Hearty & Nutritious."
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Makhan Wali",
+      "Description": "Slow-cooked black lentils with butter & cream"
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Palak",
+      "Description": "Comforting lentils simmered with fresh spinach and mild spices."
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Methi",
+      "Description": "Creamy lentils delicately flavoured with fresh fenugreek."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Sada Basmati Chawal",
+      "Description": "Steamed Boiled Rice"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Peas Pulao",
+      "Description": "Temper with Cumin Seeds, Peas & Corianders."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Veg Pulao",
+      "Description": "Aromatic basmati rice with vegetables"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Dal Khichdi",
+      "Description": "Rice Perpered with Dal."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Palak Khichdi",
+      "Description": "Rice Perpered with Dal and Palak."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Curd Rice",
+      "Description": "Rice Prepared with Curd."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Paneer Pulao",
+      "Description": "Fragrant basmati rice with roasted paneer, vegetables, and spices."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Kashmiri Pulao",
+      "Description": "Fragrant basmati rice with dry fruits, mild spices, and a hint of sweetness."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Subz Dum Biryani",
+      "Description": "Garden Fresh Vegetables & Flavourful Basmati Rice."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Veg Hydrabadi Biryani",
+      "Description": "Garden Fresh Vegetables & Flavourful Basmati Rice."
+    },
+    {
+      "Category": "Bao",
+      "Item": "Fire Cracker",
+      "Description": "Finger Cottage Cheese Marinated in Ginger, Chilli Paste, Wrap With Thread Wonton."
+    },
+    {
+      "Category": "Bao",
+      "Item": "Paneer Tikka Masala Bao",
+      "Description": ""
+    },
+    {
+      "Category": "Roll",
+      "Item": "AWG Classic",
+      "Description": "Chef’s Special."
+    },
+    {
+      "Category": "Roll",
+      "Item": "Cigar",
+      "Description": "Roll Sheets, Bell Pepper, Cottage Cheese, Coriander Served With Chilli Plum Dip."
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Tempura",
+      "Description": "Tempura In Light Crispy Battered Served With Chilli Mayo Sauce."
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Cheesy Finger Chips",
+      "Description": "Cheesy finger chips, crisp-fried and indulgent."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Crispy Corn and Water Chestnut",
+      "Description": "Corn and Waterchestnut Tossed With Fresh Red Chilli, Kaffir Lime Leaf."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Five Spice",
+      "Description": "Ginger, Garlic & Five Spice Powder."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Classic Manchurian Dry",
+      "Description": "Deep Fried Vegetable Balls Cooked With Chopped Ginger,Garlic,Onion,chilli & Coriander Leaf."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Chilli Classic Mushroom",
+      "Description": "Crispy Button Mushroom Tossed With Green Chilli, Bell Pepper, Soya Sauce & Chilli Sauce."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Hunan Style Tofu",
+      "Description": "Tofu Tossed With Ginger, Dry Red Chilli, Oyster Sauce, Bell Pepper, Cooking Wine & Chilli Oil."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Hunan Sesame",
+      "Description": "Ginger, Dry Red Chilli, Oyster Sauce, Bell Pepper, Cooking Wine & Chilli Oil."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Chilli Classic",
+      "Description": "Green Chilli, Bell Pepper, Soya Sauce & Chilli Sauce."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "AWG",
+      "Description": "Yes."
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Asian Vegetables Red Pepper Sauce",
+      "Description": "Exotic Vegetables Cooked With Ginger, Garlic, Fresh Red Chilli & Spring Onion."
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Shanghai Style",
+      "Description": "Diced Broccoli, Baby Corn, Zucchini, Water Chestnut, Pak Choy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Classic Manchurian",
+      "Description": "Deep fried Balls Cooked With Chopped Ginger, Garlic, Onion, Chilli Sauce & Coriander."
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Classic Chilli",
+      "Description": "Ginger, Garlic, Green Chilli, Spring Onion, Bell Peppers & Soya Sauce."
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Chilli Oyster",
+      "Description": "Ginger, Scallion, Fresh Chilli, Oyster Mushroom, Oyster Sauce & Soya Sauce."
+    },
+    {
+      "Category": "Rice",
+      "Item": "Pot Rice",
+      "Description": "Wok Tossed Buttery Rice Topped With Seasonal Veggie And Red Spicy Gravy With Star Anise."
+    },
+    {
+      "Category": "Rice",
+      "Item": "AWG Classic",
+      "Description": "Yes."
+    },
+    {
+      "Category": "Rice",
+      "Item": "Classic Fried Rice",
+      "Description": "Rice Tossed With Carrot, Beans & Fresh Corn."
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Pan Fried",
+      "Description": "Semi Crispy Noodles top with Choice of sauce"
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Hakka",
+      "Description": "Light Soya Sauce & Spring Onion."
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Longevity",
+      "Description": "Butter Tossed Noodles Asparagus, Zuccini, Tofu, Broccoli, Babycorn, Pak Choy & Hunan Gravy."
+    },
+    {
+      "Category": "Noodle",
+      "Item": "American Chop Suey",
+      "Description": "Sweet & Sour Vegetables With Bed Of Crispy Noodles."
+    },
+    {
+      "Category": "Noodle",
+      "Item": "All Time Favourite Chow Mein",
+      "Description": "Chilli Sauce, Soya Sauce, Bell Peppers, Celery & Spring Onion."
+    },
+    {
+      "Category": "Pasta",
+      "Item": "Penne With Tomato Basil Sauce",
+      "Description": "Penne in fresh tomato, garlic, basil sauce."
+    },
+    {
+      "Category": "Pasta",
+      "Item": "Mac N Cheese",
+      "Description": "Macroni, cheese, milk"
+    },
+    {
+      "Category": "Pasta",
+      "Item": "Make your Own Pasta",
+      "Description": "Pasta Option - Penne, Spaghetti, Fusilli, Macaroni. Choice Of Sauce Option - Alfredo, Arrabiata, Pesto, Marinara."
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Gulab Jamun With Ice Cream",
+      "Description": "Soft milk dumplings in sugar syrup with vanilla ice cream"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Moongdal Halwa with ice cream",
+      "Description": "Ghee-roasted moong dal halwa with vanilla ice cream"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Dessert Of the Day",
+      "Description": "Chef’s special sweet selection"
+    }
+  ],
+  "chef_special": [
+    {
+      "Category": "Sandwich",
+      "Item": "Chicken Tikka (Grilled / Toasted)",
+      "Description": "Grilled chicken tikka with mayo & mint chutney"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Chicken Club (Grilled / Toasted)",
+      "Description": "Triple-layered sandwich with chicken, egg & cheese"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Bar Snacks Platter",
+      "Description": "Masala Peanuts, Roasted papad, Boiled Chana Salad, Sichuan Sauce, Green Chutney"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Chicken Tikka Salad",
+      "Description": "Chunks of Tandoor Grilled Chicken with Lettuce & Peppers, Tossed with Tangy Lime Dressing."
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Sauted Brocolli Chicken Salad",
+      "Description": "Chunks of Tandoor Grilled Chicken with Lettuce & Peppers, Tossed with Tangy Lime Dressing."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Paneer Ghee Roast",
+      "Description": "Paneer cooked in aromatic ghee with a spicy, tangy Mangalorean masala."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Chicken Ghee Roast",
+      "Description": "Chicken cooked in aromatic ghee with a spicy, tangy Mangalorean masala."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Patrani Pomfret",
+      "Description": "Banana leaf–steamed pomfret with fragrant green herbs and spices."
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Hariyali Tawa Fry",
+      "Description": "Mint-coriander marinated king fish, pan-seared"
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Badam Aur Elaichi Ka Shorba",
+      "Description": "Our Chefs Speciality Midly Spiced Almond Soup Flavoured With Cardamon."
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "AWG",
+      "Description": "Exotic Vegetables, Mushroom, Tofu"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Paneer Dohora",
+      "Description": "Two Different Flavoures Stuffed Paneer Tikka Cooked in Clay Oven."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Paneer Hiltop",
+      "Description": "spiced yogurt and herbs, grilled in the tandoor for a smokey, flavourful taste. Served with mint chutney."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Subz Shikampuri Kebab",
+      "Description": "Garden Fresh Vegetable Cutlets Stuffed with Mintly Onion Relish Deep Fried to Golden Brown."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Mushroom Ki Nazakat",
+      "Description": "Stuffed Button Mushrooms Marinated with Cheese & Coated Cream Glazed in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Veg Cheese Crispy Roll",
+      "Description": "Yummy & Stuffed Cheesy Rolls Filled with Healthy Vegetables."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Murgh Nazakat",
+      "Description": "Chicken Supremes Stuffed with Minced Chicken, Cheese with Mild Spices, Fragrent Mint Masala Paste."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Sharabi Kebab",
+      "Description": "Hot & Spicy Chicken Marinated in Indian Spices Finished in Tandoor."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Murgh Alishan Kebab",
+      "Description": "Morsels of Chicken Marinated in Yougurt & Beetroot Juice with Exotic Spices Grilled in Clay Oven."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Sholey Kebab",
+      "Description": "Minced chicken kebabs stuffed with spiced egg bhurji, grilled smokey and juicy."
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Rolly Kebab",
+      "Description": "Tender chicken rolls marinated in spicy herbs and grilled for rich, smokey flavour"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Angara",
+      "Description": "An Exotic Smokey Flavour. It is Prepared with the Help of a Coal & Smoke Cooking Helps to Enhance its Taste."
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Butter Chicken",
+      "Description": "Tender chicken in rich buttery tomato gravy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Tandoori Chicken Masala",
+      "Description": "Chicken is Marinated in Tandoori Spices & Yogurt then Grilled, Prepare the Curry Sauce & Combine the Chicken."
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Kasundi Fish Tikka Masala",
+      "Description": "Grilled fish tikka in a refined Bengali mustard-infused gravy."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Kashmiri Pulao",
+      "Description": "Fragrant basmati rice with dry fruits, mild spices, and a hint of sweetness."
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Kachcha Ghost Biryani",
+      "Description": "Lamb & Finest Basmati Rice Cooked in Nizami Style."
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "AWG Veg (6 PCS)",
+      "Description": "Chef’s Special."
+    },
+    {
+      "Category": "Roll",
+      "Item": "AWG Classic",
+      "Description": "Chef’s Special."
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "AWG",
+      "Description": "Yes."
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "AWG Classic",
+      "Description": "Combination of Grilled Corn Cheese, Wok Tossed Noodles Or Fried Rice, Chilli Potatoes & Stir Fry Vegetables."
+    },
+    {
+      "Category": "Rice",
+      "Item": "AWG Classic",
+      "Description": "Yes."
+    },
+    {
+      "Category": "Mini Bao Pizza",
+      "Item": "Kadai Paneer",
+      "Description": "Bao base with spiced paneer & cheese."
+    },
+    {
+      "Category": "Mini Bao Pizza",
+      "Item": "Palak Paneer",
+      "Description": "Bao base with palak paneer & cheese."
+    },
+    {
+      "Category": "Mini Bao Pizza",
+      "Item": "Butter Chicken",
+      "Description": "Bao base with butter chicken & cheese."
+    },
+    {
+      "Category": "Mini Bao Pizza",
+      "Item": "Chicken Kebab",
+      "Description": "Bao base with chicken kebab & cheese."
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Blue Berry Cheese Cake",
+      "Description": "Philadelphia Cheese, Whipped Cream, Egg & Blueberry Fruit Filling."
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "AWG Virgin Sangria",
+      "Description": "Promogranade, cranberry, grape, and orange juice, lime, honey and house churned fruits."
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Brownie & Chocolate Shake",
+      "Description": "Brownie, Chocolate ice cream, Chocolate Syrup, Milk"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "AWG House Punch",
+      "Description": "AWG House Punch"
+    }
+  ]
+}

@@ -1,0 +1,404 @@
+NAMASTE CHEF MENU SPICE LEVEL PARSE
+Generated: 2026-04-07 16:55:37
+
+Total Unique Items Across Spice Buckets (non-exclusive):
+Spicy: 0
+Medium Spicy: 254
+Mild: 0
+Not Specified: 0
+Non Spicy: 131
+
+===== SPICY =====
+
+===== MEDIUM SPICY =====
+- [Sandwich] Cheese Chilli Toast
+- [Sandwich] Corn Chilli
+- [Sandwich] Paneer Tikka (Grilled / Toasted)
+- [Sandwich] Peri Peri Paneer (Grilled / Toasted)
+- [Sandwich] Boiled Egg (Grilled / Toasted)
+- [Sandwich] Chicken Delight (Grilled / Toasted)
+- [Sandwich] Chicken Tikka (Grilled / Toasted)
+- [Sandwich] Chicken Peri peri (Grilled / Toasted)
+- [Sandwich] BBQ Chicken (Grilled / Toasted)
+- [Quick Bite] Roomali Khakra Masala
+- [Quick Bite] Roomali Khakra Cheese Masala
+- [Quick Bite] Peanut Chaat
+- [Quick Bite] Masala Peanut
+- [Quick Bite] Peri Peri Boiled Egg
+- [Quick Bite] Bar Snacks Platter
+- [Salad & More] Sprout Salad
+- [Salad & More] Chicken Tikka Salad
+- [Salad & More] Sauted Brocolli Chicken Salad
+- [Salad & More] Crispy Salad
+- [Comfort Food] Onion Rings
+- [Comfort Food] Mix Veg Pakoda
+- [Comfort Food] Onion Pakoda
+- [Comfort Food] Paneer Pakoda
+- [Comfort Food] Hara Bhara Kebab
+- [Comfort Food] Crostini
+- [Comfort Food] Garlic Bread
+- [Comfort Food] Paneer Ghee Roast
+- [Comfort Food] Chicken Ghee Roast
+- [Comfort Food] Tawa Fry Masala Egg
+- [Comfort Food] Chicken Sukha
+- [Comfort Food] Koliwada
+- [Comfort Food] Chicken Nuggets
+- [Comfort Food] Fish & Chips
+- [Comfort Food] Patrani Pomfret
+- [Comfort Food] Tawa Fry
+- [Comfort Food] Hariyali Tawa Fry
+- [Comfort Food] Jhinga Sukha
+- [Comfort Food] Chettinad Prawns Pepper Fry
+- [Soup & Shorba] Murgh Shorba
+- [Oriental Soup] Lemon Coriander
+- [Oriental Soup] Sour and Pepper
+- [Oriental Soup] AWG
+- [Oriental Soup] Hakka
+- [Oriental Soup] Hai Kim
+- [Oriental Soup] Crispy Wonton Soup
+- [Oriental Soup] Bakso Ayam
+- [Oriental Soup] Tom Yum
+- [Oriental Soup] Tom Kha
+- [Koyle Ka Kamal] Methi Mirchi Ka Paneer Tikka
+- [Koyle Ka Kamal] Paneer Dohora
+- [Koyle Ka Kamal] Chettinad Paneer Tikka
+- [Koyle Ka Kamal] Paneer Hiltop
+- [Koyle Ka Kamal] Methi Aur Paneer Ka Naram Dill Kebab
+- [Koyle Ka Kamal] Classic Tikka
+- [Koyle Ka Kamal] Ajwani Tikka
+- [Koyle Ka Kamal] Achari Tikka
+- [Koyle Ka Kamal] Lasooni Tikka
+- [Koyle Ka Kamal] Paneer Malai Kali Miri
+- [Koyle Ka Kamal] Seekh Kebab
+- [Koyle Ka Kamal] Chilli Milli Seekh Kebab
+- [Koyle Ka Kamal] Soya Chaap Tikka
+- [Koyle Ka Kamal] Ajwani Soya Chaap
+- [Koyle Ka Kamal] Pahadi Soya Chaap
+- [Koyle Ka Kamal] Badami Aloo
+- [Koyle Ka Kamal] Subz Shikampuri Kebab
+- [Koyle Ka Kamal] Mushroom Ki Nazakat
+- [Koyle Ka Kamal] Mushroom & Babycorn Tikka
+- [Koyle Ka Kamal] Veg Cheese Crispy Roll
+- [Koyle Ka Kamal] Tandoori Platter
+- [Koyle Ka Kamal] Murgh Nazakat
+- [Koyle Ka Kamal] Murgh Ke Sholey
+- [Koyle Ka Kamal] Sharabi Kebab
+- [Koyle Ka Kamal] Murgh Alishan Kebab
+- [Koyle Ka Kamal] Tandoori Murgh
+- [Koyle Ka Kamal] Chicken Tangdi Kebab
+- [Koyle Ka Kamal] Banjara Tikka
+- [Koyle Ka Kamal] Pahadi Tikka
+- [Koyle Ka Kamal] Ajwain Tikka
+- [Koyle Ka Kamal] Chicken Amritsary
+- [Koyle Ka Kamal] Sholey Kebab
+- [Koyle Ka Kamal] Tandoori Lollypop
+- [Koyle Ka Kamal] Peri Peri Tikka
+- [Koyle Ka Kamal] Pesto Chicken Tikka
+- [Koyle Ka Kamal] Mutton Shami Kebab
+- [Koyle Ka Kamal] Mutton Boti Kebab
+- [Koyle Ka Kamal] Smoked Shore Pomfret
+- [Koyle Ka Kamal] Hariyali Pomfret
+- [Koyle Ka Kamal] Samundar Ki Shaan
+- [Koyle Ka Kamal] Jhinga Dum Ajwain
+- [Koyle Ka Kamal] Smoky Coastal Jhinga
+- [Koyle Ka Kamal] Classic Fish tikka
+- [Koyle Ka Kamal] Ajwain Fish Tikka
+- [Koyle Ka Kamal] Peri Peri Fish Tikka
+- [Koyle Ka Kamal] Lemon Butter Tandoori Fish
+- [Koyle Ka Kamal] Tandoori Non Veg Platter
+- [Bageeche Se] Punjabi Style Paneer Tikka Masala
+- [Bageeche Se] Paneer Amritsari
+- [Bageeche Se] Paneer Lahori
+- [Bageeche Se] Desi Paneer Bhurji
+- [Bageeche Se] Paneer Lababdar
+- [Bageeche Se] Paneer Butter Masala
+- [Bageeche Se] Paneer Mirch Masala
+- [Bageeche Se] Palak Paneer
+- [Bageeche Se] Paneer Do Pyaza
+- [Bageeche Se] Kadai Paneer
+- [Bageeche Se] Paneer Angara
+- [Bageeche Se] Paneer Makhmali Kofta
+- [Bageeche Se] Paneer Pasanda
+- [Bageeche Se] Banarasi Kofta Curry
+- [Bageeche Se] Kaju Masala
+- [Bageeche Se] Methi Matar Malai
+- [Bageeche Se] Maratha Vegetable Kofta Curry
+- [Bageeche Se] Sarso Ka Saag
+- [Bageeche Se] Veg Khurchan
+- [Bageeche Se] Tawa Subzi
+- [Bageeche Se] Veg Patiala
+- [Bageeche Se] Bhindi Kurkuri
+- [Dal Wali Gali] Dal Tadka
+- [Dal Wali Gali] Dal Fry
+- [Dal Wali Gali] Dal Panchmel
+- [Dal Wali Gali] Dal Methi
+- [Murgh Curry Special] Kukul Mass
+- [Murgh Curry Special] Chicken Malvani
+- [Murgh Curry Special] Kadai Mirch Wala
+- [Murgh Curry Special] Do Pyaza
+- [Murgh Curry Special] Tikka Masala
+- [Murgh Curry Special] Khurchan
+- [Murgh Curry Special] Kala Masala
+- [Murgh Curry Special] Murgh Patiala
+- [Murgh Curry Special] Kali Miri Adraki
+- [Murgh Curry Special] Kebab Masala
+- [Murgh Curry Special] Khada Masala
+- [Murgh Curry Special] Tandoori Chicken Masala
+- [Murgh Curry Special] Handi
+- [Murgh Curry Special] Egg Masala
+- [Murgh Curry Special] Maratha Style
+- [Ghost Curry Special] Rajasthani Laal Maas
+- [Ghost Curry Special] Gosht Do Pyaza
+- [Ghost Curry Special] Bhuna Mutton Pepper Fry
+- [Ghost Curry Special] Bhuna Mutton Chaap
+- [Ghost Curry Special] Khada Masala
+- [Fish Curry Special] Machi Masala
+- [Fish Curry Special] Tikka Masala
+- [Fish Curry Special] Kasundi Fish Tikka Masala
+- [Fish Curry Special] Amritsari Fish Curry
+- [Fish Curry Special] Prawns Hara Dhaniya
+- [Fish Curry Special] Masaledar
+- [Fish Curry Special] Chettinad
+- [Chawal] Dal Khichdi
+- [Chawal] Palak Khichdi
+- [Chawal] Subz Dum Biryani
+- [Chawal] Veg Hydrabadi Biryani
+- [Chawal] Avadhi Murgh Biryani
+- [Chawal] Egg Biryani
+- [Chawal] Kachcha Ghost Biryani
+- [Chawal] Hydrabadi Mutton Biryani
+- [Chawal] Prawns Dum Biryani
+- [Dim Sum] AWG Veg (6 PCS)
+- [Dim Sum] Cream Cheese Broccoli (6 PCS)
+- [Dim Sum] Assorted Mushroom & Water Chestnut (6 PCS)
+- [Dim Sum] Hot Basil (6 PCS)
+- [Dim Sum] Poached Beijing (6 PCS)
+- [Dim Sum] Sui Mai (6 PCS)
+- [Dim Sum] Assorted Platter (12 PCS)
+- [Dumpling] Mixed Veg Cheese Dumpling Fried
+- [Dumpling] Mixed Veg Cheese Dumpling Tossed
+- [Dumpling] Chicken Cheese Dumpling Fried
+- [Dumpling] Chicken Cheese Dumpling Tossed
+- [Bao] Fire Cracker
+- [Bao] Paneer Tikka Masala Bao
+- [Bao] Chilli Bao
+- [Bao] Char Siu
+- [Wings] Drums Of Heaven Toasted
+- [Wings] Korean
+- [Wings] Barbeque
+- [Wings] Hong Kong Style
+- [Roll] AWG Classic
+- [Roll] Cigar
+- [Roll] Popia Tod
+- [Deep Fried] Corn Cheese Ball
+- [Deep Fried] Chow's Finger Chips
+- [Deep Fried] Peri Peri Chips
+- [Deep Fried] Deep Fried Wonton
+- [Grill] Assorted Mushroom
+- [Grill] Asian Grilled Vegetables
+- [Grill] Lemongrass
+- [Grill] Sriracha
+- [Grill] Chilli Basil
+- [Sizzling Plate] Five Treasure
+- [Sizzling Plate] Cheese Paneer Sizzling
+- [Sizzling Plate] Barbeque Onions
+- [Sizzling Plate] Taipei
+- [Sizzling Plate] Smoked Prawn
+- [Wok Tossed] Crispy Corn and Water Chestnut
+- [Wok Tossed] Five Spice
+- [Wok Tossed] Classic Manchurian Dry
+- [Wok Tossed] Chilli Classic Mushroom
+- [Wok Tossed] Hunan Style Tofu
+- [Wok Tossed] Hunan Sesame
+- [Wok Tossed] Fresh Red Pepper
+- [Wok Tossed] Chilli Classic
+- [Wok Tossed] Hot Basil
+- [Wok Tossed] Sichuan
+- [Wok Tossed] Crackling Spinach
+- [Wok Tossed] AWG
+- [Wok Tossed] Asian Crispy Sesame
+- [Wok Tossed] Thai Spice
+- [Sizzler] AWG Classic
+- [Sizzler] Fusion Mexican
+- [Sizzler] Classic Manchurian
+- [Sizzler] Makhmali Kofta Sizzler
+- [Sizzler] Tandoori Sahi Sizzler
+- [Main Course] Asian Vegetables Red Pepper Sauce
+- [Main Course] Stir Fried Asian Green With Chilli Basil
+- [Main Course] Shanghai Style
+- [Main Course] Classic Manchurian
+- [Main Course] Sichuan
+- [Main Course] Classic Chilli
+- [Main Course] Shredded Pepper & Garlic
+- [Main Course] Chilli Oyster
+- [Main Course] Dak Galbi
+- [Main Course] Ca Uop Xa
+- [Bowl] Thukpa
+- [Bowl] Ramin Noodles Bowl
+- [Bowl] Asian Noodles
+- [Rice] Burnt Garlic
+- [Rice] Pot Rice
+- [Rice] Korean
+- [Rice] Chilli Garlic
+- [Rice] Sichuan
+- [Rice] Khao Pad Prik
+- [Noodle] Pan Fried
+- [Noodle] Hot Pepper Garlic
+- [Noodle] Sichuan
+- [Noodle] Longevity
+- [Noodle] Korean
+- [Noodle] All Time Favourite Chow Mein
+- [Pizza] Tomato Basil
+- [Pizza] Margarita
+- [Pizza] Corn Cheese
+- [Pizza] Veg Delight
+- [Pizza] Mushroom Veg
+- [Pizza] Tandoori Paneer
+- [Pizza] Peri Peri Paneer
+- [Pizza] Chicken Peri Peri
+- [Pizza] Tandoori Chicken
+- [Pizza] BBQ Chicken
+- [Mini Bao Pizza] Kadai Paneer
+- [Mini Bao Pizza] Palak Paneer
+- [Mini Bao Pizza] Chicken Kebab
+- [Pasta] Penne With Tomato Basil Sauce
+- [Pasta] Make your Own Pasta
+- [Mocktail] Guava Mary
+- [Mocktail] Pineapple Yuzu Jalapeno Sour On The Rock
+
+===== MILD =====
+
+===== NOT SPECIFIED =====
+
+===== OTHER SPICE LEVEL TAGS =====
+- [Sandwich] Veg Delight (Grilled / Toasted) [Non Spicy]
+- [Sandwich] Corn Spinach [Non Spicy]
+- [Sandwich] Classic Veg (Grilled / Toasted) [Non Spicy]
+- [Sandwich] Cheese Brust (Grilled / Toasted) [Non Spicy]
+- [Sandwich] Veg Club [Non Spicy]
+- [Sandwich] Chicken Club (Grilled / Toasted) [Non Spicy]
+- [Quick Bite] Udad Papad (Fried / Roasted) [Non Spicy]
+- [Quick Bite] Nagli Papad (Fried / Roasted) [Non Spicy]
+- [Quick Bite] Masala Papad (Fried / Roasted) [Non Spicy]
+- [Quick Bite] Boiled Chana Salad [Non Spicy]
+- [Salad & More] Ceaser Salad [Non Spicy]
+- [Salad & More] Greek Salad [Non Spicy]
+- [Salad & More] Garden Fresh Salad [Non Spicy]
+- [Salad & More] Chicken Hawaiian Salad [Non Spicy]
+- [Salad & More] Waldrof Salad [Non Spicy]
+- [Salad & More] Pasta Salad [Non Spicy]
+- [Salad & More] Russian Salad [Non Spicy]
+- [Salad & More] Watermelon & Feta Cheese Slad [Non Spicy]
+- [Salad & More] Gado Gado Salad [Non Spicy]
+- [Salad & More] Pineapple Raita [Non Spicy]
+- [Salad & More] Boondi Raita [Non Spicy]
+- [Salad & More] Mix Fruit Raita [Non Spicy]
+- [Salad & More] Plain Dahi [Non Spicy]
+- [Comfort Food] Fish Fingers [Non Spicy]
+- [Soup & Shorba] Badam Aur Elaichi Ka Shorba [Non Spicy]
+- [Soup & Shorba] Tomato Dhaniya Shorba [Non Spicy]
+- [Soup & Shorba] Palak Shorba [Non Spicy]
+- [Soup & Shorba] Choice of Cream Soup [Non Spicy]
+- [Soup & Shorba] Cream of Chicken Soup [Non Spicy]
+- [Oriental Soup] Clear Broth [Non Spicy]
+- [Oriental Soup] Sweet Corn [Non Spicy]
+- [Oriental Soup] Burmese Traditional Soup [Non Spicy]
+- [Oriental Soup] Thai Coconut Soup [Non Spicy]
+- [Koyle Ka Kamal] Cheese Makai Seekh Kebab [Non Spicy]
+- [Koyle Ka Kamal] Cheese Palak Seekh [Non Spicy]
+- [Koyle Ka Kamal] Malai Soya Chaap [Non Spicy]
+- [Koyle Ka Kamal] Murgh Malai Kebab [Non Spicy]
+- [Koyle Ka Kamal] Rolly Kebab [Non Spicy]
+- [Bageeche Se] Malai Kofta [Non Spicy]
+- [Dal Wali Gali] Dal Makhan Wali [Non Spicy]
+- [Dal Wali Gali] Dal Palak [Non Spicy]
+- [Murgh Curry Special] Butter Chicken [Non Spicy]
+- [Bread] Tandoori Roti [Non Spicy]
+- [Bread] Naan [Non Spicy]
+- [Bread] Roomali Roti [Non Spicy]
+- [Bread] Laccha Paratha [Non Spicy]
+- [Bread] Cheese Naan [Non Spicy]
+- [Bread] Garlic Naan [Non Spicy]
+- [Bread] Missi Roti [Non Spicy]
+- [Bread] Kulcha [Non Spicy]
+- [Bread] Stuffed Paratha [Non Spicy]
+- [Bread] Onion Garlic Kulcha [Non Spicy]
+- [Bread] Malabar Paratha [Non Spicy]
+- [Bread] Cheese Garlic Naan [Non Spicy]
+- [Bread] Makkai Ki Roti [Non Spicy]
+- [Bread] Assorted Bread Basket [Non Spicy]
+- [Chawal] Sada Basmati Chawal [Non Spicy]
+- [Chawal] Jeera Rice [Non Spicy]
+- [Chawal] Peas Pulao [Non Spicy]
+- [Chawal] Veg Pulao [Non Spicy]
+- [Chawal] Curd Rice [Non Spicy]
+- [Chawal] Paneer Pulao [Non Spicy]
+- [Chawal] Kashmiri Pulao [Non Spicy]
+- [Bao] Curried Chicken [Non Spicy]
+- [Bao] Butter Chicken Bao [Non Spicy]
+- [Wings] Drums Of Heaven Fried [Non Spicy]
+- [Deep Fried] Japanese Korokke [Non Spicy]
+- [Deep Fried] Tempura [Non Spicy]
+- [Deep Fried] Cheesy Finger Chips [Non Spicy]
+- [Deep Fried] Chinese Fried [Non Spicy]
+- [Grill] Corn Cheese & Water Chestnut [Non Spicy]
+- [Sizzling Plate] Butter Garlic Prawn [Non Spicy]
+- [Wok Tossed] Butter Garlic [Non Spicy]
+- [Sizzler] Butter Chicken Sizzler [Non Spicy]
+- [Main Course] Butter Garlic [Non Spicy]
+- [Curry] Kari Kapitan [Non Spicy]
+- [Curry] Kaeng Phet [Non Spicy]
+- [Curry] Gaeng Kiew Wan [Non Spicy]
+- [Bowl] Khow suey [Non Spicy]
+- [Rice] AWG Classic [Non Spicy]
+- [Rice] Classic Fried Rice [Non Spicy]
+- [Rice] Egg Fried Rice [Non Spicy]
+- [Noodle] Hakka [Non Spicy]
+- [Noodle] American Chop Suey [Non Spicy]
+- [Mini Bao Pizza] Butter Chicken [Non Spicy]
+- [Pasta] Mac N Cheese [Non Spicy]
+- [Pasta] Fussili Butter Chichen With Mini Naan [Non Spicy]
+- [Dessert] Fried Ice Cream [Non Spicy]
+- [Dessert] Gulab Jamun With Ice Cream [Non Spicy]
+- [Dessert] Crispy Honey Noodles with Ice Cream [Non Spicy]
+- [Dessert] Moongdal Halwa with ice cream [Non Spicy]
+- [Dessert] Chocolate Nutty Brownie [Non Spicy]
+- [Dessert] Blue Berry Cheese Cake [Non Spicy]
+- [Dessert] Fruit Plater [Non Spicy]
+- [Dessert] Choice of Ice Cream [Non Spicy]
+- [Dessert] Dessert Of the Day [Non Spicy]
+- [Mocktail] Lost Island [Non Spicy]
+- [Mocktail] Watermelon & Kafirlime Lemonade [Non Spicy]
+- [Mocktail] Asian Itch [Non Spicy]
+- [Mocktail] Red Ginger Fizz [Non Spicy]
+- [Mocktail] AWG Virgin Sangria [Non Spicy]
+- [Mocktail] Masala Virgin Mojito [Non Spicy]
+- [Mocktail] Strawberry & Mango Slushie [Non Spicy]
+- [Mocktail] Peach & Mint Slushie [Non Spicy]
+- [Mocktail] Spicy Blackcurrant Slushie [Non Spicy]
+- [Mocktail] Litchi & Dragon Fruit Slushie [Non Spicy]
+- [Mocktail] Brownie & Chocolate Shake [Non Spicy]
+- [Mocktail] Strawberry & Bourbon Shake [Non Spicy]
+- [Mocktail] Chocolate & Coconut Shake [Non Spicy]
+- [Mocktail] Coffee, Cookie & Toffee Shake [Non Spicy]
+- [Mocktail] Salted Caramel, Alpenliebe & Popcorn Shake [Non Spicy]
+- [Mocktail] Blueberry Cheese cake Smoothie [Non Spicy]
+- [Mocktail] Mango Mint Smoothie [Non Spicy]
+- [Mocktail] Lotus Biscoff Shake [Non Spicy]
+- [Mocktail] AWG House Punch [Non Spicy]
+- [Mocktail] Bull Basil Mojito [Non Spicy]
+- [Mocktail] Fruit Punch [Non Spicy]
+- [Mocktail] Virgin Pinacolada [Non Spicy]
+- [Mocktail] Virgin Mojito [Non Spicy]
+- [Mocktail] Blue Lagoon [Non Spicy]
+- [Mocktail] Cold Coffee [Non Spicy]
+- [Mocktail] Classic Ice Tea [Non Spicy]
+- [Mocktail] Black Current Ice Tea [Non Spicy]
+- [Mocktail] Strawberry & Peach Ice Tea [Non Spicy]
+- [Mocktail] Yuzu & Mint Ice Tea [Non Spicy]
+- [Mocktail] Blue Litchi & Coconut Lemonade [Non Spicy]
+- [Mocktail] Blueberry & Basil Lemonade [Non Spicy]
+- [Mocktail] Passion Rosemary & Chilli Lemonade [Non Spicy]
+- [Mocktail] Cucumber & Curry Leaves Lemonade [Non Spicy]
+- [Mocktail] Cucumber Lime Refresher [Non Spicy]
+- [Mocktail] Green Forest [Non Spicy]

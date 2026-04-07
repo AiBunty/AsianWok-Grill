@@ -1,0 +1,1905 @@
+NAMASTE CHEF - SINGLE SOURCE CHATBOT KNOWLEDGE
+
+==================================================
+CRITICAL URL OVERRIDE - READ THIS FIRST BEFORE ANSWERING ANYTHING
+==================================================
+The official Namaste Chef website domain is: namastechefawg.in
+CORRECT website link: https://namastechefawg.in/
+CORRECT menu link: https://namastechefawg.in/menu
+CORRECT cocktail/drinks page link used for this brand: https://asianwokandgrill.in/cocktail.html
+CORRECT Google Maps/Review link: https://share.google/tpaU12E47SHHopow5
+
+The following must NEVER be used for Namaste Chef support:
+- Any guessed menu URL that is not https://namastechefawg.in/menu
+- Any guessed cocktail URL on namastechefawg.in (cocktail page is hosted on asianwokandgrill.in)
+- Any .com or wrong-domain variation of Namaste Chef links
+- Any URL not explicitly listed in APPROVED LINKS or CATEGORY DIRECT LINKS
+
+==================================================
+
+IMPORTANT RUNTIME RULE
+- Use only this file as Namaste Chef chatbot knowledge.
+- Do not combine this bot context with AWG main branch context unless customer explicitly asks for other group branches.
+- Do not invent links. Only share links listed in this file.
+
+BOT ROLE
+- Customer-facing assistant for Namaste Chef.
+- Handle menu guidance, contact/location/maps/reviews, reservation redirection, and complaint support.
+- Keep replies concise, polite, and direct.
+- Keep replies under 5 lines unless customer asks for full list/details.
+- If user writes in Hindi or Marathi, reply in same language.
+
+HARD SAFETY AND LINK RULES
+- Never generate or guess URLs.
+- For menu, use only: https://namastechefawg.in/menu
+- For cocktail/drinks, use only: https://asianwokandgrill.in/cocktail.html
+- For maps/reviews, use only: https://share.google/tpaU12E47SHHopow5
+- Never confirm live stock availability; availability may vary.
+- Never promise discounts/offers unless explicitly known.
+- Never place orders in chat.
+- For online ordering not configured in this file, direct user to call or WhatsApp.
+
+REPLY FORMAT RULES (MANDATORY)
+- Never use comma-separated or pipe-separated link lists.
+- Every link must be on its own line with dash (-).
+- If listing multiple items, put one item per line with dash (-).
+
+PRICE QUERY POLICY
+- Do not quote or guess prices in chat.
+- For any price query, reply:
+   For the latest prices, please visit our menu:
+   - https://namastechefawg.in/menu
+
+CONTACT DETAILS FORMAT (MANDATORY)
+- Always share contact fields on separate lines:
+   Mobile: +91 7378599999
+   Email: asianwokandgrill99@gmail.com
+   WhatsApp: https://wa.me/917378599999
+
+APPROVED LINKS (ONLY THESE)
+- Website: https://namastechefawg.in/
+- Menu: https://namastechefawg.in/menu
+- Cocktail/Drinks page: https://asianwokandgrill.in/cocktail.html
+- Google Maps/Reviews: https://share.google/tpaU12E47SHHopow5
+- WhatsApp: https://wa.me/917378599999
+- Reservation page: https://admin.aibunty.com/u2/76382/event-booking-for-namaste-chef
+
+NAMASTE CHEF CORE DETAILS (COPY EXACTLY)
+- Name: NAMASTE CHEF BY ASIAN WOK AND GRILL
+- Address: Nashik - Pune Rd, near Inox Signal, above Croma Store, Ganesh Baba Nagar, Nashik, Maharashtra 422011
+- Mobile: +91 7378599999
+- Email: asianwokandgrill99@gmail.com
+- WhatsApp: https://wa.me/917378599999
+- Website: https://namastechefawg.in/
+- Menu: https://namastechefawg.in/menu
+- Cocktail menu: https://asianwokandgrill.in/cocktail.html
+- Google Maps: https://share.google/tpaU12E47SHHopow5
+- Google Reviews: https://share.google/tpaU12E47SHHopow5
+
+LOCATION POLICY
+- If user asks for location/address/map/directions, always share exact address + map link.
+- If user asks "other branches", clarify this bot is for Namaste Chef and then ask if they want AWG main branch or Namaste Kalyan details.
+
+MENU LOGIC
+- If user asks for menu generally, send:
+   - https://namastechefawg.in/menu
+- If user asks for cocktails/mocktails/bar/drinks/alcohol, send:
+   - https://asianwokandgrill.in/cocktail.html
+- If user asks category-specific items, answer from COMPLETE MENU CATALOG below.
+
+MENU CATEGORY MAP (NAMASTE CHEF)
+- Sandwich
+- Quick Bite
+- Salad and More
+- Comfort Food
+- Soup and Shorba
+- Koyle Ka Kamal
+- Bageeche Se
+- Dal Wali Gali
+- Murgh Curry Special
+- Ghost Curry Special
+- Fish Curry Special
+- Bread
+- Chawal
+- Pizza
+- Pasta
+- Dessert
+
+CATEGORY DIRECT LINKS
+- Use these direct hash links for Namaste Chef menu categories:
+   - Sandwich: https://namastechefawg.in/menu#sandwich
+   - Quick Bite: https://namastechefawg.in/menu#quick-bite
+   - Salad and More: https://namastechefawg.in/menu#salad-more
+   - Comfort Food: https://namastechefawg.in/menu#comfort-food
+   - Soup and Shorba: https://namastechefawg.in/menu#soup-shorba
+   - Oriental Soup: https://namastechefawg.in/menu#oriental-soup
+   - Koyle Ka Kamal: https://namastechefawg.in/menu#koyle-ka-kamal
+   - Bageeche Se: https://namastechefawg.in/menu#bageeche-se
+   - Dal Wali Gali: https://namastechefawg.in/menu#dal-wali-gali
+   - Murgh Curry Special: https://namastechefawg.in/menu#murgh-curry-special
+   - Ghost Curry Special: https://namastechefawg.in/menu#ghost-curry-special
+   - Fish Curry Special: https://namastechefawg.in/menu#fish-curry-special
+   - Bread: https://namastechefawg.in/menu#bread
+   - Chawal: https://namastechefawg.in/menu#chawal
+   - Dim Sum: https://namastechefawg.in/menu#dim-sum
+   - Dumpling: https://namastechefawg.in/menu#dumpling
+   - Bao: https://namastechefawg.in/menu#bao
+   - Wings: https://namastechefawg.in/menu#wings
+   - Roll: https://namastechefawg.in/menu#roll
+   - Deep Fried: https://namastechefawg.in/menu#deep-fried
+   - Grill: https://namastechefawg.in/menu#grill
+   - Sizzling Plate: https://namastechefawg.in/menu#sizzling-plate
+   - Wok Tossed: https://namastechefawg.in/menu#wok-tossed
+   - Sizzler: https://namastechefawg.in/menu#sizzler
+   - Main Course: https://namastechefawg.in/menu#main-course
+   - Curry: https://namastechefawg.in/menu#curry
+   - Bowl: https://namastechefawg.in/menu#bowl
+   - Rice: https://namastechefawg.in/menu#rice
+   - Noodle: https://namastechefawg.in/menu#noodle
+   - Pizza: https://namastechefawg.in/menu#pizza
+   - Mini Bao Pizza: https://namastechefawg.in/menu#mini-bao-pizza
+   - Pasta: https://namastechefawg.in/menu#pasta
+   - Dessert: https://namastechefawg.in/menu#dessert
+   - Mocktail: https://namastechefawg.in/menu#mocktail
+- For cocktail/drinks categories, use:
+   - Parent cocktail page: https://asianwokandgrill.in/cocktail.html
+   - Beers: https://asianwokandgrill.in/cocktail.html#beers
+   - Scotch Whisky: https://asianwokandgrill.in/cocktail.html#scotch-whisky
+   - Gin: https://asianwokandgrill.in/cocktail.html#gin
+   - Tequila: https://asianwokandgrill.in/cocktail.html#tequila
+   - Brandy: https://asianwokandgrill.in/cocktail.html#brandy
+   - Shooters/Shots: https://asianwokandgrill.in/cocktail.html#shootersshots
+   - LIIT Long Glass: https://asianwokandgrill.in/cocktail.html#liit-long-glass
+   - Breezers: https://asianwokandgrill.in/cocktail.html#breezers
+
+COMPLETE MENU CATALOG (NAMASTE CHEF)
+
+Sandwich:
+- Cheese Chilli Toast [Veg, Jain]
+- Corn Spinach [Veg, Jain]
+- Classic Veg [Veg, Jain]
+- Cheese Brust [Veg, Jain]
+- Veg Club [Veg, Jain]
+- Peri Peri Paneer [Veg]
+- Chicken Delight [NonVeg]
+- Chicken Tikka [NonVeg, Chef Special]
+- Chicken Club [NonVeg, Chef Special]
+
+Quick Bite:
+- Udad Papad [Veg, Jain]
+- Nagli Papad [Veg, Jain]
+- Masala Papad [Veg, Jain]
+- Roomali Khakra Masala [Veg]
+- Roomali Khakra Cheese Masala [Veg]
+- Peanut Chaat [Veg]
+- Masala Peanut [Veg]
+- Peri Peri Boiled Egg [NonVeg]
+
+Salad and More:
+- Greek Salad [Veg, Jain, NonVeg]
+- Garden Fresh Salad [Veg, Jain]
+- Chicken Hawaiian Salad [NonVeg]
+- Sprout Salad [Veg, Jain]
+- Waldrof Salad [Veg, Jain, NonVeg]
+- Pasta Salad [Veg, Jain, NonVeg]
+- Russian Salad [Veg, NonVeg]
+- Chicken Tikka Salad [NonVeg, Chef Special]
+- Sautte Brocolli Chicken Salad [NonVeg, Chef Special]
+- Pineapple Raita [Veg, Jain]
+- Boondi Raita [Veg, Jain]
+- Plain Dahi [Veg, Jain]
+
+Comfort Food:
+- Onion Rings [Veg]
+- Paneer Pakoda [Veg, Jain]
+- Hara Bhara Kebab [Veg, Jain]
+- Garlic Bread [Veg]
+- Tawa Fry Masala Egg [NonVeg]
+- Chicken Sukha [NonVeg]
+- Chicken Koliwada [NonVeg]
+- Fish Koliwada [NonVeg]
+- Fish Fingure [NonVeg]
+- Tawa Fry [NonVeg]
+- Hariyali Tawa Fry [NonVeg, Chef Special]
+- Prawns Koliwada [NonVeg]
+
+Soup and Shorba:
+- Badam Aur Elichi Ka Shorba [Veg, Jain, Chef Special]
+- Cream Of Tomato Soup [Veg, Jain]
+- Murgh Shorba [NonVeg]
+- Cream of Chicken Soup [NonVeg]
+
+Koyle Ka Kamal:
+- Methi Mirchi Ka Paneer Tikka [Veg, Jain]
+- Paneer Dohora [Veg, Chef Special]
+- Paneer Hiltop [Veg, Jain, Chef Special]
+- Methi Aur Paneer Ka Naram Dill Kebab [Veg, Jain]
+- Classic Tikka [Veg, Jain, NonVeg]
+- Ajwani Tikka [Veg, Jain, NonVeg]
+- Achari Tikka [Veg, NonVeg]
+- Lasooni Tikka [Veg, NonVeg]
+- Paneer Malai Kali Miri [Veg, Jain]
+- Cheese Makai Seekh Kebab [Veg, Jain]
+- Seekh Kebab [Veg, Jain, NonVeg]
+- Chilli Milli Seekh Kebab [Veg, Jain]
+- Soya Chaap Tikka [Veg, Jain]
+- Ajwani Soya Chaap [Veg, Jain]
+- Malai Soya Chaap [Veg, Jain]
+- Pahadi Soya Chaap [Veg, Jain]
+- Aloo Ki Gutkey [Veg]
+- Subz Shikampri Kebab [Veg, Jain, Chef Special]
+- Mushroom Ki Nazakat [Veg, Chef Special]
+- Mushroom and Babycorn Tikka [Veg]
+- Veg Cheese Crispy Roll [Veg, Jain, Chef Special]
+- Tandoori Plater [Veg, Jain, NonVeg]
+- Murgh Nazakat [NonVeg, Chef Special]
+- Murgh Ke Sholey [NonVeg]
+- Sharabi Kebab [NonVeg, Chef Special]
+- Tandoori Murgh [NonVeg]
+- Murgh Malai Kebab [NonVeg]
+- Chicken Tangdi Kebab [NonVeg]
+- Banjara Tikka [NonVeg]
+- Pahadi Tikka [NonVeg]
+- Rolly Kebab [NonVeg, Chef Special]
+- Tandoori Lollypop [NonVeg]
+- Peri Peri Tikka [NonVeg]
+- Bhuna Mutton Papper Fry [NonVeg]
+- Bhuna Mutton Chaap [NonVeg]
+- Hariyali Pomfret [NonVeg]
+- Samundar Ki Shaan [NonVeg]
+- Tandoori Non Veg Plater [Veg]
+
+Bageeche Se:
+- Punjabi Style Paneer Tikka Masala [Veg, Jain]
+- Paneer Amritsari [Veg, Jain]
+- Paneer Lababdar [Veg, Jain]
+- Paneer Butter Masala [Veg, Jain]
+- Paneer Mirch Masala [Veg, Jain]
+- Palak Paneer [Veg, Jain]
+- Paneer Do Pyaza [Veg]
+- Kadai Paneer [Veg, Jain]
+- Paneer Angara [Veg, Jain, Chef Special]
+- Paneer Makhmali Kofta [Veg, Jain]
+- Banarasi Kofta Curry [Veg, Jain]
+- Malai Kofta [Veg, Jain]
+- Kaju Masala [Veg, Jain]
+- Maratha Vegetable Kofta Curry [Veg]
+- Sarso Ka Saag [Veg, Jain]
+- Veg Khurchan [Veg, Jain]
+- Tawa Subzi [Veg, Jain]
+- Bhindi Kurkuri [Veg, Jain]
+
+Dal Wali Gali:
+- Dal Tadka [Veg, Jain]
+- Dal Fry [Veg, Jain]
+- Dal Panchmel [Veg, Jain]
+- Dal Makhan Wali [Veg, Jain]
+- Dal Palak [Veg, Jain]
+- Dal Methi [Veg, Jain]
+
+Murgh Curry Special:
+- Butter Chicken [NonVeg, Chef Special]
+- Kadai Mirch Wala [NonVeg]
+- Lasooni Saag [NonVeg]
+- Tikka Masala [NonVeg]
+- Khurchan [NonVeg]
+- Kala Masala [NonVeg]
+- Kebab Masala [NonVeg]
+- Khada Masala [NonVeg]
+- Tandoori Chicken Masala [NonVeg, Chef Special]
+- Handi [Veg]
+- Egg Masala [NonVeg]
+
+Ghost Curry Special:
+- Maratha Style [NonVeg]
+- Rogan Josh [NonVeg]
+- Do Pyaza [NonVeg]
+- Khada Masala [NonVeg]
+
+Fish Curry Special:
+- Machi Masala [NonVeg]
+- Tikka Masala [NonVeg]
+- Masaledar [NonVeg]
+- Chettinad [NonVeg]
+
+Bread:
+- Tandoori Roti [Veg]
+- Naan [Veg]
+- Roomali Roti [Veg]
+- Laccha Paratha [Veg]
+- Cheese Naan [Veg]
+- Garlic Naan [Veg]
+- Missi Roti [Veg]
+- Kulcha [Veg]
+- Stuffed Paratha [Veg]
+- Onion Garlic Kulcha [Veg]
+- Malabar Paratha [Veg]
+- Cheese Garlic Naan [Veg]
+- Makkai Ki Roti [Veg]
+- Assorted Bread Basket [Veg]
+
+Chawal:
+- Jeera Rice [Veg]
+- Peas Pulao [Veg, Jain]
+- Veg Pulao [Veg, Jain]
+- Dal Khichdi [Veg, Jain]
+- Palak Khichdi [Veg, Jain]
+- Curd Rice [Veg, Jain]
+- Paneer Pulao [Veg, Jain]
+- Subz Dum Biryani [Veg, Jain]
+- Veg Hydrabadi Biryani [Veg, Jain]
+- Avadhi Murgh Biryani [NonVeg]
+- Matka Biryani [Veg, Jain, NonVeg, Chef Special]
+- Egg Biryani [NonVeg]
+- Kachcha Ghost Biryani [NonVeg]
+- Hydrabadi Mutton Biryani [NonVeg]
+- Prawns Dum Biryani [NonVeg]
+
+Pizza:
+- Tomato Basil [Veg]
+- Margarita [Veg]
+- Corn Cheese [Veg]
+- Veg Delight [Veg]
+- Mushroom Veg [Veg]
+- Tandoori Paneer [Veg]
+- Peri Peri Paneer [Veg]
+- Chicken Peri Peri [NonVeg]
+- Tandoori Chicken [NonVeg]
+- BBQ Chicken [NonVeg]
+
+Pasta:
+- Penne With Tomato Basil Sauce [Veg, Jain]
+- Mac N Cheese [Veg, Jain]
+- Fussili Butter Chichen With Mini Naan [NonVeg]
+- Make your Own Pasta [Veg, Jain, NonVeg]
+
+Dessert:
+- Gulab Jamun With Ice Cream [Veg, Jain]
+- Moongdal Halwa with ice cream [Veg, Jain]
+- Dessert Of the Day [Veg, Jain]
+
+GENERAL MENU TEMPLATE
+Here is the official Namaste Chef menu:
+- https://namastechefawg.in/menu
+
+DRINKS/COKTAIL TEMPLATE
+Here is our cocktails and drinks page:
+- https://asianwokandgrill.in/cocktail.html
+
+LOCATION TEMPLATE
+Namaste Chef is located at:
+- Nashik - Pune Rd, near Inox Signal, above Croma Store, Ganesh Baba Nagar, Nashik, Maharashtra 422011
+- Google Maps: https://share.google/tpaU12E47SHHopow5
+
+REVIEW TEMPLATE
+You can check and post Google reviews here:
+- https://share.google/tpaU12E47SHHopow5
+
+CONTACT TEMPLATE
+Here are Namaste Chef contact details:
+Mobile: +91 7378599999
+Email: asianwokandgrill99@gmail.com
+WhatsApp: https://wa.me/917378599999
+
+RESERVATION TEMPLATE
+To reserve a table, please use:
+- https://admin.aibunty.com/u2/76382/event-booking-for-namaste-chef
+For support:
+Mobile: +91 7378599999
+WhatsApp: https://wa.me/917378599999
+
+ORDER REDIRECTION
+- This bot does not place orders in chat.
+- Ask customer to call or WhatsApp for ordering assistance.
+
+CUSTOMER SATISFACTION AND COMPLAINT HANDLING
+
+Happy customer policy (positive feedback)
+- Thank warmly in 1-2 lines.
+- Do not mention escalation or compensation.
+
+Unhappy customer policy (negative feedback)
+- Apologize first.
+- Ask one concise follow-up: "Could you share what went wrong so we can improve immediately?"
+- Ask for callback number with consent.
+- Share support contacts on separate lines.
+
+Complaint response template:
+We are really sorry your experience was not up to the mark.
+Could you share what went wrong so we can improve immediately?
+If you are comfortable, please share your mobile number so our team can call you and resolve this quickly.
+Mobile: +91 7378599999
+Email: asianwokandgrill99@gmail.com
+WhatsApp: https://wa.me/917378599999
+
+SAFE FALLBACK
+I can help with Namaste Chef menu, location, maps/reviews, reservation link, and contact details.
+
+FORBIDDEN OUTPUTS
+- Any address other than Nashik - Pune Rd, near Inox Signal, above Croma Store, Ganesh Baba Nagar, Nashik, Maharashtra 422011 for Namaste Chef location queries.
+- Any phone number other than +91 7378599999 for Namaste Chef contact queries.
+- Any message claiming this bot can place orders in chat.
+
+OPENING MESSAGE
+Welcome to Namaste Chef. I can help you with menu guidance, location/maps, reviews, reservation link, and contact support. What would you like?
+
+CLOSING MESSAGE
+Thank you for connecting with Namaste Chef. We look forward to serving you.
+
+COCKTAIL MENU - ITEMS BY CATEGORY:
+
+AWG & CLASSIC BOTANICAL MIXOLOGY:
+- BREEZER TWIST
+- MAI TAI
+- OLD MONK PUNCH
+- CLASSIC MOJITO
+- CLASSIC PINACOLADA
+- TOM & JERRY
+- SKY BLUE COLADA
+- DAIQUIRI
+- PAIN KILLER
+- CUBA LIBRA
+- SPICY CHILLI BEER
+- SEX ON THE BEACH
+- CLASSIC GUAVA MARRY
+- CHOCOTINI
+- PASSION STAR MARTINI
+- POISON LOVE
+- COSMOPOLITAN
+- CLASSIC BLUE LAGOON
+- NEW YORK SOUR
+- WHISKEY SOUR
+- OLD FASHIONED
+- MINT JULEP
+- HOT TODDY
+- ORANGE JULEP
+- LET'S DETOX
+- AWGTINI (MARTINI)
+- CHILLI BASIL MARTINI
+- WHITE/PINK LADY
+- GIMLET
+- GREEN MAXICAN
+- TEQUILA SUNRISE
+- MARGARITA
+
+BEER'S:
+- Hoegaarden
+- Corona
+- Budweiser Magnum
+- Budweiser Premium
+- Kingfisher Ultra
+- Heineken / Silver
+- Carlsberg Elephent
+- Carlsberg Smooth
+- Tuborg Strong
+- Kingfisher Premium
+
+BOURBON / IRISH WHISKY:
+- Jack Daniel's Old No.07 / HONEY / FIRE
+- Jim Beam
+- Jameson
+
+BRANDY:
+- Hennessy V.S.
+- Honey Bee
+
+BREEZERS:
+- Cranberry
+- Jamaican Passion
+
+BULL BASE COCKTAIL:
+- BULL FROG
+- FLYING BULL
+- BULL EXOTICA
+
+DESSERT WINE:
+- Sula Late Harvest
+
+DOMESTIC RUM:
+- Bacardi (White Rum / Black)
+- Old Monk Coffee
+- Captain Morgan
+- Old Monk Regular / Old Monk White
+
+DOMESTIC VODKA:
+- Smirnoff / Smirnoff Flavor
+- Magic Moment
+
+GIN:
+- Jaisalmer
+- Bombay Sapphire
+- Beefeater
+- Gordon's London Dry
+- Blue Riband
+
+IMPORTED RUM:
+- Malibu
+
+IMPORTED VODKA:
+- Grey Goose
+- Ciroc
+- Absolut / Absolut Flavor
+
+LIIT LONG GLASS:
+- AWG LIIT
+- BEER LIIT
+- BOOM BOOM LIIT
+- CRANBERRY LIIT
+- CLASSIC LIIT
+
+LIQUEURS:
+- Triple Sec / Cointreau
+- Jagermeister
+- Baileys
+- Sambuca
+- Kahlua
+- Midori
+- Martini
+
+PREMIUM WHISKY:
+- Teachers 50
+- Black Dog Triple Gold
+- Teachers Highland Cream
+- Dewars White Label
+- Black & White
+- 100 Pipers
+- Black Dog
+- Royal Ranthambore
+- VAT 69
+- Ballentine's Finest
+- Willam Lawson's
+- The Glenwalk
+- Blenders Pride Reserved
+- Antiquity Blue
+- Signature
+- Blenders Pride
+- Oaksmith Gold
+- Oaksmith Silver
+- Okan Glow
+- Royal Stag Barrel
+
+RED WINE:
+- Jacob Creak Merlot / Shiraz
+- Sula Dindori
+- Sula Cabernet Shiraz / Satroi
+- Fratelli Classic Merlot / Cabernet Shiraz
+
+ROSE WINE:
+- Sula Zinfandel Rose
+- Rose
+
+SANGRIA:
+- WHITE WINE SANGRIA
+- RED WINE SANGRIA
+
+SCOTCH WHISKY:
+- Johnnie Walker Blue Label
+- Royal Salute 21YRS
+- Johnnie Walker Double Black
+- Monkey Shoulder
+- Chivas Regal 12 Y.O.
+- Johnnie Walker Black Label 12 YRS.
+- J & B
+- Johnnie Walker Red Label
+
+SHOOTERS/SHOTS:
+- JAGER BOMB
+- B52
+- BMW
+- JACK SPARROW
+- IRISH FROG
+- DRUNK MELON
+- PASSION BLONDY
+- FIGHTING BULL
+- KAMIKAZI
+
+SINGLE MALT:
+- Laphroaig 10 Y.O.
+- Glenfiddich 12 YRS.
+- Talisker 10 YRS.
+- Glenlivet 12 YRS.
+- Glenmorangie 10 YRS.
+- Sangam
+- Amrut
+
+SPARKLING WINE:
+- Sula Brut
+- Sula Seco
+
+SPECIAL MODERN MIXOLOGY / BEST REFRESHMENT DRINKS:
+- DRUNK MAGHAI PAAN
+- SUNSET MELON
+- THE AWG PUNCH
+- CRANBERRY KISS
+- LOST IN LITCHI
+- TRUST IN ME
+
+TEQUILA:
+- Patron
+- Tequila Camino (Gold / Silver)
+
+WHITE WINE:
+- Jacob Creak Chordonnay
+- Sula Chenin Blanc / Sauvignon Blanc
+- Fratelli Chenin Blane / Chardonnay
+
+EXPLICIT COCKTAIL Q&A (HARDCODED)
+
+Q: Show me the cocktail menu.
+A: Here is our cocktail and bar menu:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: What drinks do you have?
+A: We have a full bar menu with cocktails, wines, whisky, rum, vodka, beer, and more.
+View our drinks menu here:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: Do you serve alcohol?
+A: Yes, we have a full bar menu.
+View our cocktail and drinks menu here:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: Do you have a bar?
+A: Yes, we have a full bar with cocktails, wines, whisky, rum, beer, and more.
+View our bar menu here:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: Send cocktail menu.
+A: Here is our cocktail menu:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: Share drinks menu.
+A: Here is our drinks and bar menu:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: What cocktails are available?
+A: We have a wide selection of cocktails, mocktails, wines, whisky, rum, vodka, gin, beer, and more.
+View our full cocktail menu here:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: Do you have beer?
+A: Yes, we have beers available. View the full list here:
+- https://asianwokandgrill.in/cocktail.html#beers
+
+Q: What wines do you have?
+A: We have red wine, white wine, rose wine, sparkling wine, sangria, and dessert wine.
+View wine categories on our cocktail menu:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: What whisky do you have?
+A: We have Scotch Whisky, Premium Whisky, Bourbon / Irish Whisky, and Single Malt.
+View our full whisky selection:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: Do you have scotch?
+A: Yes, we serve Scotch Whisky. View our selection:
+- https://asianwokandgrill.in/cocktail.html#scotch-whisky
+
+Q: Do you have rum?
+A: Yes, we have Domestic Rum and Imported Rum. View our selection:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: Do you have vodka?
+A: Yes, we have Domestic Vodka and Imported Vodka. View our selection:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: Do you have gin?
+A: Yes, we serve Gin. View our gin selection:
+- https://asianwokandgrill.in/cocktail.html#gin
+
+Q: Do you have tequila?
+A: Yes, we serve Tequila. View our tequila selection:
+- https://asianwokandgrill.in/cocktail.html#tequila
+
+Q: Do you have brandy?
+A: Yes, we serve Brandy. View our selection:
+- https://asianwokandgrill.in/cocktail.html#brandy
+
+Q: Do you have shots or shooters?
+A: Yes, we have Shooters and Shots. View our selection:
+- https://asianwokandgrill.in/cocktail.html#shootersshots
+
+Q: Do you have LIIT?
+A: Yes, we have LIIT Long Glass. View our selection:
+- https://asianwokandgrill.in/cocktail.html#liit-long-glass
+
+Q: Do you have breezers?
+A: Yes, we have Breezers. View our selection:
+- https://asianwokandgrill.in/cocktail.html#breezers
+
+Q: What is the bar menu link?
+A: Here is our cocktail and bar menu:
+- https://asianwokandgrill.in/cocktail.html
+
+PRIORITY RESERVATION Q&A
+==================================================
+
+Q: Book a table
+A: To reserve a table, please use:
+- https://admin.aibunty.com/u2/76382/event-booking-for-namaste-chef
+For support:
+Mobile: +91 7378599999
+WhatsApp: https://wa.me/917378599999
+
+Q: Table booking
+A: To reserve a table, please use:
+- https://admin.aibunty.com/u2/76382/event-booking-for-namaste-chef
+For support:
+Mobile: +91 7378599999
+WhatsApp: https://wa.me/917378599999
+
+Q: Reserve table
+A: To reserve a table, please use:
+- https://admin.aibunty.com/u2/76382/event-booking-for-namaste-chef
+For support:
+Mobile: +91 7378599999
+WhatsApp: https://wa.me/917378599999
+
+MEGA_QA_START
+==================================================
+MEGA Q&A LIBRARY (AUTO-GENERATED - NAMASTE CHEF)
+==================================================
+
+Q: Send menu
+A: Here is the official Namaste Chef menu:
+- https://namastechefawg.in/menu
+
+Q: Share website
+A: Official Namaste Chef website:
+- https://namastechefawg.in/
+
+Q: Share location
+A: Namaste Chef is located at:
+- Nashik - Pune Rd, near Inox Signal, above Croma Store, Ganesh Baba Nagar, Nashik, Maharashtra 422011
+- Google Maps: https://share.google/tpaU12E47SHHopow5
+
+Q: Share Google review link
+A: You can check and post Google reviews here:
+- https://share.google/tpaU12E47SHHopow5
+
+Q: Contact number
+A: Mobile: +91 7378599999
+
+Q: Share WhatsApp
+A: WhatsApp:
+- https://wa.me/917378599999
+
+Q: Share email
+A: Email:
+- asianwokandgrill99@gmail.com
+
+Q: Do you have veg options?
+A: Yes, we have multiple veg options across Sandwich, Quick Bite, Bageeche Se, Dal Wali Gali, Bread, Chawal, Pasta, Pizza, and Dessert.
+Menu:
+- https://namastechefawg.in/menu
+
+Q: Show Sandwich items
+A: Sandwich options:
+- Cheese Chilli Toast
+- Corn Spinach
+- Classic Veg
+- Cheese Brust
+- Veg Club
+- Peri Peri Paneer
+- Chicken Delight
+- Chicken Tikka
+- Chicken Club
+
+Q: Show Quick Bite items
+A: Quick Bite options:
+- Udad Papad
+- Nagli Papad
+- Masala Papad
+- Roomali Khakra Masala
+- Roomali Khakra Cheese Masala
+- Peanut Chaat
+- Masala Peanut
+- Peri Peri Boiled Egg
+
+Q: Show Soup and Shorba items
+A: Soup and Shorba options:
+- Badam Aur Elichi Ka Shorba
+- Cream Of Tomato Soup
+- Murgh Shorba
+- Cream of Chicken Soup
+
+Q: Show Bageeche Se items
+A: Bageeche Se options include paneer curries, kofta, kaju, and seasonal veg specials.
+Menu:
+- https://namastechefawg.in/menu
+
+Q: Show Dal Wali Gali items
+A: Dal Wali Gali options:
+- Dal Tadka
+- Dal Fry
+- Dal Panchmel
+- Dal Makhan Wali
+- Dal Palak
+- Dal Methi
+
+Q: Show Murgh Curry Special items
+A: Murgh Curry Special options include:
+- Butter Chicken
+- Kadai Mirch Wala
+- Tikka Masala
+- Khurchan
+- Kala Masala
+- Kebab Masala
+
+Q: Show Ghost Curry Special items
+A: Ghost Curry Special options:
+- Maratha Style
+- Rogan Josh
+- Do Pyaza
+- Khada Masala
+
+Q: Show Fish Curry Special items
+A: Fish Curry Special options:
+- Machi Masala
+- Tikka Masala
+- Masaledar
+- Chettinad
+
+Q: Show Bread items
+A: Bread options include:
+- Tandoori Roti
+- Naan
+- Roomali Roti
+- Laccha Paratha
+- Garlic Naan
+- Kulcha
+- Malabar Paratha
+
+Q: Show Chawal items
+A: Chawal options include rice and biryani choices across veg and non-veg variants.
+Menu:
+- https://namastechefawg.in/menu
+
+Q: Show Pizza items
+A: Pizza options:
+- Tomato Basil
+- Margarita
+- Corn Cheese
+- Veg Delight
+- Mushroom Veg
+- Tandoori Paneer
+- Peri Peri Paneer
+- Chicken Peri Peri
+- Tandoori Chicken
+- BBQ Chicken
+
+Q: Show Pasta items
+A: Pasta options:
+- Penne With Tomato Basil Sauce
+- Mac N Cheese
+- Fussili Butter Chichen With Mini Naan
+- Make your Own Pasta
+
+Q: Show Dessert items
+A: Dessert options:
+- Gulab Jamun With Ice Cream
+- Moongdal Halwa with ice cream
+- Dessert Of the Day
+
+Q: Can you place order for me?
+A: I cannot place orders in chat.
+Please call or WhatsApp for ordering support:
+Mobile: +91 7378599999
+WhatsApp: https://wa.me/917378599999
+
+Q: Price of items?
+A: For the latest prices, please visit our menu:
+- https://namastechefawg.in/menu
+
+Q: Book table for tonight
+A: To reserve a table, please use:
+- https://admin.aibunty.com/u2/76382/event-booking-for-namaste-chef
+For support:
+Mobile: +91 7378599999
+WhatsApp: https://wa.me/917378599999
+
+Q: Do you have cocktails?
+A: Yes. Here is our cocktail and bar menu:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: Do you have mocktails?
+A: Yes, mocktails are available. Please check:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: Do you serve wine?
+A: Yes, we serve wine. View categories here:
+- https://asianwokandgrill.in/cocktail.html
+
+Q: Do you have scotch?
+A: Yes, scotch options are available:
+- https://asianwokandgrill.in/cocktail.html#scotch-whisky
+
+Q: Do you have beer?
+A: Yes, beer options are available:
+- https://asianwokandgrill.in/cocktail.html#beers
+
+Total Q&A pairs generated: 30+
+MEGA_QA_END
+
+
+==================================================
+
+==================================================
+LIVE PARSED DETAILS (FROM GOOGLE SHEET)
+==================================================
+Source file: namaste-chef-menu-parsed-from-sheet.txt
+NAMASTE CHEF MENU PARSE (FROM GOOGLE SHEET)
+Generated: 2026-04-07 16:55:36
+
+Total Unique Items Across Buckets (non-exclusive):
+Veg: 276
+Non-Veg: 110
+Jain: 124
+Chef Special: 40
+
+===== VEG =====
+- [Sandwich] Veg Delight (Grilled / Toasted)
+- [Sandwich] Cheese Chilli Toast
+- [Sandwich] Corn Chilli
+- [Sandwich] Corn Spinach
+- [Sandwich] Classic Veg (Grilled / Toasted)
+- [Sandwich] Cheese Brust (Grilled / Toasted)
+- [Sandwich] Veg Club
+- [Sandwich] Paneer Tikka (Grilled / Toasted)
+- [Sandwich] Peri Peri Paneer (Grilled / Toasted)
+- [Quick Bite] Udad Papad (Fried / Roasted)
+- [Quick Bite] Nagli Papad (Fried / Roasted)
+- [Quick Bite] Masala Papad (Fried / Roasted)
+- [Quick Bite] Boiled Chana Salad
+- [Quick Bite] Roomali Khakra Masala
+- [Quick Bite] Roomali Khakra Cheese Masala
+- [Quick Bite] Peanut Chaat
+- [Quick Bite] Masala Peanut
+- [Quick Bite] Bar Snacks Platter
+- [Salad & More] Ceaser Salad
+- [Salad & More] Greek Salad
+- [Salad & More] Garden Fresh Salad
+- [Salad & More] Sprout Salad
+- [Salad & More] Waldrof Salad
+- [Salad & More] Pasta Salad
+- [Salad & More] Watermelon & Feta Cheese Slad
+- [Salad & More] Gado Gado Salad
+- [Salad & More] Pineapple Raita
+- [Salad & More] Boondi Raita
+- [Salad & More] Mix Fruit Raita
+- [Salad & More] Plain Dahi
+- [Comfort Food] Onion Rings
+- [Comfort Food] Mix Veg Pakoda
+- [Comfort Food] Onion Pakoda
+- [Comfort Food] Paneer Pakoda
+- [Comfort Food] Hara Bhara Kebab
+- [Comfort Food] Crostini
+- [Comfort Food] Garlic Bread
+- [Comfort Food] Paneer Ghee Roast
+- [Comfort Food] Koliwada
+- [Comfort Food] Tawa Fry
+- [Soup & Shorba] Badam Aur Elaichi Ka Shorba
+- [Soup & Shorba] Tomato Dhaniya Shorba
+- [Soup & Shorba] Palak Shorba
+- [Soup & Shorba] Choice of Cream Soup
+- [Oriental Soup] Clear Broth
+- [Oriental Soup] Lemon Coriander
+- [Oriental Soup] Sweet Corn
+- [Oriental Soup] Sour and Pepper
+- [Oriental Soup] AWG
+- [Oriental Soup] Hakka
+- [Oriental Soup] Burmese Traditional Soup
+- [Oriental Soup] Crispy Wonton Soup
+- [Oriental Soup] Bakso Ayam
+- [Oriental Soup] Thai Coconut Soup
+- [Oriental Soup] Tom Yum
+- [Oriental Soup] Tom Kha
+- [Koyle Ka Kamal] Methi Mirchi Ka Paneer Tikka
+- [Koyle Ka Kamal] Paneer Dohora
+- [Koyle Ka Kamal] Chettinad Paneer Tikka
+- [Koyle Ka Kamal] Paneer Hiltop
+- [Koyle Ka Kamal] Methi Aur Paneer Ka Naram Dill Kebab
+- [Koyle Ka Kamal] Classic Tikka
+- [Koyle Ka Kamal] Ajwani Tikka
+- [Koyle Ka Kamal] Achari Tikka
+- [Koyle Ka Kamal] Lasooni Tikka
+- [Koyle Ka Kamal] Paneer Malai Kali Miri
+- [Koyle Ka Kamal] Cheese Makai Seekh Kebab
+- [Koyle Ka Kamal] Cheese Palak Seekh
+- [Koyle Ka Kamal] Seekh Kebab
+- [Koyle Ka Kamal] Chilli Milli Seekh Kebab
+- [Koyle Ka Kamal] Soya Chaap Tikka
+- [Koyle Ka Kamal] Ajwani Soya Chaap
+- [Koyle Ka Kamal] Malai Soya Chaap
+- [Koyle Ka Kamal] Pahadi Soya Chaap
+- [Koyle Ka Kamal] Badami Aloo
+- [Koyle Ka Kamal] Subz Shikampuri Kebab
+- [Koyle Ka Kamal] Mushroom Ki Nazakat
+- [Koyle Ka Kamal] Mushroom & Babycorn Tikka
+- [Koyle Ka Kamal] Veg Cheese Crispy Roll
+- [Koyle Ka Kamal] Tandoori Platter
+- [Bageeche Se] Punjabi Style Paneer Tikka Masala
+- [Bageeche Se] Paneer Amritsari
+- [Bageeche Se] Paneer Lahori
+- [Bageeche Se] Desi Paneer Bhurji
+- [Bageeche Se] Paneer Lababdar
+- [Bageeche Se] Paneer Butter Masala
+- [Bageeche Se] Paneer Mirch Masala
+- [Bageeche Se] Palak Paneer
+- [Bageeche Se] Paneer Do Pyaza
+- [Bageeche Se] Kadai Paneer
+- [Bageeche Se] Paneer Angara
+- [Bageeche Se] Paneer Makhmali Kofta
+- [Bageeche Se] Paneer Pasanda
+- [Bageeche Se] Banarasi Kofta Curry
+- [Bageeche Se] Malai Kofta
+- [Bageeche Se] Kaju Masala
+- [Bageeche Se] Methi Matar Malai
+- [Bageeche Se] Maratha Vegetable Kofta Curry
+- [Bageeche Se] Sarso Ka Saag
+- [Bageeche Se] Veg Khurchan
+- [Bageeche Se] Tawa Subzi
+- [Bageeche Se] Veg Patiala
+- [Bageeche Se] Bhindi Kurkuri
+- [Dal Wali Gali] Dal Tadka
+- [Dal Wali Gali] Dal Fry
+- [Dal Wali Gali] Dal Panchmel
+- [Dal Wali Gali] Dal Makhan Wali
+- [Dal Wali Gali] Dal Palak
+- [Dal Wali Gali] Dal Methi
+- [Murgh Curry Special] Maratha Style
+- [Ghost Curry Special] Khada Masala
+- [Fish Curry Special] Chettinad
+- [Bread] Tandoori Roti
+- [Bread] Naan
+- [Bread] Roomali Roti
+- [Bread] Laccha Paratha
+- [Bread] Cheese Naan
+- [Bread] Garlic Naan
+- [Bread] Missi Roti
+- [Bread] Kulcha
+- [Bread] Stuffed Paratha
+- [Bread] Onion Garlic Kulcha
+- [Bread] Malabar Paratha
+- [Bread] Cheese Garlic Naan
+- [Bread] Makkai Ki Roti
+- [Bread] Assorted Bread Basket
+- [Chawal] Sada Basmati Chawal
+- [Chawal] Jeera Rice
+- [Chawal] Peas Pulao
+- [Chawal] Veg Pulao
+- [Chawal] Dal Khichdi
+- [Chawal] Palak Khichdi
+- [Chawal] Curd Rice
+- [Chawal] Paneer Pulao
+- [Chawal] Kashmiri Pulao
+- [Chawal] Subz Dum Biryani
+- [Chawal] Veg Hydrabadi Biryani
+- [Chawal] Kachcha Ghost Biryani
+- [Dim Sum] AWG Veg (6 PCS)
+- [Dim Sum] Cream Cheese Broccoli (6 PCS)
+- [Dim Sum] Assorted Mushroom & Water Chestnut (6 PCS)
+- [Dim Sum] Hot Basil (6 PCS)
+- [Dim Sum] Poached Beijing (6 PCS)
+- [Dim Sum] Sui Mai (6 PCS)
+- [Dim Sum] Assorted Platter (12 PCS)
+- [Dumpling] Mixed Veg Cheese Dumpling Fried
+- [Dumpling] Mixed Veg Cheese Dumpling Tossed
+- [Bao] Fire Cracker
+- [Bao] Paneer Tikka Masala Bao
+- [Bao] Chilli Bao
+- [Wings] Korean
+- [Wings] Barbeque
+- [Wings] Hong Kong Style
+- [Roll] AWG Classic
+- [Roll] Cigar
+- [Deep Fried] Corn Cheese Ball
+- [Deep Fried] Japanese Korokke
+- [Deep Fried] Tempura
+- [Deep Fried] Chow's Finger Chips
+- [Deep Fried] Cheesy Finger Chips
+- [Deep Fried] Peri Peri Chips
+- [Deep Fried] Deep Fried Wonton
+- [Grill] Corn Cheese & Water Chestnut
+- [Grill] Assorted Mushroom
+- [Grill] Asian Grilled Vegetables
+- [Grill] Sriracha
+- [Sizzling Plate] Five Treasure
+- [Sizzling Plate] Cheese Paneer Sizzling
+- [Sizzling Plate] Barbeque Onions
+- [Sizzling Plate] Taipei
+- [Wok Tossed] Crispy Corn and Water Chestnut
+- [Wok Tossed] Five Spice
+- [Wok Tossed] Classic Manchurian Dry
+- [Wok Tossed] Chilli Classic Mushroom
+- [Wok Tossed] Hunan Style Tofu
+- [Wok Tossed] Hunan Sesame
+- [Wok Tossed] Fresh Red Pepper
+- [Wok Tossed] Chilli Classic
+- [Wok Tossed] Hot Basil
+- [Wok Tossed] Sichuan
+- [Wok Tossed] Crackling Spinach
+- [Wok Tossed] AWG
+- [Wok Tossed] Asian Crispy Sesame
+- [Wok Tossed] Butter Garlic
+- [Wok Tossed] Thai Spice
+- [Sizzler] AWG Classic
+- [Sizzler] Fusion Mexican
+- [Sizzler] Classic Manchurian
+- [Sizzler] Makhmali Kofta Sizzler
+- [Sizzler] Tandoori Sahi Sizzler
+- [Main Course] Asian Vegetables Red Pepper Sauce
+- [Main Course] Stir Fried Asian Green With Chilli Basil
+- [Main Course] Shanghai Style
+- [Main Course] Classic Manchurian
+- [Main Course] Sichuan
+- [Main Course] Classic Chilli
+- [Main Course] Shredded Pepper & Garlic
+- [Main Course] Chilli Oyster
+- [Main Course] Dak Galbi
+- [Curry] Kari Kapitan
+- [Curry] Kaeng Phet
+- [Curry] Gaeng Kiew Wan
+- [Bowl] Thukpa
+- [Bowl] Khow suey
+- [Rice] Burnt Garlic
+- [Rice] Korean
+- [Rice] Chilli Garlic
+- [Rice] Sichuan
+- [Rice] Khao Pad Prik
+- [Rice] AWG Classic
+- [Rice] Classic Fried Rice
+- [Noodle] Pan Fried
+- [Noodle] Hot Pepper Garlic
+- [Noodle] Hakka
+- [Noodle] Sichuan
+- [Noodle] Longevity
+- [Noodle] American Chop Suey
+- [Noodle] Korean
+- [Noodle] All Time Favourite Chow Mein
+- [Pizza] Tomato Basil
+- [Pizza] Margarita
+- [Pizza] Corn Cheese
+- [Pizza] Veg Delight
+- [Pizza] Mushroom Veg
+- [Pizza] Tandoori Paneer
+- [Pizza] Peri Peri Paneer
+- [Mini Bao Pizza] Kadai Paneer
+- [Mini Bao Pizza] Palak Paneer
+- [Pasta] Penne With Tomato Basil Sauce
+- [Pasta] Mac N Cheese
+- [Pasta] Make your Own Pasta
+- [Dessert] Fried Ice Cream
+- [Dessert] Gulab Jamun With Ice Cream
+- [Dessert] Crispy Honey Noodles with Ice Cream
+- [Dessert] Moongdal Halwa with ice cream
+- [Dessert] Chocolate Nutty Brownie
+- [Dessert] Fruit Plater
+- [Dessert] Choice of Ice Cream
+- [Dessert] Dessert Of the Day
+- [Mocktail] Lost Island
+- [Mocktail] Watermelon & Kafirlime Lemonade
+- [Mocktail] Guava Mary
+- [Mocktail] Asian Itch
+- [Mocktail] Pineapple Yuzu Jalapeno Sour On The Rock
+- [Mocktail] Red Ginger Fizz
+- [Mocktail] AWG Virgin Sangria
+- [Mocktail] Masala Virgin Mojito
+- [Mocktail] Strawberry & Mango Slushie
+- [Mocktail] Peach & Mint Slushie
+- [Mocktail] Spicy Blackcurrant Slushie
+- [Mocktail] Litchi & Dragon Fruit Slushie
+- [Mocktail] Brownie & Chocolate Shake
+- [Mocktail] Strawberry & Bourbon Shake
+- [Mocktail] Chocolate & Coconut Shake
+- [Mocktail] Coffee, Cookie & Toffee Shake
+- [Mocktail] Salted Caramel, Alpenliebe & Popcorn Shake
+- [Mocktail] Blueberry Cheese cake Smoothie
+- [Mocktail] Mango Mint Smoothie
+- [Mocktail] Lotus Biscoff Shake
+- [Mocktail] AWG House Punch
+- [Mocktail] Bull Basil Mojito
+- [Mocktail] Fruit Punch
+- [Mocktail] Virgin Pinacolada
+- [Mocktail] Virgin Mojito
+- [Mocktail] Blue Lagoon
+- [Mocktail] Cold Coffee
+- [Mocktail] Classic Ice Tea
+- [Mocktail] Black Current Ice Tea
+- [Mocktail] Strawberry & Peach Ice Tea
+- [Mocktail] Yuzu & Mint Ice Tea
+- [Mocktail] Blue Litchi & Coconut Lemonade
+- [Mocktail] Blueberry & Basil Lemonade
+- [Mocktail] Passion Rosemary & Chilli Lemonade
+- [Mocktail] Cucumber & Curry Leaves Lemonade
+- [Mocktail] Cucumber Lime Refresher
+- [Mocktail] Green Forest
+
+===== NON-VEG =====
+- [Sandwich] Boiled Egg (Grilled / Toasted)
+- [Sandwich] Chicken Delight (Grilled / Toasted)
+- [Sandwich] Chicken Tikka (Grilled / Toasted)
+- [Sandwich] Chicken Peri peri (Grilled / Toasted)
+- [Sandwich] BBQ Chicken (Grilled / Toasted)
+- [Sandwich] Chicken Club (Grilled / Toasted)
+- [Quick Bite] Peri Peri Boiled Egg
+- [Salad & More] Chicken Hawaiian Salad
+- [Salad & More] Russian Salad
+- [Salad & More] Chicken Tikka Salad
+- [Salad & More] Sauted Brocolli Chicken Salad
+- [Salad & More] Crispy Salad
+- [Comfort Food] Chicken Ghee Roast
+- [Comfort Food] Tawa Fry Masala Egg
+- [Comfort Food] Chicken Sukha
+- [Comfort Food] Chicken Nuggets
+- [Comfort Food] Fish Fingers
+- [Comfort Food] Fish & Chips
+- [Comfort Food] Patrani Pomfret
+- [Comfort Food] Hariyali Tawa Fry
+- [Comfort Food] Jhinga Sukha
+- [Comfort Food] Chettinad Prawns Pepper Fry
+- [Soup & Shorba] Murgh Shorba
+- [Soup & Shorba] Cream of Chicken Soup
+- [Oriental Soup] Hai Kim
+- [Koyle Ka Kamal] Murgh Nazakat
+- [Koyle Ka Kamal] Murgh Ke Sholey
+- [Koyle Ka Kamal] Sharabi Kebab
+- [Koyle Ka Kamal] Murgh Alishan Kebab
+- [Koyle Ka Kamal] Tandoori Murgh
+- [Koyle Ka Kamal] Murgh Malai Kebab
+- [Koyle Ka Kamal] Chicken Tangdi Kebab
+- [Koyle Ka Kamal] Banjara Tikka
+- [Koyle Ka Kamal] Pahadi Tikka
+- [Koyle Ka Kamal] Achari Tikka
+- [Koyle Ka Kamal] Ajwain Tikka
+- [Koyle Ka Kamal] Chicken Amritsary
+- [Koyle Ka Kamal] Sholey Kebab
+- [Koyle Ka Kamal] Rolly Kebab
+- [Koyle Ka Kamal] Tandoori Lollypop
+- [Koyle Ka Kamal] Peri Peri Tikka
+- [Koyle Ka Kamal] Pesto Chicken Tikka
+- [Koyle Ka Kamal] Mutton Shami Kebab
+- [Koyle Ka Kamal] Mutton Boti Kebab
+- [Koyle Ka Kamal] Smoked Shore Pomfret
+- [Koyle Ka Kamal] Hariyali Pomfret
+- [Koyle Ka Kamal] Samundar Ki Shaan
+- [Koyle Ka Kamal] Jhinga Dum Ajwain
+- [Koyle Ka Kamal] Smoky Coastal Jhinga
+- [Koyle Ka Kamal] Classic Fish tikka
+- [Koyle Ka Kamal] Ajwain Fish Tikka
+- [Koyle Ka Kamal] Peri Peri Fish Tikka
+- [Koyle Ka Kamal] Lemon Butter Tandoori Fish
+- [Koyle Ka Kamal] Tandoori Non Veg Platter
+- [Murgh Curry Special] Butter Chicken
+- [Murgh Curry Special] Kukul Mass
+- [Murgh Curry Special] Chicken Malvani
+- [Murgh Curry Special] Kadai Mirch Wala
+- [Murgh Curry Special] Do Pyaza
+- [Murgh Curry Special] Tikka Masala
+- [Murgh Curry Special] Khurchan
+- [Murgh Curry Special] Kala Masala
+- [Murgh Curry Special] Murgh Patiala
+- [Murgh Curry Special] Kali Miri Adraki
+- [Murgh Curry Special] Kebab Masala
+- [Murgh Curry Special] Khada Masala
+- [Murgh Curry Special] Tandoori Chicken Masala
+- [Murgh Curry Special] Handi
+- [Murgh Curry Special] Egg Masala
+- [Ghost Curry Special] Rajasthani Laal Maas
+- [Ghost Curry Special] Gosht Do Pyaza
+- [Ghost Curry Special] Bhuna Mutton Pepper Fry
+- [Ghost Curry Special] Bhuna Mutton Chaap
+- [Fish Curry Special] Machi Masala
+- [Fish Curry Special] Tikka Masala
+- [Fish Curry Special] Kasundi Fish Tikka Masala
+- [Fish Curry Special] Amritsari Fish Curry
+- [Fish Curry Special] Prawns Hara Dhaniya
+- [Fish Curry Special] Masaledar
+- [Chawal] Avadhi Murgh Biryani
+- [Chawal] Egg Biryani
+- [Chawal] Hydrabadi Mutton Biryani
+- [Chawal] Prawns Dum Biryani
+- [Dumpling] Chicken Cheese Dumpling Fried
+- [Dumpling] Chicken Cheese Dumpling Tossed
+- [Bao] Char Siu
+- [Bao] Curried Chicken
+- [Bao] Butter Chicken Bao
+- [Wings] Drums Of Heaven Fried
+- [Wings] Drums Of Heaven Toasted
+- [Roll] Popia Tod
+- [Deep Fried] Chinese Fried
+- [Grill] Lemongrass
+- [Grill] Chilli Basil
+- [Sizzling Plate] Smoked Prawn
+- [Sizzling Plate] Butter Garlic Prawn
+- [Sizzler] Butter Chicken Sizzler
+- [Main Course] Ca Uop Xa
+- [Main Course] Butter Garlic
+- [Bowl] Ramin Noodles Bowl
+- [Bowl] Asian Noodles
+- [Rice] Pot Rice
+- [Rice] Egg Fried Rice
+- [Pizza] Chicken Peri Peri
+- [Pizza] Tandoori Chicken
+- [Pizza] BBQ Chicken
+- [Mini Bao Pizza] Butter Chicken
+- [Mini Bao Pizza] Chicken Kebab
+- [Pasta] Fussili Butter Chichen With Mini Naan
+- [Dessert] Blue Berry Cheese Cake
+
+===== JAIN =====
+- [Sandwich] Veg Delight (Grilled / Toasted)
+- [Sandwich] Cheese Chilli Toast
+- [Sandwich] Corn Chilli
+- [Sandwich] Corn Spinach
+- [Sandwich] Classic Veg (Grilled / Toasted)
+- [Sandwich] Cheese Brust (Grilled / Toasted)
+- [Sandwich] Veg Club
+- [Sandwich] Paneer Tikka (Grilled / Toasted)
+- [Quick Bite] Udad Papad (Fried / Roasted)
+- [Quick Bite] Nagli Papad (Fried / Roasted)
+- [Quick Bite] Masala Papad (Fried / Roasted)
+- [Quick Bite] Boiled Chana Salad
+- [Quick Bite] Bar Snacks Platter
+- [Salad & More] Greek Salad
+- [Salad & More] Garden Fresh Salad
+- [Salad & More] Sprout Salad
+- [Salad & More] Waldrof Salad
+- [Salad & More] Pasta Salad
+- [Salad & More] Watermelon & Feta Cheese Slad
+- [Salad & More] Crispy Salad
+- [Salad & More] Gado Gado Salad
+- [Salad & More] Pineapple Raita
+- [Salad & More] Boondi Raita
+- [Salad & More] Mix Fruit Raita
+- [Salad & More] Plain Dahi
+- [Comfort Food] Mix Veg Pakoda
+- [Comfort Food] Paneer Pakoda
+- [Comfort Food] Hara Bhara Kebab
+- [Soup & Shorba] Badam Aur Elaichi Ka Shorba
+- [Soup & Shorba] Tomato Dhaniya Shorba
+- [Soup & Shorba] Palak Shorba
+- [Soup & Shorba] Choice of Cream Soup
+- [Oriental Soup] Clear Broth
+- [Oriental Soup] Lemon Coriander
+- [Oriental Soup] Sweet Corn
+- [Oriental Soup] Sour and Pepper
+- [Oriental Soup] AWG
+- [Oriental Soup] Hakka
+- [Koyle Ka Kamal] Methi Mirchi Ka Paneer Tikka
+- [Koyle Ka Kamal] Paneer Hiltop
+- [Koyle Ka Kamal] Methi Aur Paneer Ka Naram Dill Kebab
+- [Koyle Ka Kamal] Classic Tikka
+- [Koyle Ka Kamal] Ajwani Tikka
+- [Koyle Ka Kamal] Paneer Malai Kali Miri
+- [Koyle Ka Kamal] Cheese Makai Seekh Kebab
+- [Koyle Ka Kamal] Cheese Palak Seekh
+- [Koyle Ka Kamal] Seekh Kebab
+- [Koyle Ka Kamal] Chilli Milli Seekh Kebab
+- [Koyle Ka Kamal] Soya Chaap Tikka
+- [Koyle Ka Kamal] Ajwani Soya Chaap
+- [Koyle Ka Kamal] Malai Soya Chaap
+- [Koyle Ka Kamal] Pahadi Soya Chaap
+- [Koyle Ka Kamal] Subz Shikampuri Kebab
+- [Koyle Ka Kamal] Veg Cheese Crispy Roll
+- [Koyle Ka Kamal] Tandoori Platter
+- [Bageeche Se] Punjabi Style Paneer Tikka Masala
+- [Bageeche Se] Paneer Amritsari
+- [Bageeche Se] Paneer Lahori
+- [Bageeche Se] Desi Paneer Bhurji
+- [Bageeche Se] Paneer Lababdar
+- [Bageeche Se] Paneer Butter Masala
+- [Bageeche Se] Paneer Mirch Masala
+- [Bageeche Se] Palak Paneer
+- [Bageeche Se] Kadai Paneer
+- [Bageeche Se] Paneer Angara
+- [Bageeche Se] Paneer Makhmali Kofta
+- [Bageeche Se] Banarasi Kofta Curry
+- [Bageeche Se] Malai Kofta
+- [Bageeche Se] Kaju Masala
+- [Bageeche Se] Methi Matar Malai
+- [Bageeche Se] Sarso Ka Saag
+- [Bageeche Se] Veg Khurchan
+- [Bageeche Se] Tawa Subzi
+- [Bageeche Se] Veg Patiala
+- [Bageeche Se] Bhindi Kurkuri
+- [Dal Wali Gali] Dal Tadka
+- [Dal Wali Gali] Dal Fry
+- [Dal Wali Gali] Dal Panchmel
+- [Dal Wali Gali] Dal Makhan Wali
+- [Dal Wali Gali] Dal Palak
+- [Dal Wali Gali] Dal Methi
+- [Chawal] Sada Basmati Chawal
+- [Chawal] Peas Pulao
+- [Chawal] Veg Pulao
+- [Chawal] Dal Khichdi
+- [Chawal] Palak Khichdi
+- [Chawal] Curd Rice
+- [Chawal] Paneer Pulao
+- [Chawal] Kashmiri Pulao
+- [Chawal] Subz Dum Biryani
+- [Chawal] Veg Hydrabadi Biryani
+- [Bao] Fire Cracker
+- [Bao] Paneer Tikka Masala Bao
+- [Roll] AWG Classic
+- [Roll] Cigar
+- [Deep Fried] Tempura
+- [Deep Fried] Cheesy Finger Chips
+- [Wok Tossed] Crispy Corn and Water Chestnut
+- [Wok Tossed] Five Spice
+- [Wok Tossed] Classic Manchurian Dry
+- [Wok Tossed] Chilli Classic Mushroom
+- [Wok Tossed] Hunan Style Tofu
+- [Wok Tossed] Hunan Sesame
+- [Wok Tossed] Chilli Classic
+- [Wok Tossed] AWG
+- [Main Course] Asian Vegetables Red Pepper Sauce
+- [Main Course] Shanghai Style
+- [Main Course] Classic Manchurian
+- [Main Course] Classic Chilli
+- [Main Course] Chilli Oyster
+- [Rice] Pot Rice
+- [Rice] AWG Classic
+- [Rice] Classic Fried Rice
+- [Noodle] Pan Fried
+- [Noodle] Hakka
+- [Noodle] Longevity
+- [Noodle] American Chop Suey
+- [Noodle] All Time Favourite Chow Mein
+- [Pasta] Penne With Tomato Basil Sauce
+- [Pasta] Mac N Cheese
+- [Pasta] Make your Own Pasta
+- [Dessert] Gulab Jamun With Ice Cream
+- [Dessert] Moongdal Halwa with ice cream
+- [Dessert] Dessert Of the Day
+
+===== CHEF SPECIAL =====
+- [Sandwich] Chicken Tikka (Grilled / Toasted)
+- [Sandwich] Chicken Club (Grilled / Toasted)
+- [Quick Bite] Bar Snacks Platter
+- [Salad & More] Chicken Tikka Salad
+- [Salad & More] Sauted Brocolli Chicken Salad
+- [Comfort Food] Paneer Ghee Roast
+- [Comfort Food] Chicken Ghee Roast
+- [Comfort Food] Patrani Pomfret
+- [Comfort Food] Hariyali Tawa Fry
+- [Soup & Shorba] Badam Aur Elaichi Ka Shorba
+- [Oriental Soup] AWG
+- [Koyle Ka Kamal] Paneer Dohora
+- [Koyle Ka Kamal] Paneer Hiltop
+- [Koyle Ka Kamal] Subz Shikampuri Kebab
+- [Koyle Ka Kamal] Mushroom Ki Nazakat
+- [Koyle Ka Kamal] Veg Cheese Crispy Roll
+- [Koyle Ka Kamal] Murgh Nazakat
+- [Koyle Ka Kamal] Sharabi Kebab
+- [Koyle Ka Kamal] Murgh Alishan Kebab
+- [Koyle Ka Kamal] Sholey Kebab
+- [Koyle Ka Kamal] Rolly Kebab
+- [Bageeche Se] Paneer Angara
+- [Murgh Curry Special] Butter Chicken
+- [Murgh Curry Special] Tandoori Chicken Masala
+- [Fish Curry Special] Kasundi Fish Tikka Masala
+- [Chawal] Kashmiri Pulao
+- [Chawal] Kachcha Ghost Biryani
+- [Dim Sum] AWG Veg (6 PCS)
+- [Roll] AWG Classic
+- [Wok Tossed] AWG
+- [Sizzler] AWG Classic
+- [Rice] AWG Classic
+- [Mini Bao Pizza] Kadai Paneer
+- [Mini Bao Pizza] Palak Paneer
+- [Mini Bao Pizza] Butter Chicken
+- [Mini Bao Pizza] Chicken Kebab
+- [Dessert] Blue Berry Cheese Cake
+- [Mocktail] AWG Virgin Sangria
+- [Mocktail] Brownie & Chocolate Shake
+- [Mocktail] AWG House Punch
+
+==================================================
+LIVE PARSED SPICE DETAILS (FROM GOOGLE SHEET)
+==================================================
+Source file: namaste-chef-menu-spice-level-parsed.txt
+NAMASTE CHEF MENU SPICE LEVEL PARSE
+Generated: 2026-04-07 16:55:37
+
+Total Unique Items Across Spice Buckets (non-exclusive):
+Spicy: 0
+Medium Spicy: 254
+Mild: 0
+Not Specified: 0
+Non Spicy: 131
+
+===== SPICY =====
+
+===== MEDIUM SPICY =====
+- [Sandwich] Cheese Chilli Toast
+- [Sandwich] Corn Chilli
+- [Sandwich] Paneer Tikka (Grilled / Toasted)
+- [Sandwich] Peri Peri Paneer (Grilled / Toasted)
+- [Sandwich] Boiled Egg (Grilled / Toasted)
+- [Sandwich] Chicken Delight (Grilled / Toasted)
+- [Sandwich] Chicken Tikka (Grilled / Toasted)
+- [Sandwich] Chicken Peri peri (Grilled / Toasted)
+- [Sandwich] BBQ Chicken (Grilled / Toasted)
+- [Quick Bite] Roomali Khakra Masala
+- [Quick Bite] Roomali Khakra Cheese Masala
+- [Quick Bite] Peanut Chaat
+- [Quick Bite] Masala Peanut
+- [Quick Bite] Peri Peri Boiled Egg
+- [Quick Bite] Bar Snacks Platter
+- [Salad & More] Sprout Salad
+- [Salad & More] Chicken Tikka Salad
+- [Salad & More] Sauted Brocolli Chicken Salad
+- [Salad & More] Crispy Salad
+- [Comfort Food] Onion Rings
+- [Comfort Food] Mix Veg Pakoda
+- [Comfort Food] Onion Pakoda
+- [Comfort Food] Paneer Pakoda
+- [Comfort Food] Hara Bhara Kebab
+- [Comfort Food] Crostini
+- [Comfort Food] Garlic Bread
+- [Comfort Food] Paneer Ghee Roast
+- [Comfort Food] Chicken Ghee Roast
+- [Comfort Food] Tawa Fry Masala Egg
+- [Comfort Food] Chicken Sukha
+- [Comfort Food] Koliwada
+- [Comfort Food] Chicken Nuggets
+- [Comfort Food] Fish & Chips
+- [Comfort Food] Patrani Pomfret
+- [Comfort Food] Tawa Fry
+- [Comfort Food] Hariyali Tawa Fry
+- [Comfort Food] Jhinga Sukha
+- [Comfort Food] Chettinad Prawns Pepper Fry
+- [Soup & Shorba] Murgh Shorba
+- [Oriental Soup] Lemon Coriander
+- [Oriental Soup] Sour and Pepper
+- [Oriental Soup] AWG
+- [Oriental Soup] Hakka
+- [Oriental Soup] Hai Kim
+- [Oriental Soup] Crispy Wonton Soup
+- [Oriental Soup] Bakso Ayam
+- [Oriental Soup] Tom Yum
+- [Oriental Soup] Tom Kha
+- [Koyle Ka Kamal] Methi Mirchi Ka Paneer Tikka
+- [Koyle Ka Kamal] Paneer Dohora
+- [Koyle Ka Kamal] Chettinad Paneer Tikka
+- [Koyle Ka Kamal] Paneer Hiltop
+- [Koyle Ka Kamal] Methi Aur Paneer Ka Naram Dill Kebab
+- [Koyle Ka Kamal] Classic Tikka
+- [Koyle Ka Kamal] Ajwani Tikka
+- [Koyle Ka Kamal] Achari Tikka
+- [Koyle Ka Kamal] Lasooni Tikka
+- [Koyle Ka Kamal] Paneer Malai Kali Miri
+- [Koyle Ka Kamal] Seekh Kebab
+- [Koyle Ka Kamal] Chilli Milli Seekh Kebab
+- [Koyle Ka Kamal] Soya Chaap Tikka
+- [Koyle Ka Kamal] Ajwani Soya Chaap
+- [Koyle Ka Kamal] Pahadi Soya Chaap
+- [Koyle Ka Kamal] Badami Aloo
+- [Koyle Ka Kamal] Subz Shikampuri Kebab
+- [Koyle Ka Kamal] Mushroom Ki Nazakat
+- [Koyle Ka Kamal] Mushroom & Babycorn Tikka
+- [Koyle Ka Kamal] Veg Cheese Crispy Roll
+- [Koyle Ka Kamal] Tandoori Platter
+- [Koyle Ka Kamal] Murgh Nazakat
+- [Koyle Ka Kamal] Murgh Ke Sholey
+- [Koyle Ka Kamal] Sharabi Kebab
+- [Koyle Ka Kamal] Murgh Alishan Kebab
+- [Koyle Ka Kamal] Tandoori Murgh
+- [Koyle Ka Kamal] Chicken Tangdi Kebab
+- [Koyle Ka Kamal] Banjara Tikka
+- [Koyle Ka Kamal] Pahadi Tikka
+- [Koyle Ka Kamal] Ajwain Tikka
+- [Koyle Ka Kamal] Chicken Amritsary
+- [Koyle Ka Kamal] Sholey Kebab
+- [Koyle Ka Kamal] Tandoori Lollypop
+- [Koyle Ka Kamal] Peri Peri Tikka
+- [Koyle Ka Kamal] Pesto Chicken Tikka
+- [Koyle Ka Kamal] Mutton Shami Kebab
+- [Koyle Ka Kamal] Mutton Boti Kebab
+- [Koyle Ka Kamal] Smoked Shore Pomfret
+- [Koyle Ka Kamal] Hariyali Pomfret
+- [Koyle Ka Kamal] Samundar Ki Shaan
+- [Koyle Ka Kamal] Jhinga Dum Ajwain
+- [Koyle Ka Kamal] Smoky Coastal Jhinga
+- [Koyle Ka Kamal] Classic Fish tikka
+- [Koyle Ka Kamal] Ajwain Fish Tikka
+- [Koyle Ka Kamal] Peri Peri Fish Tikka
+- [Koyle Ka Kamal] Lemon Butter Tandoori Fish
+- [Koyle Ka Kamal] Tandoori Non Veg Platter
+- [Bageeche Se] Punjabi Style Paneer Tikka Masala
+- [Bageeche Se] Paneer Amritsari
+- [Bageeche Se] Paneer Lahori
+- [Bageeche Se] Desi Paneer Bhurji
+- [Bageeche Se] Paneer Lababdar
+- [Bageeche Se] Paneer Butter Masala
+- [Bageeche Se] Paneer Mirch Masala
+- [Bageeche Se] Palak Paneer
+- [Bageeche Se] Paneer Do Pyaza
+- [Bageeche Se] Kadai Paneer
+- [Bageeche Se] Paneer Angara
+- [Bageeche Se] Paneer Makhmali Kofta
+- [Bageeche Se] Paneer Pasanda
+- [Bageeche Se] Banarasi Kofta Curry
+- [Bageeche Se] Kaju Masala
+- [Bageeche Se] Methi Matar Malai
+- [Bageeche Se] Maratha Vegetable Kofta Curry
+- [Bageeche Se] Sarso Ka Saag
+- [Bageeche Se] Veg Khurchan
+- [Bageeche Se] Tawa Subzi
+- [Bageeche Se] Veg Patiala
+- [Bageeche Se] Bhindi Kurkuri
+- [Dal Wali Gali] Dal Tadka
+- [Dal Wali Gali] Dal Fry
+- [Dal Wali Gali] Dal Panchmel
+- [Dal Wali Gali] Dal Methi
+- [Murgh Curry Special] Kukul Mass
+- [Murgh Curry Special] Chicken Malvani
+- [Murgh Curry Special] Kadai Mirch Wala
+- [Murgh Curry Special] Do Pyaza
+- [Murgh Curry Special] Tikka Masala
+- [Murgh Curry Special] Khurchan
+- [Murgh Curry Special] Kala Masala
+- [Murgh Curry Special] Murgh Patiala
+- [Murgh Curry Special] Kali Miri Adraki
+- [Murgh Curry Special] Kebab Masala
+- [Murgh Curry Special] Khada Masala
+- [Murgh Curry Special] Tandoori Chicken Masala
+- [Murgh Curry Special] Handi
+- [Murgh Curry Special] Egg Masala
+- [Murgh Curry Special] Maratha Style
+- [Ghost Curry Special] Rajasthani Laal Maas
+- [Ghost Curry Special] Gosht Do Pyaza
+- [Ghost Curry Special] Bhuna Mutton Pepper Fry
+- [Ghost Curry Special] Bhuna Mutton Chaap
+- [Ghost Curry Special] Khada Masala
+- [Fish Curry Special] Machi Masala
+- [Fish Curry Special] Tikka Masala
+- [Fish Curry Special] Kasundi Fish Tikka Masala
+- [Fish Curry Special] Amritsari Fish Curry
+- [Fish Curry Special] Prawns Hara Dhaniya
+- [Fish Curry Special] Masaledar
+- [Fish Curry Special] Chettinad
+- [Chawal] Dal Khichdi
+- [Chawal] Palak Khichdi
+- [Chawal] Subz Dum Biryani
+- [Chawal] Veg Hydrabadi Biryani
+- [Chawal] Avadhi Murgh Biryani
+- [Chawal] Egg Biryani
+- [Chawal] Kachcha Ghost Biryani
+- [Chawal] Hydrabadi Mutton Biryani
+- [Chawal] Prawns Dum Biryani
+- [Dim Sum] AWG Veg (6 PCS)
+- [Dim Sum] Cream Cheese Broccoli (6 PCS)
+- [Dim Sum] Assorted Mushroom & Water Chestnut (6 PCS)
+- [Dim Sum] Hot Basil (6 PCS)
+- [Dim Sum] Poached Beijing (6 PCS)
+- [Dim Sum] Sui Mai (6 PCS)
+- [Dim Sum] Assorted Platter (12 PCS)
+- [Dumpling] Mixed Veg Cheese Dumpling Fried
+- [Dumpling] Mixed Veg Cheese Dumpling Tossed
+- [Dumpling] Chicken Cheese Dumpling Fried
+- [Dumpling] Chicken Cheese Dumpling Tossed
+- [Bao] Fire Cracker
+- [Bao] Paneer Tikka Masala Bao
+- [Bao] Chilli Bao
+- [Bao] Char Siu
+- [Wings] Drums Of Heaven Toasted
+- [Wings] Korean
+- [Wings] Barbeque
+- [Wings] Hong Kong Style
+- [Roll] AWG Classic
+- [Roll] Cigar
+- [Roll] Popia Tod
+- [Deep Fried] Corn Cheese Ball
+- [Deep Fried] Chow's Finger Chips
+- [Deep Fried] Peri Peri Chips
+- [Deep Fried] Deep Fried Wonton
+- [Grill] Assorted Mushroom
+- [Grill] Asian Grilled Vegetables
+- [Grill] Lemongrass
+- [Grill] Sriracha
+- [Grill] Chilli Basil
+- [Sizzling Plate] Five Treasure
+- [Sizzling Plate] Cheese Paneer Sizzling
+- [Sizzling Plate] Barbeque Onions
+- [Sizzling Plate] Taipei
+- [Sizzling Plate] Smoked Prawn
+- [Wok Tossed] Crispy Corn and Water Chestnut
+- [Wok Tossed] Five Spice
+- [Wok Tossed] Classic Manchurian Dry
+- [Wok Tossed] Chilli Classic Mushroom
+- [Wok Tossed] Hunan Style Tofu
+- [Wok Tossed] Hunan Sesame
+- [Wok Tossed] Fresh Red Pepper
+- [Wok Tossed] Chilli Classic
+- [Wok Tossed] Hot Basil
+- [Wok Tossed] Sichuan
+- [Wok Tossed] Crackling Spinach
+- [Wok Tossed] AWG
+- [Wok Tossed] Asian Crispy Sesame
+- [Wok Tossed] Thai Spice
+- [Sizzler] AWG Classic
+- [Sizzler] Fusion Mexican
+- [Sizzler] Classic Manchurian
+- [Sizzler] Makhmali Kofta Sizzler
+- [Sizzler] Tandoori Sahi Sizzler
+- [Main Course] Asian Vegetables Red Pepper Sauce
+- [Main Course] Stir Fried Asian Green With Chilli Basil
+- [Main Course] Shanghai Style
+- [Main Course] Classic Manchurian
+- [Main Course] Sichuan
+- [Main Course] Classic Chilli
+- [Main Course] Shredded Pepper & Garlic
+- [Main Course] Chilli Oyster
+- [Main Course] Dak Galbi
+- [Main Course] Ca Uop Xa
+- [Bowl] Thukpa
+- [Bowl] Ramin Noodles Bowl
+- [Bowl] Asian Noodles
+- [Rice] Burnt Garlic
+- [Rice] Pot Rice
+- [Rice] Korean
+- [Rice] Chilli Garlic
+- [Rice] Sichuan
+- [Rice] Khao Pad Prik
+- [Noodle] Pan Fried
+- [Noodle] Hot Pepper Garlic
+- [Noodle] Sichuan
+- [Noodle] Longevity
+- [Noodle] Korean
+- [Noodle] All Time Favourite Chow Mein
+- [Pizza] Tomato Basil
+- [Pizza] Margarita
+- [Pizza] Corn Cheese
+- [Pizza] Veg Delight
+- [Pizza] Mushroom Veg
+- [Pizza] Tandoori Paneer
+- [Pizza] Peri Peri Paneer
+- [Pizza] Chicken Peri Peri
+- [Pizza] Tandoori Chicken
+- [Pizza] BBQ Chicken
+- [Mini Bao Pizza] Kadai Paneer
+- [Mini Bao Pizza] Palak Paneer
+- [Mini Bao Pizza] Chicken Kebab
+- [Pasta] Penne With Tomato Basil Sauce
+- [Pasta] Make your Own Pasta
+- [Mocktail] Guava Mary
+- [Mocktail] Pineapple Yuzu Jalapeno Sour On The Rock
+
+===== MILD =====
+
+===== NOT SPECIFIED =====
+
+===== OTHER SPICE LEVEL TAGS =====
+- [Sandwich] Veg Delight (Grilled / Toasted) [Non Spicy]
+- [Sandwich] Corn Spinach [Non Spicy]
+- [Sandwich] Classic Veg (Grilled / Toasted) [Non Spicy]
+- [Sandwich] Cheese Brust (Grilled / Toasted) [Non Spicy]
+- [Sandwich] Veg Club [Non Spicy]
+- [Sandwich] Chicken Club (Grilled / Toasted) [Non Spicy]
+- [Quick Bite] Udad Papad (Fried / Roasted) [Non Spicy]
+- [Quick Bite] Nagli Papad (Fried / Roasted) [Non Spicy]
+- [Quick Bite] Masala Papad (Fried / Roasted) [Non Spicy]
+- [Quick Bite] Boiled Chana Salad [Non Spicy]
+- [Salad & More] Ceaser Salad [Non Spicy]
+- [Salad & More] Greek Salad [Non Spicy]
+- [Salad & More] Garden Fresh Salad [Non Spicy]
+- [Salad & More] Chicken Hawaiian Salad [Non Spicy]
+- [Salad & More] Waldrof Salad [Non Spicy]
+- [Salad & More] Pasta Salad [Non Spicy]
+- [Salad & More] Russian Salad [Non Spicy]
+- [Salad & More] Watermelon & Feta Cheese Slad [Non Spicy]
+- [Salad & More] Gado Gado Salad [Non Spicy]
+- [Salad & More] Pineapple Raita [Non Spicy]
+- [Salad & More] Boondi Raita [Non Spicy]
+- [Salad & More] Mix Fruit Raita [Non Spicy]
+- [Salad & More] Plain Dahi [Non Spicy]
+- [Comfort Food] Fish Fingers [Non Spicy]
+- [Soup & Shorba] Badam Aur Elaichi Ka Shorba [Non Spicy]
+- [Soup & Shorba] Tomato Dhaniya Shorba [Non Spicy]
+- [Soup & Shorba] Palak Shorba [Non Spicy]
+- [Soup & Shorba] Choice of Cream Soup [Non Spicy]
+- [Soup & Shorba] Cream of Chicken Soup [Non Spicy]
+- [Oriental Soup] Clear Broth [Non Spicy]
+- [Oriental Soup] Sweet Corn [Non Spicy]
+- [Oriental Soup] Burmese Traditional Soup [Non Spicy]
+- [Oriental Soup] Thai Coconut Soup [Non Spicy]
+- [Koyle Ka Kamal] Cheese Makai Seekh Kebab [Non Spicy]
+- [Koyle Ka Kamal] Cheese Palak Seekh [Non Spicy]
+- [Koyle Ka Kamal] Malai Soya Chaap [Non Spicy]
+- [Koyle Ka Kamal] Murgh Malai Kebab [Non Spicy]
+- [Koyle Ka Kamal] Rolly Kebab [Non Spicy]
+- [Bageeche Se] Malai Kofta [Non Spicy]
+- [Dal Wali Gali] Dal Makhan Wali [Non Spicy]
+- [Dal Wali Gali] Dal Palak [Non Spicy]
+- [Murgh Curry Special] Butter Chicken [Non Spicy]
+- [Bread] Tandoori Roti [Non Spicy]
+- [Bread] Naan [Non Spicy]
+- [Bread] Roomali Roti [Non Spicy]
+- [Bread] Laccha Paratha [Non Spicy]
+- [Bread] Cheese Naan [Non Spicy]
+- [Bread] Garlic Naan [Non Spicy]
+- [Bread] Missi Roti [Non Spicy]
+- [Bread] Kulcha [Non Spicy]
+- [Bread] Stuffed Paratha [Non Spicy]
+- [Bread] Onion Garlic Kulcha [Non Spicy]
+- [Bread] Malabar Paratha [Non Spicy]
+- [Bread] Cheese Garlic Naan [Non Spicy]
+- [Bread] Makkai Ki Roti [Non Spicy]
+- [Bread] Assorted Bread Basket [Non Spicy]
+- [Chawal] Sada Basmati Chawal [Non Spicy]
+- [Chawal] Jeera Rice [Non Spicy]
+- [Chawal] Peas Pulao [Non Spicy]
+- [Chawal] Veg Pulao [Non Spicy]
+- [Chawal] Curd Rice [Non Spicy]
+- [Chawal] Paneer Pulao [Non Spicy]
+- [Chawal] Kashmiri Pulao [Non Spicy]
+- [Bao] Curried Chicken [Non Spicy]
+- [Bao] Butter Chicken Bao [Non Spicy]
+- [Wings] Drums Of Heaven Fried [Non Spicy]
+- [Deep Fried] Japanese Korokke [Non Spicy]
+- [Deep Fried] Tempura [Non Spicy]
+- [Deep Fried] Cheesy Finger Chips [Non Spicy]
+- [Deep Fried] Chinese Fried [Non Spicy]
+- [Grill] Corn Cheese & Water Chestnut [Non Spicy]
+- [Sizzling Plate] Butter Garlic Prawn [Non Spicy]
+- [Wok Tossed] Butter Garlic [Non Spicy]
+- [Sizzler] Butter Chicken Sizzler [Non Spicy]
+- [Main Course] Butter Garlic [Non Spicy]
+- [Curry] Kari Kapitan [Non Spicy]
+- [Curry] Kaeng Phet [Non Spicy]
+- [Curry] Gaeng Kiew Wan [Non Spicy]
+- [Bowl] Khow suey [Non Spicy]
+- [Rice] AWG Classic [Non Spicy]
+- [Rice] Classic Fried Rice [Non Spicy]
+- [Rice] Egg Fried Rice [Non Spicy]
+- [Noodle] Hakka [Non Spicy]
+- [Noodle] American Chop Suey [Non Spicy]
+- [Mini Bao Pizza] Butter Chicken [Non Spicy]
+- [Pasta] Mac N Cheese [Non Spicy]
+- [Pasta] Fussili Butter Chichen With Mini Naan [Non Spicy]
+- [Dessert] Fried Ice Cream [Non Spicy]
+- [Dessert] Gulab Jamun With Ice Cream [Non Spicy]
+- [Dessert] Crispy Honey Noodles with Ice Cream [Non Spicy]
+- [Dessert] Moongdal Halwa with ice cream [Non Spicy]
+- [Dessert] Chocolate Nutty Brownie [Non Spicy]
+- [Dessert] Blue Berry Cheese Cake [Non Spicy]
+- [Dessert] Fruit Plater [Non Spicy]
+- [Dessert] Choice of Ice Cream [Non Spicy]
+- [Dessert] Dessert Of the Day [Non Spicy]
+- [Mocktail] Lost Island [Non Spicy]
+- [Mocktail] Watermelon & Kafirlime Lemonade [Non Spicy]
+- [Mocktail] Asian Itch [Non Spicy]
+- [Mocktail] Red Ginger Fizz [Non Spicy]
+- [Mocktail] AWG Virgin Sangria [Non Spicy]
+- [Mocktail] Masala Virgin Mojito [Non Spicy]
+- [Mocktail] Strawberry & Mango Slushie [Non Spicy]
+- [Mocktail] Peach & Mint Slushie [Non Spicy]
+- [Mocktail] Spicy Blackcurrant Slushie [Non Spicy]
+- [Mocktail] Litchi & Dragon Fruit Slushie [Non Spicy]
+- [Mocktail] Brownie & Chocolate Shake [Non Spicy]
+- [Mocktail] Strawberry & Bourbon Shake [Non Spicy]
+- [Mocktail] Chocolate & Coconut Shake [Non Spicy]
+- [Mocktail] Coffee, Cookie & Toffee Shake [Non Spicy]
+- [Mocktail] Salted Caramel, Alpenliebe & Popcorn Shake [Non Spicy]
+- [Mocktail] Blueberry Cheese cake Smoothie [Non Spicy]
+- [Mocktail] Mango Mint Smoothie [Non Spicy]
+- [Mocktail] Lotus Biscoff Shake [Non Spicy]
+- [Mocktail] AWG House Punch [Non Spicy]
+- [Mocktail] Bull Basil Mojito [Non Spicy]
+- [Mocktail] Fruit Punch [Non Spicy]
+- [Mocktail] Virgin Pinacolada [Non Spicy]
+- [Mocktail] Virgin Mojito [Non Spicy]
+- [Mocktail] Blue Lagoon [Non Spicy]
+- [Mocktail] Cold Coffee [Non Spicy]
+- [Mocktail] Classic Ice Tea [Non Spicy]
+- [Mocktail] Black Current Ice Tea [Non Spicy]
+- [Mocktail] Strawberry & Peach Ice Tea [Non Spicy]
+- [Mocktail] Yuzu & Mint Ice Tea [Non Spicy]
+- [Mocktail] Blue Litchi & Coconut Lemonade [Non Spicy]
+- [Mocktail] Blueberry & Basil Lemonade [Non Spicy]
+- [Mocktail] Passion Rosemary & Chilli Lemonade [Non Spicy]
+- [Mocktail] Cucumber & Curry Leaves Lemonade [Non Spicy]
+- [Mocktail] Cucumber Lime Refresher [Non Spicy]
+- [Mocktail] Green Forest [Non Spicy]

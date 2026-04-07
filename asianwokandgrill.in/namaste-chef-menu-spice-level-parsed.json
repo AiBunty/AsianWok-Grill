@@ -1,0 +1,2084 @@
+{
+  "generated_at": "2026-04-07 16:53:16",
+  "total_items": 387,
+  "spice_summary": {
+    "Spicy": 0,
+    "Medium Spicy": 256,
+    "Mild": 0,
+    "Not Specified": 0,
+    "Non Spicy": 131
+  },
+  "spicy": null,
+  "medium_spicy": [
+    {
+      "Category": "Sandwich",
+      "Item": "Cheese Chilli Toast",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Corn Chilli",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Paneer Tikka (Grilled / Toasted)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Peri Peri Paneer (Grilled / Toasted)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Boiled Egg (Grilled / Toasted)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Chicken Delight (Grilled / Toasted)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Chicken Tikka (Grilled / Toasted)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Chicken Peri peri (Grilled / Toasted)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "BBQ Chicken (Grilled / Toasted)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Roomali Khakra Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Roomali Khakra Cheese Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Peanut Chaat",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Masala Peanut",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Peri Peri Boiled Egg",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Bar Snacks Platter",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Sprout Salad",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Chicken Tikka Salad",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Sauted Brocolli Chicken Salad",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Crispy Salad",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Onion Rings",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Mix Veg Pakoda",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Onion Pakoda",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Paneer Pakoda",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Hara Bhara Kebab",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Crostini",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Garlic Bread",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Paneer Ghee Roast",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Chicken Ghee Roast",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Tawa Fry Masala Egg",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Chicken Sukha",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Koliwada",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Chicken Nuggets",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Fish & Chips",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Patrani Pomfret",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Tawa Fry",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Hariyali Tawa Fry",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Jhinga Sukha",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Chettinad Prawns Pepper Fry",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Murgh Shorba",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Lemon Coriander",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Sour and Pepper",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "AWG",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Hakka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Hai Kim",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Crispy Wonton Soup",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Bakso Ayam",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Tom Yum",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Tom Kha",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Methi Mirchi Ka Paneer Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Paneer Dohora",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Chettinad Paneer Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Paneer Hiltop",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Methi Aur Paneer Ka Naram Dill Kebab",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Classic Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Ajwani Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Achari Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Lasooni Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Paneer Malai Kali Miri",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Seekh Kebab",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Chilli Milli Seekh Kebab",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Soya Chaap Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Ajwani Soya Chaap",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Pahadi Soya Chaap",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Badami Aloo",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Subz Shikampuri Kebab",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Mushroom Ki Nazakat",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Mushroom & Babycorn Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Veg Cheese Crispy Roll",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Tandoori Platter",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Murgh Nazakat",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Murgh Ke Sholey",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Sharabi Kebab",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Murgh Alishan Kebab",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Tandoori Murgh",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Chicken Tangdi Kebab",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Banjara Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Pahadi Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Achari Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Ajwain Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Chicken Amritsary",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Sholey Kebab",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Tandoori Lollypop",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Peri Peri Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Pesto Chicken Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Mutton Shami Kebab",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Mutton Boti Kebab",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Smoked Shore Pomfret",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Hariyali Pomfret",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Samundar Ki Shaan",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Jhinga Dum Ajwain",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Smoky Coastal Jhinga",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Classic Fish tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Ajwain Fish Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Peri Peri Fish Tikka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Lemon Butter Tandoori Fish",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Tandoori Non Veg Platter",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Punjabi Style Paneer Tikka Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Amritsari",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Lahori",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Desi Paneer Bhurji",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Lababdar",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Butter Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Mirch Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Palak Paneer",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Do Pyaza",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Kadai Paneer",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Angara",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Makhmali Kofta",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Pasanda",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Paneer Makhmali Kofta",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Banarasi Kofta Curry",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Kaju Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Methi Matar Malai",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Maratha Vegetable Kofta Curry",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Sarso Ka Saag",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Veg Khurchan",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Tawa Subzi",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Veg Patiala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Bhindi Kurkuri",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Tadka",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Fry",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Panchmel",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Methi",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Kukul Mass",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Chicken Malvani",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Kadai Mirch Wala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Do Pyaza",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Tikka Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Khurchan",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Kala Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Murgh Patiala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Kali Miri Adraki",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Kebab Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Khada Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Tandoori Chicken Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Handi",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Egg Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Maratha Style",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Ghost Curry Special",
+      "Item": "Rajasthani Laal Maas",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Ghost Curry Special",
+      "Item": "Gosht Do Pyaza",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Ghost Curry Special",
+      "Item": "Bhuna Mutton Pepper Fry",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Ghost Curry Special",
+      "Item": "Bhuna Mutton Chaap",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Ghost Curry Special",
+      "Item": "Khada Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Machi Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Tikka Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Kasundi Fish Tikka Masala",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Amritsari Fish Curry",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Prawns Hara Dhaniya",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Masaledar",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Fish Curry Special",
+      "Item": "Chettinad",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Dal Khichdi",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Palak Khichdi",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Subz Dum Biryani",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Veg Hydrabadi Biryani",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Avadhi Murgh Biryani",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Egg Biryani",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Kachcha Ghost Biryani",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Hydrabadi Mutton Biryani",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Prawns Dum Biryani",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "AWG Veg (6 PCS)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "Cream Cheese Broccoli (6 PCS)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "Assorted Mushroom & Water Chestnut (6 PCS)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "Hot Basil (6 PCS)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "Poached Beijing (6 PCS)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "Sui Mai (6 PCS)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dim Sum",
+      "Item": "Assorted Platter (12 PCS)",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dumpling",
+      "Item": "Mixed Veg Cheese Dumpling Fried",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dumpling",
+      "Item": "Mixed Veg Cheese Dumpling Tossed",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dumpling",
+      "Item": "Chicken Cheese Dumpling Fried",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Dumpling",
+      "Item": "Chicken Cheese Dumpling Tossed",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bao",
+      "Item": "Fire Cracker",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bao",
+      "Item": "Paneer Tikka Masala Bao",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bao",
+      "Item": "Chilli Bao",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bao",
+      "Item": "Char Siu",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wings",
+      "Item": "Drums Of Heaven Toasted",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wings",
+      "Item": "Korean",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wings",
+      "Item": "Barbeque",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wings",
+      "Item": "Hong Kong Style",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Roll",
+      "Item": "AWG Classic",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Roll",
+      "Item": "Cigar",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Roll",
+      "Item": "Popia Tod",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Corn Cheese Ball",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Chow's Finger Chips",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Peri Peri Chips",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Deep Fried Wonton",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Grill",
+      "Item": "Assorted Mushroom",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Grill",
+      "Item": "Asian Grilled Vegetables",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Grill",
+      "Item": "Lemongrass",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Grill",
+      "Item": "Sriracha",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Grill",
+      "Item": "Chilli Basil",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sizzling Plate",
+      "Item": "Five Treasure",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sizzling Plate",
+      "Item": "Cheese Paneer Sizzling",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sizzling Plate",
+      "Item": "Barbeque Onions",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sizzling Plate",
+      "Item": "Taipei",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sizzling Plate",
+      "Item": "Smoked Prawn",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Crispy Corn and Water Chestnut",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Five Spice",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Classic Manchurian Dry",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Chilli Classic Mushroom",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Hunan Style Tofu",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Hunan Sesame",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Fresh Red Pepper",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Chilli Classic",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Hot Basil",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Sichuan",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Crackling Spinach",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "AWG",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Asian Crispy Sesame",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Thai Spice",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "AWG Classic",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "Fusion Mexican",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "Classic Manchurian",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "Makhmali Kofta Sizzler",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "Tandoori Sahi Sizzler",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Asian Vegetables Red Pepper Sauce",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Stir Fried Asian Green With Chilli Basil",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Shanghai Style",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Classic Manchurian",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Sichuan",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Classic Chilli",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Shredded Pepper & Garlic",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Chilli Oyster",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Dak Galbi",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Ca Uop Xa",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bowl",
+      "Item": "Thukpa",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bowl",
+      "Item": "Ramin Noodles Bowl",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Bowl",
+      "Item": "Asian Noodles",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Rice",
+      "Item": "Burnt Garlic",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Rice",
+      "Item": "Pot Rice",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Rice",
+      "Item": "Korean",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Rice",
+      "Item": "Chilli Garlic",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Rice",
+      "Item": "Sichuan",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Rice",
+      "Item": "Khao Pad Prik",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Pan Fried",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Hot Pepper Garlic",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Sichuan",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Longevity",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Korean",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Noodle",
+      "Item": "All Time Favourite Chow Mein",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Tomato Basil",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Margarita",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Corn Cheese",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Veg Delight",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Mushroom Veg",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Tandoori Paneer",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Peri Peri Paneer",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Chicken Peri Peri",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "Tandoori Chicken",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Pizza",
+      "Item": "BBQ Chicken",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Mini Bao Pizza",
+      "Item": "Kadai Paneer",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Mini Bao Pizza",
+      "Item": "Palak Paneer",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Mini Bao Pizza",
+      "Item": "Chicken Kebab",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Pasta",
+      "Item": "Penne With Tomato Basil Sauce",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Pasta",
+      "Item": "Make your Own Pasta",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Guava Mary",
+      "SpiceLevelRaw": "Medium Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Pineapple Yuzu Jalapeno Sour On The Rock",
+      "SpiceLevelRaw": "Medium Spicy"
+    }
+  ],
+  "mild": null,
+  "not_specified": null,
+  "other_levels": [
+    {
+      "Category": "Sandwich",
+      "Item": "Veg Delight (Grilled / Toasted)",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Corn Spinach",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Classic Veg (Grilled / Toasted)",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Cheese Brust (Grilled / Toasted)",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Veg Club",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Sandwich",
+      "Item": "Chicken Club (Grilled / Toasted)",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Udad Papad (Fried / Roasted)",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Nagli Papad (Fried / Roasted)",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Masala Papad (Fried / Roasted)",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Quick Bite",
+      "Item": "Boiled Chana Salad",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Ceaser Salad",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Greek Salad",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Garden Fresh Salad",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Chicken Hawaiian Salad",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Waldrof Salad",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Pasta Salad",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Russian Salad",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Watermelon & Feta Cheese Slad",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Gado Gado Salad",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Pineapple Raita",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Boondi Raita",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Mix Fruit Raita",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Salad & More",
+      "Item": "Plain Dahi",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Comfort Food",
+      "Item": "Fish Fingers",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Badam Aur Elaichi Ka Shorba",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Tomato Dhaniya Shorba",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Palak Shorba",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Choice of Cream Soup",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Soup & Shorba",
+      "Item": "Cream of Chicken Soup",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Clear Broth",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Sweet Corn",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Burmese Traditional Soup",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Oriental Soup",
+      "Item": "Thai Coconut Soup",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Cheese Makai Seekh Kebab",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Cheese Palak Seekh",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Malai Soya Chaap",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Murgh Malai Kebab",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Koyle Ka Kamal",
+      "Item": "Rolly Kebab",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bageeche Se",
+      "Item": "Malai Kofta",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Makhan Wali",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Dal Wali Gali",
+      "Item": "Dal Palak",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Murgh Curry Special",
+      "Item": "Butter Chicken",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Tandoori Roti",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Naan",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Roomali Roti",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Laccha Paratha",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Cheese Naan",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Garlic Naan",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Missi Roti",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Kulcha",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Stuffed Paratha",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Onion Garlic Kulcha",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Malabar Paratha",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Cheese Garlic Naan",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Makkai Ki Roti",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bread",
+      "Item": "Assorted Bread Basket",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Sada Basmati Chawal",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Jeera Rice",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Peas Pulao",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Veg Pulao",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Curd Rice",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Paneer Pulao",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Chawal",
+      "Item": "Kashmiri Pulao",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bao",
+      "Item": "Curried Chicken",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bao",
+      "Item": "Butter Chicken Bao",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Wings",
+      "Item": "Drums Of Heaven Fried",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Japanese Korokke",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Tempura",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Cheesy Finger Chips",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Deep Fried",
+      "Item": "Chinese Fried",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Grill",
+      "Item": "Corn Cheese & Water Chestnut",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Sizzling Plate",
+      "Item": "Butter Garlic Prawn",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Wok Tossed",
+      "Item": "Butter Garlic",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Sizzler",
+      "Item": "Butter Chicken Sizzler",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Main Course",
+      "Item": "Butter Garlic",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Curry",
+      "Item": "Kari Kapitan",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Curry",
+      "Item": "Kaeng Phet",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Curry",
+      "Item": "Gaeng Kiew Wan",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Bowl",
+      "Item": "Khow suey",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Rice",
+      "Item": "AWG Classic",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Rice",
+      "Item": "Classic Fried Rice",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Rice",
+      "Item": "Egg Fried Rice",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Noodle",
+      "Item": "Hakka",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Noodle",
+      "Item": "American Chop Suey",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mini Bao Pizza",
+      "Item": "Butter Chicken",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Pasta",
+      "Item": "Mac N Cheese",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Pasta",
+      "Item": "Fussili Butter Chichen With Mini Naan",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Fried Ice Cream",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Gulab Jamun With Ice Cream",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Crispy Honey Noodles with Ice Cream",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Moongdal Halwa with ice cream",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Chocolate Nutty Brownie",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Blue Berry Cheese Cake",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Fruit Plater",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Choice of Ice Cream",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Dessert",
+      "Item": "Dessert Of the Day",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Lost Island",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Watermelon & Kafirlime Lemonade",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Asian Itch",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Red Ginger Fizz",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "AWG Virgin Sangria",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Masala Virgin Mojito",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Strawberry & Mango Slushie",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Peach & Mint Slushie",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Spicy Blackcurrant Slushie",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Litchi & Dragon Fruit Slushie",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Brownie & Chocolate Shake",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Strawberry & Bourbon Shake",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Chocolate & Coconut Shake",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Coffee, Cookie & Toffee Shake",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Salted Caramel, Alpenliebe & Popcorn Shake",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Blueberry Cheese cake Smoothie",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Mango Mint Smoothie",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Lotus Biscoff Shake",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "AWG House Punch",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Bull Basil Mojito",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Fruit Punch",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Virgin Pinacolada",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Virgin Mojito",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Blue Lagoon",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Cold Coffee",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Classic Ice Tea",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Black Current Ice Tea",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Strawberry & Peach Ice Tea",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Yuzu & Mint Ice Tea",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Blue Litchi & Coconut Lemonade",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Blueberry & Basil Lemonade",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Passion Rosemary & Chilli Lemonade",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Cucumber & Curry Leaves Lemonade",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Cucumber Lime Refresher",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    },
+    {
+      "Category": "Mocktail",
+      "Item": "Green Forest",
+      "SpiceLevelRaw": "Non Spicy",
+      "SpiceBucket": "Non Spicy"
+    }
+  ]
+}
