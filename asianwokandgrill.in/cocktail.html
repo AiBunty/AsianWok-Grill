@@ -302,6 +302,13 @@
       z-index: 1200;
     }
   }
+
+  /* === SEARCH BAR — COCKTAIL DARK LUXURY === */
+  .cocktail-search-wrap { text-align: center; margin: 0 0 36px; position: relative; z-index: 5; }
+  .cocktail-search { display: block; width: min(680px, calc(100% - 30px)); margin: 0 auto; padding: 13px 24px; border-radius: 999px; border: 1px solid rgba(240,196,143,0.35); background: linear-gradient(135deg, rgba(0,0,0,0.36), rgba(20,5,5,0.7)); color: #f4e5c2; caret-color: #f4e5c2; font-size: 0.93rem; font-family: 'Montserrat', sans-serif; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+  .cocktail-search::placeholder { color: rgba(244,229,194,0.42); }
+  .cocktail-search:focus { border-color: var(--gold-bright); box-shadow: 0 0 0 2px rgba(240,196,143,0.2); }
+  .empty-state { text-align: center; padding: 60px 20px; color: var(--gold-cream); font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 1px; opacity: 0.75; }
   </style>
  </head>
  <body id="menuBody">
@@ -368,6 +375,9 @@
     </span>
    </h1>
   </div>
+  <div class="cocktail-search-wrap">
+    <input class="cocktail-search" id="cocktailSearchInput" type="search" placeholder="Search cocktails, spirits, wines…" autocomplete="off" oninput="setCocktailSearch(this.value)" aria-label="Search cocktail menu">
+  </div>
   <div class="menu-frame">
    <main id="menuMain">
    </main>
@@ -429,6 +439,14 @@
    ▲
   </button>
   <script>
+    let cocktailSearchQuery = '';
+    let _lastMenuData = null;
+
+    function setCocktailSearch(value) {
+      cocktailSearchQuery = String(value || '').trim();
+      if (_lastMenuData) UIEngine.render(_lastMenuData.data, _lastMenuData.source);
+    }
+
    /* ============================================================
         ⚠️ GLOBAL DATA RULE — HARDENED PROXY PIPELINE (LOCKED)
        ============================================================ */
@@ -545,9 +563,24 @@
         },
         
         render(items, source) {
+            const query = cocktailSearchQuery.toLowerCase();
+            const filtered = query
+                ? items.filter(i => {
+                    const variantKeys = Object.keys(i.prices || {});
+                    const searchable = [i.name, i.desc || '', i.cat, ...variantKeys].join(' ').toLowerCase();
+                    return searchable.includes(query);
+                  })
+                : items;
             const main = document.getElementById('menuMain');
             const navList = document.getElementById('sideNavList');
-            const categories = [...new Set(items.map(i => i.cat))];
+            const categories = [...new Set(filtered.map(i => i.cat))];
+            if (!categories.length) {
+                if (main) main.innerHTML = '<div class="empty-state">No items found. Try a different keyword.</div>';
+                if (navList) navList.innerHTML = '';
+                const syncStatus = document.getElementById('syncStatus');
+                if (syncStatus) syncStatus.innerText = source === 'live' ? `Live Sync: ${new Date().toLocaleTimeString()}` : 'Viewing Emergency Cache';
+                return;
+            }
             
             // Only update navList if it exists (old navigation structure)
             if (navList) {
@@ -560,7 +593,7 @@
             if (main) {
                 main.innerHTML = categories.map(cat => {
                     const catId = this.getCategoryId(cat);
-                    const catItems = items.filter(i => i.cat === cat);
+                    const catItems = filtered.filter(i => i.cat === cat);
                     return `
                         <div class="category-section" id="${catId}">
                             <h2 class="category-title">${cat}</h2>
@@ -636,6 +669,7 @@
             console.log('Starting menu data fetch...');
             const { data, source } = await DataLayer.getMenuData();
             console.log(`Menu loaded from ${source} with ${data.length} items`);
+            _lastMenuData = { data, source };
             UIEngine.render(data, source);
             applyHashCategoryLink();
             document.getElementById('loader').style.display = 'none';

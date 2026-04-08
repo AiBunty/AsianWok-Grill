@@ -17,6 +17,12 @@ let showChefOnly  = false;
 let showJainOnly  = false;
 let activeVariant = {};
 let activeQty     = {};
+let searchQuery   = '';
+
+function setSearchQuery(value) {
+  searchQuery = String(value || '').trim();
+  render();
+}
 
 // Re-export constants from data layer for convenient local use
 const VEG_XPCS_VARIANTS = MenuData.VEG_XPCS_COLS;
@@ -230,10 +236,26 @@ function render() {
   }
   if (showChefOnly) db = db.filter(i => i.chef);
 
+  // Search filter — applied on top of all other filters
+  const query = searchQuery.toLowerCase();
+  if (query) {
+    db = db.filter(i => {
+      const variantKeys = [...Object.keys(i.proteins || {}), ...Object.keys(i.servings || {}), ...Object.keys(i.dynamic || {})];
+      const searchable = [i.name, i.desc, i.cat, ...variantKeys].join(' ').toLowerCase();
+      return searchable.includes(query);
+    });
+  }
+
   // Preserve original category order but only include categories that have
   // at least one item in the filtered set (e.g. only chef-special categories).
   const allCats    = [...new Set(MENU_DB.map(i => i.cat))];
   const activeCats = allCats.filter(c => db.some(i => i.cat === c));
+
+  if (!activeCats.length) {
+    main.innerHTML = '<div class="empty-state">No items found. Try a different keyword.</div>';
+    sideList.innerHTML = '';
+    return;
+  }
 
   main.innerHTML = activeCats.map(c => {
     const items = db.filter(i => i.cat === c);

@@ -54,9 +54,14 @@
    }
   body { font-family: -apple-system, system-ui, sans-serif; background: #1e130c; background: -webkit-linear-gradient(to right, #9a8478, #1e130c); background: linear-gradient(to right, #9a8478, #1e130c); background-attachment: fixed; color: var(--color-text-primary); line-height: 1.6; overflow-x: hidden; transition: background 0.4s ease; }
    .theme-icon-btn { background: none; border: none; font-size: 1.4rem; cursor: pointer; color: #fff; }
-   .top-controls-bar { position: sticky; top: var(--header-h); z-index: 999; display: flex; align-items: center; gap: 12px; background: var(--color-bg-primary); padding: 12px 1rem; border-bottom: 1px solid rgba(0,0,0,0.05); overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+   .top-controls-bar { position: sticky; top: var(--header-h); z-index: 999; display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; background: var(--color-bg-primary); padding: 10px 1rem 10px; border-bottom: 1px solid rgba(0,0,0,0.05); scrollbar-width: none; }
    .top-controls-bar::-webkit-scrollbar { display: none; }
-   .square-toggle-group { display: flex; background: var(--color-bg-secondary); border-radius: 12px; padding: 3px; }
+   .square-toggle-group { display: flex; background: var(--color-bg-secondary); border-radius: 12px; padding: 3px; flex-shrink: 0; }
+   .search-wrap { flex: 1 1 100%; order: 99; padding-top: 6px; }
+   .menu-search { width: 100%; padding: 9px 36px 9px 12px; border: 1px solid rgba(0,0,0,0.12); border-radius: 11px; font-size: 0.82rem; font-family: inherit; background: #ffffff; color: #1d1d1d; caret-color: #1d1d1d; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+   .menu-search::placeholder { color: #747474; }
+   .menu-search:focus { border-color: var(--color-accent-maroon); box-shadow: 0 0 0 3px rgba(198,40,40,0.11); }
+   .empty-state { text-align: center; padding: 60px 20px; color: var(--color-text-secondary); font-size: 0.95rem; letter-spacing: 0.4px; }
    .square-btn { font-size: 0.65rem; font-weight: 700; padding: 6px 12px; border-radius: 9px; color: var(--color-text-secondary); border: none; background: transparent; text-transform: uppercase; cursor: pointer; }
 /* Category Highlighter: solid color for active */
 .square-btn.active {
@@ -969,6 +974,9 @@
      <button class="square-btn" id="chef-on" onclick="setChefToggle(true)">
       ⭐ CHEF
      </button>
+    </div>
+    <div class="search-wrap">
+      <input class="menu-search" id="menuSearchInput" type="search" placeholder="Search dishes, categories…" autocomplete="off" oninput="setSearchQuery(this.value)" aria-label="Search menu">
     </div>
   </div>
   <div id="floatingQuickActions">
