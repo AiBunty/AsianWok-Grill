@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /admin.html
+Disallow: /admin-menu-price-editor.html
+Disallow: /admin-menu-category-designer.html
+Disallow: /Menu%20Edit%20Instructions.html
+Disallow: /menu-blocker.html
+Disallow: /qr.html
+Disallow: /thankyou.html
 
 Sitemap: https://asianwokandgrill.in/sitemap.xml

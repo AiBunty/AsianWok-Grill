@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWG Admin Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css?v=20260512-awg-logo-ui" />
+  <link rel="stylesheet" href="../assets/css/crm-admin-checkboxes.css?v=20260513" />
+</head>
+<body>
+  <div class="admin-app">
+    <aside class="admin-sidebar">
+      <div class="admin-brand-block">
+        <img class="admin-brand-logo" src="../assets/images/logo.svg" alt="Asian Wok & Grill logo" width="58" height="58" decoding="async" />
+        <div class="admin-brand-text">
+          <div class="admin-brand-kicker">Asian Wok & Grill</div>
+          <h1 class="admin-brand-title">Admin Portal</h1>
+          <p class="admin-brand-copy">Operations, rewards, CRM, and diagnostics in one secured workspace.</p>
+        </div>
+      </div>
+
+      <nav class="admin-nav" id="adminNavRoot" aria-label="Admin navigation"></nav>
+
+      <div class="admin-sidebar-footer">
+        <span class="admin-status-dot"></span>
+        <span id="adminBackendStatusText">Connecting backend...</span>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <div class="admin-page-kicker">Admin Workspace</div>
+          <h2 id="adminPageTitle">Dashboard</h2>
+        </div>
+        <div class="admin-topbar-actions">
+          <a class="admin-topbar-link" href="../home.html">Back to Website</a>
+          <button id="adminLogoutButton" type="button" class="admin-topbar-link admin-topbar-button">Logout</button>
+        </div>
+      </header>
+
+      <section class="admin-grid">
+        <article class="admin-card admin-card-wide">
+          <div id="adminModuleMount" class="admin-module-mount"></div>
+        </article>
+      </section>
+
+      <div id="adminGlobalLoader" class="admin-global-loader" aria-live="polite" aria-busy="true" hidden>
+        <div class="admin-global-loader__card">
+          <div class="admin-global-loader__spinner" aria-hidden="true"></div>
+          <div class="admin-global-loader__text">Loading module data...</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="../js/admin-modules/base.js?v=20260513-crm-refresh"></script>
+</body>
+</html>

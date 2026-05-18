@@ -1,0 +1,14 @@
+curl -X POST "https://admin.aibunty.com/api/automations/6a0452a02f7c6/execute" \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "api_token": "2c4d31a64560325280e4eb968e24bbb8",
+    "contact_name": "John",
+    "contact_email": "email@email.com",
+    "contact_phone": "+919999999999",
+    "custom_values": {
+      "coupon_code": "AWG-7J3K9P",
+      "prize": "Free Dessert",
+      "outcome": "WON"
+    }
+  }'

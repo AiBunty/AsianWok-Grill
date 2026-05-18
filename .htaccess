@@ -1,0 +1,6 @@
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+
+<IfModule mime_module>
+	AddHandler application/x-httpd-php82 .php
+</IfModule>

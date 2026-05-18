@@ -862,6 +862,25 @@
       letter-spacing: 0.12em;
       padding: 16px 18px;
     }
+    /* ── Mobile performance: remove GPU-heavy blur effects ── */
+    body.concept-body .card {
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.08) 100%),
+        linear-gradient(180deg, rgba(18, 25, 34, 0.62) 0%, rgba(10, 15, 22, 0.52) 100%) !important;
+    }
+    /* Hide animated canvas elements on mobile — they cause tab crashes on low-end devices */
+    body.concept-body #menuAmbientCanvas,
+    body.concept-body #menuAmbientBlurTop,
+    body.concept-body #menuAmbientBlurBottom,
+    body.concept-body .menu-ambient-blur {
+      display: none !important;
+    }
+    /* background-attachment:fixed is broken/slow on iOS Safari — use scroll */
+    body.concept-body {
+      background-attachment: scroll !important;
+    }
   }
   @media (prefers-reduced-motion: reduce) {
     body.concept-body .loader-shell,
@@ -877,7 +896,16 @@
     }
   }
   </style>
- </head>
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP5QMQJ9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTP5QMQJ9K');
+</script>
+</head>
  <body class="concept-body" id="menuBody">
   <div class="menu-ambient" aria-hidden="true">
    <canvas class="menu-ambient-canvas" id="menuAmbientCanvas"></canvas>
@@ -911,13 +939,14 @@
      </div>
   </div>
   <header class="concept-header">
-   <a class="concept-brand" href="https://www.asianwokandgrill.in/" aria-label="Asian Wok and Grill home">
+  <a class="concept-brand" href="home.html" aria-label="Asian Wok and Grill home">
     <img alt="Asian Wok &amp; Grill Logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg"/>
    </a>
    <nav class="concept-nav" id="conceptNav" aria-label="Primary">
-    <a href="https://www.asianwokandgrill.in/">Home</a>
+    <a href="home.html">Home</a>
     <a href="menu.html">AWG Menu</a>
-    <a href="namastemenu.html">Multicuisine Menu</a>
+      <a href="namastemenu.html">Namaste Menu</a>
+      <a href="events.html">Live Event</a>
     <a href="cocktail.html">Cocktail</a>
     <a href="reservation.html">Reservation</a>
     <a href="#symbol-legend">Symbols</a>
@@ -1003,7 +1032,7 @@
     </div>
    <div id="sideNavList">
    </div>
-   <a href="https://asianwokandgrill.in" style="margin-top:auto; padding:15px; background:var(--color-accent-maroon); color:#fff; text-decoration:none; border-radius:12px; font-size:0.85rem; font-weight:700; text-align:center;">
+  <a href="home.html" style="margin-top:auto; padding:15px; background:var(--color-accent-maroon); color:#fff; text-decoration:none; border-radius:12px; font-size:0.85rem; font-weight:700; text-align:center;">
     Back to Website
    </a>
   </div>
@@ -1102,8 +1131,78 @@
     <div id="footerItemCount"></div>
    </div>
   </footer>
-    <script src="assets/js/menu-data.js" defer></script>
-  <script src="assets/js/menu-ui.js" defer></script>
-  <script src="assets/js/side-nav.js" defer></script>
+  <script>
+   (function () {
+     function loadScript(src) {
+       return new Promise(function (resolve, reject) {
+         var s = document.createElement('script');
+         s.src = src;
+         s.defer = true;
+         s.onload = resolve;
+         s.onerror = reject;
+         document.body.appendChild(s);
+       });
+     }
+
+     function buildPhpActionUrl(queryString) {
+       return `/?${queryString}`;
+     }
+
+    async function loadMenuBlockerForPage(pageKey) {
+       try {
+         const settings = await (await fetch('/?action=get_blocker_settings', {
+           headers: { Accept: 'application/json' },
+           cache: 'no-store'
+         })).json();
+         const pages = settings && settings.enabledPages ? settings.enabledPages : {};
+         const blockerSettings = settings && settings.settings ? settings.settings : {};
+         const isEnabled = Boolean(settings && settings.ok === true && !blockerSettings.globalDisable && pages[pageKey] === true);
+         if (!isEnabled || document.getElementById('mb-overlay')) {
+           return;
+         }
+
+         const linkEl = document.createElement('link');
+         linkEl.rel = 'stylesheet';
+         linkEl.href = 'css/menu-blocker.css';
+         document.head.appendChild(linkEl);
+
+         const script1 = document.createElement('script');
+         script1.src = 'js/data/country-codes-all.js';
+         document.body.appendChild(script1);
+         await new Promise(r => script1.onload = r);
+
+         const script2 = document.createElement('script');
+         script2.src = 'js/menu-blocker.js';
+         document.body.appendChild(script2);
+         await new Promise(r => script2.onload = r);
+
+         const markup = await (await fetch('menu-blocker.html', { cache: 'no-store' })).text();
+         const parser = new DOMParser();
+         const parsed = parser.parseFromString(markup, 'text/html');
+         const overlay = parsed.querySelector('#mb-overlay');
+         if (!overlay) {
+           throw new Error('menu-blocker markup missing #mb-overlay root.');
+         }
+         document.body.appendChild(overlay);
+
+         if (typeof MenuBlocker === 'function') {
+           window.menuBlocker = new MenuBlocker();
+         }
+       } catch (e) {
+         console.warn('Menu blocker initialization skipped on menu:', e);
+       }
+     }
+
+    (async function bootMenuAfterGate() {
+       window.AWG_MENU_SOURCE_KEY = 'awg_main';
+
+       await loadMenuBlockerForPage('menu');
+
+       await loadScript('assets/js/menu-data.js');
+       await loadScript('assets/js/menu-ui.js');
+       await loadScript('assets/js/side-nav.js');
+     }());
+   }());
+  </script>
  </body>
 </html>

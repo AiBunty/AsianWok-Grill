@@ -1,0 +1,37 @@
+CRM VARIABLE FORMAT MASTER
+Use format: {%contact.<field_key>%}
+
+GLOBAL CONTACT TOKENS
+Name: {%contact.first_name%}
+Mobile: {%contact.phone%}
+Email: {%contact.email%}
+
+TRIGGER: menu_blocker_coupon_won
+Coupon Code: {%contact.custom_values.coupon_code%}
+Prize: {%contact.custom_values.prize%}
+Outcome: {%contact.custom_values.outcome%}
+
+TRIGGER: menu_blocker_try_again
+Try Again: {%contact.custom_values.try_again%}
+Outcome: {%contact.custom_values.outcome%}
+
+TRIGGER: event_registration_confirmed
+Event Name: {%contact.custom_values.event_name%}
+Event Date: {%contact.custom_values.event_date%}
+Event Time: {%contact.custom_values.event_time%}
+Transaction ID: {%contact.custom_values.transaction_id%}
+Ticket Qty: {%contact.custom_values.ticket_qty%}
+Registration Status: {%contact.custom_values.registration_status%}
+QR Code Image: {%contact.custom_values.qrcodeimage%}
+QR URL: {%contact.custom_values.qr_url%}
+
+TRIGGER: event_scan_entry
+Event Name: {%contact.custom_values.event_name%}
+Event Date: {%contact.custom_values.event_date%}
+Entry Date: {%contact.custom_values.entry_date%}
+Entry Time: {%contact.custom_values.entry_time%}
+No Of Guest: {%contact.custom_values.no_of_guest%}
+Transaction ID: {%contact.custom_values.transaction_id%}
+Remaining Passes: {%contact.custom_values.remaining_passes%}
+
+Static Customer Care Number: 7269899999

@@ -1,0 +1,30 @@
+/* CRM admin panel checkboxes - compact style */
+.admin-checkbox input[type="checkbox"][data-crm-trigger-field] {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.admin-checkbox input[type="checkbox"][data-crm-trigger-enabled] {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.admin-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.admin-form-grid .admin-checkbox {
+  margin-bottom: 0;
+}

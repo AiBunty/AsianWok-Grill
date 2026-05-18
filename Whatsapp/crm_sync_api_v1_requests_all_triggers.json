@@ -1,0 +1,73 @@
+{
+  "endpoint": "https://admin.aibunty.com/api/automations/6a0452a02f7c6/execute",
+  "method": "POST",
+  "headers": {
+    "Accept": "application/json",
+    "Content-Type": "application/json"
+  },
+  "triggers": {
+    "menu_blocker_coupon_won": {
+      "body": {
+        "api_token": "2c4d31a64560325280e4eb968e24bbb8",
+        "contact_name": "John",
+        "contact_phone": "+919999999999",
+        "custom_values": {
+          "coupon_code": "AWG-7J3K9P",
+          "prize": "Free Dessert",
+          "outcome": "Won"
+        }
+      }
+    },
+    "menu_blocker_try_again": {
+      "body": {
+        "api_token": "2c4d31a64560325280e4eb968e24bbb8",
+        "contact_name": "John",
+        "contact_phone": "+919999999999",
+        "custom_values": {
+          "try_again": "Try Again after 24hrs",
+          "outcome": "Try Again"
+        }
+      }
+    },
+    "event_registration_confirmed": {
+      "body": {
+        "api_token": "2c4d31a64560325280e4eb968e24bbb8",
+        "contact_name": "John",
+        "contact_email": "email@email.com",
+        "contact_phone": "+919999999999",
+        "custom_values": {
+          "event_name": "DJ Night",
+          "event_date": "2026-06-21",
+          "event_time": "20:00",
+          "transaction_id": "TXN12345",
+          "ticket_qty": "2",
+          "registration_status": "confirmed",
+          "qrcodeimage": "https://example.com/qr-image.png",
+          "qr_url": "https://example.com/qr/abc123"
+        }
+      }
+    },
+    "event_scan_entry": {
+      "body": {
+        "api_token": "2c4d31a64560325280e4eb968e24bbb8",
+        "contact_name": "John",
+        "contact_email": "email@email.com",
+        "contact_phone": "+919999999999",
+        "custom_values": {
+          "event_name": "DJ Night",
+          "event_date": "2026-06-21",
+          "entry_date": "2026-06-21",
+          "entry_time": "19:46:00",
+          "no_of_guest": "2",
+          "transaction_id": "TXN12345",
+          "remaining_passes": "0"
+        }
+      }
+    }
+  },
+  "notes": [
+    "Exact field set aligned with CRM Sync trigger definitions in app/Services/CrmTriggerService.php.",
+    "At least one of contact_email or contact_phone is required by API 1.0.",
+    "Static customer care number for templates: 7269899999."
+  ]
+}

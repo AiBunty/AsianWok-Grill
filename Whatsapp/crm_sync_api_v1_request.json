@@ -1,0 +1,24 @@
+{
+  "endpoint": "https://admin.aibunty.com/api/automations/6a0452a02f7c6/execute",
+  "method": "POST",
+  "headers": {
+    "Accept": "application/json",
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "api_token": "2c4d31a64560325280e4eb968e24bbb8",
+    "contact_name": "John",
+    "contact_email": "email@email.com",
+    "contact_phone": "+919999999999",
+    "custom_values": {
+      "coupon_code": "AWG-7J3K9P",
+      "prize": "Free Dessert",
+      "outcome": "WON"
+    }
+  },
+  "notes": [
+    "At least one of contact_email or contact_phone is required by API 1.0.",
+    "For this project, customer care number is fixed as 7269899999.",
+    "Use these field keys exactly as CRM Sync Panel trigger variables."
+  ]
+}

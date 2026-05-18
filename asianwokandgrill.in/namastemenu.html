@@ -723,6 +723,25 @@
             letter-spacing: 0.12em;
             padding: 16px 18px;
         }
+        /* ── Mobile performance: remove GPU-heavy blur effects ── */
+        body.concept-body .card {
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.08) 100%),
+                linear-gradient(180deg, rgba(18, 25, 34, 0.62) 0%, rgba(10, 15, 22, 0.52) 100%) !important;
+        }
+        /* Hide animated canvas elements on mobile — they cause tab crashes on low-end devices */
+        body.concept-body #menuAmbientCanvas,
+        body.concept-body #menuAmbientBlurTop,
+        body.concept-body #menuAmbientBlurBottom,
+        body.concept-body .menu-ambient-blur {
+            display: none !important;
+        }
+        /* background-attachment:fixed is broken/slow on iOS Safari — use scroll */
+        body.concept-body {
+            background-attachment: scroll !important;
+        }
     }
     @media (prefers-reduced-motion: reduce) {
         body.concept-body .loader-shell,
@@ -738,7 +757,16 @@
         }
     }
     </style>
- </head>
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP5QMQJ9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTP5QMQJ9K');
+</script>
+</head>
  <body class="concept-body" id="menuBody">
   <div class="menu-ambient" aria-hidden="true">
    <canvas class="menu-ambient-canvas" id="menuAmbientCanvas"></canvas>
@@ -772,13 +800,14 @@
      </div>
   </div>
   <header class="concept-header">
-    <a class="concept-brand" href="https://www.asianwokandgrill.in/" aria-label="Namaste Chef home">
+    <a class="concept-brand" href="home.html" aria-label="Namaste Chef home">
     <img alt="Namaste Chef Logo" src="https://storage.files-vault.com/uploads/1768797625-EllydznoIM.JPG"/>
    </a>
    <nav class="concept-nav" id="conceptNav" aria-label="Primary">
-    <a href="https://www.asianwokandgrill.in/">Home</a>
+    <a href="home.html">Home</a>
     <a href="menu.html">AWG Menu</a>
     <a href="namastemenu.html">Multicuisine Menu</a>
+    <a href="events.html">Live Event</a>
     <a href="cocktail.html">Cocktail</a>
     <a href="reservation.html">Reservation</a>
         <a href="#symbol-legend" onclick="scrollToLegend(event)">Symbols</a>
@@ -872,7 +901,7 @@
      </div>
      <div id="sideNavList">
      </div>
-     <a class="side-nav-back-link" href="https://www.asianwokandgrill.in">
+    <a class="side-nav-back-link" href="home.html">
         Back to Website
      </a>
     </div>
@@ -1066,10 +1095,10 @@
     </div>
    </div>
   </footer>
-  <script>
-   const SHEET_ID = '1KA-aKRyCkGiAyUU991sAiO0NNY28oc-I2YYHfj2gqqE';
+    <script>
+     const API_BASE = (location.protocol === 'file:') ? 'http://127.0.0.1:8090/' : '/';
 
-   const API_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;
+     const API_URL = `${API_BASE.replace(/\/?$/, '/')}?action=menu_public_items&source=namastemenu`;
 
    let MENU_DB = [];
 
@@ -1092,35 +1121,135 @@
      render();
    }
 
+    function normalizeCategoryName(value) {
+        const normalized = String(value || '').replace(/\s+/g, ' ').trim();
+        return normalized || 'Other';
+    }
+
    const MENU_CACHE_KEY = 'menu-cache:namastemenu:v1';
+
+   async function cleanupMenuClientCache() {
+       try {
+           localStorage.removeItem(MENU_CACHE_KEY);
+       } catch (_) {}
+
+       try {
+           if ('caches' in window) {
+               const keys = await caches.keys();
+               await Promise.all(
+                   keys
+                       .filter((key) => key.indexOf('menu-cache-') === 0)
+                       .map((key) => caches.delete(key))
+               );
+           }
+       } catch (_) {}
+
+       try {
+           if ('serviceWorker' in navigator) {
+               const regs = await navigator.serviceWorker.getRegistrations();
+               await Promise.all(
+                   regs
+                       .filter((reg) => {
+                           const scriptUrl = reg.active && reg.active.scriptURL ? reg.active.scriptURL : '';
+                           return scriptUrl.includes('menu-cache-sw.js');
+                       })
+                       .map((reg) => reg.unregister())
+               );
+           }
+       } catch (_) {}
+   }
 
    function registerMenuCacheWorker() {
        if (!('serviceWorker' in navigator)) return;
        navigator.serviceWorker.register('/menu-cache-sw.js').catch(() => {});
    }
 
+   function toLegacyRowsAndCols(items) {
+       const baseCols = [
+           'Item Name',
+           'Description',
+           'Category',
+           'Image URL',
+           'Jain',
+           "Chef's Special",
+           'Spice Level',
+           'Unit (Pcs)',
+       ];
+
+       const proteinSet = new Set();
+       const servingSet = new Set();
+       const dynamicSet = new Set();
+
+       (items || []).forEach((item) => {
+           Object.keys(item.proteins || {}).forEach((k) => proteinSet.add(k));
+           Object.keys(item.servings || {}).forEach((k) => servingSet.add(k));
+           Object.keys(item.dynamic || {}).forEach((k) => dynamicSet.add(k));
+       });
+
+       const proteinCols = Array.from(proteinSet);
+       const servingCols = Array.from(servingSet);
+       const dynamicCols = Array.from(dynamicSet).filter((k) => !proteinSet.has(k) && !servingSet.has(k));
+       const headers = [...baseCols, ...proteinCols, ...servingCols, ...dynamicCols];
+       const cols = headers.map((label) => ({ label }));
+
+       const rows = (items || []).map((item) => {
+           const values = {
+               'Item Name': item.name || '',
+               'Description': item.description || '',
+               'Category': item.cat || item.category || item.category_name || 'Other',
+               'Image URL': item.imageUrl || '',
+               'Jain': item.jainPrice || '',
+               "Chef's Special": item.chef ? 'Yes' : '',
+               'Spice Level': item.spice || '',
+               'Unit (Pcs)': item.servingUnit || '',
+           };
+
+           Object.entries(item.proteins || {}).forEach(([k, v]) => { values[k] = v; });
+           Object.entries(item.servings || {}).forEach(([k, v]) => { values[k] = v; });
+           Object.entries(item.dynamic || {}).forEach(([k, v]) => { values[k] = v; });
+
+           return {
+               c: headers.map((header) => {
+                   const value = values[header];
+                   return (value === undefined || value === null || value === '') ? null : { v: value };
+               })
+           };
+       });
+
+       return { rows, cols };
+   }
+
    async function loadMenuDataWithCache() {
+       await cleanupMenuClientCache();
+
        try {
-           const cached = localStorage.getItem(MENU_CACHE_KEY);
-           if (cached) {
-               const parsed = JSON.parse(cached);
-               if (parsed && parsed.rows && parsed.cols) {
-                   return { rows: parsed.rows, cols: parsed.cols, fromCache: true };
-               }
+           const res = await fetch(`${API_URL}&_ts=${Date.now()}`, { cache: 'no-store' });
+           if (!res.ok) throw new Error(`Menu API fetch failed: HTTP ${res.status}`);
+           const json = await res.json();
+           if (!json || json.ok !== true || !Array.isArray(json.items)) {
+               throw new Error('Menu API returned invalid payload.');
            }
-       } catch (_) {}
 
-       const res = await fetch(API_URL, { cache: 'force-cache' });
-       const text = await res.text();
-       const json = JSON.parse(text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1));
-       const rows = json.table.rows;
-       const cols = json.table.cols;
+           const { rows, cols } = toLegacyRowsAndCols(json.items);
 
-       try {
-           localStorage.setItem(MENU_CACHE_KEY, JSON.stringify({ rows, cols, ts: Date.now() }));
-       } catch (_) {}
+           try {
+               localStorage.setItem(MENU_CACHE_KEY, JSON.stringify({ rows, cols, ts: Date.now() }));
+           } catch (_) {}
 
-       return { rows, cols, fromCache: false };
+           return { rows, cols, fromCache: false };
+       } catch (networkError) {
+           try {
+               const cached = localStorage.getItem(MENU_CACHE_KEY);
+               if (cached) {
+                   const parsed = JSON.parse(cached);
+                   if (parsed && parsed.rows && parsed.cols) {
+                       return { rows: parsed.rows, cols: parsed.cols, fromCache: true };
+                   }
+               }
+           } catch (_) {}
+
+           throw networkError;
+       }
    }
 
    function warmMenuAssets(items) {
@@ -1218,7 +1347,8 @@
                      }
 
                      function showSchemaErrorOverlay(errors) {
-                         document.getElementById('loader').style.display = 'none';
+                         const loader = document.getElementById('loader');
+                         if (loader) loader.style.display = 'none';
                          const id = 'schemaErrorOverlay';
                          let el = document.getElementById(id);
                          if(!el) {
@@ -1330,11 +1460,15 @@
 
                const chefRaw = (map["Chef's Special"] !== undefined && d[map["Chef's Special"]]) ? d[map["Chef's Special"]].v : null;
 
+               const categoryRaw = (map["Category"] !== undefined && d[map["Category"]] && d[map["Category"]].v)
+                   ? d[map["Category"]].v
+                   : (d[0] && d[0].v ? d[0].v : "Other");
+
                return {
 
                    id: idx,
 
-                   cat: d[map["Category"]]?.v || "Other",
+                   cat: normalizeCategoryName(categoryRaw),
 
                    name: itemName,
 
@@ -1367,7 +1501,8 @@
 
            warmMenuAssets(MENU_DB);
 
-           document.getElementById('loader').style.display = 'none';
+           const loader = document.getElementById('loader');
+           if (loader) loader.style.display = 'none';
 
            // Apply URL-based filter states to UI
 
@@ -1389,7 +1524,11 @@
 
            render();
 
-       } catch (e) { console.error(e); }
+       } catch (e) {
+           console.error(e);
+           const loader = document.getElementById('loader');
+           if (loader) loader.style.display = 'none';
+       }
 
    }
 
@@ -1484,6 +1623,14 @@
        return String(value).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
    }
 
+   function pickVegVariant(item, proteinKeys, servingKeys) {
+       const vegProtein = proteinKeys.find(k => String(k).trim().toLowerCase() === 'veg');
+       if (vegProtein) return vegProtein;
+       const vegServing = servingKeys.find(k => /^veg\b/i.test(String(k).trim()));
+       if (vegServing) return vegServing;
+       return '';
+   }
+
    function generateCard(i) {
 
        const proteinKeys = Object.keys(i.proteins);
@@ -1494,7 +1641,7 @@
 
            if(showJainOnly && i.jainPrice !== null) activeVariant[i.id] = 'Jain';
 
-           else if(foodFilter === 'VEG') activeVariant[i.id] = proteinKeys.find(k => k === "Veg") || proteinKeys[0] || servingKeys[0];
+           else if(foodFilter === 'VEG') activeVariant[i.id] = pickVegVariant(i, proteinKeys, servingKeys) || proteinKeys[0] || servingKeys[0];
 
            else if(foodFilter === 'NON') activeVariant[i.id] = proteinKeys.find(k => k !== "Veg") || proteinKeys[0] || servingKeys[0];
 
@@ -1502,7 +1649,14 @@
 
        }
 
-       const selV = activeVariant[i.id];
+       let selV = activeVariant[i.id];
+       if(foodFilter === 'VEG' && !showJainOnly && selV !== 'Jain') {
+           const vegSafe = pickVegVariant(i, proteinKeys, servingKeys);
+           if(vegSafe) {
+               selV = vegSafe;
+               activeVariant[i.id] = vegSafe;
+           }
+       }
 
        let dietType = i.rowDiet; 
 
@@ -1511,6 +1665,8 @@
        if (selV === "Jain") dietType = "jain";
 
        if (["Chicken", "Prawn", "Mutton", "Fish", "Surmai", "Pomfret", "Crab", "Egg"].includes(selV)) dietType = "nonveg";
+
+       if(foodFilter === 'VEG' && selV !== 'Jain') dietType = 'veg';
 
     const isJainSelected = selV === "Jain";
 
@@ -1616,7 +1772,17 @@
 
    function toggleDesc(el) { el.classList.toggle('collapsed'); el.classList.toggle('expanded'); }
 
-   function snapTo(id) { const el = document.getElementById(id); if(el) { toggleSideNav(false); window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 160, behavior: 'smooth' }); } }
+   function snapTo(id) {
+       toggleSideNav(false);
+       const el = document.getElementById(id);
+       if (!el) return;
+       const header   = document.querySelector('.concept-header');
+       const controls = document.getElementById('topControlsBar');
+       const headerH   = header   ? header.getBoundingClientRect().height   : 92;
+       const controlsH = controls ? controls.getBoundingClientRect().height : 0;
+       const offset = Math.round(headerH + controlsH) + 8;
+       window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - offset, behavior: 'smooth' });
+   }
 
     function updateFilter(val) { foodFilter = val; if(val !== 'VEG') showJainOnly = false; activeVariant = {}; document.querySelectorAll('.top-controls-bar .square-btn').forEach(b => { if(b.id && b.id.startsWith('f-')) b.classList.remove('active'); }); document.getElementById('f-' + val.toLowerCase()).classList.add('active'); renderPreserveScroll(); }
 
@@ -1738,49 +1904,64 @@
        }
    })();
 
-     window.onload = init;
+     async function loadMenuBlockerForNamaste() {
+         try {
+             const settings = await (await fetch('/?action=get_blocker_settings', {
+                 headers: { Accept: 'application/json' },
+                 cache: 'no-store'
+             })).json();
+             const pages = settings && settings.enabledPages ? settings.enabledPages : {};
+             const blockerSettings = settings && settings.settings ? settings.settings : {};
+             const isEnabled = Boolean(
+                 settings && settings.ok === true && !blockerSettings.globalDisable &&
+                 (pages.namastemenu === true || pages.namaste_chef === true || pages.menu === true)
+             );
+             if (!isEnabled || document.getElementById('mb-overlay')) {
+                 return;
+             }
+
+             const linkEl = document.createElement('link');
+             linkEl.rel = 'stylesheet';
+             linkEl.href = 'css/menu-blocker.css';
+             document.head.appendChild(linkEl);
+
+             const script1 = document.createElement('script');
+             script1.src = 'js/data/country-codes-all.js';
+             document.body.appendChild(script1);
+             await new Promise(r => script1.onload = r);
+
+             const script2 = document.createElement('script');
+             script2.src = 'js/menu-blocker.js';
+             document.body.appendChild(script2);
+             await new Promise(r => script2.onload = r);
+
+             const markup = await (await fetch('menu-blocker.html', { cache: 'no-store' })).text();
+             const parser = new DOMParser();
+             const parsed = parser.parseFromString(markup, 'text/html');
+             const overlay = parsed.querySelector('#mb-overlay');
+             if (!overlay) {
+                 throw new Error('menu-blocker markup missing #mb-overlay root.');
+             }
+             document.body.appendChild(overlay);
+
+             if (typeof MenuBlocker === 'function') {
+                 window.menuBlocker = new MenuBlocker();
+             }
+         } catch (e) {
+             console.warn('Menu blocker initialization skipped on namaste menu:', e);
+         }
+     }
+
+     let __namasteMenuInitStarted = false;
+     async function startNamasteMenuInit() {
+         if (__namasteMenuInitStarted) return;
+         __namasteMenuInitStarted = true;
+         await loadMenuBlockerForNamaste();
+         init();
+     }
+     document.addEventListener('DOMContentLoaded', startNamasteMenuInit);
+     window.addEventListener('load', startNamasteMenuInit);
   </script>
     <script src="assets/js/side-nav.js" defer></script>
-  <script>
-   // Ensure Mocktail and Bread category/items are always visible regardless of veg/jain/nonveg toggles.
-        (function(){
-            const original = window.render;
-            function isExemptItem(i){
-                if(!i || !i.cat) return false;
-                const c = i.cat.toString().toLowerCase();
-                const nonVegWords = (window.NON_VEG_WORDS && window.NON_VEG_WORDS.slice()) || ['chicken','egg','eggs','mutton','prawn','prawns','fish','surmai','crab','pomfret'];
-                const desc = (i.desc||'').toString().toLowerCase();
-                const hasNonVegInDesc = nonVegWords.some(w => desc.indexOf(w) !== -1);
-                const proteinKeys = Object.keys(i.proteins||{});
-                const hasNonVegProtein = proteinKeys.some(k => nonVegWords.some(nw => k.toLowerCase().includes(nw)) && i.proteins[k]);
-                if(/(mocktail|bread)/i.test(c)) return true;
-                if(c.indexOf('dessert') !== -1) {
-                    if(hasNonVegInDesc) return false;
-                    if(hasNonVegProtein) return false;
-                    return true;
-                }
-                return false;
-            }
-            window.render = function(){
-                try{ original(); } catch(e){ console.error(e); }
-                try{
-                    const main = document.getElementById('menuMain');
-                    const exempt = (MENU_DB||[]).filter(isExemptItem);
-                    exempt.forEach(i => {
-                        const slug = i.cat.replace(/[^a-z0-9]/gi,'-').toLowerCase();
-                        let section = document.getElementById(slug);
-                        if(!section){
-                            const html = `<section class="container" id="${slug}"><h2 class="section-title">${i.cat}</h2><div class="grid">${generateCard(i)}</div></section>`;
-                            main.insertAdjacentHTML('beforeend', html);
-                        } else {
-                            const grid = section.querySelector('.grid');
-                            const exists = grid && grid.innerText && grid.innerText.includes(i.name);
-                            if(grid && !exists) grid.insertAdjacentHTML('beforeend', generateCard(i));
-                        }
-                    });
-                } catch(e){ console.error('Exempt post-render hook failed', e); }
-            };
-        })();
-  </script>
  </body>
 </html>

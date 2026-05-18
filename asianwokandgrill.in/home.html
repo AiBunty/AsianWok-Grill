@@ -1131,7 +1131,278 @@ body {
 }
 
 
+.live-events-strip {
+  padding: 62px 60px 42px;
+  background: linear-gradient(180deg, #250909 0%, #1f0000 100%);
+}
 
+.live-events-strip .live-events-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: baseline;
+  margin: 0 auto 26px;
+  max-width: 1080px;
+}
+
+.live-events-strip h2 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #c7a46b;
+  font-size: 46px;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.live-events-strip a {
+  color: #f3eadc;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid rgba(243, 234, 220, 0.4);
+}
+
+.live-events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.live-events-viewport {
+  max-width: 1080px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.live-events-grid.is-carousel {
+  display: flex;
+  gap: 20px;
+  transition: transform 520ms ease;
+  will-change: transform;
+  max-width: none;
+}
+
+.live-events-grid.is-carousel .live-event-card {
+  flex: 0 0 calc((100% - 20px) / 2);
+}
+
+.live-event-card {
+  border: 1px solid rgba(199, 164, 107, 0.32);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.02));
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
+}
+
+.live-event-media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: radial-gradient(circle at 30% 20%, rgba(199, 164, 107, 0.25), rgba(24, 0, 0, 0.95));
+}
+
+.live-event-media img,
+.live-event-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.live-event-media::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 45%;
+  background: linear-gradient(to top, rgba(12, 0, 0, 0.92), rgba(12, 0, 0, 0));
+  pointer-events: none;
+}
+
+.live-event-media-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(16, 0, 0, 0.75);
+  border: 1px solid rgba(243, 234, 220, 0.4);
+  color: #f3eadc;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.live-event-body {
+  padding: 18px 18px 20px;
+}
+
+.live-event-datetime-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.live-event-day-xl {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 4.4vw, 64px);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: #f4d39f;
+  font-weight: 700;
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.live-event-date-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.live-event-date-label {
+  color: rgba(243, 234, 220, 0.92);
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.live-event-time-label {
+  color: #f0cf94;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.live-event-price-badge {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  background: linear-gradient(135deg, #f5d8a6 0%, #c68b37 100%);
+  color: #260000;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 8px 12px;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.28);
+}
+
+.live-event-countdown {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(199, 164, 107, 0.36);
+  border-radius: 999px;
+  padding: 7px 12px;
+  color: #f7ddad;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.live-event-card h3 {
+  color: #f3eadc;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  margin-bottom: 10px;
+  line-height: 1.15;
+}
+
+.live-event-card p {
+  color: rgba(243, 234, 220, 0.78);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.live-event-meta {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: #f0cf94;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(199, 164, 107, 0.32);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.live-event-card .live-event-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 0;
+  border: 1px solid rgba(199, 164, 107, 0.45);
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .live-events-strip {
+    padding: 42px 20px 28px;
+  }
+
+  .live-events-strip .live-events-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .live-events-strip h2 {
+    font-size: 34px;
+  }
+
+  .live-events-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .live-events-grid.is-carousel {
+    gap: 14px;
+  }
+
+  .live-events-grid.is-carousel .live-event-card {
+    flex: 0 0 100%;
+  }
+
+  .live-event-card {
+    border-radius: 14px;
+  }
+
+  .live-event-datetime-row {
+    gap: 10px;
+  }
+
+  .live-event-day-xl {
+    font-size: 46px;
+  }
+
+  .live-event-body {
+    padding: 16px;
+  }
+
+  .live-event-card h3 {
+    font-size: 24px;
+  }
+}
 
 </style>
 <style id="mobile-half-menu-fix">
@@ -1170,151 +1441,60 @@ body {
   }
 }
 
-#leadPopup {
-  display: none;
+/* ✅ CRITICAL BLOCKER STYLES - LOAD FIRST */
+#mb-overlay-blocker {
   position: fixed;
-  inset: 0;
-  padding: 24px;
-  background:
-    radial-gradient(circle at top left, rgba(199, 164, 107, 0.22), transparent 34%),
-    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.12), transparent 30%),
-    rgba(16, 4, 4, 0.68);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  z-index: 99999;
-  justify-content: center;
-  align-items: center;
-}
-
-.lead-popup-shell {
-  width: min(92vw, 720px);
-  position: relative;
-  border-radius: 28px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-}
-
-.lead-popup-shell::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), transparent 48%);
-  pointer-events: none;
-}
-
-.lead-popup-header {
-  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 2;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 20px 22px 0;
-}
-
-.lead-popup-copy {
-  max-width: calc(100% - 56px);
-}
-
-.lead-popup-chip {
-  display: inline-block;
-  margin-bottom: 8px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  color: #f7ead1;
-  font-family: 'Poppins', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-}
-
-.lead-popup-title {
-  margin: 0;
-  color: #fff8ef;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 4vw, 40px);
-  font-weight: 500;
-  line-height: 1;
-}
-
-.lead-popup-subtitle {
-  margin: 6px 0 0;
-  color: rgba(255, 248, 239, 0.82);
-  font-family: 'Poppins', sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.03em;
-}
-
-.lead-popup-close {
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  font-size: 18px;
-  line-height: 1;
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.lead-popup-close:hover {
-  transform: scale(1.06);
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.lead-popup-frame-wrap {
-  position: relative;
-  padding: 98px 18px 18px;
-}
-
-.lead-popup-iframe {
   width: 100%;
-  height: min(70vh, 600px);
-  border: none;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.1s ease-in;
 }
 
-@media (max-width: 600px) {
-  #leadPopup {
-    padding: 14px;
-  }
-
-  .lead-popup-shell {
-    width: 100%;
-    border-radius: 22px;
-  }
-
-  .lead-popup-header {
-    padding: 18px 18px 0;
-  }
-
-  .lead-popup-subtitle {
-    font-size: 12px;
-  }
-
-  .lead-popup-frame-wrap {
-    padding: 92px 12px 12px;
-  }
-
-  .lead-popup-iframe {
-    height: min(72vh, 560px);
-    border-radius: 18px;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+
+#mb-overlay-blocker.hidden {
+  display: none;
+}
+
+#mb-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(199, 164, 107, 0.2);
+  border-top: 4px solid #c7a46b;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP5QMQJ9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTP5QMQJ9K');
+</script>
 </head>
 <body>
+<!-- ✅ BLOCKER SHOWS IMMEDIATELY (before any other content renders) -->
+<div id="mb-overlay-blocker">
+  <div id="mb-spinner"></div>
+</div>
+
 <header class="site-header">
   <div class="logo"><img src="assets/images/asainlogo.webp"></div>
   <nav class="main-nav">
@@ -1322,7 +1502,7 @@ body {
       
     <li><a href="javascript:void(0)" onclick="scrollToSection('.about-section')">ABOUT US</a></li>
     <li><a href="javascript:void(0)" onclick="scrollToSection('.menu-section')">MENU</a></li>
-    <li><a href="javascript:void(0)" onclick="scrollToSection('.exclusive-v2')">EVENT</a></li>
+    <li><a href="events.html">LIVE EVENT</a></li>
      <li><a href="franchises.html" onclick="document.querySelector('.franchises').scrollIntoView({behavior:'smooth'})">FRANCHISES</a></li>
        <li><a href="reservation.html" onclick="document.querySelector('').scrollIntoView({behavior:'smooth'})">RESERVATION</a></li>
          <li><a href="contact.html" onclick="document.querySelector('').scrollIntoView({behavior:'smooth'})">CONTACT</a></li>
@@ -1363,6 +1543,40 @@ body {
       </div>
     </div>
 
+  </div>
+</section>
+<section class="live-events-strip" id="homeLiveEvents">
+  <div class="live-events-head">
+    <h2>Live Events</h2>
+    <a href="events.html">View all events</a>
+  </div>
+  <div class="live-events-viewport" id="liveEventsViewport">
+    <div class="live-events-grid" id="liveEventsGrid">
+      <article class="live-event-card">
+        <div class="live-event-media">
+          <span class="live-event-media-badge">Live Post</span>
+          <img src="assets/images/Event Folder/Output/event1.jpg" alt="Asian Street Night" loading="lazy">
+        </div>
+        <div class="live-event-body">
+          <h3>Asian Street Night</h3>
+          <p>Live wok stations, signature mocktails, and chef specials from 7 PM onward.</p>
+          <div class="live-event-meta">Fri 7:00 PM</div>
+          <a class="live-event-link" href="events.html">Explore Event</a>
+        </div>
+      </article>
+      <article class="live-event-card">
+        <div class="live-event-media">
+          <span class="live-event-media-badge">Live Post</span>
+          <img src="assets/images/Event Folder/Output/event2.jpg" alt="Family Dim Sum Sunday" loading="lazy">
+        </div>
+        <div class="live-event-body">
+          <h3>Family Dim Sum Sunday</h3>
+          <p>Interactive dim sum platters and a weekend brunch spread curated for families.</p>
+          <div class="live-event-meta">Sun 1:00 PM</div>
+          <a class="live-event-link" href="events.html">Explore Event</a>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 <section class="about-section">
@@ -1459,7 +1673,7 @@ body {
       <!-- Left Arrow -->
       <div class="menu-nav-arrow left" data-row="1">‹</div>
       
-      <div class="menu-card" data-card-index="0">
+      <div class="menu-card" data-card-index="0" id="food-menu-card">
         <img src="assets/images/Output/one.jpg" class="menu-img" alt="">
         <div class="menu-circle">
            <a href="menu.html">
@@ -2174,39 +2388,255 @@ setInterval(() => {
     });
   });
 </script>
-<!-- POPUP FORM -->
-<div id="leadPopup">
-  <div class="lead-popup-shell">
-    <div class="lead-popup-header">
-      <div class="lead-popup-copy">
-        <span class="lead-popup-chip">Exclusive Offers</span>
-        <h3 class="lead-popup-title">Unlock Your Special Dining Perks</h3>
-        <p class="lead-popup-subtitle">Share your details to receive curated offers, event updates, and priority access.</p>
-      </div>
-      <button class="lead-popup-close" type="button" aria-label="Close offer popup" onclick="closeLeadPopup()">✕</button>
-    </div>
-
-    <div class="lead-popup-frame-wrap">
-      <iframe
-        src="https://admin.aibunty.com/widget/form/695b9dd42c946"
-        class="lead-popup-iframe"
-        title="Landing Page form">
-      </iframe>
-    </div>
-  </div>
-</div>
 <script>
-function closeLeadPopup(){
-  document.getElementById("leadPopup").style.display = "none";
+function escapeHtml(value) {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
-window.addEventListener("load", function(){
+function sanitizeMediaUrl(value) {
+  const url = String(value || '').trim();
+  if (!url) {
+    return '';
+  }
+  if (/^javascript:/i.test(url)) {
+    return '';
+  }
+  return url;
+}
 
-  // 6 seconds delay
-  setTimeout(function(){
-    document.getElementById("leadPopup").style.display = "flex";
-  }, 6000);
+function pickEventMedia(event) {
+  const videoUrl = sanitizeMediaUrl(event.videoUrl || event.video_url || '');
+  const imageUrl = sanitizeMediaUrl(event.imageUrl || event.image_url || event.posterUrl || event.poster_url || '');
+  if (videoUrl) {
+    return { type: 'video', url: videoUrl };
+  }
+  if (imageUrl) {
+    return { type: 'image', url: imageUrl };
+  }
+  return null;
+}
 
+function normalizeTimeLabel(raw) {
+  const value = String(raw || '').trim();
+  if (!value) {
+    return 'TBA';
+  }
+
+  const full = value.length === 5 ? `${value}:00` : value;
+  const parsed = Date.parse(`2000-01-01T${full}`);
+  if (Number.isNaN(parsed)) {
+    return value;
+  }
+
+  return new Date(parsed).toLocaleTimeString('en-IN', {
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+  });
+}
+
+function parseEventStart(event) {
+  const datePart = String(event.startDate || event.start_date || event.date || '').trim();
+  const timePart = String(event.startTime || event.start_time || event.time || '00:00:00').trim();
+  if (!datePart) {
+    return null;
+  }
+
+  const isoTime = timePart.length === 5 ? `${timePart}:00` : (timePart || '00:00:00');
+  const parsed = new Date(`${datePart}T${isoTime}`);
+  if (Number.isNaN(parsed.getTime())) {
+    return null;
+  }
+
+  return parsed;
+}
+
+function formatPriceBadge(event) {
+  const eventType = String(event.eventType || event.event_type || event.type || '').toLowerCase();
+  if (eventType !== 'paid') {
+    return 'FREE';
+  }
+
+  const amountRaw = Number(event.ticketPrice ?? event.ticket_price ?? 0);
+  const amount = Number.isFinite(amountRaw) ? amountRaw : 0;
+  const currency = String(event.currency || 'INR').toUpperCase();
+  const formattedAmount = amount > 0 ? amount.toLocaleString('en-IN', { maximumFractionDigits: 2 }) : '0';
+  return `${currency} ${formattedAmount}`;
+}
+
+function refreshHomeEventCountdowns() {
+  const countdownNodes = document.querySelectorAll('[data-event-start-ms]');
+  const now = Date.now();
+
+  countdownNodes.forEach((node) => {
+    const startMs = Number(node.getAttribute('data-event-start-ms') || '0');
+    if (!Number.isFinite(startMs) || startMs <= 0) {
+      node.textContent = 'Countdown unavailable';
+      return;
+    }
+
+    const diff = startMs - now;
+    if (diff <= 0) {
+      node.textContent = 'Event is live';
+      return;
+    }
+
+    const totalMinutes = Math.floor(diff / 60000);
+    const days = Math.floor(totalMinutes / (24 * 60));
+    const hours = Math.floor((totalMinutes % (24 * 60)) / 60);
+    const minutes = totalMinutes % 60;
+
+    if (days > 0) {
+      node.textContent = `${days}D ${hours}H ${minutes}M to go`;
+      return;
+    }
+
+    node.textContent = `${hours}H ${minutes}M to go`;
+  });
+}
+
+function setupImageFallbacks() {
+  const fallbackSrc = 'assets/images/circlelogo.png';
+  Array.from(document.images || []).forEach((img) => {
+    img.addEventListener('error', () => {
+      const current = (img.getAttribute('src') || '').trim();
+      if (!current || current === fallbackSrc) {
+        return;
+      }
+      img.setAttribute('src', fallbackSrc);
+    }, { once: true });
+  });
+}
+
+async function loadHomeLiveEvents() {
+  const section = document.getElementById('homeLiveEvents');
+  const viewport = document.getElementById('liveEventsViewport');
+  const grid = document.getElementById('liveEventsGrid');
+  if (!grid || !section || !viewport) {
+    return;
+  }
+
+  try {
+    const response = await fetch('/?action=public_live_events', {
+      headers: { Accept: 'application/json' },
+      cache: 'no-store'
+    });
+    const payload = await response.json();
+    const allEvents = Array.isArray(payload.events) ? payload.events : [];
+    const events = allEvents.filter((event) => {
+      const activeRaw = event && Object.prototype.hasOwnProperty.call(event, 'isActive')
+        ? event.isActive
+        : event && Object.prototype.hasOwnProperty.call(event, 'is_active')
+          ? event.is_active
+          : true;
+      if (typeof activeRaw === 'boolean') {
+        return activeRaw;
+      }
+      const normalized = String(activeRaw ?? '').trim().toLowerCase();
+      return normalized === '' || normalized === '1' || normalized === 'true' || normalized === 'yes' || normalized === 'on';
+    });
+
+    if (!events.length) {
+      section.style.display = 'none';
+      return;
+    }
+    section.style.display = '';
+
+    if (window.homeEventsCarouselTimer) {
+      clearInterval(window.homeEventsCarouselTimer);
+      window.homeEventsCarouselTimer = null;
+    }
+
+    const sortedEvents = events.slice().sort((a, b) => {
+      const ts = (event) => {
+        const start = parseEventStart(event);
+        if (start) {
+          return start.getTime();
+        }
+        const updated = Date.parse(String(event.updatedAt || event.updated_at || ''));
+        return Number.isNaN(updated) ? 0 : updated;
+      };
+
+      return ts(a) - ts(b);
+    });
+
+    grid.innerHTML = sortedEvents.map((event) => {
+      const eventId = String(event.id || '');
+      const target = eventId ? `events.html?eventId=${encodeURIComponent(eventId)}` : 'events.html';
+      const start = parseEventStart(event);
+      const dayNumber = start ? String(start.getDate()).padStart(2, '0') : '--';
+      const dateLabel = start
+        ? start.toLocaleDateString('en-IN', { weekday: 'short', month: 'short', year: 'numeric' })
+        : 'Upcoming';
+      const timeLabel = normalizeTimeLabel(event.startTime || event.start_time || event.time || '');
+      const priceBadge = formatPriceBadge(event);
+      const countdownMs = start ? String(start.getTime()) : '';
+      const media = pickEventMedia(event);
+      const mediaMarkup = media
+        ? media.type === 'video'
+          ? `<video src="${escapeHtml(media.url)}" muted playsinline controls preload="metadata"></video>`
+          : `<img src="${escapeHtml(media.url)}" alt="${escapeHtml(event.title || 'Live Event')}" loading="lazy">`
+        : `<img src="assets/images/circlelogo.png" alt="${escapeHtml(event.title || 'Live Event')}" loading="lazy">`;
+      return `
+        <article class="live-event-card">
+          <div class="live-event-media">
+            <span class="live-event-media-badge">${media && media.type === 'video' ? 'Live Reel' : 'Live Post'}</span>
+            <span class="live-event-price-badge">${escapeHtml(priceBadge)}</span>
+            ${mediaMarkup}
+          </div>
+          <div class="live-event-body">
+            <div class="live-event-datetime-row">
+              <div class="live-event-day-xl">${escapeHtml(dayNumber)}</div>
+              <div class="live-event-date-block">
+                <div class="live-event-date-label">Event Day</div>
+                <div class="live-event-time-label">${escapeHtml(dateLabel)} | ${escapeHtml(timeLabel)}</div>
+              </div>
+            </div>
+            <h3>${escapeHtml(event.title || 'Live Event')}</h3>
+            <p>${escapeHtml(event.description || 'Reserve your seat now for this special Asian Wok & Grill experience.')}</p>
+            <div class="live-event-meta">${escapeHtml(String(event.venue || 'Asian Wok & Grill, Nashik'))}</div>
+            <div class="live-event-countdown" data-event-start-ms="${escapeHtml(countdownMs)}">Loading countdown...</div>
+            <a class="live-event-link" href="${escapeHtml(target)}">Explore Event</a>
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    if (window.homeEventsCountdownTimer) {
+      clearInterval(window.homeEventsCountdownTimer);
+      window.homeEventsCountdownTimer = null;
+    }
+    refreshHomeEventCountdowns();
+    window.homeEventsCountdownTimer = setInterval(refreshHomeEventCountdowns, 30000);
+
+    const enableCarousel = sortedEvents.length > 2;
+    grid.classList.toggle('is-carousel', enableCarousel);
+    grid.style.transform = 'translateX(0px)';
+
+    if (enableCarousel) {
+      const perView = window.matchMedia('(max-width: 900px)').matches ? 1 : 2;
+      const totalPages = Math.ceil(sortedEvents.length / perView);
+      let page = 0;
+
+      window.homeEventsCarouselTimer = setInterval(() => {
+        page = (page + 1) % totalPages;
+        const offset = viewport.clientWidth * page;
+        grid.style.transform = `translateX(-${offset}px)`;
+      }, 3600);
+    }
+  } catch (_) {
+    // Keep fallback cards already rendered in markup.
+  }
+}
+
+window.addEventListener("DOMContentLoaded", async function(){
+  setupImageFallbacks();
+  loadHomeLiveEvents();
 });
 </script>
 <!-- MyAppzChat Widget -->
@@ -2247,5 +2677,63 @@ window.addEventListener("load", function(){
 })();
 </script>
 <script src="assets/js/side-nav.js" defer></script>
+<script id="menu-blocker-init">
+/* ✅ BLOCKER ALREADY VISIBLE (critical CSS + inline HTML loaded first) */
+/* Now load full blocker asynchronously WITHOUT blocking page render */
+(async function initMenuBlockerOnHome() {
+  try {
+    const settings = await (await fetch('/?action=get_blocker_settings', {
+      headers: { Accept: 'application/json' },
+      cache: 'no-store'
+    })).json();
+    const pages = settings && settings.enabledPages ? settings.enabledPages : {};
+    const blockerSettings = settings && settings.settings ? settings.settings : {};
+    const isEnabledOnHome = Boolean(settings && settings.ok === true && !blockerSettings.globalDisable && pages.home === true);
+
+    if (!isEnabledOnHome) {
+      /* Blocker disabled - hide the minimal blocker immediately */
+      const blocker = document.getElementById('mb-overlay-blocker');
+      if (blocker) blocker.classList.add('hidden');
+      return;
+    }
+
+    /* Blocker enabled - load full UI asynchronously */
+    const linkEl = document.createElement('link');
+    linkEl.rel = 'stylesheet';
+    linkEl.href = 'css/menu-blocker.css';
+    document.head.appendChild(linkEl);
+    
+    await (async () => {
+      const script1 = document.createElement('script');
+      script1.src = 'js/data/country-codes-all.js';
+      document.body.appendChild(script1);
+      await new Promise(r => script1.onload = r);
+      
+      const script2 = document.createElement('script');
+      script2.src = 'js/menu-blocker.js';
+      document.body.appendChild(script2);
+      await new Promise(r => script2.onload = r);
+    })();
+
+    const markup = await (await fetch('menu-blocker.html', { cache: 'no-store' })).text();
+    const parser = new DOMParser();
+    const parsed = parser.parseFromString(markup, 'text/html');
+    const overlay = parsed.querySelector('#mb-overlay');
+    if (!overlay) {
+      throw new Error('menu-blocker markup missing #mb-overlay root.');
+    }
+    
+    /* Replace simple blocker with full featured blocker */
+    const simpleBlocker = document.getElementById('mb-overlay-blocker');
+    if (simpleBlocker) simpleBlocker.replaceWith(overlay);
+
+    if (typeof MenuBlocker === 'function') {
+      window.menuBlocker = new MenuBlocker();
+    }
+  } catch (e) { 
+    console.warn('Menu blocker initialization skipped on home:', e); 
+  }
+})();
+</script>
 </body>
 </html>

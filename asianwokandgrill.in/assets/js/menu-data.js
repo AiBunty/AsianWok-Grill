@@ -11,13 +11,23 @@
 // ---------------------------------------------------------------------------
 // Sheet configuration
 // ---------------------------------------------------------------------------
-const SHEET_SOURCE_URL = 'https://docs.google.com/spreadsheets/d/19hUSc2ny1NGd73WDTQfosdS3O7xhwiQbdGbiDgKSQlA/edit?usp=sharing';
-const SHEET_ID = (() => {
-  const m = SHEET_SOURCE_URL.match(/\/d\/([^/]+)/i);
-  return m ? m[1] : '19hUSc2ny1NGd73WDTQfosdS3O7xhwiQbdGbiDgKSQlA';
+const MENU_SOURCE_KEY = (window.AWG_MENU_SOURCE_KEY || 'awg_main').toString().trim();
+const API_BASE = (() => {
+  if (typeof window !== 'undefined' && typeof window.AWG_MENU_API_BASE === 'string' && window.AWG_MENU_API_BASE.trim() !== '') {
+    return window.AWG_MENU_API_BASE.trim();
+  }
+
+  // When opened via file:// (local preview), relative fetch('/?action=...') fails.
+  // Route API calls to the local PHP server by default.
+  if (typeof location !== 'undefined' && location.protocol === 'file:') {
+    return 'http://127.0.0.1:8090/';
+  }
+
+  return '/';
 })();
-const API_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json;reqId:1&tq=select%20*&headers=1`;
-const MENU_CACHE_KEY = `menu-cache:menu:${SHEET_ID}:v4`;
+
+const API_URL = `${API_BASE.replace(/\/?$/, '/')}?action=menu_public_items&source=${encodeURIComponent(MENU_SOURCE_KEY)}`;
+const MENU_CACHE_KEY = `menu-cache:menu:${MENU_SOURCE_KEY}:mysql:v1`;
 
 function isMobileCacheDisabled() {
   if (typeof window === 'undefined') return false;
@@ -121,37 +131,35 @@ async function loadMenuDataWithCache() {
     cleanupMenuClientCache().catch(() => {});
 
     const res = await fetch(`${API_URL}&_ts=${Date.now()}`, { cache: 'no-store' });
-    if (!res.ok) throw new Error(`Sheet fetch failed: HTTP ${res.status}`);
-    const text = await res.text();
-    const json = JSON.parse(text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1));
-    const rows = json.table.rows || [];
-    const cols = json.table.cols || [];
-    if (!cols.length) throw new Error('Sheet returned no columns');
-    return { rows, cols, fromCache: false };
+    if (!res.ok) throw new Error(`Menu API fetch failed: HTTP ${res.status}`);
+    const json = await res.json();
+    if (!json || json.ok !== true || !Array.isArray(json.items)) {
+      throw new Error('Menu API returned invalid payload.');
+    }
+    return { items: json.items, fromCache: false };
   }
 
   try {
     const res = await fetch(`${API_URL}&_ts=${Date.now()}`, { cache: 'no-store' });
-    if (!res.ok) throw new Error(`Sheet fetch failed: HTTP ${res.status}`);
-    const text = await res.text();
-    const json = JSON.parse(text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1));
-    const rows = json.table.rows || [];
-    const cols = json.table.cols || [];
-    if (!cols.length) throw new Error('Sheet returned no columns');
+    if (!res.ok) throw new Error(`Menu API fetch failed: HTTP ${res.status}`);
+    const json = await res.json();
+    if (!json || json.ok !== true || !Array.isArray(json.items)) {
+      throw new Error('Menu API returned invalid payload.');
+    }
 
     try {
-      localStorage.setItem(MENU_CACHE_KEY, JSON.stringify({ rows, cols, ts: Date.now() }));
+      localStorage.setItem(MENU_CACHE_KEY, JSON.stringify({ items: json.items, ts: Date.now() }));
     } catch (_) {}
 
-    return { rows, cols, fromCache: false };
+    return { items: json.items, fromCache: false };
   } catch (networkErr) {
     try {
       const cached = localStorage.getItem(MENU_CACHE_KEY);
       if (cached) {
         const parsed = JSON.parse(cached);
-        if (parsed && Array.isArray(parsed.rows) && Array.isArray(parsed.cols) && parsed.cols.length) {
+        if (parsed && Array.isArray(parsed.items) && parsed.items.length) {
           console.warn('[MenuData] Using cached feed — live fetch failed.', networkErr);
-          return { rows: parsed.rows, cols: parsed.cols, fromCache: true };
+          return { items: parsed.items, fromCache: true };
         }
       }
     } catch (_) {}
@@ -399,9 +407,15 @@ function parseMenuRows(dataRows, map, headerList, cols) {
     const jVal   = getCellValue(d, idxJain);
     const chefRaw = getCellValue(d, chefIdx);
 
+    const categoryRaw = (getCellValue(d, idxCategory) !== null && getCellValue(d, idxCategory) !== undefined && String(getCellValue(d, idxCategory)).trim() !== '')
+      ? getCellValue(d, idxCategory)
+      : (getCellValue(d, 0) !== null && getCellValue(d, 0) !== undefined && String(getCellValue(d, 0)).trim() !== ''
+        ? getCellValue(d, 0)
+        : 'Other');
+
     return {
       id: idx,
-      cat: String(getCellValue(d, idxCategory) || 'Other'),
+      cat: String(categoryRaw),
       name: itemName,
       desc: itemDesc,
       proteins,
@@ -447,23 +461,11 @@ function validateHeaders(map, headerList, rows, cols) {
 // Public init — fetches, validates, parses, returns MENU_DB array
 // ---------------------------------------------------------------------------
 async function loadAndParseMenu() {
-  const { rows, cols, fromCache } = await loadMenuDataWithCache();
+  const { items, fromCache } = await loadMenuDataWithCache();
 
-  const { map, headerList } = buildHeaderMapFromCols(cols);
-  const validation = validateHeaders(map, headerList, rows, cols);
-
-  if (!validation.valid) {
+  if (!Array.isArray(items) || !items.length) {
     throw Object.assign(
-      new Error('Menu sheet schema validation failed: missing required columns: ' + validation.missing.join(', ')),
-      { type: 'SCHEMA_ERROR', missing: validation.missing }
-    );
-  }
-
-  const items = parseMenuRows(validation.dataRows, validation.map, validation.headerList, cols);
-
-  if (!items.length) {
-    throw Object.assign(
-      new Error('No menu rows were parsed from Google Sheet. Verify required columns and row values.'),
+      new Error('No menu rows were returned from MySQL menu API.'),
       { type: 'EMPTY_ERROR' }
     );
   }
@@ -473,7 +475,7 @@ async function loadAndParseMenu() {
 
 // Expose constants needed by UI layer
 window.MenuData = {
-  SHEET_ID,
+  SHEET_ID: MENU_SOURCE_KEY,
   API_URL,
   PROTEIN_COLUMNS,
   VEG_XPCS_COLS,

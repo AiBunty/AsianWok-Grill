@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Entry Verification</title>
+  <style>
+    :root {
+      --bg: #f7f7f9;
+      --card: #ffffff;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --brand: #b91c1c;
+      --ok: #166534;
+      --err: #991b1b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: linear-gradient(180deg, #fff, var(--bg));
+      color: var(--ink);
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+    }
+    h1 { margin: 0 0 8px; font-size: 22px; }
+    h2 { margin: 0 0 8px; font-size: 16px; }
+    .muted { color: var(--muted); font-size: 13px; }
+    .row {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .field { display: grid; gap: 6px; }
+    .field label { font-size: 12px; color: var(--muted); }
+    .field input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 11px;
+      font-size: 14px;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    button {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 8px;
+      padding: 9px 12px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    button.primary {
+      background: var(--brand);
+      color: #fff;
+      border-color: var(--brand);
+    }
+    button:disabled { opacity: .55; cursor: not-allowed; }
+    .status {
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 10px;
+      font-size: 13px;
+    }
+    .status.ok { color: var(--ok); border-color: #86efac; background: #f0fdf4; }
+    .status.err { color: var(--err); border-color: #fecaca; background: #fef2f2; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .kv {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px;
+      min-height: 56px;
+    }
+    .kv .k { font-size: 11px; color: var(--muted); text-transform: uppercase; }
+    .kv .v { margin-top: 4px; font-size: 14px; word-break: break-word; }
+    .guest-list {
+      display: grid;
+      gap: 6px;
+      max-height: 280px;
+      overflow: auto;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      padding: 8px;
+    }
+    .guest-item {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px;
+    }
+    .history-list { display: grid; gap: 8px; }
+    .history-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 13px;
+    }
+    @media (max-width: 760px) {
+      .row, .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP5QMQJ9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTP5QMQJ9K');
+</script>
+</head>
+<body>
+  <div class="wrap">
+    <section class="card">
+      <h1>Event Entry Verification</h1>
+      <div class="muted">Email-link gate check-in flow (no QR scan required).</div>
+    </section>
+
+    <section class="card">
+      <h2>Load Ticket Details</h2>
+      <div class="row">
+        <div class="field">
+          <label for="transactionId">Transaction ID</label>
+          <input id="transactionId" type="text" placeholder="txn_xxx" />
+        </div>
+        <div class="field">
+          <label for="passcode">Event Entry Passcode</label>
+          <input id="passcode" type="password" placeholder="Enter staff passcode" />
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px;">
+        <div class="field">
+          <label for="verifiedBy">Verified By (optional)</label>
+          <input id="verifiedBy" type="text" placeholder="e.g. Gate Staff - A" />
+        </div>
+        <div class="field">
+          <label>Actions</label>
+          <div class="actions">
+            <button id="btnLoad" class="primary" type="button">Load Ticket Details</button>
+            <button id="btnReset" type="button">Reset</button>
+          </div>
+        </div>
+      </div>
+      <div id="status" class="status" style="margin-top:10px;">Enter passcode and transaction ID to begin.</div>
+    </section>
+
+    <section class="card">
+      <h2>Booking Preview</h2>
+      <div id="preview" class="grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Guest Selection</h2>
+      <div class="muted" style="margin-bottom:8px;">Select one or more guest names entering now. Unselected guests remain for next check-in.</div>
+      <div class="actions" style="margin-bottom:8px;">
+        <button id="btnSelectAll" type="button">Select All Remaining</button>
+        <button id="btnConfirm" class="primary" type="button" disabled>Confirm Check-In</button>
+      </div>
+      <div id="guestList" class="guest-list"></div>
+    </section>
+
+    <section class="card">
+      <h2>Check-in History</h2>
+      <div id="history" class="history-list"></div>
+    </section>
+  </div>
+
+  <script>
+    const state = {
+      transactionId: '',
+      passcode: '',
+      verifiedBy: '',
+      booking: null,
+      remainingGuestNames: [],
+      history: [],
+      loading: false,
+    };
+
+    const nodes = {
+      transactionId: document.getElementById('transactionId'),
+      passcode: document.getElementById('passcode'),
+      verifiedBy: document.getElementById('verifiedBy'),
+      status: document.getElementById('status'),
+      preview: document.getElementById('preview'),
+      guestList: document.getElementById('guestList'),
+      history: document.getElementById('history'),
+      btnLoad: document.getElementById('btnLoad'),
+      btnConfirm: document.getElementById('btnConfirm'),
+      btnSelectAll: document.getElementById('btnSelectAll'),
+      btnReset: document.getElementById('btnReset'),
+    };
+
+    function setStatus(message, type) {
+      nodes.status.textContent = message;
+      nodes.status.classList.remove('ok', 'err');
+      if (type === 'ok') nodes.status.classList.add('ok');
+      if (type === 'err') nodes.status.classList.add('err');
+    }
+
+    function setLoading(loading) {
+      state.loading = loading;
+      nodes.btnLoad.disabled = loading;
+      nodes.btnConfirm.disabled = loading || state.remainingGuestNames.length === 0;
+      nodes.btnSelectAll.disabled = loading || state.remainingGuestNames.length === 0;
+    }
+
+    function readForm() {
+      state.transactionId = String(nodes.transactionId.value || '').trim();
+      state.passcode = String(nodes.passcode.value || '').trim().toUpperCase();
+      state.verifiedBy = String(nodes.verifiedBy.value || '').trim();
+    }
+
+    async function postAction(action, payload) {
+      const res = await fetch('/index.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ action, ...payload }),
+      });
+      const json = await res.json();
+      if (!res.ok || !json || json.ok !== true) {
+        const err = (json && (json.message || json.error)) ? (json.message || json.error) : ('HTTP ' + res.status);
+        const error = new Error(err);
+        error.payload = json;
+        throw error;
+      }
+      return json;
+    }
+
+    function renderPreview() {
+      const b = state.booking;
+      if (!b) {
+        nodes.preview.innerHTML = '<div class="muted">No ticket loaded yet.</div>';
+        return;
+      }
+      const map = [
+        ['Event title', b.eventTitle || '-'],
+        ['Primary guest/customer', b.primaryGuest || '-'],
+        ['Checked-in count', String(b.checkedInCount ?? 0)],
+        ['Remaining count', String(b.remainingCount ?? 0)],
+        ['Transaction id', b.transactionId || '-'],
+        ['Email', b.email || '-'],
+        ['Phone', b.phone || '-'],
+        ['Status', b.status || '-'],
+      ];
+      nodes.preview.innerHTML = map.map(([k, v]) => `
+        <div class="kv">
+          <div class="k">${escapeHtml(k)}</div>
+          <div class="v">${escapeHtml(v)}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderGuestList() {
+      if (!state.remainingGuestNames.length) {
+        nodes.guestList.innerHTML = '<div class="muted">No remaining attendees.</div>';
+        nodes.btnConfirm.disabled = true;
+        nodes.btnSelectAll.disabled = true;
+        return;
+      }
+
+      nodes.guestList.innerHTML = state.remainingGuestNames.map((name, idx) => `
+        <label class="guest-item">
+          <input type="checkbox" data-guest="${escapeHtml(name)}" id="g_${idx}" />
+          <span>${escapeHtml(name)}</span>
+        </label>
+      `).join('');
+
+      const boxes = Array.from(nodes.guestList.querySelectorAll('input[type="checkbox"]'));
+      boxes.forEach((el) => el.addEventListener('change', () => {
+        nodes.btnConfirm.disabled = state.loading || selectedGuestNames().length === 0;
+      }));
+
+      nodes.btnConfirm.disabled = state.loading || selectedGuestNames().length === 0;
+      nodes.btnSelectAll.disabled = state.loading;
+    }
+
+    function renderHistory() {
+      if (!state.history.length) {
+        nodes.history.innerHTML = '<div class="muted">No prior check-ins found.</div>';
+        return;
+      }
+
+      nodes.history.innerHTML = state.history.map((item) => {
+        const names = Array.isArray(item.guestNames) ? item.guestNames.join(', ') : '';
+        return `
+          <div class="history-item">
+            <div><strong>Guests:</strong> ${escapeHtml(names || '-')}</div>
+            <div><strong>Admitted:</strong> ${escapeHtml(String(item.admittedCount || 0))}</div>
+            <div><strong>Verified By:</strong> ${escapeHtml(item.verifiedBy || '-')}</div>
+            <div><strong>Source:</strong> ${escapeHtml(item.source || '-')}</div>
+            <div><strong>Time:</strong> ${escapeHtml(item.createdAt || '-')}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function selectedGuestNames() {
+      return Array.from(nodes.guestList.querySelectorAll('input[type="checkbox"]:checked'))
+        .map((el) => String(el.getAttribute('data-guest') || '').trim())
+        .filter(Boolean);
+    }
+
+    async function loadTicketDetails() {
+      readForm();
+      if (!state.transactionId) {
+        setStatus('Transaction ID is required.', 'err');
+        return;
+      }
+      if (!state.passcode) {
+        setStatus('Event Entry Passcode is required.', 'err');
+        return;
+      }
+
+      try {
+        setLoading(true);
+        const payload = await postAction('verify_event_qr', {
+          passcode: state.passcode,
+          transactionId: state.transactionId,
+          verifiedBy: state.verifiedBy,
+          previewOnly: 1,
+          source: 'email_link',
+        });
+
+        state.booking = payload.booking || null;
+        state.remainingGuestNames = Array.isArray(payload.remainingGuestNames) ? payload.remainingGuestNames : [];
+        state.history = Array.isArray(payload.history) ? payload.history : [];
+
+        renderPreview();
+        renderGuestList();
+        renderHistory();
+        setStatus('Ticket details loaded.', 'ok');
+      } catch (error) {
+        const api = error && error.payload ? error.payload : null;
+        if (api && api.error === 'NO_MORE_ENTRY') {
+          state.booking = api.booking || null;
+          state.remainingGuestNames = [];
+          state.history = Array.isArray(api.history) ? api.history : [];
+          renderPreview();
+          renderGuestList();
+          renderHistory();
+        }
+        setStatus(error.message || 'Failed to load ticket details.', 'err');
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    async function confirmCheckIn() {
+      readForm();
+      const selected = selectedGuestNames();
+      if (!state.transactionId || !state.passcode) {
+        setStatus('Passcode and transaction ID are required.', 'err');
+        return;
+      }
+      if (!selected.length) {
+        setStatus('Select at least 1 guest name.', 'err');
+        return;
+      }
+
+      try {
+        setLoading(true);
+        const payload = await postAction('verify_event_qr', {
+          passcode: state.passcode,
+          transactionId: state.transactionId,
+          verifiedBy: state.verifiedBy,
+          selectedGuestNames: selected,
+          admittedCount: selected.length,
+          source: 'email_link',
+        });
+
+        state.booking = payload.booking || state.booking;
+        state.remainingGuestNames = Array.isArray(payload.remainingGuestNames) ? payload.remainingGuestNames : [];
+        state.history = Array.isArray(payload.history) ? payload.history : state.history;
+
+        renderPreview();
+        renderGuestList();
+        renderHistory();
+        setStatus('Check-in confirmed successfully.', 'ok');
+      } catch (error) {
+        setStatus(error.message || 'Check-in failed.', 'err');
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    function selectAllRemaining() {
+      Array.from(nodes.guestList.querySelectorAll('input[type="checkbox"]')).forEach((el) => {
+        el.checked = true;
+      });
+      nodes.btnConfirm.disabled = state.loading || selectedGuestNames().length === 0;
+    }
+
+    function resetForm() {
+      state.booking = null;
+      state.remainingGuestNames = [];
+      state.history = [];
+      nodes.verifiedBy.value = '';
+      renderPreview();
+      renderGuestList();
+      renderHistory();
+      setStatus('Form reset. Enter details to load ticket.', '');
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    nodes.btnLoad.addEventListener('click', loadTicketDetails);
+    nodes.btnConfirm.addEventListener('click', confirmCheckIn);
+    nodes.btnSelectAll.addEventListener('click', selectAllRemaining);
+    nodes.btnReset.addEventListener('click', resetForm);
+
+    (function boot() {
+      const params = new URLSearchParams(window.location.search);
+      const tx = String(params.get('transactionId') || params.get('tx') || '').trim();
+      if (tx) {
+        nodes.transactionId.value = tx;
+      }
+      renderPreview();
+      renderGuestList();
+      renderHistory();
+    })();
+  </script>
+</body>
+</html>

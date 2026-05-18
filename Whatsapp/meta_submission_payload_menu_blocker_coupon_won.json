@@ -1,0 +1,30 @@
+{
+  "name": "menu_blocker_coupon_won",
+  "category": "UTILITY",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "TEXT",
+      "text": "Spin Wheel Reward"
+    },
+    {
+      "type": "BODY",
+      "text": "Hi {{1}},\n\nCongratulations. You have won {{2}} in our Spin Wheel event.\nCoupon code: {{3}}\nOutcome: {{4}}\nValidity: Today only.\n\nShow this code to our staff to redeem your reward.",
+      "example": {
+        "body_text": [
+          [
+            "John",
+            "Free Dessert",
+            "AWG-7J3K9P",
+            "WON"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "FOOTER",
+      "text": "Customer Care: 7269899999"
+    }
+  ]
+}

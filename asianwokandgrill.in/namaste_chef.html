@@ -20,6 +20,10 @@
   <meta name="twitter:title" content="Namaste Chef | Official Menu" />
   <meta name="twitter:description" content="Explore the official Namaste Chef menu with curated chef specials and signature flavors." />
   <meta name="twitter:image" content="https://asianwokandgrill.in/assets/images/circlelogo.png" />
+    <meta http-equiv="refresh" content="0; url=namastemenu.html" />
+    <script>
+        window.location.replace('namastemenu.html');
+    </script>
   <link rel="stylesheet" href="assets/css/side-nav.css">
   <style>
    /* 1. CORE SYSTEM */
@@ -153,265 +157,29 @@
 
    .card-header-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; width: 100%; margin-bottom: 4px; }
 
-   .header-right-symbols { display: flex; align-items: center; gap: 5px; flex-shrink: 0; margin-left: auto; }
+    </style>
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP5QMQJ9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-   .badge-type { width: 18px; height: 18px; background: #fff; border-radius: 4px; display: flex; align-items: center; justify-content: center; border: 1px solid #ddd; }
-
-   .dot { width: 8px; height: 8px; border-radius: 50%; }
-
-   .dot.veg { background: var(--color-veg); }
-
-   .dot.nonveg { background: var(--color-nonveg); }
-
-   .dot.jain { background: var(--color-jain); }
-
-   .jain-badge { background: var(--color-jain); color: #fff; font-size: 0.5rem; font-weight: 900; padding: 2px 5px; border-radius: 4px; text-transform: uppercase; line-height: 1; }
-
-   .chef-badge { background: #fff; color: var(--color-accent-maroon); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-
-   .item-name { font-size: 0.95rem; font-weight: 600; color: var(--color-text-primary); line-height: 1.2; flex: 1; }
-
-   .item-desc { font-size: 0.75rem; color: var(--color-text-secondary); margin: 4px 0 10px 0; line-height: 1.4; cursor: pointer; overflow: hidden; }
-
-   .item-desc.collapsed { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-
-   .item-desc::after { content: "▾ More"; display: block; font-size: 0.6rem; color: var(--color-accent-gold); margin-top: 4px; font-weight: 700; }
-
-   .item-desc.expanded::after { content: "▴ Less"; }
-
-   .variant-chip, .qty-chip { padding: 5px 12px; border-radius: 8px; font-size: 0.65rem; font-weight: 800; background: var(--color-bg-primary); color: var(--color-text-secondary); cursor: pointer; white-space: nowrap; transition: 0.2s; border: 1px solid rgba(0,0,0,0.05); margin-bottom: 4px; }
-
-   .variant-chip.active.v-veg, .qty-chip.active.v-veg { background: var(--color-veg) !important; color: #FFFFFF !important; border-color: var(--color-veg) !important; }
-
-   .variant-chip.active.v-non, .qty-chip.active.v-non { background: var(--color-nonveg) !important; color: #FFFFFF !important; border-color: var(--color-nonveg) !important; }
-
-   .variant-chip.active.v-jain, .qty-chip.active.v-jain { background: var(--color-jain) !important; color: #FFFFFF !important; border-color: var(--color-jain) !important; }
-
-   .price { font-size: 1.1rem; font-weight: 800; color: var(--color-text-primary); border-top: 1px solid rgba(0,0,0,0.05); padding-top: 10px; margin-top: 5px; display: flex; justify-content: space-between; align-items: center; }
-
-   footer { background: #000000; color: #F2EDE4; padding: 4rem 1.5rem; text-align: center; border-top: 2px solid var(--color-accent-gold); }
-
-   .branch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; text-align: left; max-width: 1200px; margin: 0 auto; }
-
-   .branch-item { background: #111; padding: 20px; border-radius: 15px; border: 1px solid #333; }
-
-   .branch-logo { height: 50px; margin-bottom: 15px; object-fit: contain; }
-
-   .branch-socials { display: flex; gap: 15px; margin-top: 15px; align-items: center; }
-
-   .branch-socials a svg { width: 22px; height: 22px; fill: var(--color-accent-gold); transition: 0.3s; }
-
-   .branch-socials a:hover svg { fill: #fff; transform: translateY(-3px); }
-
-   .sync-info { font-size: 0.65rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 1px; margin-top: 3rem; }
-
-   #loader { position: fixed; inset: 0; background: #000; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-
-   .legend-section { background: var(--color-bg-secondary); padding: 2.5rem 1.5rem; margin: 0 auto 3rem; max-width: 1200px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); }
-
-   .legend-title { font-size: 1.3rem; color: var(--color-text-primary); text-align: center; font-weight: 300; letter-spacing: 2px; margin-bottom: 2rem; text-transform: uppercase; }
-
-   .legend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
-
-   .legend-item { display: flex; align-items: center; gap: 12px; padding: 15px; background: var(--color-bg-primary); border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); transition: 0.3s; }
-
-   .legend-item:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-
-   .legend-icon { flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
-
-   .legend-icon .badge-type { width: 24px; height: 24px; background: #fff; border-radius: 6px; display: flex; align-items: center; justify-content: center; border: 1px solid #ddd; }
-
-   .legend-icon .dot { width: 12px; height: 12px; border-radius: 50%; }
-
-   .legend-icon .jain-badge { background: var(--color-jain); color: #fff; font-size: 0.6rem; font-weight: 900; padding: 4px 8px; border-radius: 6px; text-transform: uppercase; }
-
-   .legend-icon .chef-badge { background: #fff; color: var(--color-accent-maroon); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 2px solid var(--color-accent-maroon); }
-
-   .legend-icon .spice-indicator { font-size: 1.3rem; }
-
-   .legend-text { flex: 1; }
-
-   .legend-label { font-size: 0.9rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 2px; }
-
-   .legend-desc { font-size: 0.7rem; color: var(--color-text-secondary); line-height: 1.3; }
-
-   .nav-links-header { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
-
-   .nav-links-header a { color: #fff; text-decoration: none; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.3); padding: 6px 12px; border-radius: 6px; transition: 0.3s; }
-
-   .nav-links-header a:hover { background: rgba(255,255,255,0.1); }
-
-   /* =====================
-      SITE HEADER NAMASTE
-   ===================== */
-   .site-header-namaste {
-     position: sticky;
-     top: 0;
-     height: 80px;
-     background: #000000;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 0 1.25rem;
-     border-bottom: 1px solid #333;
-     z-index: 1000;
-   }
-
-   .site-header-namaste .header-logo {
-     height: 60px;
-     width: auto;
-     object-fit: contain;
-   }
-
-   /* NAV */
-   .main-nav-namaste ul {
-     display: flex;
-     gap: 32px;
-     list-style: none;
-     margin: 0;
-     padding: 0;
-   }
-
-   .main-nav-namaste a {
-     color: #fff;
-     text-decoration: none;
-     font-size: 15px;
-     letter-spacing: 1px;
-     font-family: 'Poppins', sans-serif;
-     font-weight: 500;
-     transition: opacity 0.3s ease;
-   }
-
-   .main-nav-namaste a:hover {
-     opacity: 0.75;
-   }
-
-   .header-actions-namaste {
-     display: flex;
-     align-items: center;
-     gap: 15px;
-   }
-
-   /* HAMBURGER */
-   .hamburger-namaste {
-     display: none;
-     flex-direction: column;
-     gap: 6px;
-     cursor: pointer;
-   }
-
-   .hamburger-namaste span {
-     width: 28px;
-     height: 2px;
-     background: #fff;
-     display: block;
-     transition: 0.3s ease;
-   }
-
-   @media (max-width: 768px) {
-     .site-header-namaste {
-       height: 70px;
-       padding: 0 1rem;
-     }
-
-     .site-header-namaste .header-logo {
-       height: 50px;
-     }
-
-     .main-nav-namaste {
-       position: fixed;
-       inset: 0;
-       background: #000000;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       transform: translateX(100%);
-       transition: transform 0.4s ease;
-       z-index: 150;
-     }
-
-     .main-nav-namaste ul {
-       flex-direction: column;
-       gap: 28px;
-       text-align: center;
-     }
-
-     .main-nav-namaste a {
-       font-size: 24px;
-     }
-
-     .hamburger-namaste {
-       display: flex;
-     }
-
-     .main-nav-namaste.active {
-       transform: translateX(0);
-     }
-
-     .hamburger-namaste.active span:nth-child(1) {
-       transform: rotate(45deg) translateY(12px);
-     }
-
-     .hamburger-namaste.active span:nth-child(2) {
-       opacity: 0;
-     }
-
-     .hamburger-namaste.active span:nth-child(3) {
-       transform: rotate(-45deg) translateY(-12px);
-     }
-   }
-  </style>
-  <style id="mobile-menu-visibility-fix">
-  @media (max-width: 768px) {
-    .site-header-namaste {
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      z-index: 1100 !important;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
-    }
-    .main-nav-namaste {
-      left: auto !important;
-      right: 0 !important;
-      top: 0 !important;
-      bottom: 0 !important;
-      width: min(78vw, 340px) !important;
-      height: 100vh !important;
-      justify-content: flex-start !important;
-      align-items: flex-start !important;
-      padding: 90px 20px 20px !important;
-      box-shadow: -10px 0 30px rgba(0,0,0,0.28);
-    }
-    .main-nav-namaste ul {
-      width: 100%;
-    }
-    .main-nav-namaste a {
-      display: block;
-      width: 100%;
-    }
-    .hamburger-namaste {
-      position: relative;
-      z-index: 1200;
-    }
-  }
-  </style>
- </head>
+  gtag('config', 'G-YTP5QMQJ9K');
+</script>
+</head>
  <body id="menuBody">
-  <div id="loader">
-   <img alt="Logo" src="https://storage.files-vault.com/uploads/1768797625-EllydznoIM.JPG" style="height:80px;"/>
-  </div>
-  <header class="site-header-namaste">
-   <img alt="Namaste Chef Logo" class="header-logo" src="https://storage.files-vault.com/uploads/1768797625-EllydznoIM.JPG"/>
-   <nav class="main-nav-namaste">
-    <ul>
-      <li><a href="https://www.asianwokandgrill.in/">HOME</a></li>
-      <li><a href="menu.html">AWG MENU</MENU></a></li>
-      <li><a href="cocktail.html">COCKTAIL</a></li>
-          
-      <li><a href="#order-online">ORDER ONLINE</a></li>
-    </ul>
-   </nav>
+    <header class="site-header-namaste">
+     <a href="home.html" aria-label="Asian Wok & Grill home">
+        <img class="header-logo" src="assets/images/circlelogo.png" alt="Asian Wok & Grill" />
+     </a>
+     <nav class="main-nav-namaste" aria-label="Primary">
+        <a href="home.html">Home</a>
+        <a href="menu.html">Menu A</a>
+        <a href="cocktail.html">Menu B</a>
+        <a href="namaste_chef.html">Menu C</a>
+        <a href="reservation.html">Reservation</a>
+     </nav>
    <div class="header-actions-namaste">
     <button class="theme-icon-btn" id="themeIconBtn" onclick="toggleTheme()">
      🌙
@@ -423,6 +191,7 @@
     </div>
    </div>
   </header>
+    <div id="loader" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(242,237,228,0.92);z-index:9999;font-weight:700;color:#2D3E33;">Loading menu...</div>
   <div class="top-controls-bar">
    <div class="square-toggle-group">
     <button class="square-btn active" id="f-all" onclick="updateFilter('ALL')">
@@ -708,10 +477,10 @@
     </div>
    </div>
   </footer>
-  <script>
-   const SHEET_ID = '1BbxQ-HN-QsknQAXGp75IpaGqfnD6b1acLPnMUdi5hAg';
-
-   const API_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;
+  <script src="assets/js/menu-gate.js"></script>
+    <script>
+        const API_BASE = (location.protocol === 'file:') ? 'http://127.0.0.1:8090/' : '/';
+        const API_URL = `${API_BASE.replace(/\/?$/, '/')}?action=menu_public_items&source=namaste_chef`;
 
    let MENU_DB = [];
 
@@ -741,7 +510,73 @@
        navigator.serviceWorker.register('/menu-cache-sw.js').catch(() => {});
      }
 
-     async function loadMenuDataWithCache() {
+         function toLegacyRowsAndCols(items) {
+             const baseCols = [
+                 'Item Name',
+                 'Description',
+                 'Category',
+                 'Image URL',
+                 'Jain',
+                 "Chef's Special",
+                 'Spice Level',
+                 'Unit (Pcs)',
+                 'Veg',
+                 'Chicken',
+                 'Prawn',
+                 'Mutton',
+                 'Fish',
+                 'Surmai',
+                 'Pomfret',
+                 'Crab',
+                 'Egg',
+                 'Half',
+                 'Full',
+                 'Plain',
+                 'Butter',
+                 'Medium',
+                 'Large'
+             ];
+
+             const dynamicCols = [];
+             (items || []).forEach((item) => {
+                 Object.keys(item.dynamic || {}).forEach((key) => {
+                     if (!baseCols.includes(key) && !dynamicCols.includes(key)) dynamicCols.push(key);
+                 });
+                 Object.keys(item.servings || {}).forEach((key) => {
+                     if (!baseCols.includes(key) && !dynamicCols.includes(key)) dynamicCols.push(key);
+                 });
+             });
+
+             const headers = [...baseCols, ...dynamicCols];
+             const cols = headers.map((label) => ({ label }));
+             const rows = (items || []).map((item) => {
+                 const values = {
+                     'Item Name': item.name || '',
+                     'Description': item.desc || '',
+                     'Category': item.cat || 'Other',
+                     'Image URL': item.img || '',
+                     'Jain': item.jainPrice || '',
+                     "Chef's Special": item.chef ? 'Yes' : '',
+                     'Spice Level': item.spice || '',
+                     'Unit (Pcs)': item.servingUnit || '',
+                 };
+
+                 Object.entries(item.proteins || {}).forEach(([k, v]) => { values[k] = v; });
+                 Object.entries(item.servings || {}).forEach(([k, v]) => { values[k] = v; });
+                 Object.entries(item.dynamic || {}).forEach(([k, v]) => { values[k] = v; });
+
+                 return {
+                     c: headers.map((header) => {
+                         const value = values[header];
+                         return (value === undefined || value === null || value === '') ? null : { v: value };
+                     })
+                 };
+             });
+
+             return { rows, cols };
+         }
+
+         async function loadMenuDataWithCache() {
        try {
          const cached = localStorage.getItem(MENU_CACHE_KEY);
          if (cached) {
@@ -752,11 +587,14 @@
          }
        } catch (_) {}
 
-       const res = await fetch(API_URL, { cache: 'force-cache' });
-       const text = await res.text();
-       const json = JSON.parse(text.substring(text.indexOf('{'), text.lastIndexOf('}') + 1));
-       const rows = json.table.rows;
-       const cols = json.table.cols;
+             const res = await fetch(`${API_URL}&_ts=${Date.now()}`, { cache: 'no-store' });
+             if (!res.ok) throw new Error(`Menu API fetch failed: HTTP ${res.status}`);
+             const json = await res.json();
+             if (!json || json.ok !== true || !Array.isArray(json.items)) {
+                 throw new Error('Menu API returned invalid payload.');
+             }
+
+             const { rows, cols } = toLegacyRowsAndCols(json.items);
 
        try {
          localStorage.setItem(MENU_CACHE_KEY, JSON.stringify({ rows, cols, ts: Date.now() }));
@@ -832,6 +670,8 @@
 
    async function init() {
 
+       await window.awgGate.waitForGate();
+
        try {
 
            parseUrlParams();
@@ -881,7 +721,8 @@
                      }
 
                      function showSchemaErrorOverlay(errors) {
-                         document.getElementById('loader').style.display = 'none';
+                         const loader = document.getElementById('loader');
+                         if (loader) loader.style.display = 'none';
                          const id = 'schemaErrorOverlay';
                          let el = document.getElementById(id);
                          if(!el) {
@@ -1030,7 +871,8 @@
 
            warmMenuAssets(MENU_DB);
 
-           document.getElementById('loader').style.display = 'none';
+          const loader = document.getElementById('loader');
+          if (loader) loader.style.display = 'none';
 
            // Apply URL-based filter states to UI
 
@@ -1247,7 +1089,17 @@
 
    function toggleDesc(el) { el.classList.toggle('collapsed'); el.classList.toggle('expanded'); }
 
-   function snapTo(id) { const el = document.getElementById(id); if(el) { toggleSideNav(false); window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 160, behavior: 'smooth' }); } }
+   function snapTo(id) {
+       toggleSideNav(false);
+       const el = document.getElementById(id);
+       if (!el) return;
+       const header   = document.querySelector('.concept-header');
+       const controls = document.getElementById('topControlsBar');
+       const headerH   = header   ? header.getBoundingClientRect().height   : 92;
+       const controlsH = controls ? controls.getBoundingClientRect().height : 0;
+       const offset = Math.round(headerH + controlsH) + 8;
+       window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - offset, behavior: 'smooth' });
+   }
 
    function updateFilter(val) { foodFilter = val; if(val !== 'VEG') showJainOnly = false; activeVariant = {}; document.querySelectorAll('.top-controls-bar .square-btn').forEach(b => { if(b.id && b.id.startsWith('f-')) b.classList.remove('active'); }); document.getElementById('f-' + val.toLowerCase()).classList.add('active'); render(); }
 
@@ -1343,7 +1195,14 @@
 
    window.addEventListener('load', () => { setTimeout(handleScrollAnimation, 100); });
 
-     window.onload = init;
+     let __namasteInitStarted = false;
+     function startNamasteInit() {
+         if (__namasteInitStarted) return;
+         __namasteInitStarted = true;
+         init();
+     }
+     document.addEventListener('DOMContentLoaded', startNamasteInit);
+     window.addEventListener('load', startNamasteInit);
   </script>
   <script>
    // Ensure Mocktail and Bread category/items are always visible regardless of veg/jain/nonveg toggles.

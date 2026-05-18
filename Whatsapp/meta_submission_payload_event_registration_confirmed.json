@@ -1,0 +1,34 @@
+{
+  "name": "event_registration_confirmed",
+  "category": "UTILITY",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "TEXT",
+      "text": "Event Registration Confirmed"
+    },
+    {
+      "type": "BODY",
+      "text": "Hi {{1}},\n\nYour registration is confirmed.\nEvent: {{2}}\nDate: {{3}}\nTime: {{4}}\nTransaction ID: {{5}}\nTickets: {{6}}\nStatus: {{7}}\nQR Link: {{8}}\n\nPlease keep this message for entry verification.",
+      "example": {
+        "body_text": [
+          [
+            "John",
+            "DJ Night",
+            "2026-06-21",
+            "20:00",
+            "TXN12345",
+            "2",
+            "confirmed",
+            "https://example.com/qr/abc123"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "FOOTER",
+      "text": "Customer Care: 7269899999"
+    }
+  ]
+}

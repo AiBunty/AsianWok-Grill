@@ -4,7 +4,7 @@
  * Common side navigation, floating quick actions, and scroll-to-top button.
  * Shared across ALL pages of asianwokandgrill.in.
  *
- * On menu / namaste_chef pages the side-nav list is populated by their own
+ * On menu / namastemenu pages the side-nav list is populated by their own
  * page-specific JS (menu-ui.js etc.). On all other pages this script
  * auto-populates the drawer with site-wide navigation links.
  */
@@ -18,7 +18,7 @@
     { label: 'Home',         href: 'home.html' },
     { label: 'AWG Menu',         href: 'menu.html' },
     { label: 'Cocktails Menu',    href: 'cocktail.html' },
-    { label: 'Namaste Chef Menu', href: 'namaste_chef.html' },
+    { label: 'Namaste Menu', href: 'namastemenu.html' },
     { label: 'Reservations', href: 'reservation.html' },
     { label: 'Contact',      href: 'contact.html' },
     { label: 'Franchises',   href: 'franchises.html' }
@@ -28,7 +28,7 @@
   // Inject side-nav HTML into the page
   // -----------------------------------------------------------------------
   function injectSideNavHTML() {
-    // Skip injection if page already has side-nav elements (menu.html, namaste_chef.html, etc.)
+    // Skip injection if page already has side-nav elements (menu.html, namastemenu.html, etc.)
     if (document.getElementById('floatingQuickActions') ||
         document.getElementById('sideNavContainer')) return;
 

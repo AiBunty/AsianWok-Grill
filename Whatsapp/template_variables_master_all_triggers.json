@@ -1,0 +1,47 @@
+{
+  "crmVariableFormat": "{%contact.<field_key>%}",
+  "masterTriggers": {
+    "menu_blocker_coupon_won": {
+      "variables": [
+        { "placeholder": "{{1}}", "token": "{%contact.first_name%}", "param": "contact_name" },
+        { "placeholder": "{{2}}", "token": "{%contact.custom_values.prize%}", "param": "custom_values.prize" },
+        { "placeholder": "{{3}}", "token": "{%contact.custom_values.coupon_code%}", "param": "custom_values.coupon_code" },
+        { "placeholder": "{{4}}", "token": "{%contact.custom_values.outcome%}", "param": "custom_values.outcome" }
+      ]
+    },
+    "menu_blocker_try_again": {
+      "variables": [
+        { "placeholder": "{{1}}", "token": "{%contact.first_name%}", "param": "contact_name" },
+        { "placeholder": "{{2}}", "token": "{%contact.custom_values.try_again%}", "param": "custom_values.try_again" },
+        { "placeholder": "{{3}}", "token": "{%contact.custom_values.outcome%}", "param": "custom_values.outcome" }
+      ]
+    },
+    "event_registration_confirmed": {
+      "variables": [
+        { "placeholder": "{{1}}", "token": "{%contact.first_name%}", "param": "contact_name" },
+        { "placeholder": "{{2}}", "token": "{%contact.custom_values.event_name%}", "param": "custom_values.event_name" },
+        { "placeholder": "{{3}}", "token": "{%contact.custom_values.event_date%}", "param": "custom_values.event_date" },
+        { "placeholder": "{{4}}", "token": "{%contact.custom_values.event_time%}", "param": "custom_values.event_time" },
+        { "placeholder": "{{5}}", "token": "{%contact.custom_values.transaction_id%}", "param": "custom_values.transaction_id" },
+        { "placeholder": "{{6}}", "token": "{%contact.custom_values.ticket_qty%}", "param": "custom_values.ticket_qty" },
+        { "placeholder": "{{7}}", "token": "{%contact.custom_values.registration_status%}", "param": "custom_values.registration_status" },
+        { "placeholder": "{{8}}", "token": "{%contact.custom_values.qr_url%}", "param": "custom_values.qr_url" }
+      ]
+    },
+    "event_scan_entry": {
+      "variables": [
+        { "placeholder": "{{1}}", "token": "{%contact.first_name%}", "param": "contact_name" },
+        { "placeholder": "{{2}}", "token": "{%contact.custom_values.event_name%}", "param": "custom_values.event_name" },
+        { "placeholder": "{{3}}", "token": "{%contact.custom_values.event_date%}", "param": "custom_values.event_date" },
+        { "placeholder": "{{4}}", "token": "{%contact.custom_values.entry_date%}", "param": "custom_values.entry_date" },
+        { "placeholder": "{{5}}", "token": "{%contact.custom_values.entry_time%}", "param": "custom_values.entry_time" },
+        { "placeholder": "{{6}}", "token": "{%contact.custom_values.no_of_guest%}", "param": "custom_values.no_of_guest" },
+        { "placeholder": "{{7}}", "token": "{%contact.custom_values.transaction_id%}", "param": "custom_values.transaction_id" },
+        { "placeholder": "{{8}}", "token": "{%contact.custom_values.remaining_passes%}", "param": "custom_values.remaining_passes" }
+      ]
+    }
+  },
+  "static": {
+    "customerCareNumber": "7269899999"
+  }
+}

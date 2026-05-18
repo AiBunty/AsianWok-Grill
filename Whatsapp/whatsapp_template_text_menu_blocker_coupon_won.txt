@@ -1,0 +1,21 @@
+HEADER:
+Spin Wheel Reward
+
+BODY:
+Hi {{1}},
+
+Congratulations. You have won {{2}} in our Spin Wheel event.
+Coupon code: {{3}}
+Outcome: {{4}}
+Validity: Today only.
+
+Show this code to our staff to redeem your reward.
+
+FOOTER:
+Customer Care: 7269899999
+
+VARIABLES:
+{{1}} -> {%contact.first_name%}
+{{2}} -> {%contact.custom_values.prize%}
+{{3}} -> {%contact.custom_values.coupon_code%}
+{{4}} -> {%contact.custom_values.outcome%}

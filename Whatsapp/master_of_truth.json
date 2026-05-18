@@ -1,0 +1,85 @@
+{
+  "project": "Asian Wok & Grill",
+  "version": "1.0",
+  "masterOfTruth": {
+    "customerCareNumber": "7269899999",
+    "eventName": "Spin Wheel + Events",
+    "rewardValidity": "same_day",
+    "crmVariableFormat": "{%contact.<field_key>%}",
+    "crmVariableTokens": {
+      "name": "{%contact.first_name%}",
+      "mobile": "{%contact.phone%}",
+      "email": "{%contact.email%}",
+      "couponCode": "{%contact.custom_values.coupon_code%}",
+      "prize": "{%contact.custom_values.prize%}",
+      "outcome": "{%contact.custom_values.outcome%}",
+      "tryAgain": "{%contact.custom_values.try_again%}",
+      "eventName": "{%contact.custom_values.event_name%}",
+      "eventDate": "{%contact.custom_values.event_date%}",
+      "eventTime": "{%contact.custom_values.event_time%}",
+      "transactionId": "{%contact.custom_values.transaction_id%}",
+      "ticketQty": "{%contact.custom_values.ticket_qty%}",
+      "registrationStatus": "{%contact.custom_values.registration_status%}",
+      "qrUrl": "{%contact.custom_values.qr_url%}",
+      "qrCodeImage": "{%contact.custom_values.qrcodeimage%}",
+      "entryDate": "{%contact.custom_values.entry_date%}",
+      "entryTime": "{%contact.custom_values.entry_time%}",
+      "noOfGuest": "{%contact.custom_values.no_of_guest%}",
+      "remainingPasses": "{%contact.custom_values.remaining_passes%}"
+    },
+    "triggerTemplates": {
+      "menu_blocker_coupon_won": [
+        "contact_name",
+        "contact_phone",
+        "custom_values.coupon_code",
+        "custom_values.prize",
+        "custom_values.outcome"
+      ],
+      "menu_blocker_try_again": [
+        "contact_name",
+        "contact_phone",
+        "custom_values.try_again",
+        "custom_values.outcome"
+      ],
+      "event_registration_confirmed": [
+        "contact_name",
+        "contact_email",
+        "contact_phone",
+        "custom_values.event_name",
+        "custom_values.event_date",
+        "custom_values.event_time",
+        "custom_values.transaction_id",
+        "custom_values.ticket_qty",
+        "custom_values.registration_status",
+        "custom_values.qrcodeimage",
+        "custom_values.qr_url"
+      ],
+      "event_scan_entry": [
+        "contact_name",
+        "contact_email",
+        "contact_phone",
+        "custom_values.event_name",
+        "custom_values.event_date",
+        "custom_values.entry_date",
+        "custom_values.entry_time",
+        "custom_values.no_of_guest",
+        "custom_values.transaction_id",
+        "custom_values.remaining_passes"
+      ]
+    },
+    "crmSync": {
+      "source": "CRM Sync Panel",
+      "requiredFields": [
+        "api_token",
+        "contact_name",
+        "contact_phone"
+      ],
+      "optionalFields": [
+        "contact_email",
+        "custom_values.coupon_code",
+        "custom_values.prize",
+        "custom_values.outcome"
+      ]
+    }
+  }
+}

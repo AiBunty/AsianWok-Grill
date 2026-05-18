@@ -1,0 +1,37 @@
+{
+  "templateName": "event_scan_entry",
+  "channel": "whatsapp",
+  "category": "UTILITY",
+  "language": "en",
+  "status": "draft_for_meta_approval",
+  "header": {
+    "type": "TEXT",
+    "text": "Event Entry Confirmed"
+  },
+  "body": {
+    "text": "Hi {{1}},\n\nYour event entry has been successfully scanned.\nEvent: {{2}}\nEvent Date: {{3}}\nEntry Date: {{4}}\nEntry Time: {{5}}\nGuests Entered: {{6}}\nTransaction ID: {{7}}\nRemaining Passes: {{8}}"
+  },
+  "footer": {
+    "text": "Customer Care: 7269899999"
+  },
+  "variableMapping": {
+    "1": "{%contact.first_name%}",
+    "2": "{%contact.custom_values.event_name%}",
+    "3": "{%contact.custom_values.event_date%}",
+    "4": "{%contact.custom_values.entry_date%}",
+    "5": "{%contact.custom_values.entry_time%}",
+    "6": "{%contact.custom_values.no_of_guest%}",
+    "7": "{%contact.custom_values.transaction_id%}",
+    "8": "{%contact.custom_values.remaining_passes%}"
+  },
+  "metaExampleValues": {
+    "1": "John",
+    "2": "DJ Night",
+    "3": "2026-06-21",
+    "4": "2026-06-21",
+    "5": "19:46:00",
+    "6": "2",
+    "7": "TXN12345",
+    "8": "0"
+  }
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Event Details | Asian Wok & Grill</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP5QMQJ9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTP5QMQJ9K');
+</script>
+</head>
+<body>
+  <script>
+    (function redirectToEventDetails() {
+      const params = new URLSearchParams(window.location.search);
+      const target = new URL('../events.html', window.location.href);
+      const eventId = params.get('eventId') || params.get('event_id') || '';
+      const eventSlug = params.get('eventSlug') || params.get('event_slug') || '';
+      if (eventId) {
+        target.searchParams.set('eventId', eventId);
+      }
+      if (eventSlug) {
+        target.searchParams.set('eventSlug', eventSlug);
+      }
+      target.hash = 'register';
+      window.location.replace(target.toString());
+    })();
+  </script>
+  <a href="../events.html#register">Open event registration</a>
+</body>
+</html>

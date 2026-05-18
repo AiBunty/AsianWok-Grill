@@ -155,6 +155,7 @@ function updateCardSelectionState(id) {
   if (!item || !card) return false;
 
   const selV  = activeVariant[id];
+  const dietType = getDietTypeForVariant(item, selV);
   const price = getDisplayPriceForVariant(item, selV);
 
   const priceEl = card.querySelector('[data-role="total-price"]');
@@ -166,6 +167,11 @@ function updateCardSelectionState(id) {
       getChipActiveClasses(selV).forEach(cls => chip.classList.add(cls));
     }
   });
+
+  const symbolsEl = card.querySelector('.header-right-symbols');
+  if (symbolsEl) {
+    symbolsEl.innerHTML = `${selV === 'Jain' ? '<div class="jain-badge">JAIN</div>' : `<div class="badge-type"><div class="dot ${dietType}"></div></div>`}${item.chef ? '<div class="chef-badge">👨‍🍳</div>' : ''}`;
+  }
 
   return true;
 }
@@ -327,12 +333,28 @@ function toggleDesc(el) {
   el.classList.toggle('expanded');
 }
 
-function snapTo(id) {
+// Tracks a category target requested while the page is still loading.
+let _pendingSnapTarget = null;
+
+function _getStickyOffset() {
+  const header   = document.querySelector('.concept-header');
+  const controls = document.getElementById('topControlsBar');
+  const headerH   = header   ? header.getBoundingClientRect().height   : 92;
+  const controlsH = controls ? controls.getBoundingClientRect().height : 0;
+  return Math.round(headerH + controlsH) + 8; // 8 px breathing room
+}
+
+function _doSnap(id) {
   const el = document.getElementById(id);
-  if (el) {
-    toggleSideNav(false);
-    window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 160, behavior: 'smooth' });
-  }
+  if (!el) return;
+  const offset = _getStickyOffset();
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - offset, behavior: 'smooth' });
+}
+
+function snapTo(id) {
+  toggleSideNav(false);
+  _pendingSnapTarget = id;
+  _doSnap(id);
 }
 
 function updateFilter(val) {
@@ -528,6 +550,9 @@ function checkURLParams() {
 // Ambient canvas background particles
 // ---------------------------------------------------------------------------
 function initMenuAmbient() {
+  // Skip on mobile — canvas animations are GPU-heavy and cause crashes on low-end phones.
+  if (window.matchMedia('(max-width: 768px)').matches) return;
+
   const canvas     = document.getElementById('menuAmbientCanvas');
   const blurTop    = document.getElementById('menuAmbientBlurTop');
   const blurBottom = document.getElementById('menuAmbientBlurBottom');
@@ -676,6 +701,12 @@ async function init() {
     checkURLParams();
     render();
     await hideLoader();
+    // Re-apply any category scroll that fired during loading (layout is now stable).
+    if (_pendingSnapTarget) {
+      const t = _pendingSnapTarget;
+      _pendingSnapTarget = null;
+      window.setTimeout(() => _doSnap(t), 80);
+    }
   } catch (e) {
     console.error(e);
     if (e && e.type === 'SCHEMA_ERROR') {

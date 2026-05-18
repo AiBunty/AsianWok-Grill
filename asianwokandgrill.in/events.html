@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Active Events | Asian Wok & Grill</title>
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://asianwokandgrill.in/events.html" />
+  <meta property="og:url" content="https://asianwokandgrill.in/events.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f0405;
+      --bg-soft: #1a0708;
+      --panel: rgba(255, 255, 255, 0.04);
+      --line: rgba(199, 164, 107, 0.32);
+      --gold: #c7a46b;
+      --text: #f7ead9;
+      --muted: rgba(247, 234, 217, 0.76);
+      --danger: #ffc6c6;
+      --success: #b8f5c9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 12% 2%, #341112 0%, rgba(26, 9, 10, 0.96) 36%, rgba(12, 3, 4, 0.96) 70%),
+        linear-gradient(180deg, #150607 0%, #090203 100%);
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 16px 56px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .header {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px 16px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.22));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3.2vw, 40px);
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      line-height: 1;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      border: 1px solid rgba(199, 164, 107, 0.5);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px 16px;
+      background: var(--panel);
+      display: grid;
+      gap: 4px;
+    }
+
+    .intro h1 {
+      font-size: 38px;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .intro p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .event-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(0, 0, 0, 0.2));
+      display: grid;
+      gap: 0;
+    }
+
+    .event-poster {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      background: #2a0f10;
+      display: block;
+    }
+
+    .event-content {
+      padding: 12px 14px 14px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .event-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      line-height: 1.1;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .event-meta {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .event-content p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .event-card button {
+      border: 1px solid rgba(199, 164, 107, 0.5);
+      border-radius: 999px;
+      background: rgba(199, 164, 107, 0.14);
+      color: var(--text);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 9px 14px;
+      cursor: pointer;
+      width: fit-content;
+    }
+
+    .focus-wrap {
+      border: 1px solid rgba(199, 164, 107, 0.42);
+      border-radius: 18px;
+      padding: 16px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(0, 0, 0, 0.25));
+      display: none;
+      gap: 14px;
+    }
+
+    .focus-wrap.active {
+      display: grid;
+    }
+
+    .focus-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .focus-head h3 {
+      font-size: 40px;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .focus-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 14px;
+    }
+
+    .focus-event {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.22);
+      display: grid;
+      align-content: start;
+    }
+
+    .focus-event img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+      background: #2a1112;
+    }
+
+    .focus-copy {
+      padding: 12px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .focus-copy h4 {
+      font-size: 34px;
+      line-height: 1.1;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+    }
+
+    .focus-copy p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .register-panel {
+      border: 1px solid rgba(199, 164, 107, 0.45);
+      border-radius: 14px;
+      background: rgba(16, 5, 6, 0.9);
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .register-panel h4 {
+      font-size: 22px;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .otp-note {
+      border: 1px dashed rgba(199, 164, 107, 0.45);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+      background: rgba(199, 164, 107, 0.08);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .form-grid input,
+    .form-grid select,
+    .form-grid textarea {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      padding: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+    }
+
+    .form-grid textarea,
+    .full {
+      grid-column: span 2;
+    }
+
+    .phone-row {
+      display: grid;
+      grid-template-columns: 110px minmax(0, 1fr);
+      gap: 8px;
+      grid-column: span 2;
+    }
+
+    .guest-name-list {
+      grid-column: span 2;
+      display: grid;
+      gap: 7px;
+    }
+
+    .guest-name-list .label {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .guest-name-item {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      padding: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+    }
+
+    .form-grid button[type='submit'] {
+      border: 1px solid rgba(199, 164, 107, 0.55);
+      border-radius: 999px;
+      background: rgba(199, 164, 107, 0.2);
+      color: var(--text);
+      padding: 10px 14px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      width: fit-content;
+      cursor: pointer;
+    }
+
+    .form-grid button[type='submit']:disabled {
+      border-color: rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.14);
+      color: rgba(247, 234, 217, 0.48);
+      cursor: not-allowed;
+    }
+
+    .otp-controls {
+      grid-column: span 2;
+      display: grid;
+      gap: 8px;
+      border: 1px dashed rgba(199, 164, 107, 0.45);
+      border-radius: 12px;
+      padding: 10px;
+      background: rgba(199, 164, 107, 0.07);
+    }
+
+    .otp-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .otp-row input {
+      max-width: 150px;
+    }
+
+    .otp-row button,
+    .resend-confirmation-btn {
+      border: 1px solid rgba(199, 164, 107, 0.55);
+      border-radius: 999px;
+      background: rgba(199, 164, 107, 0.16);
+      color: var(--text);
+      padding: 9px 13px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .otp-row button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .verify-badge {
+      width: fit-content;
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(247, 234, 217, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .verify-badge.verified {
+      color: var(--success);
+      border-color: rgba(184, 245, 201, 0.5);
+      background: rgba(184, 245, 201, 0.1);
+    }
+
+    .status {
+      min-height: 20px;
+      color: var(--success);
+      font-size: 13px;
+    }
+
+    .status.error {
+      color: var(--danger);
+    }
+
+    .empty-state {
+      border: 1px dashed rgba(199, 164, 107, 0.4);
+      border-radius: 12px;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    @media (max-width: 980px) {
+      .events-grid,
+      .focus-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .event-poster,
+      .focus-event img {
+        height: 320px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-grid textarea,
+      .full,
+      .phone-row,
+      .otp-controls,
+      .guest-name-list {
+        grid-column: span 1;
+      }
+
+      .phone-row {
+        grid-template-columns: 1fr;
+      }
+
+      .brand {
+        font-size: 34px;
+      }
+    }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP5QMQJ9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTP5QMQJ9K');
+</script>
+</head>
+<body>
+  <main class="page">
+    <section class="header">
+      <div class="brand">All Active Events</div>
+      <div class="actions">
+        <a class="nav-link" href="home.html">Back to Home Events</a>
+        <a class="nav-link" href="home.html">Home</a>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h1>Choose Your Event</h1>
+      <p>Step 1: select any active event from the cards below. Step 2: the selected event opens with the registration form directly under it.</p>
+    </section>
+
+    <section class="events-grid" id="eventsGrid">
+      <article class="event-card">
+        <img class="event-poster" src="assets/images/Output/event1.jpg" alt="Event" />
+        <div class="event-content">
+          <div class="event-meta">Upcoming | 8:00 PM</div>
+          <h2>Live Event</h2>
+          <p>Event cards are loading...</p>
+          <button type="button">Register Now</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="focus-wrap" id="eventFocusWrap">
+      <div class="focus-head">
+        <h3 id="focusTitle">Event Details</h3>
+        <a class="nav-link" href="#eventsGrid">Back To All Events</a>
+      </div>
+
+      <div class="focus-layout" id="register">
+        <article class="focus-event">
+          <img id="focusImage" src="assets/images/Output/event1.jpg" alt="Selected event" />
+          <div class="focus-copy">
+            <div class="event-meta" id="focusMeta">Upcoming | 8:00 PM</div>
+            <h4 id="focusHeading">Selected Event</h4>
+            <p id="focusDescription">Choose an event above to load complete event details and registration form.</p>
+            <div class="event-meta" id="focusVenue"></div>
+          </div>
+        </article>
+
+        <section class="register-panel">
+          <h4>Register Guest Pass For Free Entry</h4>
+          <div class="otp-note">Verify your email by OTP before registration or checkout can continue.</div>
+
+          <form id="eventRegistrationForm" class="form-grid">
+            <input id="regName" type="text" placeholder="Full Name" required />
+            <input id="regEmail" type="email" placeholder="Email Address" required />
+
+            <div class="phone-row">
+              <select id="regCountryCode" aria-label="Country code">
+                <option value="+91" selected>+91</option>
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+                <option value="+971">+971</option>
+              </select>
+              <input id="regPhone" type="tel" placeholder="10 digit mobile" required />
+            </div>
+
+            <input id="regEventDisplay" class="full" type="text" placeholder="Select an event from above" readonly />
+            <input id="regQty" type="number" min="1" max="20" value="1" required />
+            <textarea id="regNotes" class="full" placeholder="Optional notes"></textarea>
+
+            <div id="guestNameList" class="guest-name-list">
+              <div class="label">Guest Names (one per pass)</div>
+            </div>
+
+            <div class="otp-controls">
+              <span id="emailVerifyBadge" class="verify-badge">Email verification required</span>
+              <div class="otp-row">
+                <button id="sendOtpBtn" type="button">Send OTP</button>
+                <input id="regOtp" type="text" inputmode="numeric" maxlength="6" pattern="[0-9]{6}" placeholder="6 digit OTP" hidden />
+                <button id="verifyOtpBtn" type="button" hidden>Verify OTP</button>
+              </div>
+              <div id="otpHelp" class="otp-note">Register button unlocks only after this email is verified.</div>
+            </div>
+
+            <button id="registerSubmitBtn" type="submit" disabled>Register</button>
+          </form>
+
+          <div id="regStatus" class="status"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const eventsGrid = document.getElementById('eventsGrid');
+    const focusWrap = document.getElementById('eventFocusWrap');
+    const focusTitle = document.getElementById('focusTitle');
+    const focusHeading = document.getElementById('focusHeading');
+    const focusMeta = document.getElementById('focusMeta');
+    const focusDescription = document.getElementById('focusDescription');
+    const focusVenue = document.getElementById('focusVenue');
+    const focusImage = document.getElementById('focusImage');
+
+    const regEventDisplay = document.getElementById('regEventDisplay');
+    const regCountryCode = document.getElementById('regCountryCode');
+    const regStatus = document.getElementById('regStatus');
+    const regForm = document.getElementById('eventRegistrationForm');
+    const regName = document.getElementById('regName');
+    const regEmail = document.getElementById('regEmail');
+    const regPhone = document.getElementById('regPhone');
+    const regQty = document.getElementById('regQty');
+    const guestNameList = document.getElementById('guestNameList');
+    const regOtp = document.getElementById('regOtp');
+    const sendOtpBtn = document.getElementById('sendOtpBtn');
+    const verifyOtpBtn = document.getElementById('verifyOtpBtn');
+    const registerSubmitBtn = document.getElementById('registerSubmitBtn');
+    const emailVerifyBadge = document.getElementById('emailVerifyBadge');
+    const otpHelp = document.getElementById('otpHelp');
+
+    const eventById = new Map();
+    const eventBySlug = new Map();
+    let selectedEvent = null;
+    let otpCooldownTimer = null;
+    const otpState = {
+      verificationToken: '',
+      verifiedEmail: '',
+      cooldownRemaining: 0,
+      sending: false,
+      verifying: false,
+    };
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function buildGuestNameInputs() {
+      const qty = Math.max(1, Math.min(20, Number(regQty.value || 1)));
+      regQty.value = String(qty);
+
+      const fields = [];
+      for (let i = 1; i <= qty; i += 1) {
+        fields.push(`
+          <input
+            type="text"
+            class="guest-name-item"
+            data-guest-index="${i}"
+            placeholder="Guest ${i} name"
+            ${i === 1 ? 'required' : ''}
+          />
+        `);
+      }
+
+      guestNameList.innerHTML = '<div class="label">Guest Names (one per pass)</div>' + fields.join('');
+    }
+
+    function readAttendeeDetails() {
+      const names = Array.from(guestNameList.querySelectorAll('.guest-name-item'))
+        .map((input) => String(input.value || '').trim())
+        .filter(Boolean);
+
+      return names.map((name) => ({ name }));
+    }
+
+    function setStatus(message, isError) {
+      regStatus.textContent = message || '';
+      regStatus.classList.toggle('error', Boolean(isError));
+    }
+
+    function showDuplicateRegistration(transactionId) {
+      const safeTransactionId = escapeHtml(transactionId);
+      regStatus.classList.add('error');
+      regStatus.innerHTML = `
+        Existing registration found for this event.
+        <button class="resend-confirmation-btn" type="button" data-resend-confirmation="${safeTransactionId}">
+          Send Email Confirmation Again
+        </button>
+      `;
+    }
+
+    async function resendConfirmation(transactionId) {
+      try {
+        const response = await fetch('/?action=resend_event_confirmation', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ action: 'resend_event_confirmation', transactionId })
+        });
+        const data = await response.json();
+        if (!response.ok || !data.ok) {
+          throw new Error((data && data.message) || 'Unable to resend now, please retry.');
+        }
+        setStatus('Confirmation email sent again.', false);
+      } catch (error) {
+        setStatus(error instanceof Error ? error.message : 'Unable to resend now, please retry.', true);
+      }
+    }
+
+    function normalizeEmail(value) {
+      return String(value || '').trim().toLowerCase();
+    }
+
+    function currentEmailVerified() {
+      return Boolean(otpState.verificationToken && otpState.verifiedEmail && otpState.verifiedEmail === normalizeEmail(regEmail.value));
+    }
+
+    function renderOtpState() {
+      const verified = currentEmailVerified();
+      emailVerifyBadge.textContent = verified ? 'Email verified' : 'Email verification required';
+      emailVerifyBadge.classList.toggle('verified', verified);
+      registerSubmitBtn.disabled = !verified;
+      sendOtpBtn.disabled = otpState.sending || otpState.cooldownRemaining > 0;
+      verifyOtpBtn.disabled = otpState.verifying || !regOtp.value.trim();
+
+      if (otpState.cooldownRemaining > 0) {
+        sendOtpBtn.textContent = `Resend in ${otpState.cooldownRemaining}s`;
+      } else {
+        sendOtpBtn.textContent = otpState.sending ? 'Sending...' : (regOtp.hidden ? 'Send OTP' : 'Resend OTP');
+      }
+      verifyOtpBtn.textContent = otpState.verifying ? 'Verifying...' : 'Verify OTP';
+    }
+
+    function clearOtpVerification(message) {
+      otpState.verificationToken = '';
+      otpState.verifiedEmail = '';
+      if (message) {
+        otpHelp.textContent = message;
+      }
+      renderOtpState();
+    }
+
+    function startOtpCooldown(seconds) {
+      otpState.cooldownRemaining = Math.max(0, Number(seconds || 0));
+      if (otpCooldownTimer) {
+        window.clearInterval(otpCooldownTimer);
+      }
+      renderOtpState();
+      if (otpState.cooldownRemaining <= 0) {
+        return;
+      }
+      otpCooldownTimer = window.setInterval(() => {
+        otpState.cooldownRemaining = Math.max(0, otpState.cooldownRemaining - 1);
+        if (otpState.cooldownRemaining <= 0) {
+          window.clearInterval(otpCooldownTimer);
+          otpCooldownTimer = null;
+        }
+        renderOtpState();
+      }, 1000);
+    }
+
+    function eventSlugOf(event) {
+      return String(event?.slug || event?.eventSlug || event?.event_slug || '').trim().toLowerCase();
+    }
+
+    function focusOnEvent(event, shouldScroll) {
+      if (!event) {
+        return;
+      }
+
+      selectedEvent = event;
+      clearOtpVerification('Register button unlocks only after this email is verified.');
+      const eventTitle = String(event.title || 'Live Event');
+      const date = String(event.date || event.startDate || event.start_date || 'Upcoming');
+      const time = String(event.time || event.startTime || event.start_time || 'TBA');
+      const imageUrl = String(event.imageUrl || event.image_url || 'assets/images/Output/event1.jpg');
+      const venue = String(event.venue || event.location || 'Asian Wok & Grill');
+
+      focusWrap.classList.add('active');
+      focusTitle.textContent = eventTitle;
+      focusHeading.textContent = eventTitle;
+      focusMeta.textContent = `${date} | ${time}`;
+      focusDescription.textContent = String(event.description || 'Reserve your seat now for this event.');
+      focusVenue.textContent = venue ? `Venue: ${venue}` : '';
+      focusImage.src = imageUrl;
+      focusImage.alt = eventTitle;
+      regEventDisplay.value = eventTitle;
+
+      const slug = eventSlugOf(event);
+      if (slug) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('eventSlug', slug);
+        history.replaceState({}, '', `${url.pathname}?${url.searchParams.toString()}#register`);
+      }
+
+      if (shouldScroll) {
+        document.getElementById('register').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function buildEventCard(event) {
+      const eventId = String(event.id || '');
+      const title = String(event.title || 'Live Event');
+      const date = String(event.date || event.startDate || event.start_date || 'Upcoming');
+      const time = String(event.time || event.startTime || event.start_time || 'TBA');
+      const description = String(event.description || 'Reserve your seat now for this event at Asian Wok & Grill.');
+      const imageUrl = String(event.imageUrl || event.image_url || 'assets/images/Output/event1.jpg');
+      const buttonId = `open-event-${eventId}`;
+
+      return `
+        <article class="event-card">
+          <img class="event-poster" src="${escapeHtml(imageUrl)}" alt="${escapeHtml(title)}" />
+          <div class="event-content">
+            <div class="event-meta">${escapeHtml(date)} | ${escapeHtml(time)}</div>
+            <h2>${escapeHtml(title)}</h2>
+            <p>${escapeHtml(description)}</p>
+            <button id="${escapeHtml(buttonId)}" type="button" data-select-event="${escapeHtml(eventId)}">Register Now</button>
+          </div>
+        </article>
+      `;
+    }
+
+    function bindEventButtons() {
+      Array.from(document.querySelectorAll('[data-select-event]')).forEach((button) => {
+        button.addEventListener('click', () => {
+          const eventId = String(button.getAttribute('data-select-event') || '');
+          window.location.href = `events/event.html?eventId=${encodeURIComponent(eventId)}#register`;
+        });
+      });
+    }
+
+    function pickInitialEvent(events) {
+      const params = new URLSearchParams(window.location.search);
+      const eventId = String(params.get('eventId') || '').trim();
+      const eventSlug = String(params.get('eventSlug') || '').trim().toLowerCase();
+
+      if (eventId && eventById.has(eventId)) {
+        return eventById.get(eventId);
+      }
+
+      if (eventSlug && eventBySlug.has(eventSlug)) {
+        return eventBySlug.get(eventSlug);
+      }
+
+      if (window.location.hash === '#register' && events.length > 0) {
+        return events[0];
+      }
+
+      return null;
+    }
+
+    async function loadEvents() {
+      try {
+        const response = await fetch('/?action=public_live_events', {
+          headers: { Accept: 'application/json' },
+          cache: 'no-store'
+        });
+        const payload = await response.json();
+        const events = Array.isArray(payload.events) ? payload.events : [];
+
+        if (!events.length) {
+          eventsGrid.innerHTML = '<div class="empty-state">No active events right now. Please check again soon.</div>';
+          return;
+        }
+
+        events.forEach((event) => {
+          const eventId = String(event.id || '');
+          if (eventId) {
+            eventById.set(eventId, event);
+          }
+
+          const slug = eventSlugOf(event);
+          if (slug) {
+            eventBySlug.set(slug, event);
+          }
+        });
+
+        eventsGrid.innerHTML = events.map(buildEventCard).join('');
+        bindEventButtons();
+
+        const initialEvent = pickInitialEvent(events);
+        if (initialEvent) {
+          focusOnEvent(initialEvent, window.location.hash === '#register');
+        }
+      } catch (_) {
+        eventsGrid.innerHTML = '<div class="empty-state">Unable to load events right now. Please refresh the page.</div>';
+      }
+    }
+
+    async function sendOtp() {
+      if (!selectedEvent || !selectedEvent.id) {
+        setStatus('Please select an event first.', true);
+        return;
+      }
+      const email = normalizeEmail(regEmail.value);
+      if (!regName.value.trim()) {
+        setStatus('Full name is required before sending OTP.', true);
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setStatus('Enter a valid email address before sending OTP.', true);
+        return;
+      }
+
+      try {
+        otpState.sending = true;
+        renderOtpState();
+        const response = await fetch('/?action=send_event_otp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            action: 'send_event_otp',
+            eventId: String(selectedEvent.id),
+            customerName: regName.value.trim(),
+            customerEmail: email
+          })
+        });
+        const data = await response.json();
+        if (!response.ok || !data.ok) {
+          if (data && data.error === 'OTP_RESEND_COOLDOWN') {
+            startOtpCooldown(data.retryAfterSeconds || data.retry_after_seconds || 60);
+          }
+          throw new Error((data && data.message) || 'Failed to send OTP. Please try again.');
+        }
+        regOtp.hidden = false;
+        verifyOtpBtn.hidden = false;
+        regOtp.value = '';
+        clearOtpVerification('OTP sent. Enter the 6 digit code from your email.');
+        startOtpCooldown(data.resendAllowedInSeconds || data.resend_allowed_in_seconds || 60);
+        setStatus('OTP sent.', false);
+      } catch (error) {
+        setStatus(error instanceof Error ? error.message : 'Failed to send OTP. Please try again.', true);
+      } finally {
+        otpState.sending = false;
+        renderOtpState();
+      }
+    }
+
+    async function verifyOtp() {
+      const email = normalizeEmail(regEmail.value);
+      const otp = String(regOtp.value || '').trim();
+      if (!/^\d{6}$/.test(otp)) {
+        setStatus('Enter the 6 digit OTP.', true);
+        return;
+      }
+      try {
+        otpState.verifying = true;
+        renderOtpState();
+        const response = await fetch('/?action=verify_event_otp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            action: 'verify_event_otp',
+            eventId: String(selectedEvent.id),
+            customerEmail: email,
+            otp
+          })
+        });
+        const data = await response.json();
+        if (!response.ok || !data.ok || !(data.verificationToken || data.verification_token)) {
+          throw new Error((data && data.message) || 'OTP verification failed.');
+        }
+        otpState.verificationToken = data.verificationToken || data.verification_token;
+        otpState.verifiedEmail = email;
+        otpHelp.textContent = 'Email verified. You can now register.';
+        setStatus('Email verified.', false);
+      } catch (error) {
+        clearOtpVerification('Verification failed. Request or enter OTP again.');
+        setStatus(error instanceof Error ? error.message : 'OTP verification failed.', true);
+      } finally {
+        otpState.verifying = false;
+        renderOtpState();
+      }
+    }
+
+    regForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      if (!selectedEvent || !selectedEvent.id) {
+        setStatus('Please select an event first.', true);
+        return;
+      }
+
+      if (!currentEmailVerified()) {
+        clearOtpVerification('Please verify the current email before continuing.');
+        setStatus('Email OTP verification is required.', true);
+        return;
+      }
+
+      const phone = String(regPhone.value || '').replace(/\D+/g, '');
+      const qty = Math.max(1, Math.min(20, Number(regQty.value || 1)));
+      const attendeeNames = Array.from(guestNameList.querySelectorAll('.guest-name-item'))
+        .map((input) => String(input.value || '').trim())
+        .filter(Boolean);
+
+      if (phone.length !== 10) {
+        setStatus('Enter a valid 10 digit phone number.', true);
+        return;
+      }
+
+      if (!(qty === 1 && attendeeNames.length === 0) && attendeeNames.length !== qty) {
+        setStatus('Please add guest names for all selected passes.', true);
+        return;
+      }
+
+      const payload = {
+        eventId: String(selectedEvent.id),
+        customerName: regName.value.trim(),
+        customerEmail: normalizeEmail(regEmail.value),
+        customerPhone: phone,
+        customerCountryCode: String(regCountryCode.value || '91').replace(/\D+/g, '') || '91',
+        qty,
+        attendeeNames: attendeeNames.length ? attendeeNames : [regName.value.trim()],
+        verificationToken: otpState.verificationToken
+      };
+
+      if (!payload.customerName || !payload.customerEmail || !payload.eventId) {
+        setStatus('Name, phone, email and event are required.', true);
+        return;
+      }
+
+      try {
+        const registerAction = String(selectedEvent.type || selectedEvent.eventType || 'free').toLowerCase() === 'paid'
+          ? 'create_event_order'
+          : 'register_free_event';
+
+        setStatus(registerAction === 'create_event_order' ? 'Creating payment order...' : 'Completing registration...', false);
+
+        const registerResponse = await fetch(`/?action=${registerAction}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await registerResponse.json();
+        if (!registerResponse.ok || !data.ok) {
+          if (data && data.error === 'OTP_VERIFICATION_REQUIRED') {
+            clearOtpVerification('Verification expired. Please verify your email again.');
+          }
+          if (data && data.error === 'DUPLICATE_BOOKING' && (data.transactionId || data.transaction_id)) {
+            showDuplicateRegistration(data.transactionId || data.transaction_id);
+            return;
+          }
+          throw new Error(data.message || 'Registration failed. Please try again.');
+        }
+
+        if (registerAction === 'create_event_order') {
+          setStatus('Order created. Complete payment to receive your QR confirmation.', false);
+        } else {
+          setStatus('Registration successful. Confirmation email has been sent.', false);
+        }
+
+        regForm.reset();
+        regQty.value = '1';
+        regEventDisplay.value = String(selectedEvent.title || '');
+        clearOtpVerification('Register button unlocks only after this email is verified.');
+        buildGuestNameInputs();
+      } catch (error) {
+        setStatus(error instanceof Error ? error.message : 'Registration failed. Please try again.', true);
+      }
+    });
+
+    regQty.addEventListener('input', buildGuestNameInputs);
+    regEmail.addEventListener('input', () => {
+      if (otpState.verifiedEmail && otpState.verifiedEmail !== normalizeEmail(regEmail.value)) {
+        clearOtpVerification('Email changed. Please verify the new email.');
+      }
+    });
+    regOtp.addEventListener('input', renderOtpState);
+    sendOtpBtn.addEventListener('click', sendOtp);
+    verifyOtpBtn.addEventListener('click', verifyOtp);
+    regStatus.addEventListener('click', (event) => {
+      const button = event.target && event.target.closest ? event.target.closest('[data-resend-confirmation]') : null;
+      if (!button) {
+        return;
+      }
+      resendConfirmation(String(button.getAttribute('data-resend-confirmation') || ''));
+    });
+
+    buildGuestNameInputs();
+    renderOtpState();
+    loadEvents();
+  </script>
+</body>
+</html>

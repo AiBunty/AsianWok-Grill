@@ -1,0 +1,29 @@
+HEADER:
+Event Registration Confirmed
+
+BODY:
+Hi {{1}},
+
+Your registration is confirmed.
+Event: {{2}}
+Date: {{3}}
+Time: {{4}}
+Transaction ID: {{5}}
+Tickets: {{6}}
+Status: {{7}}
+QR Link: {{8}}
+
+Please keep this message for entry verification.
+
+FOOTER:
+Customer Care: 7269899999
+
+VARIABLES:
+{{1}} -> {%contact.first_name%}
+{{2}} -> {%contact.custom_values.event_name%}
+{{3}} -> {%contact.custom_values.event_date%}
+{{4}} -> {%contact.custom_values.event_time%}
+{{5}} -> {%contact.custom_values.transaction_id%}
+{{6}} -> {%contact.custom_values.ticket_qty%}
+{{7}} -> {%contact.custom_values.registration_status%}
+{{8}} -> {%contact.custom_values.qr_url%}

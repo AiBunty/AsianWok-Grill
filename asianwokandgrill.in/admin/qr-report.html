@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Scan Report</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap');
+
+    :root {
+      --ink: #14281d;
+      --muted: #5f6f66;
+      --line: #d8e3dc;
+      --surface: #ffffff;
+      --canvas: #f2f7f4;
+      --brand: #184e3e;
+      --brand-soft: #e6f2ed;
+      --warn: #9a5e1a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 10% 0%, #ecf8f2 0%, #f5faf7 44%, #eef5f1 100%);
+      color: var(--ink);
+      font-family: Manrope, Segoe UI, Tahoma, sans-serif;
+      min-height: 100vh;
+      padding: 22px;
+    }
+
+    .shell {
+      width: min(1400px, 100%);
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      box-shadow: 0 10px 28px rgba(16, 46, 35, 0.08);
+      padding: 16px;
+    }
+
+    .hero {
+      background: linear-gradient(130deg, #1f5f4c, #2a7c65 45%, #3f8f7b);
+      color: #f6fffb;
+      border: none;
+    }
+
+    .hero h1 {
+      margin: 0 0 4px;
+      font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+      letter-spacing: 0.01em;
+    }
+
+    .hero p { margin: 0; color: #e0f3eb; }
+
+    .status {
+      margin-top: 8px;
+      min-height: 20px;
+      font-size: 0.93rem;
+      color: #e3fff4;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .metric {
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 10px;
+      backdrop-filter: blur(4px);
+    }
+
+    .metric span {
+      display: block;
+      font-size: 0.78rem;
+      color: #dff3ea;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 6px;
+      font-size: 1.36rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    select,
+    input {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px;
+      font: inherit;
+      color: var(--ink);
+      background: #fbfefd;
+    }
+
+    .table-wrap {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1080px;
+      font-size: 0.92rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid #edf3ef;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f7f3;
+      color: #305847;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-size: 0.73rem;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    td small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.79rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: var(--brand-soft);
+      color: var(--brand);
+    }
+
+    .warn { color: var(--warn); }
+
+    @media (max-width: 1200px) {
+      .metric-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 860px) {
+      body { padding: 12px; }
+      .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toolbar { grid-template-columns: 1fr; }
+      table { min-width: 880px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="card hero">
+      <h1>QR Scan Report</h1>
+      <p>Track total scans, source device, and location details for every QR entry.</p>
+      <div id="status" class="status">Loading report...</div>
+      <div class="metric-grid">
+        <div class="metric"><span>Total Scans</span><strong id="scanCount">-</strong></div>
+        <div class="metric"><span>QR Records</span><strong id="qrCount">-</strong></div>
+        <div class="metric"><span>Active QRs</span><strong id="activeCount">-</strong></div>
+        <div class="metric"><span>Mobile Scans</span><strong id="mobileCount">-</strong></div>
+        <div class="metric"><span>Unique Locations</span><strong id="locationCount">-</strong></div>
+        <div class="metric"><span>Admin Scans</span><strong id="adminCount">-</strong></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 style="margin:0 0 10px;">Recent Scan Log</h2>
+      <div class="toolbar">
+        <select id="channelFilter">
+          <option value="all">All Channels</option>
+          <option value="customer">Customer</option>
+          <option value="admin">Admin</option>
+        </select>
+        <input id="searchFilter" type="search" placeholder="Search slug, device, browser, location, ip" />
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Scanned At</th>
+              <th>Scan #</th>
+              <th>Channel</th>
+              <th>QR / Destination</th>
+              <th>Mobile / Device</th>
+              <th>Browser / OS</th>
+              <th>Location</th>
+              <th>IP</th>
+            </tr>
+          </thead>
+          <tbody id="scanRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 style="margin:0 0 10px;">QR Summary</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>QR Slug</th>
+              <th>Channel</th>
+              <th>Total Scans</th>
+              <th>Last Scanned</th>
+            </tr>
+          </thead>
+          <tbody id="summaryRows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module">
+    import { buildPhpActionUrl } from '../js/runtime-config.js';
+
+    const token = String(localStorage.getItem('awg_admin_token') || '').trim();
+    const statusNode = document.getElementById('status');
+    const qrCountNode = document.getElementById('qrCount');
+    const activeCountNode = document.getElementById('activeCount');
+    const scanCountNode = document.getElementById('scanCount');
+    const mobileCountNode = document.getElementById('mobileCount');
+    const locationCountNode = document.getElementById('locationCount');
+    const adminCountNode = document.getElementById('adminCount');
+    const scanRowsNode = document.getElementById('scanRows');
+    const summaryRowsNode = document.getElementById('summaryRows');
+    const channelFilterNode = document.getElementById('channelFilter');
+    const searchFilterNode = document.getElementById('searchFilter');
+
+    let scanRows = [];
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    function isMobileLike(row) {
+      const raw = `${row.device || ''} ${row.user_agent || ''}`.toLowerCase();
+      return /mobile|iphone|android|ipad|tablet/.test(raw);
+    }
+
+    function getLocationLabel(row) {
+      const city = String(row.city || '').trim();
+      const region = String(row.region || '').trim();
+      const country = String(row.country || '').trim();
+      const parts = [city, region, country].filter(Boolean);
+      return parts.length ? parts.join(', ') : 'Unknown';
+    }
+
+    function renderScans() {
+      const channelFilter = String(channelFilterNode.value || 'all').toLowerCase();
+      const q = String(searchFilterNode.value || '').trim().toLowerCase();
+
+      const filtered = scanRows.filter((row) => {
+        const channel = String(row.channel || '').toLowerCase();
+        if (channelFilter !== 'all' && channel !== channelFilter) {
+          return false;
+        }
+
+        if (!q) {
+          return true;
+        }
+
+        const haystack = [
+          row.qr_slug,
+          row.destination_key,
+          row.destination_label,
+          row.device,
+          row.browser,
+          row.os,
+          row.ip_address,
+          row.city,
+          row.region,
+          row.country,
+          row.user_agent,
+        ].map((value) => String(value || '').toLowerCase()).join(' ');
+        return haystack.includes(q);
+      });
+
+      scanRowsNode.innerHTML = filtered.map((row) => {
+        const location = getLocationLabel(row);
+        const mobile = isMobileLike(row) ? '<span class="badge">Mobile</span>' : '<span class="badge">Desktop</span>';
+        return `
+          <tr>
+            <td>${escapeHtml(row.scanned_at || '-')}</td>
+            <td>${escapeHtml(String(row.scan_number || '-'))}</td>
+            <td><span class="badge">${escapeHtml(String(row.channel || '-'))}</span></td>
+            <td>
+              <strong>${escapeHtml(row.qr_slug || '-')}</strong>
+              <small>${escapeHtml(row.destination_label || row.destination_key || '-')}</small>
+            </td>
+            <td>
+              ${mobile}
+              <small>${escapeHtml(row.device || 'Unknown device')}</small>
+            </td>
+            <td>
+              <strong>${escapeHtml(row.browser || 'Unknown browser')}</strong>
+              <small>${escapeHtml(row.os || '-')}</small>
+            </td>
+            <td>${escapeHtml(location)}</td>
+            <td class="${row.ip_address ? '' : 'warn'}">${escapeHtml(row.ip_address || 'Not captured')}</td>
+          </tr>
+        `;
+      }).join('') || '<tr><td colspan="8">No scan rows available for selected filters.</td></tr>';
+    }
+
+    async function adminGet(action) {
+      const response = await fetch(buildPhpActionUrl(action), {
+        headers: {
+          Accept: 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      const payload = await response.json();
+      if (!response.ok || !payload.ok) {
+        throw new Error(payload.message || 'Request failed.');
+      }
+
+      return payload;
+    }
+
+    async function load() {
+      if (!token) {
+        statusNode.textContent = 'Admin token missing. Sign in to admin first.';
+        return;
+      }
+
+      try {
+        const [redirectsPayload, reportPayload] = await Promise.all([
+          adminGet('auth_list_qr_redirects'),
+          adminGet('qr_report'),
+        ]);
+
+        const redirects = Array.isArray(redirectsPayload.redirects) ? redirectsPayload.redirects : [];
+        scanRows = Array.isArray(reportPayload.recentScans) ? reportPayload.recentScans : [];
+        const qrSummary = Array.isArray(reportPayload.qrSummary) ? reportPayload.qrSummary : [];
+
+        const active = redirects.filter((row) => Number(row.is_active || row.isActive || 0) === 1).length;
+        const totalScans = Number(reportPayload.totalScans || 0);
+        const mobileScans = scanRows.filter((row) => isMobileLike(row)).length;
+        const adminScans = scanRows.filter((row) => String(row.channel || '').toLowerCase() === 'admin').length;
+        const uniqueLocations = new Set(scanRows.map((row) => getLocationLabel(row).toLowerCase()).filter((row) => row !== 'unknown')).size;
+
+        qrCountNode.textContent = String(redirects.length);
+        activeCountNode.textContent = String(active);
+        scanCountNode.textContent = String(totalScans);
+        mobileCountNode.textContent = String(mobileScans);
+        locationCountNode.textContent = String(uniqueLocations);
+        adminCountNode.textContent = String(adminScans);
+
+        summaryRowsNode.innerHTML = qrSummary.map((row) => `
+          <tr>
+            <td>${escapeHtml(row.qr_slug || '-')}</td>
+            <td>${escapeHtml(row.channel || '-')}</td>
+            <td>${escapeHtml(String(row.total || 0))}</td>
+            <td>${escapeHtml(row.last_scanned_at || '-')}</td>
+          </tr>
+        `).join('') || '<tr><td colspan="4">No summary rows available.</td></tr>';
+
+        renderScans();
+        statusNode.textContent = 'Report loaded successfully.';
+      } catch (error) {
+        statusNode.textContent = error instanceof Error ? error.message : 'Failed to load report.';
+      }
+    }
+
+    channelFilterNode.addEventListener('change', renderScans);
+    searchFilterNode.addEventListener('input', renderScans);
+
+    load();
+  </script>
+</body>
+</html>

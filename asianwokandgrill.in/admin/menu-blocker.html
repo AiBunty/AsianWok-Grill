@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Blocker Admin Panel - Asian Wok & Grill</title>
+  <link rel="icon" href="data:,">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --color-bg-primary: #1b1111;
+      --color-bg-secondary: #2a1812;
+      --color-text-primary: #f2e2c8;
+      --color-text-secondary: #a89472;
+      --color-accent: #f0c48f;
+      --color-success: #89ff45;
+      --color-error: #ff6b6b;
+      --color-info: #f0c48f;
+    }
+    body {
+      background: var(--color-bg-primary);
+      color: var(--color-text-primary);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+    .admin-header {
+      background: linear-gradient(135deg, #1b1111, #2a1812);
+      border-bottom: 2px solid var(--color-accent);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .admin-header h1 {
+      font-size: 24px;
+      color: var(--color-accent);
+    }
+    .admin-header .user-info {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+    }
+    .admin-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .admin-nav {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .admin-nav button {
+      padding: 10px 16px;
+      border: 1px solid rgba(240, 196, 143, 0.25);
+      background: rgba(240, 196, 143, 0.08);
+      color: var(--color-accent);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: all 0.2s ease;
+    }
+    .admin-nav button:hover {
+      background: rgba(240, 196, 143, 0.15);
+      border-color: rgba(240, 196, 143, 0.4);
+    }
+    .admin-nav button.active {
+      background: var(--color-accent);
+      color: var(--color-bg-primary);
+    }
+    #admin-content {
+      min-height: calc(100vh - 200px);
+    }
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: var(--color-text-secondary);
+    }
+    .spinner {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(240, 196, 143, 0.2);
+      border-top: 3px solid var(--color-accent);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .admin-footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid rgba(240, 196, 143, 0.15);
+      color: var(--color-text-secondary);
+      font-size: 12px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-header">
+    <h1>⚙️ Menu Blocker Admin</h1>
+    <div class="user-info">
+      <p>Logged in as: <strong id="user-email">Admin</strong></p>
+      <p>Last updated: <strong id="last-updated">—</strong></p>
+    </div>
+  </div>
+
+  <div class="admin-container">
+    <div class="admin-nav">
+      <button class="nav-btn active" data-module="menu-blocker">Menu Blocker</button>
+      <button class="nav-btn" data-module="documentation">Documentation</button>
+      <button id="logout-btn" style="margin-left: auto; background: rgba(255, 107, 107, 0.12); color: #ff6b6b; border-color: rgba(255, 107, 107, 0.25);">Logout</button>
+    </div>
+
+    <div id="admin-content">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Loading admin panel...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-footer">
+    <p>Asian Wok & Grill Admin System | Menu Blocker v1.0</p>
+    <p>© 2024 All Rights Reserved</p>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    /**
+     * Admin Panel Bootstrap
+     * Handles authentication and module loading
+     */
+
+    // Helper: Build PHP action URL
+    function buildPhpActionUrl(action) {
+      return `../index.php?${action}`;
+    }
+
+    // Check authentication on load
+    async function checkAuth() {
+      try {
+        // Verify user is authenticated via a simple admin endpoint check
+        const response = await fetch(buildPhpActionUrl('action=auth_get_menu_blocker_settings'));
+        if (!response.ok) {
+          throw new Error('Not authenticated');
+        }
+        return true;
+      } catch (e) {
+        window.location.href = '../admin/login.html';
+        return false;
+      }
+    }
+
+    // Module loader
+    async function loadModule(moduleName) {
+      const content = document.getElementById('admin-content');
+      
+      if (moduleName === 'menu-blocker') {
+        content.innerHTML = '<div class="loading"><div class="spinner"></div><p>Loading Menu Blocker settings...</p></div>';
+        
+        // Load CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '../css/admin-menu-blocker.css';
+        document.head.appendChild(link);
+
+        // Load JS
+        const script = document.createElement('script');
+        script.src = '../js/admin-modules/menu-blocker-admin.js';
+        script.onload = () => {
+          if (window.MenuBlockerAdminModule) {
+            content.innerHTML = '';
+            MenuBlockerAdminModule.init();
+          }
+        };
+        document.body.appendChild(script);
+      } else if (moduleName === 'documentation') {
+        content.innerHTML = `
+          <div class="mb-admin-section" style="max-width: 800px;">
+            <h2>Menu Blocker Documentation</h2>
+            <h3>Overview</h3>
+            <p>The Menu Blocker system displays an overlay spin wheel on specified menu pages. Customers enter their details and spin to win prizes. The system tracks all spins and prevents abuse through a 24-hour cooldown per phone number.</p>
+            
+            <h3>Configuration</h3>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+              <li><strong>Staff Bypass Code:</strong> Allow staff to skip the spin wheel</li>
+              <li><strong>WhatsApp Number:</strong> Used for sending prize information via WhatsApp</li>
+              <li><strong>Display on Pages:</strong> Select which pages show the menu blocker</li>
+              <li><strong>Enable/Disable:</strong> Toggle the entire menu blocker feature</li>
+            </ul>
+
+            <h3>Prize System</h3>
+            <p>Customers can win:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+              <li>Free Dessert</li>
+              <li>Free Mocktail</li>
+              <li>Free Aerated Drink</li>
+              <li>Free Starter</li>
+              <li>10%-25% Discount (various amounts)</li>
+              <li>Try Again (2x more likely than other prizes)</li>
+            </ul>
+
+            <h3>Cooldown Rules</h3>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+              <li>Each customer can spin once per 24 hours</li>
+              <li>Cooldown is tracked by phone number + country code</li>
+              <li>Winners receive a unique coupon code (e.g., AWG-DESSERT-a1b2c3d4)</li>
+            </ul>
+
+            <h3>Admin Actions</h3>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+              <li><strong>View Statistics:</strong> See prize distribution and trends</li>
+              <li><strong>Customer Lookup:</strong> Check spin history for any phone number</li>
+              <li><strong>Update Settings:</strong> Change configuration at any time</li>
+            </ul>
+
+            <h3>Support</h3>
+            <p>For issues or questions, contact: <strong>asianwokandgrill99@gmail.com</strong></p>
+          </div>
+        `;
+      }
+    }
+
+    // Nav button handlers
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        loadModule(e.target.dataset.module);
+      });
+    });
+
+    // Logout handler
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      if (confirm('Are you sure you want to logout?')) {
+        window.location.href = '../admin/login.html?logout=true';
+      }
+    });
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', async () => {
+      const isAuthenticated = await checkAuth();
+      if (isAuthenticated) {
+        loadModule('menu-blocker');
+        // Update user email
+        document.getElementById('user-email').textContent = 'Administrator';
+        document.getElementById('last-updated').textContent = new Date().toLocaleString();
+      }
+    });
+  </script>
+</body>
+</html>

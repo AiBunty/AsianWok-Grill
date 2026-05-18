@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unlock Menu Access</title>
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <link rel="canonical" href="https://asianwokandgrill.in/lead-capture.html" />
+  <meta property="og:url" content="https://asianwokandgrill.in/lead-capture.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #120606;
+      --panel: #1f0000;
+      --panel-soft: #2a0a0a;
+      --border: rgba(199, 164, 107, 0.28);
+      --gold: #c7a46b;
+      --gold-soft: #e4cda2;
+      --cream: #f3eadc;
+      --muted: rgba(243, 234, 220, 0.7);
+      --danger: #ffb6b6;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: linear-gradient(160deg, #120606 0%, #1f0000 55%, #160707 100%);
+      color: var(--cream);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body { padding: 0; }
+
+    .shell {
+      min-height: 100vh;
+      padding: 18px;
+      display: grid;
+      place-items: center;
+    }
+
+    .card {
+      width: min(100%, 470px);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(42, 10, 10, 0.98), rgba(31, 0, 0, 0.98));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 26px 22px;
+    }
+
+    .kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      font-size: 0.72rem;
+    }
+
+    h1, h2 {
+      font-family: 'Cormorant Garamond', serif;
+      margin: 8px 0 10px;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.85rem; }
+
+    .copy {
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+
+    .hidden { display: none !important; }
+
+    .form-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 10px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      font-size: 0.92rem;
+      color: var(--gold-soft);
+    }
+
+    input, select, button {
+      font: inherit;
+    }
+
+    input, select {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(199, 164, 107, 0.26);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--cream);
+      padding: 13px 14px;
+      outline: none;
+    }
+
+    input:focus, select:focus {
+      border-color: rgba(199, 164, 107, 0.52);
+      box-shadow: 0 0 0 4px rgba(199, 164, 107, 0.12);
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .button {
+      flex: 1;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 16px;
+      background: linear-gradient(135deg, #d0aa70, #b88d4e);
+      color: #220202;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .button.secondary {
+      background: rgba(255,255,255,0.04);
+      color: var(--cream);
+      border: 1px solid var(--border);
+    }
+
+    .button:disabled { opacity: 0.65; cursor: wait; }
+
+    .status {
+      min-height: 24px;
+      margin-top: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .status.error { color: var(--danger); }
+
+    .wheel-stage {
+      display: grid;
+      gap: 18px;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .wheel-wrap {
+      display: grid;
+      gap: 12px;
+      justify-items: center;
+      width: 100%;
+    }
+
+    .wheel {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      border: 5px solid rgba(199, 164, 107, 0.4);
+      background: conic-gradient(from -18deg, #8d531a 0deg 60deg, #6a1b1b 60deg 120deg, #a16621 120deg 180deg, #6a1b1b 180deg 240deg, #8d531a 240deg 300deg, #6a1b1b 300deg 360deg);
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 0 40px rgba(0,0,0,0.25), 0 16px 34px rgba(0,0,0,0.28);
+      transition: transform 1.8s cubic-bezier(0.2, 0.9, 0.15, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wheel.spinning {
+      transform: rotate(1620deg);
+    }
+
+    .wheel-inner {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: rgba(20, 6, 6, 0.92);
+      border: 2px solid rgba(243, 234, 220, 0.28);
+      display: grid;
+      place-items: center;
+      color: var(--gold-soft);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      z-index: 2;
+    }
+
+    .wheel-offers {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .wheel-offers span {
+      border-radius: 999px;
+      border: 1px solid rgba(199, 164, 107, 0.25);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--gold-soft);
+      padding: 7px 10px;
+      font-size: 0.78rem;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .reward-box {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      padding: 16px;
+      text-align: left;
+    }
+
+    .reward-box strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: var(--cream);
+    }
+
+    .reward-meta {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 520px) {
+      .row { grid-template-columns: 1fr; }
+      .card { padding: 22px 18px; }
+      .wheel { width: 200px; height: 200px; }
+      .wheel-offers { grid-template-columns: 1fr; }
+    }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP5QMQJ9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTP5QMQJ9K');
+</script>
+</head>
+<body>
+  <main class="shell">
+    <section class="card">
+      <section id="leadFormStage">
+        <div class="kicker">Asian Wok & Grill</div>
+        <h1>Unlock the menu and your spin.</h1>
+        <p class="copy">Share your details once, spin to reveal your dining reward, then continue to the menu.</p>
+
+        <form id="leadCaptureForm" class="form-grid">
+          <label>
+            <span>Name</span>
+            <input id="leadName" name="name" type="text" autocomplete="name" placeholder="Enter your full name" required />
+          </label>
+
+          <div class="row">
+            <label>
+              <span>Country Code</span>
+              <select id="leadCountryCode" name="countryCode">
+                <option value="91" selected>India (+91)</option>
+                <option value="1">USA / Canada (+1)</option>
+                <option value="44">UK (+44)</option>
+                <option value="971">UAE (+971)</option>
+                <option value="61">Australia (+61)</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Phone Number</span>
+              <input id="leadPhone" name="phone" type="tel" inputmode="numeric" maxlength="14" autocomplete="tel-national" placeholder="10-digit mobile number" required />
+            </label>
+          </div>
+
+          <label>
+            <span>Date of Birth</span>
+            <input id="leadDob" name="dateOfBirth" type="date" />
+          </label>
+
+          <label>
+            <span>Anniversary</span>
+            <input id="leadAnniversary" name="dateOfAnniversary" type="date" />
+          </label>
+
+          <div class="actions">
+            <button id="leadSubmitButton" class="button" type="submit">Continue to Spin</button>
+          </div>
+        </form>
+
+        <div id="leadFormStatus" class="status" aria-live="polite"></div>
+      </section>
+
+      <section id="spinStage" class="wheel-stage hidden">
+        <div class="kicker">Reward Spin</div>
+        <h2>Your reward is ready to reveal.</h2>
+        <p class="copy">Tap the wheel once to complete your spin and unlock access to the menu.</p>
+
+        <div class="wheel-wrap">
+          <div id="spinWheel" class="wheel" aria-hidden="true">
+            <div class="wheel-inner">Spin</div>
+          </div>
+          <div id="wheelOffers" class="wheel-offers"></div>
+        </div>
+
+        <div class="actions" style="width:100%;">
+          <button id="spinButton" class="button" type="button">Spin Now</button>
+        </div>
+
+        <div id="spinStatus" class="status" aria-live="polite"></div>
+        <div id="rewardBox" class="reward-box hidden">
+          <strong id="rewardTitle"></strong>
+          <div id="rewardMeta" class="reward-meta"></div>
+        </div>
+        <div class="actions hidden" id="continueActions">
+          <button id="continueButton" class="button" type="button">Continue to Menu</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="js/lead-capture.js"></script>
+  <script>
+    (function applyEmbedMode() {
+      const params = new URLSearchParams(window.location.search || '');
+      if (params.get('embed') !== '1') {
+        return;
+      }
+
+      document.documentElement.setAttribute('data-embed', '1');
+      document.body.setAttribute('data-embed', '1');
+      const shell = document.querySelector('.shell');
+      const card = document.querySelector('.card');
+      if (shell) {
+        shell.style.minHeight = '100vh';
+        shell.style.padding = '0';
+      }
+      if (card) {
+        card.style.width = '100%';
+        card.style.maxWidth = '100%';
+        card.style.minHeight = '100vh';
+        card.style.borderRadius = '0';
+        card.style.border = '0';
+        card.style.boxShadow = 'none';
+        card.style.padding = '24px 22px';
+        card.style.background = 'transparent';
+      }
+      document.body.style.background = 'transparent';
+      document.documentElement.style.background = 'transparent';
+    })();
+  </script>
+</body>
+</html>

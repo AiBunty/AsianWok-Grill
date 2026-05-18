@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWG Admin Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css?v=20260512-awg-logo-ui" />
+</head>
+<body>
+  <main class="admin-login-shell">
+    <section class="admin-login-card">
+      <div class="admin-login-brand">
+        <img class="admin-brand-logo admin-brand-logo-large" src="../assets/images/logo.svg" alt="Asian Wok & Grill logo" width="68" height="68" decoding="async" />
+        <div>
+          <div class="admin-brand-kicker">Asian Wok & Grill</div>
+          <h1 class="admin-brand-title">Admin Sign In</h1>
+          <p class="admin-brand-copy">Use your admin credentials to access verification, CRM, settings, diagnostics, and reward operations.</p>
+        </div>
+      </div>
+
+      <form id="adminLoginForm" class="admin-login-form">
+        <label class="admin-input-group">
+          <span>Username</span>
+          <input id="adminUsername" name="username" type="text" autocomplete="username" required />
+        </label>
+
+        <label class="admin-input-group">
+          <span>Password</span>
+          <input id="adminPassword" name="password" type="password" autocomplete="current-password" required />
+        </label>
+
+        <button id="adminLoginButton" class="admin-login-button" type="submit">Sign In</button>
+      </form>
+
+      <div id="adminLoginStatus" class="admin-login-status" aria-live="polite"></div>
+
+      <div id="adminBootstrapPanel" class="hidden">
+        <p class="admin-brand-copy" style="margin:0;">No superadmin exists yet. Use bootstrap once to create the initial admin from server-side environment settings.</p>
+        <div class="actions" style="margin-top:12px;">
+          <button id="adminBootstrapButton" class="button secondary" type="button">Bootstrap Superadmin</button>
+        </div>
+      </div>
+
+      <a class="admin-topbar-link" href="../home.html">Back to Website</a>
+    </section>
+  </main>
+
+  <script type="module" src="../js/admin-modules/login.js?v=20260512-awg-logo-ui"></script>
+</body>
+</html>

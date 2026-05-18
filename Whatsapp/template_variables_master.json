@@ -1,0 +1,32 @@
+{
+  "templateName": "menu_blocker_coupon_won",
+  "variables": [
+    {
+      "index": 1,
+      "placeholder": "{{1}}",
+      "sourceKey": "{%contact.first_name%}",
+      "description": "Customer name"
+    },
+    {
+      "index": 2,
+      "placeholder": "{{2}}",
+      "sourceKey": "{%contact.custom_values.prize%}",
+      "description": "Prize name from Menu Blocker"
+    },
+    {
+      "index": 3,
+      "placeholder": "{{3}}",
+      "sourceKey": "{%contact.custom_values.coupon_code%}",
+      "description": "System-generated coupon code"
+    },
+    {
+      "index": 4,
+      "placeholder": "{{4}}",
+      "sourceKey": "{%contact.custom_values.outcome%}",
+      "description": "Spin result outcome"
+    }
+  ],
+  "staticValues": {
+    "customerCareNumber": "7269899999"
+  }
+}

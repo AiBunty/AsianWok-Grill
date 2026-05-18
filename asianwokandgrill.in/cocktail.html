@@ -310,7 +310,16 @@
   .cocktail-search:focus { border-color: var(--gold-bright); box-shadow: 0 0 0 2px rgba(240,196,143,0.2); }
   .empty-state { text-align: center; padding: 60px 20px; color: var(--gold-cream); font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 1px; opacity: 0.75; }
   </style>
- </head>
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP5QMQJ9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTP5QMQJ9K');
+</script>
+</head>
  <body id="menuBody">
   <div id="loader">
    <div class="spinner">
@@ -320,13 +329,14 @@
    </div>
   </div>
   <header class="concept-header">
-   <a class="concept-brand" href="https://www.asianwokandgrill.in/" aria-label="Asian Wok and Grill home">
+  <a class="concept-brand" href="home.html" aria-label="Asian Wok and Grill home">
     <img alt="Asian Wok &amp; Grill Logo" src="https://storage.files-vault.com/uploads/1767864198-qOus3Ywqoe.jpeg"/>
    </a>
    <nav class="concept-nav" id="conceptNav" aria-label="Primary">
-    <a href="https://www.asianwokandgrill.in/">Home</a>
+    <a href="home.html">Home</a>
     <a href="menu.html">AWG Menu</a>
-    <a href="namastemenu.html">Multicuisine Menu</a>
+    <a href="namastemenu.html">Namaste Menu</a>
+    <a href="events.html">Live Event</a>
     <a href="cocktail.html">Cocktail</a>
     <a href="reservation.html">Reservation</a>
     <a href="#order-online">Order Online</a>
@@ -451,46 +461,31 @@
         ⚠️ GLOBAL DATA RULE — HARDENED PROXY PIPELINE (LOCKED)
        ============================================================ */
     const DataLayer = {
-        PROXY_URL: 'https://script.google.com/macros/s/AKfycbxKdQvD58ks4-lowwGtmNeVyODOpQbFVFi8_Xgd6r6fYV6N40sA5gDwzt0C15MNBfQ23A/exec',
+      API_BASE: (location.protocol === 'file:') ? 'http://127.0.0.1:8090/' : '/',
+      API_URL: '',
         SUPPORTED_UNITS: ["Glass", "30ml", "Pint", "Pitcher", "Per Bottle"],
 
         async getMenuData() {
             try {
-                // Task 1: Identify and bypass Forbidden redirect error
-                const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), 8000); // 8 second timeout
-                
-                const response = await fetch(this.PROXY_URL, { 
-                    method: 'GET',
-                    redirect: 'follow', // Explicitly follow Google Macro redirects
-                    signal: controller.signal
-                });
-                
-                clearTimeout(timeoutId);
-                
+          if (!this.API_URL) {
+            this.API_URL = `${this.API_BASE.replace(/\/?$/, '/')}?action=menu_public_cocktail`;
+          }
+
+          const response = await fetch(`${this.API_URL}&_ts=${Date.now()}`, {
+            method: 'GET',
+            cache: 'no-store'
+          });
+
                 if (!response.ok) {
-                    console.error(`HTTP Error: ${response.status} ${response.statusText}`);
-                    throw new Error(`PROXY_HTTP_ERROR_${response.status}`);
+            throw new Error(`MENU_API_HTTP_ERROR_${response.status}`);
                 }
-                
-                const text = await response.text();
-                console.log('Fetched data length:', text.length, 'First 100 chars:', text.substring(0, 100));
-                
-                // Check if response is HTML (error page)
-                if (text.trim().startsWith('<')) {
-                    console.error('Received HTML response (likely error page):', text.substring(0, 200));
-                    throw new Error("FORBIDDEN_HTML_RESPONSE");
-                }
-                
-                // Check if response is empty
-                if (!text || text.trim().length === 0) {
-                    throw new Error("EMPTY_RESPONSE");
-                }
-                
-                const data = this.parseCSV(text);
-                if (!data || data.length === 0) throw new Error("EMPTY_CSV_RESPONSE");
-                
-                console.log('Successfully parsed', data.length, 'menu items from live data');
+
+          const json = await response.json();
+          if (!json || json.ok !== true || !Array.isArray(json.data) || json.data.length === 0) {
+            throw new Error('EMPTY_MENU_API_RESPONSE');
+          }
+
+          const data = json.data;
                 localStorage.setItem('awg_v5_cache', JSON.stringify(data));
                 return { data, source: 'live' };
             } catch (error) {
@@ -510,50 +505,6 @@
                 }
             }
             throw new Error("DATA_UNAVAILABLE");
-        },
-
-        parseCSV(csv) {
-            try {
-                const arr = []; let quote = false;
-                for (let row = 0, col = 0, c = 0; c < csv.length; c++) {
-                    let cc = csv[c], nc = csv[c + 1];
-                    arr[row] = arr[row] || []; arr[row][col] = arr[row][col] || "";
-                    if (cc == '"' && quote && nc == '"') { arr[row][col] += cc; ++c; continue; }
-                    if (cc == '"') { quote = !quote; continue; }
-                    if (cc == ',' && !quote) { ++col; continue; }
-                    if (cc == '\n' && !quote) { ++row; col = 0; continue; }
-                    arr[row][col] += cc;
-                }
-                const headers = arr[0].map(h => h.trim().toLowerCase());
-                return arr.slice(1).map((row, rowIdx) => {
-                    let item = {}; 
-                    headers.forEach((h, i) => item[h] = (row[i] || "").toString().trim());
-                    
-                    // Validate that required fields exist
-                    if (!item["item name"] || item["item name"].length === 0) {
-                        console.warn(`Row ${rowIdx + 2}: Missing item name, skipping`);
-                        return null;
-                    }
-                    
-                    let prices = {};
-                    this.SUPPORTED_UNITS.forEach(u => {
-                        const v = item[u.toLowerCase()];
-                        if (v && v !== "" && !isNaN(v.replace(/[₹,]/g, ''))) {
-                            prices[u] = v.replace(/[₹,]/g, '').trim();
-                        }
-                    });
-                    return { 
-                        name: item["item name"], 
-                        cat: item["category"] || "Selection", 
-                        desc: item["description"] || "", 
-                        prices, 
-                        avail: item["availability"] !== "No" 
-                    };
-                }).filter(i => i !== null && i.name && i.avail);
-            } catch (parseError) {
-                console.error('CSV Parse Error:', parseError.message);
-                throw parseError;
-            }
         }
     };
 
@@ -758,6 +709,57 @@
       });
     }
   </script>
+    function buildPhpActionUrl(queryString) {
+      return `/?${queryString}`;
+    }
+
   <script src="assets/js/side-nav.js" defer></script>
+  <script id="menu-blocker-init-cocktail">
+  (async function initMenuBlockerOnCocktail() {
+    try {
+      const settings = await (await fetch('/?action=get_blocker_settings', {
+        headers: { Accept: 'application/json' },
+        cache: 'no-store'
+      })).json();
+      const pages = settings && settings.enabledPages ? settings.enabledPages : {};
+      const blockerSettings = settings && settings.settings ? settings.settings : {};
+      const isEnabledOnCocktail = Boolean(settings && settings.ok === true && !blockerSettings.globalDisable && pages.cocktail === true);
+
+      if (isEnabledOnCocktail) {
+        const linkEl = document.createElement('link');
+        linkEl.rel = 'stylesheet';
+        linkEl.href = 'css/menu-blocker.css';
+        document.head.appendChild(linkEl);
+        
+        await (async () => {
+          const script1 = document.createElement('script');
+          script1.src = 'js/data/country-codes-all.js';
+          document.body.appendChild(script1);
+          await new Promise(r => script1.onload = r);
+          
+          const script2 = document.createElement('script');
+          script2.src = 'js/menu-blocker.js';
+          document.body.appendChild(script2);
+          await new Promise(r => script2.onload = r);
+        })();
+
+        const markup = await (await fetch('menu-blocker.html', { cache: 'no-store' })).text();
+        const parser = new DOMParser();
+        const parsed = parser.parseFromString(markup, 'text/html');
+        const overlay = parsed.querySelector('#mb-overlay');
+        if (!overlay) {
+          throw new Error('menu-blocker markup missing #mb-overlay root.');
+        }
+        document.body.appendChild(overlay);
+
+        if (typeof MenuBlocker === 'function') {
+          window.menuBlocker = new MenuBlocker();
+        }
+      }
+    } catch (e) { 
+      console.warn('Menu blocker initialization skipped on cocktail:', e); 
+    }
+  })();
+  </script>
  </body>
 </html>

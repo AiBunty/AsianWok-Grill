@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Portal</title>
+  <script>
+    (function redirectToPrimaryAdminShell() {
+      var hash = window.location.hash || '';
+      var query = window.location.search || '';
+      var target = '/admin/index.html' + query + hash;
+      window.location.replace(target);
+    })();
+  </script>
+</head>
+<body></body>
+</html>

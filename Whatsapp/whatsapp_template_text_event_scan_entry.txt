@@ -1,0 +1,27 @@
+HEADER:
+Event Entry Confirmed
+
+BODY:
+Hi {{1}},
+
+Your event entry has been successfully scanned.
+Event: {{2}}
+Event Date: {{3}}
+Entry Date: {{4}}
+Entry Time: {{5}}
+Guests Entered: {{6}}
+Transaction ID: {{7}}
+Remaining Passes: {{8}}
+
+FOOTER:
+Customer Care: 7269899999
+
+VARIABLES:
+{{1}} -> {%contact.first_name%}
+{{2}} -> {%contact.custom_values.event_name%}
+{{3}} -> {%contact.custom_values.event_date%}
+{{4}} -> {%contact.custom_values.entry_date%}
+{{5}} -> {%contact.custom_values.entry_time%}
+{{6}} -> {%contact.custom_values.no_of_guest%}
+{{7}} -> {%contact.custom_values.transaction_id%}
+{{8}} -> {%contact.custom_values.remaining_passes%}

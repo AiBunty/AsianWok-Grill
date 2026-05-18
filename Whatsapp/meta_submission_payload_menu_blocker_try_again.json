@@ -1,0 +1,29 @@
+{
+  "name": "menu_blocker_try_again",
+  "category": "UTILITY",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "TEXT",
+      "text": "Spin Wheel Update"
+    },
+    {
+      "type": "BODY",
+      "text": "Hi {{1}},\n\nThanks for spinning at Asian Wok & Grill.\nResult: {{2}}\nStatus: {{3}}\n\nPlease try again after 24 hours for your next chance to win.",
+      "example": {
+        "body_text": [
+          [
+            "John",
+            "Try Again after 24hrs",
+            "Try Again"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "FOOTER",
+      "text": "Customer Care: 7269899999"
+    }
+  ]
+}

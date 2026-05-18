@@ -1,0 +1,34 @@
+{
+  "name": "event_scan_entry",
+  "category": "UTILITY",
+  "language": "en",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "TEXT",
+      "text": "Event Entry Confirmed"
+    },
+    {
+      "type": "BODY",
+      "text": "Hi {{1}},\n\nYour event entry has been successfully scanned.\nEvent: {{2}}\nEvent Date: {{3}}\nEntry Date: {{4}}\nEntry Time: {{5}}\nGuests Entered: {{6}}\nTransaction ID: {{7}}\nRemaining Passes: {{8}}",
+      "example": {
+        "body_text": [
+          [
+            "John",
+            "DJ Night",
+            "2026-06-21",
+            "2026-06-21",
+            "19:46:00",
+            "2",
+            "TXN12345",
+            "0"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "FOOTER",
+      "text": "Customer Care: 7269899999"
+    }
+  ]
+}

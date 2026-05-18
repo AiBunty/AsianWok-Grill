@@ -1,0 +1,37 @@
+{
+  "templateName": "event_registration_confirmed",
+  "channel": "whatsapp",
+  "category": "UTILITY",
+  "language": "en",
+  "status": "draft_for_meta_approval",
+  "header": {
+    "type": "TEXT",
+    "text": "Event Registration Confirmed"
+  },
+  "body": {
+    "text": "Hi {{1}},\n\nYour registration is confirmed.\nEvent: {{2}}\nDate: {{3}}\nTime: {{4}}\nTransaction ID: {{5}}\nTickets: {{6}}\nStatus: {{7}}\nQR Link: {{8}}\n\nPlease keep this message for entry verification."
+  },
+  "footer": {
+    "text": "Customer Care: 7269899999"
+  },
+  "variableMapping": {
+    "1": "{%contact.first_name%}",
+    "2": "{%contact.custom_values.event_name%}",
+    "3": "{%contact.custom_values.event_date%}",
+    "4": "{%contact.custom_values.event_time%}",
+    "5": "{%contact.custom_values.transaction_id%}",
+    "6": "{%contact.custom_values.ticket_qty%}",
+    "7": "{%contact.custom_values.registration_status%}",
+    "8": "{%contact.custom_values.qr_url%}"
+  },
+  "metaExampleValues": {
+    "1": "John",
+    "2": "DJ Night",
+    "3": "2026-06-21",
+    "4": "20:00",
+    "5": "TXN12345",
+    "6": "2",
+    "7": "confirmed",
+    "8": "https://example.com/qr/abc123"
+  }
+}

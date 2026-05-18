@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWG Menu Category Designer</title>
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <link rel="canonical" href="https://asianwokandgrill.in/admin-menu-category-designer.html" />
+  <meta property="og:url" content="https://asianwokandgrill.in/admin-menu-category-designer.html" />
+  <style>
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: #fcf9f2;
+      font-family: "Avenir Next", "Trebuchet MS", Verdana, sans-serif;
+      color: #2f241b;
+    }
+
+    .shell {
+      padding: 18px;
+    }
+
+    .shell.embedded {
+      padding: 0;
+    }
+
+    .card {
+      border: 1px solid rgba(123, 94, 67, 0.18);
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 10px 24px rgba(80, 57, 36, 0.08);
+      padding: 16px;
+    }
+
+    .shell.embedded .card {
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      background: transparent;
+    }
+
+    .notice {
+      margin: 0 0 10px;
+      color: #7d6a59;
+      font-size: 0.92rem;
+    }
+
+    .shell.embedded .notice {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <main id="pageShell" class="shell">
+    <section class="card">
+      <p class="notice">Embedded Menu Category Designer</p>
+      <div id="mount"></div>
+    </section>
+  </main>
+
+  <script type="module">
+    import { renderMenuCategoryDesigner } from './js/admin-modules/menu-category-designer.js';
+
+    const params = new URLSearchParams(window.location.search || '');
+    const authToken = String(params.get('authToken') || '').trim();
+    const embedded = params.get('embedded') === '1';
+
+    if (embedded) {
+      document.getElementById('pageShell')?.classList.add('embedded');
+    }
+
+    if (authToken) {
+      localStorage.setItem('awg_admin_token', authToken);
+    }
+
+    window.addEventListener('message', (event) => {
+      if (event.origin !== window.location.origin) return;
+      const data = event.data || {};
+      if (data.type !== 'NK_EMBEDDED_AUTH') return;
+      const token = String(data.token || '').trim();
+      if (token) {
+        localStorage.setItem('awg_admin_token', token);
+      }
+    });
+
+    renderMenuCategoryDesigner(document.getElementById('mount')).catch((error) => {
+      const mount = document.getElementById('mount');
+      if (mount) {
+        mount.textContent = error instanceof Error ? error.message : 'Unable to load category designer.';
+      }
+    });
+  </script>
+</body>
+</html>

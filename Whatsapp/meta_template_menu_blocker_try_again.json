@@ -1,0 +1,27 @@
+{
+  "templateName": "menu_blocker_try_again",
+  "channel": "whatsapp",
+  "category": "UTILITY",
+  "language": "en",
+  "status": "draft_for_meta_approval",
+  "header": {
+    "type": "TEXT",
+    "text": "Spin Wheel Update"
+  },
+  "body": {
+    "text": "Hi {{1}},\n\nThanks for spinning at Asian Wok & Grill.\nResult: {{2}}\nStatus: {{3}}\n\nPlease try again after 24 hours for your next chance to win."
+  },
+  "footer": {
+    "text": "Customer Care: 7269899999"
+  },
+  "variableMapping": {
+    "1": "{%contact.first_name%}",
+    "2": "{%contact.custom_values.try_again%}",
+    "3": "{%contact.custom_values.outcome%}"
+  },
+  "metaExampleValues": {
+    "1": "John",
+    "2": "Try Again after 24hrs",
+    "3": "Try Again"
+  }
+}

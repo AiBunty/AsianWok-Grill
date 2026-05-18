@@ -1,0 +1,38 @@
+Options -Indexes -MultiViews
+DirectoryIndex index.html index.php
+
+<IfModule mime_module>
+AddHandler application/x-httpd-php82 .php
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Canonical host: force non-www to avoid host-level duplicate indexing.
+RewriteCond %{HTTP_HOST} ^www\.asianwokandgrill\.in$ [NC]
+RewriteRule ^ https://asianwokandgrill.in%{REQUEST_URI} [R=301,L,NE]
+
+# Normalize accidental trailing slash on file URLs (example: page.html/).
+RewriteRule ^(.+\.html)/+$ /$1 [R=301,L,NC]
+
+# Root-served API front controller, matching the Namaste Kalyan pattern.
+RewriteRule ^index\.php$ - [END]
+RewriteRule ^backend$ /backend/ [R=301,L,QSA]
+RewriteRule ^\.env$ - [F,END]
+RewriteRule ^composer\.(json|lock)$ - [F,END]
+RewriteRule ^(app|bootstrap|database|storage)/ - [F,END]
+
+# Stable public QR path -> middle-layer scanner/redirect logger.
+RewriteRule ^qr/([a-z0-9][a-z0-9-]{1,180})/?$ /qr/scan.html?slug=$1 [QSA,END,NC]
+
+# Pretty public event routes.
+RewriteRule ^events/?$ /events.html [QSA,END,NC]
+RewriteRule ^events/event/?$ /events.html [QSA,END,NC]
+RewriteRule ^events/([a-z0-9][a-z0-9-]{1,180})/?$ /events.html?eventSlug=$1 [QSA,END,NC]
+
+RewriteCond %{QUERY_STRING} (^|&)action= [NC]
+RewriteRule ^$ /backend/index.php [QSA,END]
+
+RewriteCond %{REQUEST_METHOD} ^(POST|PUT|PATCH|DELETE)$ [NC]
+RewriteRule ^$ /backend/index.php [QSA,END]
+</IfModule>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asian Wok & Grill - Spin for Prizes</title>
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <link rel="canonical" href="https://asianwokandgrill.in/menu-blocker.html">
+    <meta property="og:url" content="https://asianwokandgrill.in/menu-blocker.html">
+    <link rel="stylesheet" href="css/menu-blocker.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YTP5QMQJ9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YTP5QMQJ9K');
+</script>
+</head>
+<body>
+    <!-- Overlay Container -->
+    <div id="mb-overlay" class="mb-overlay mb-hidden">
+        <!-- Main Card -->
+        <div class="mb-card">
+            <!-- Form Phase -->
+            <div id="mb-form-phase" class="mb-phase">
+                <div class="mb-header">
+                    <h1 class="mb-title">Spin & Win Discounts</h1>
+                    <p class="mb-subtitle">Win upto 50% off on your food bill u just need to fill the form below.</p>
+                </div>
+
+                <form id="mb-form" class="mb-form">
+                    <!-- Name Field -->
+                    <div class="mb-form-group">
+                        <label class="mb-label" for="mb-name">Name *</label>
+                        <input type="text" id="mb-name" class="mb-input" placeholder="Enter your name" required maxlength="150">
+                    </div>
+
+                    <!-- Country Code + Phone Row -->
+                    <div class="mb-form-row">
+                        <div class="mb-form-group">
+                            <label class="mb-label" for="mb-country-code">Mobile Number *</label>
+                            <select id="mb-country-code" class="mb-select" required>
+                                <option value="">Select country...</option>
+                            </select>
+                        </div>
+                        <div class="mb-form-group">
+                            <label class="mb-label mb-label-spacer" for="mb-phone">&nbsp;</label>
+                            <input type="tel" id="mb-phone" class="mb-input" placeholder="Enter mobile number" required maxlength="20">
+                        </div>
+                    </div>
+
+                    <!-- DOB & Anniversary Row -->
+                    <div class="mb-form-row">
+                        <div class="mb-form-group">
+                            <label class="mb-label" for="mb-dob">Date of Birth</label>
+                            <input type="date" id="mb-dob" class="mb-input">
+                            <small class="mb-help-text">Type DD/MM/YYYY or use calendar.</small>
+                        </div>
+                        <div class="mb-form-group">
+                            <label class="mb-label" for="mb-anniversary">Date of Anniversary</label>
+                            <input type="date" id="mb-anniversary" class="mb-input">
+                            <small class="mb-help-text">Optional. Leave blank if not applicable.</small>
+                        </div>
+                    </div>
+
+                    <p class="mb-subnote">Fill details and submit to continue to spin.</p>
+
+                    <!-- Staff Bypass (Hidden by default) -->
+                    <div class="mb-bypass-section">
+                        <button type="button" id="mb-bypass-toggle" class="mb-bypass-toggle">Staff Only: Enter Code</button>
+                        <div id="mb-bypass-panel" class="mb-bypass-panel mb-hidden">
+                            <input type="text" id="mb-bypass-code" class="mb-input mb-bypass-input" placeholder="Staff bypass code" maxlength="32">
+                            <button type="button" id="mb-bypass-submit" class="mb-btn mb-btn-secondary">Verify</button>
+                            <div id="mb-bypass-status" class="mb-status"></div>
+                        </div>
+                    </div>
+
+                    <!-- Status Message -->
+                    <div id="mb-form-status" class="mb-status"></div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="mb-submit" class="mb-btn mb-btn-primary">Submit & Continue To Spin</button>
+                </form>
+            </div>
+
+            <!-- Spin Phase -->
+            <div id="mb-spin-phase" class="mb-phase mb-hidden">
+                <div class="mb-header">
+                    <h1 class="mb-title">Lucky Spin Wheel</h1>
+                    <p class="mb-subtitle" id="mb-spin-subtitle">You can win upto 50% off. Spin now.</p>
+                </div>
+
+                <div class="mb-wheel-container">
+                    <div class="mb-wheel-wrapper">
+                        <canvas id="mb-wheel-canvas" width="320" height="320" class="mb-wheel-canvas"></canvas>
+                        <div class="mb-wheel-pointer"></div>
+                    </div>
+                </div>
+
+                <button type="button" id="mb-spin-button" class="mb-btn mb-btn-primary mb-spin-button">Spin Now</button>
+                <div id="mb-spin-status" class="mb-status"></div>
+            </div>
+
+            <!-- Result Phase - Winner -->
+            <div id="mb-result-winner-phase" class="mb-phase mb-hidden">
+                <div class="mb-header">
+                    <h1 class="mb-title">Your Result</h1>
+                    <p class="mb-subtitle">Congratulations! Please share your result on WhatsApp.</p>
+                </div>
+
+                <div class="mb-result-box">
+                    <div class="mb-result-prize" id="mb-result-prize-text">Loading...</div>
+                    <div class="mb-result-label">You Won</div>
+                </div>
+
+                <div id="mb-coupon-section" class="mb-coupon-section">
+                    <p class="mb-coupon-label">Your Coupon Code</p>
+                    <div class="mb-coupon-code" id="mb-coupon-code">—</div>
+                    <button type="button" id="mb-copy-coupon" class="mb-btn mb-btn-secondary">Copy Code</button>
+                </div>
+
+                <div class="mb-result-meta">
+                    <p id="mb-result-meta-text">Prize details and information</p>
+                </div>
+
+                <button type="button" id="mb-send-whatsapp" class="mb-btn mb-btn-primary">Send to Admin</button>
+                <button type="button" id="mb-continue-winner" class="mb-btn mb-btn-secondary">View Menu</button>
+            </div>
+
+            <!-- Result Phase - Try Again -->
+            <div id="mb-result-tryagain-phase" class="mb-phase mb-hidden">
+                <div class="mb-header">
+                    <h1 class="mb-title">Your Result</h1>
+                    <p class="mb-subtitle">Try Again</p>
+                </div>
+
+                <div class="mb-result-box mb-result-tryagain">
+                    <div class="mb-result-label mb-result-tryagain-text">Try Again. Do not get disheartened. Ask Captain for a surprise on WhatsApp.</div>
+                </div>
+
+                <button type="button" id="mb-ask-surprise" class="mb-btn mb-btn-primary">Ask Captain For Surprise on WhatsApp</button>
+                <div id="mb-tryagain-status" class="mb-status"></div>
+                <button type="button" id="mb-continue-tryagain" class="mb-btn mb-btn-secondary">View Menu</button>
+            </div>
+
+            <!-- Cooldown Phase -->
+            <div id="mb-cooldown-phase" class="mb-phase mb-hidden">
+                <div class="mb-header">
+                    <h1 class="mb-title">Come Back Later!</h1>
+                    <p class="mb-subtitle">You can spin again after 24 hours</p>
+                </div>
+
+                <div class="mb-result-box">
+                    <div id="mb-cooldown-timer" class="mb-cooldown-timer">23:45:32</div>
+                    <div class="mb-result-label">Time remaining</div>
+                </div>
+
+                <button type="button" id="mb-continue-cooldown" class="mb-btn mb-btn-secondary">Continue to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data/country-codes-all.js"></script>
+    <script src="js/menu-blocker.js"></script>
+</body>
+</html>
