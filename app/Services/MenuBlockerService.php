@@ -52,9 +52,11 @@ class MenuBlockerService
         // Generate weighted random prize
         $prize = $this->selectRandomPrize();
         
-        // Generate coupon code only for winning prizes (format: AWG-PRIZETYPE-RANDOMHEX).
+        // Generate coupon code for all prizes.
+        // Try Again prizes get a unique placeholder (TRYAGAIN-XXXXXXXX) to satisfy the NOT NULL
+        // constraint — these codes are never shown to the user and are not redeemable.
         $couponCode = $prize['index'] === 8
-            ? null
+            ? 'TRYAGAIN-' . strtoupper(bin2hex(random_bytes(8)))
             : 'AWG-' . $prize['code'] . '-' . strtoupper(bin2hex(random_bytes(4)));
 
         // Log spin entry
@@ -75,7 +77,7 @@ class MenuBlockerService
             'outcome' => [
                 'prizeIndex' => $prize['index'],
                 'prizeText' => $prize['label'],
-                'couponCode' => $couponCode,
+                'couponCode' => $prize['index'] === 8 ? null : $couponCode,
                 'message' => $this->getPrizeMessage($prize['label']),
             ],
         ];

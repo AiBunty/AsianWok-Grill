@@ -1196,11 +1196,25 @@
     (async function bootMenuAfterGate() {
        window.AWG_MENU_SOURCE_KEY = 'awg_main';
 
-       await loadMenuBlockerForPage('menu');
+       // Load menu scripts and run blocker check in parallel — don't block one on the other.
+       // The loader overlay keeps the menu hidden until init() finishes, so the blocker
+       // can still gate access even if it resolves slightly after menu scripts are ready.
+       const menuScriptsPromise = loadScript('assets/js/menu-data.js')
+         .then(() => loadScript('assets/js/menu-ui.js'));
 
-       await loadScript('assets/js/menu-data.js');
-       await loadScript('assets/js/menu-ui.js');
-       await loadScript('assets/js/side-nav.js');
+       await Promise.all([
+         loadMenuBlockerForPage('menu'),
+         menuScriptsPromise
+       ]);
+
+       // Safety: if window.onload already fired before menu-ui.js loaded,
+       // the window.onload = init assignment won't auto-trigger — call it manually.
+       if (document.readyState === 'complete' && typeof init === 'function' && !window._menuInitStarted) {
+         init();
+       }
+
+       // Side-nav is non-critical — load without blocking anything
+       loadScript('assets/js/side-nav.js');
      }());
    }());
   </script>

@@ -1195,7 +1195,7 @@
        const rows = (items || []).map((item) => {
            const values = {
                'Item Name': item.name || '',
-               'Description': item.description || '',
+               'Description': item.desc || item.description || '',
                'Category': item.cat || item.category || item.category_name || 'Other',
                'Image URL': item.imageUrl || '',
                'Jain': item.jainPrice || '',

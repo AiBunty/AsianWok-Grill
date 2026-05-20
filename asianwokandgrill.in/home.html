@@ -2528,17 +2528,31 @@ async function loadHomeLiveEvents() {
     });
     const payload = await response.json();
     const allEvents = Array.isArray(payload.events) ? payload.events : [];
+    const now = Date.now();
     const events = allEvents.filter((event) => {
       const activeRaw = event && Object.prototype.hasOwnProperty.call(event, 'isActive')
         ? event.isActive
         : event && Object.prototype.hasOwnProperty.call(event, 'is_active')
           ? event.is_active
           : true;
-      if (typeof activeRaw === 'boolean') {
-        return activeRaw;
+      const isActive = typeof activeRaw === 'boolean'
+        ? activeRaw
+        : ['', '1', 'true', 'yes', 'on'].includes(String(activeRaw ?? '').trim().toLowerCase());
+      if (!isActive) return false;
+
+      // Hide events whose end/start date has already passed
+      const endDateStr = String(event.endDate || event.end_date || '').trim();
+      const startDateStr = String(event.startDate || event.start_date || event.date || '').trim();
+      const dateStr = endDateStr || startDateStr;
+      if (dateStr) {
+        const timeStr = endDateStr
+          ? String(event.endTime || event.end_time || '23:59:59').trim() || '23:59:59'
+          : '23:59:59';
+        const expiry = Date.parse(dateStr + 'T' + timeStr);
+        if (!Number.isNaN(expiry) && expiry < now) return false;
       }
-      const normalized = String(activeRaw ?? '').trim().toLowerCase();
-      return normalized === '' || normalized === '1' || normalized === 'true' || normalized === 'yes' || normalized === 'on';
+
+      return true;
     });
 
     if (!events.length) {

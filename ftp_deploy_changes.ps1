@@ -1,3 +1,6 @@
+# Targeted deploy: uploads only source/text files, skips binary assets (images, fonts, enc files)
+# Use this for deploying code changes without re-uploading slow large files.
+
 $ErrorActionPreference = 'Stop'
 
 function Get-EnvMap([string]$path) {
@@ -13,15 +16,8 @@ function Get-EnvMap([string]$path) {
 
 function Get-ProfileValue($envMap, [string]$key, [string]$profile) {
   $profileKey = if ([string]::IsNullOrWhiteSpace($profile)) { '' } else { "${key}_$($profile.ToUpperInvariant())" }
-
-  if ($profileKey -and $envMap.ContainsKey($profileKey)) {
-    return $envMap[$profileKey]
-  }
-
-  if ($envMap.ContainsKey($key)) {
-    return $envMap[$key]
-  }
-
+  if ($profileKey -and $envMap.ContainsKey($profileKey)) { return $envMap[$profileKey] }
+  if ($envMap.ContainsKey($key)) { return $envMap[$key] }
   return ''
 }
 
@@ -51,10 +47,11 @@ if ([string]::IsNullOrWhiteSpace($publicRemoteRoot)) {
   throw 'FTP_REMOTE_PATH must point to the backend directory, for example /public_html/backend.'
 }
 
-$cred = New-Object System.Net.NetworkCredential($ftpUser, $ftpPass)
-
 $backendRoot = Normalize-RemotePath $backendRemoteRoot
 $siteRoot = Normalize-RemotePath $publicRemoteRoot
+
+# Extensions to deploy (source/text files only — skip images, fonts, binary)
+$includeExtensions = @('.html', '.htm', '.css', '.js', '.php', '.sql', '.xml', '.txt', '.json', '.md', '.htaccess', '.env', '.svg', '.ico')
 
 $deployItems = @(
   @{ LocalPath = (Join-Path $repoRoot 'asianwokandgrill.in'); RemoteRoot = $siteRoot; Type = 'dir' },
@@ -73,12 +70,19 @@ foreach ($item in $deployItems) {
   if (-not (Test-Path $item.LocalPath)) { continue }
 
   if ($item.Type -eq 'file') {
-    $files.Add([pscustomobject]@{ LocalFile = (Resolve-Path $item.LocalPath).Path; RemoteFile = $item.RemoteRoot })
+    $ext = [System.IO.Path]::GetExtension($item.LocalPath).ToLower()
+    $name = [System.IO.Path]::GetFileName($item.LocalPath)
+    if ($includeExtensions -contains $ext -or $includeExtensions -contains ".$name") {
+      $files.Add([pscustomobject]@{ LocalFile = (Resolve-Path $item.LocalPath).Path; RemoteFile = $item.RemoteRoot })
+    }
     continue
   }
 
   $root = (Resolve-Path $item.LocalPath).Path
-  Get-ChildItem -Path $root -Recurse -File | ForEach-Object {
+  Get-ChildItem -Path $root -Recurse -File | Where-Object {
+    $ext = $_.Extension.ToLower()
+    $includeExtensions -contains $ext -or $_.Name -eq '.htaccess'
+  } | ForEach-Object {
     $relative = $_.FullName.Substring($root.Length).TrimStart('\\').Replace('\\', '/')
     $files.Add([pscustomobject]@{ LocalFile = $_.FullName; RemoteFile = ($item.RemoteRoot.TrimEnd('/') + '/' + $relative) })
   }
@@ -88,14 +92,14 @@ $total = $files.Count
 $ok = 0
 $fail = 0
 
-Write-Output ("Starting upload of {0} files to {1}" -f $total, $ftpHost)
+Write-Host ("Starting targeted upload of {0} source files to {1}" -f $total, $ftpHost) -ForegroundColor Cyan
+Write-Host ("(Binary files like images/fonts/enc are skipped)") -ForegroundColor DarkGray
 
 $curlCreds = "${ftpUser}:${ftpPass}"
 
 for ($i = 0; $i -lt $total; $i++) {
   $file = $files[$i]
   $remotePath = Normalize-RemotePath $file.RemoteFile
-  $remoteUri = "$ftpHost$remotePath"
 
   try {
     # URL-encode path segments to handle spaces and special chars in filenames
@@ -110,12 +114,17 @@ for ($i = 0; $i -lt $total; $i++) {
     $ok++
   } catch {
     $fail++
-    Write-Output ("FAILED: {0} :: {1}" -f $remotePath, $_.Exception.Message)
+    Write-Host ("FAILED: {0} :: {1}" -f $remotePath, $_.Exception.Message) -ForegroundColor Red
   }
 
-  if (((($i + 1) % 50) -eq 0 -or ($i + 1) -eq $total)) {
-    Write-Output ("Progress: {0}/{1} uploaded (ok={2}, fail={3})" -f ($i + 1), $total, $ok, $fail)
+  if (((($i + 1) % 10) -eq 0 -or ($i + 1) -eq $total)) {
+    Write-Host ("Progress: {0}/{1} (ok={2}, fail={3})" -f ($i + 1), $total, $ok, $fail) -ForegroundColor Yellow
   }
 }
 
-Write-Output ("DONE: total={0}, ok={1}, fail={2}" -f $total, $ok, $fail)
+Write-Host ""
+if ($fail -eq 0) {
+  Write-Host ("DONE: All {0} files uploaded successfully!" -f $ok) -ForegroundColor Green
+} else {
+  Write-Host ("DONE: total={0}, ok={1}, FAILED={2}" -f $total, $ok, $fail) -ForegroundColor Yellow
+}

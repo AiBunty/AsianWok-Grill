@@ -44,12 +44,20 @@ final class LeadController
 
     public function getMenuBlockerSettings(): array
     {
-        $service = new \AWG\Services\MenuBlockerService(\AWG\Config\Database::connection());
-        return [
-            'ok' => true,
-            'success' => true,
-            'settings' => $service->getSettings(),
-        ];
+        try {
+            $service = new \AWG\Services\MenuBlockerService(\AWG\Config\Database::connection());
+            return [
+                'ok' => true,
+                'success' => true,
+                'settings' => $service->getSettings(),
+            ];
+        } catch (\Throwable $ex) {
+            return [
+                'ok' => false,
+                'error' => 'SETTINGS_UNAVAILABLE',
+                'message' => 'Settings temporarily unavailable.',
+            ];
+        }
     }
 
     public function syncCrmByPhone(array $body): array

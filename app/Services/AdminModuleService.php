@@ -424,13 +424,34 @@ final class AdminModuleService
                 $event['event_slug'] = $slug;
                 return $event;
             }, $events);
-            $liveEvents = array_values(array_filter($events, function (array $event): bool {
+            $nowTs = time();
+            $liveEvents = array_values(array_filter($events, function (array $event) use ($nowTs): bool {
+                // Active flag check
                 if (array_key_exists('isActive', $event)) {
-                    return $this->toBooleanSetting($event['isActive']);
+                    if (!$this->toBooleanSetting($event['isActive'])) {
+                        return false;
+                    }
+                } elseif (array_key_exists('is_active', $event)) {
+                    if (!$this->toBooleanSetting($event['is_active'])) {
+                        return false;
+                    }
                 }
 
-                if (array_key_exists('is_active', $event)) {
-                    return $this->toBooleanSetting($event['is_active']);
+                // Expiry check: hide events whose date has already passed
+                $endDate = trim((string) ($event['endDate'] ?? $event['end_date'] ?? ''));
+                $startDate = trim((string) ($event['startDate'] ?? $event['start_date'] ?? $event['date'] ?? ''));
+                $date = $endDate !== '' ? $endDate : $startDate;
+                if ($date !== '') {
+                    $time = $endDate !== ''
+                        ? trim((string) ($event['endTime'] ?? $event['end_time'] ?? '23:59:59'))
+                        : '23:59:59';
+                    if ($time === '') {
+                        $time = '23:59:59';
+                    }
+                    $ts = strtotime($date . ' ' . $time);
+                    if ($ts !== false && $ts < $nowTs) {
+                        return false;
+                    }
                 }
 
                 return true;

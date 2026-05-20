@@ -225,8 +225,17 @@ try {
         exit(1);
     }
 
-    $status = (isset($result['ok']) && $result['ok'] === false) ? 404 : 200;
-    Response::send($result, $status);
+    $httpStatus = 200;
+    if (isset($result['ok']) && $result['ok'] === false) {
+        $errorCode = $result['error'] ?? '';
+        if (in_array($errorCode, ['AUTH_REQUIRED', 'INVALID_TOKEN', 'SESSION_EXPIRED'], true)) {
+            $httpStatus = 401;
+        } elseif (in_array($errorCode, ['FORBIDDEN', 'PERMISSION_DENIED'], true)) {
+            $httpStatus = 403;
+        }
+        // All other business-logic errors stay HTTP 200 with ok:false in the body
+    }
+    Response::send($result, $httpStatus);
 } catch (\Throwable $exception) {
     $writeBootLog('unhandled_exception', [
         'message' => $exception->getMessage(),

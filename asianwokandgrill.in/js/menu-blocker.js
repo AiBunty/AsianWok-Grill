@@ -288,11 +288,20 @@ class MenuBlocker {
         body: JSON.stringify(payload),
       });
 
-      if (!response.ok) {
+      // Parse JSON first so we can show the real backend message on errors,
+      // rather than a generic "Connection error".
+      let result;
+      try {
+        result = await response.json();
+      } catch (_) {
         throw new Error(`HTTP ${response.status}`);
       }
 
-      const result = await response.json();
+      if (!response.ok) {
+        this.spinStatus.textContent = result.message || 'Server error. Please try again.';
+        this.spinButton.disabled = false;
+        return;
+      }
 
       if (result.success) {
         this.state.wheelResult = result.outcome; // { prizeIndex, prizeText, couponCode, message }

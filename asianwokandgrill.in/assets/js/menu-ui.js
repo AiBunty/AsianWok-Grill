@@ -39,7 +39,7 @@ function hideLoader() {
   if (!loader) return Promise.resolve();
   if (loader.dataset.hidden === 'true') return Promise.resolve();
 
-  const minVisibleMs = 1100;
+  const minVisibleMs = 300;
   const remaining = Math.max(0, minVisibleMs - (Date.now() - loaderMountedAt));
 
   return new Promise((resolve) => {
@@ -686,6 +686,8 @@ window.addEventListener('load', initMenuAmbient, { once: true });
 // Main init — called by menu.html on window.onload
 // ---------------------------------------------------------------------------
 async function init() {
+  if (window._menuInitStarted) return;
+  window._menuInitStarted = true;
   try {
     const { items, fromCache } = await MenuData.loadAndParseMenu();
 
@@ -721,4 +723,12 @@ async function init() {
   }
 }
 
-window.onload = init;
+// Use window.onload if it hasn't fired yet; otherwise init() is called
+// directly from the menu.html boot script after all scripts are ready.
+if (document.readyState === 'complete') {
+  if (!window._menuInitStarted) init();
+} else {
+  window.addEventListener('load', function () {
+    if (!window._menuInitStarted) init();
+  }, { once: true });
+}

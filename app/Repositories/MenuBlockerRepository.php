@@ -14,6 +14,32 @@ class MenuBlockerRepository
     public function __construct($db)
     {
         $this->db = $db;
+        $this->ensureTable();
+    }
+
+    /**
+     * Create the table if it does not yet exist on this server.
+     * Runs on every instantiation but is fast (no-op when table exists).
+     */
+    private function ensureTable(): void
+    {
+        $this->db->exec(
+            "CREATE TABLE IF NOT EXISTS `menu_blocker_spins` (
+                `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                `phone` VARCHAR(20) NOT NULL,
+                `country_code` VARCHAR(10) NOT NULL,
+                `prize_index` INT NOT NULL,
+                `prize_label` VARCHAR(50) NOT NULL,
+                `coupon_code` VARCHAR(50) NULL,
+                `status` ENUM('active','redeemed','expired') DEFAULT 'active',
+                `redeemed_at` TIMESTAMP NULL,
+                `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                KEY `idx_phone_country` (`phone`, `country_code`),
+                KEY `idx_created_at` (`created_at`),
+                KEY `idx_status` (`status`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
+        );
     }
 
     /**

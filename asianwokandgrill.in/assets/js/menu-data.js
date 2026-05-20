@@ -126,45 +126,39 @@ function warmMenuAssets(items) {
 // ---------------------------------------------------------------------------
 // Network / cache fetch
 // ---------------------------------------------------------------------------
-async function loadMenuDataWithCache() {
-  if (isMobileCacheDisabled()) {
-    cleanupMenuClientCache().catch(() => {});
 
-    const res = await fetch(`${API_URL}&_ts=${Date.now()}`, { cache: 'no-store' });
-    if (!res.ok) throw new Error(`Menu API fetch failed: HTTP ${res.status}`);
-    const json = await res.json();
-    if (!json || json.ok !== true || !Array.isArray(json.items)) {
-      throw new Error('Menu API returned invalid payload.');
-    }
-    return { items: json.items, fromCache: false };
+// Fetches fresh data from the API and saves it to localStorage.
+async function _fetchFreshMenu() {
+  const res = await fetch(`${API_URL}&_ts=${Date.now()}`, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`Menu API fetch failed: HTTP ${res.status}`);
+  const json = await res.json();
+  if (!json || json.ok !== true || !Array.isArray(json.items)) {
+    throw new Error('Menu API returned invalid payload.');
   }
-
   try {
-    const res = await fetch(`${API_URL}&_ts=${Date.now()}`, { cache: 'no-store' });
-    if (!res.ok) throw new Error(`Menu API fetch failed: HTTP ${res.status}`);
-    const json = await res.json();
-    if (!json || json.ok !== true || !Array.isArray(json.items)) {
-      throw new Error('Menu API returned invalid payload.');
-    }
+    localStorage.setItem(MENU_CACHE_KEY, JSON.stringify({ items: json.items, ts: Date.now() }));
+  } catch (_) {}
+  return { items: json.items, fromCache: false };
+}
 
-    try {
-      localStorage.setItem(MENU_CACHE_KEY, JSON.stringify({ items: json.items, ts: Date.now() }));
-    } catch (_) {}
-
-    return { items: json.items, fromCache: false };
-  } catch (networkErr) {
-    try {
-      const cached = localStorage.getItem(MENU_CACHE_KEY);
-      if (cached) {
-        const parsed = JSON.parse(cached);
-        if (parsed && Array.isArray(parsed.items) && parsed.items.length) {
-          console.warn('[MenuData] Using cached feed — live fetch failed.', networkErr);
-          return { items: parsed.items, fromCache: true };
-        }
+// Stale-while-revalidate: if cached data exists, return it immediately and
+// refresh the cache in the background. This makes the menu appear instantly
+// on repeat visits — text renders first, images load lazily behind it.
+async function loadMenuDataWithCache() {
+  try {
+    const cached = localStorage.getItem(MENU_CACHE_KEY);
+    if (cached) {
+      const parsed = JSON.parse(cached);
+      if (parsed && Array.isArray(parsed.items) && parsed.items.length) {
+        // Serve stale cache immediately; refresh silently in background.
+        _fetchFreshMenu().catch(() => {});
+        return { items: parsed.items, fromCache: true };
       }
-    } catch (_) {}
-    throw networkErr;
-  }
+    }
+  } catch (_) {}
+
+  // No usable cache — must fetch and wait.
+  return _fetchFreshMenu();
 }
 
 // ---------------------------------------------------------------------------
