@@ -1,0 +1,71 @@
+{
+  "plan_id": "20260610_150458",
+  "mode": "full",
+  "environment": "LOCAL",
+  "targets": [
+    {
+      "name": "Frontend",
+      "type": "ftp",
+      "local_dir": "asianwokandgrill.in",
+      "remote_path": "/",
+      "file_extensions": [
+        ".html",
+        ".htm",
+        ".css",
+        ".js",
+        ".svg",
+        ".ico",
+        ".xml",
+        ".json"
+      ],
+      "files": [
+        {
+          "relative_path": "asianwokandgrill.in/menu.html",
+          "file_type": "M",
+          "size": 50000,
+          "hash": null
+        }
+      ]
+    },
+    {
+      "name": "Backend Code",
+      "type": "ftp",
+      "local_dir": "app",
+      "remote_path": "/app",
+      "file_extensions": [
+        ".php",
+        ".htaccess"
+      ],
+      "files": [
+        {
+          "relative_path": "app/Services/MenuService.php",
+          "file_type": "M",
+          "size": 15000,
+          "hash": null
+        }
+      ]
+    },
+    {
+      "name": "Backend Services",
+      "type": "ftp",
+      "local_dir": "app",
+      "remote_path": "/app",
+      "file_extensions": [
+        ".php",
+        ".env"
+      ],
+      "files": [
+        {
+          "relative_path": "app/Services/MenuService.php",
+          "file_type": "M",
+          "size": 15000,
+          "hash": null
+        }
+      ]
+    }
+  ],
+  "total_files": 3,
+  "total_size": 80000,
+  "estimated_time_seconds": 6.762939453125,
+  "created_at": "2026-06-10T15:04:58.573422"
+}

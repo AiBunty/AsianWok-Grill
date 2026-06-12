@@ -548,7 +548,7 @@ final class MenuImportService
                 'category' => (string) ($this->getCellValue($cells, $idxCategory) ?? 'Other'),
                 'name' => $itemName,
                 'description' => $description,
-                'imageUrl' => (string) ($this->getCellValue($cells, $idxImageUrl) ?? 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400'),
+                'imageUrl' => (string) ($this->getCellValue($cells, $idxImageUrl) ?? ''),
                 'servingUnit' => $this->getCellValue($cells, $idxUnitPcs),
                 'chefSpecial' => $this->isChefSpecialValue($this->getCellValue($cells, $chefIndex)),
                 'spiceLevel' => (string) ($this->getCellValue($cells, $idxSpice) ?? ''),

@@ -1,0 +1,15 @@
+[2026-06-10 15:04:58] [32mINFO[0m | deployer.test | Environment loaded: EnvParser(file=D:\GITHUB Projects\AsianWok&Grill\AsianWok-Grill\.env, profile=LIVE)
+[2026-06-10 15:04:58] [32mINFO[0m | deployer.test | FTP Host: ftp.theboxerp.com
+[2026-06-10 15:04:58] [32mINFO[0m | deployer.test | DB Host: mysql.gb.stackcp.com:42126
+[2026-06-10 15:04:58] [32mINFO[0m | deployer.test | 
+Change Summary:
+  Total files: 0
+  Total size: 0.00 MB
+  
+  By category:
+    - Frontend: 0 files
+    - Backend: 0 files
+    - Database: 0 files
+    - Config: 0 files
+    - Other: 0 files
+

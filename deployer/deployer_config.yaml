@@ -1,0 +1,86 @@
+# Deployer Configuration for Asian Wok & Grill
+# Controls deployment behavior, timeouts, and logging
+
+# FTP Configuration
+ftp:
+  timeout: 60                    # Connection timeout in seconds
+  retries: 3                     # Retry failed uploads
+  retry_backoff: 2.0             # Exponential backoff multiplier
+  parallel_workers: 5            # Concurrent upload threads
+  chunk_size: 8192               # Upload chunk size in bytes
+  skip_binary_on_changes: true   # Don't re-upload large binary files if no changes
+  passive_mode: true             # Use PASV mode (NAT friendly)
+  
+# Database Configuration
+database:
+  timeout: 30                    # Connection timeout in seconds
+  backup_enabled: true           # Auto-backup before migrations
+  backup_compress: true          # Gzip backup files
+  backup_dir: "backups"          # Relative to project root
+  backup_retention_days: 30      # Keep backups for X days
+  migration_batch_size: 1        # Run 1 migration at a time (safer)
+  
+# Deployment Behavior
+deployment:
+  auto_create_dirs: true         # Create remote directories as needed
+  dry_run_default: false         # Default to dry-run mode
+  interactive_migrations: true   # Ask confirmation per migration
+  log_level: "INFO"              # DEBUG, INFO, WARNING, ERROR
+  log_retention_count: 10        # Keep last N deploy logs
+  
+# Paths (relative to project root)
+paths:
+  local_root: "."
+  frontend_dir: "asianwokandgrill.in"
+  backend_dir: "app"
+  database_migrations_dir: "database/migrations"
+  logs_dir: "deployer/logs"
+  backup_dir: "deployer/backups"
+  
+# Ignored Patterns (in addition to .gitignore and .deployignore)
+ignore_patterns:
+  - "node_modules/"
+  - ".git/"
+  - ".vscode/"
+  - "__pycache__/"
+  - "*.pyc"
+  - ".DS_Store"
+  - "deployer/"
+  - "*.env.local"
+  - ".env.*.local"
+  - "*.log"
+
+# File Extensions to Deploy (if changed)
+deploy_extensions:
+  frontend:
+    - ".html"
+    - ".htm"
+    - ".css"
+    - ".js"
+    - ".svg"
+    - ".ico"
+    - ".xml"
+    - ".json"
+  backend:
+    - ".php"
+    - ".htaccess"
+  config:
+    - ".env"
+    - ".yaml"
+    - ".yml"
+  database:
+    - ".sql"
+  all:
+    - ".md"
+    - ".txt"
+
+# Environment Profiles
+environments:
+  LIVE:
+    name: "Production (LIVE)"
+    warn_on_deploy: true         # Show warning before deploying to LIVE
+    require_confirmation: true   # Require explicit "yes" confirmation
+  LOCAL:
+    name: "Development (LOCAL)"
+    warn_on_deploy: false
+    require_confirmation: false

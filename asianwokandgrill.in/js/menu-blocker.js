@@ -15,32 +15,13 @@ class MenuBlocker {
     };
 
     this.config = {
-      wheelSegments: 9,
+      wheelSegments: 4, // Will be set from admin offers
       spinDuration: 4200, // 4.2s exact
       spinEasing: 'quartic', // easing function
       cooldownHours: 24,
-      wheelColors: [
-        '#ff4fd8', // Dessert - pink
-        '#4dffea', // Mocktail - cyan
-        '#89ff45', // Aerated - green
-        '#ffd84d', // Starter - yellow
-        '#ff6b9d', // 10% - magenta
-        '#4da6ff', // 15% - blue
-        '#ffb84d', // 20% - orange
-        '#65ff51', // 25% - lime
-        '#e5b3ff', // Try Again - lavender
-      ],
-      wheelPrizes: [
-        'Free Dessert',
-        'Free Mocktail',
-        'Free Aerated Drink',
-        'Free Starter',
-        '10% Discount',
-        '15% Discount',
-        '20% Discount',
-        '25% Discount',
-        'Try Again',
-      ],
+      wheelColors: [], // Will be populated from admin offers
+      wheelPrizes: [], // Will be populated from admin offers
+      wheelOffers: [], // Raw admin offers
     };
 
     this.settings = {
@@ -59,6 +40,7 @@ class MenuBlocker {
   async init() {
     this.cacheDOM();
     await this.loadSettings();
+    await this.loadSpinOffers(); // Load offers from admin before setup
     this.populateCountryCodes();
     this.setupEventListeners();
     this.restoreState();
@@ -128,7 +110,7 @@ class MenuBlocker {
     this.continueTryAgain.addEventListener('click', () => this.closeBlocker('#food-menu-card'));
     this.continueCooldown.addEventListener('click', () => this.closeBlocker('#food-menu-card'));
 
-    // Initial wheel draw
+    // Draw wheel after all setup is complete
     setTimeout(() => this.drawWheel(0), 100);
   }
 
@@ -143,6 +125,34 @@ class MenuBlocker {
       }
     } catch (err) {
       console.warn('Failed to load menu blocker settings:', err);
+    }
+  }
+
+  async loadSpinOffers() {
+    try {
+      const response = await fetch(buildPhpActionUrl('public_spin_offers'));
+      if (response.ok) {
+        const result = await response.json();
+        console.log('Spin offers loaded:', result);
+        if ((result.ok || result.success) && Array.isArray(result.offers)) {
+          const offers = result.offers.filter((o) => o.isActive !== false);
+          console.log('Active offers:', offers);
+          if (offers.length > 0) {
+            // Update config with admin offers
+            this.config.wheelSegments = offers.length;
+            this.config.wheelOffers = offers;
+            this.config.wheelColors = offers.map((o) => o.color || '#C7A46B');
+            this.config.wheelPrizes = offers.map((o) => o.label);
+            console.log('Updated wheel config:', this.config.wheelSegments, this.config.wheelPrizes);
+          }
+        }
+      }
+    } catch (err) {
+      console.warn('Failed to load spin offers:', err);
+      // Fall back to minimal defaults
+      this.config.wheelSegments = 1;
+      this.config.wheelColors = ['#C7A46B'];
+      this.config.wheelPrizes = ['Spin Error - Retry Later'];
     }
   }
 
@@ -447,18 +457,18 @@ class MenuBlocker {
   }
 
   getWheelLabel(prizeText) {
-    const map = {
-      'Free Dessert': 'Dessert',
-      'Free Mocktail': 'Mocktail',
-      'Free Aerated Drink': 'Aerated',
-      'Free Starter': 'Starter',
-      '10% Discount': '10% OFF',
-      '15% Discount': '15% OFF',
-      '20% Discount': '20% OFF',
-      '25% Discount': '25% OFF',
-      'Try Again': 'Try Again',
-    };
-    return map[prizeText] || prizeText;
+    // Truncate long labels to fit on wheel segments
+    if (!prizeText) return '';
+    
+    // Replace "Free" with nothing to shorten labels
+    let label = prizeText.replace(/^Free\s+/i, '').trim();
+    
+    // Truncate to max 15 chars
+    if (label.length > 15) {
+      label = label.substring(0, 12) + '...';
+    }
+    
+    return label || prizeText;
   }
 
   displayWinnerResult() {
@@ -648,7 +658,9 @@ class MenuBlocker {
   }
 
   isTryAgainPrize(result) {
-    return Number(result?.prizeIndex) === 8 || String(result?.prizeText || '').trim().toLowerCase() === 'try again';
+    // Check if prize text contains "try again" (case-insensitive)
+    const prizeText = String(result?.prizeText || '').trim().toLowerCase();
+    return prizeText === 'try again' || prizeText.includes('try again');
   }
 
   toggleElement(element, shouldShow) {
@@ -770,7 +782,9 @@ class MenuBlocker {
 
 function buildPhpActionUrl(queryString) {
   const qs = String(queryString || '').replace(/^\?+/, '');
-  return '/?' + qs;
+  // If it doesn't already start with "action=", add it
+  const finalQs = qs.startsWith('action=') ? qs : 'action=' + qs;
+  return '/?' + finalQs;
 }
 
 // Initialize on load

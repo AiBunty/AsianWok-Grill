@@ -1,0 +1,69 @@
+# Deployment Ignore List
+# Files/patterns that should NOT be deployed, even if changed
+# Syntax: same as .gitignore (fnmatch patterns)
+
+# Python/Deployer Files
+deployer/
+*.pyc
+__pycache__/
+*.pyo
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.windows-folder-settings
+
+# Development
+node_modules/
+dist/
+build/
+*.local
+.env.local
+.env.*.local
+
+# Cache & Logs
+*.log
+.cache/
+*.tmp
+temp/
+
+# Testing
+test_results/
+coverage/
+.coverage
+
+# Large Binary Assets (handled separately)
+*.mp4
+*.mov
+*.avi
+assets/images/**/*.{psd,ai,sketch}
+
+# Session/Temp Files
+tmp_*.js
+*.tmp.html
+.last_deploy_marker
+
+# Protected Backend Files (deploy via migration script only)
+database/backups/
+deployer/backups/
+
+# Documentation (optional, change if needed)
+# *.md          # Uncomment to skip markdown deployment
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Excluded Folders (all)
+encrypted_assets/
+private/
+secrets/

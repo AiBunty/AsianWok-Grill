@@ -280,6 +280,12 @@ final class MenuRepository
                 }
             }
 
+            // Filter out fallback placeholder images — if image_url is the Unsplash placeholder, return empty string instead
+            $imageUrl = (string) ($row['image_url'] ?? '');
+            if (strpos($imageUrl, 'images.unsplash.com') !== false || strpos($imageUrl, 'photo-1546069901-ba9599a7e63c') !== false) {
+                $imageUrl = '';
+            }
+            
             return [
                 'id' => (int) $row['row_index'],
                 'cat' => (string) $row['category_name'],
@@ -292,7 +298,7 @@ final class MenuRepository
                 'chef' => ((int) $row['chef_special']) === 1,
                 'spice' => (string) ($row['spice_level'] ?? ''),
                 'jainPrice' => $row['jain_price'] !== null ? (string) $row['jain_price'] : null,
-                'img' => (string) ($row['image_url'] ?? ''),
+                'img' => $imageUrl,
                 'isVeg' => ((int) $row['is_veg']) === 1,
                 'rowDiet' => (string) $row['row_diet'],
                 'descNonVeg' => ((int) $row['desc_non_veg']) === 1,

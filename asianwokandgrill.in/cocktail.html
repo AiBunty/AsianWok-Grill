@@ -728,7 +728,7 @@
       if (isEnabledOnCocktail) {
         const linkEl = document.createElement('link');
         linkEl.rel = 'stylesheet';
-        linkEl.href = 'css/menu-blocker.css';
+        linkEl.href = 'css/menu-blocker.css?v=20260612002';  // Cache bust
         document.head.appendChild(linkEl);
         
         await (async () => {
@@ -738,7 +738,7 @@
           await new Promise(r => script1.onload = r);
           
           const script2 = document.createElement('script');
-          script2.src = 'js/menu-blocker.js';
+          script2.src = 'js/menu-blocker.js?v=20260612002';  // Cache bust - 6 offers dynamic load
           document.body.appendChild(script2);
           await new Promise(r => script2.onload = r);
         })();

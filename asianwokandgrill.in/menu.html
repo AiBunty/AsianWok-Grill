@@ -1163,16 +1163,14 @@
 
          const linkEl = document.createElement('link');
          linkEl.rel = 'stylesheet';
-         linkEl.href = 'css/menu-blocker.css';
-         document.head.appendChild(linkEl);
-
+    linkEl.href = 'css/menu-blocker.css?v=20260612002';  // Cache bust
          const script1 = document.createElement('script');
          script1.src = 'js/data/country-codes-all.js';
          document.body.appendChild(script1);
          await new Promise(r => script1.onload = r);
 
          const script2 = document.createElement('script');
-         script2.src = 'js/menu-blocker.js';
+         script2.src = 'js/menu-blocker.js?v=20260612002';  // Cache bust - 6 offers dynamic load
          document.body.appendChild(script2);
          await new Promise(r => script2.onload = r);
 
